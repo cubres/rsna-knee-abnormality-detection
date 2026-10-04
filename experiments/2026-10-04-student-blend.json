@@ -1,0 +1,37 @@
+{
+  "experiment": "Native ensemble plus independently trained five-fold student",
+  "submitted_at_utc": "2026-10-04T08:19:10.267Z",
+  "official": {
+    "ref": "56818632",
+    "status": "COMPLETE",
+    "public_score": "0.943",
+    "error_description": "",
+    "verified_at_utc": "2026-10-04T17:05:29.552502Z"
+  },
+  "reference": {
+    "ref": "56795351",
+    "status": "COMPLETE",
+    "public_score": "0.943"
+  },
+  "configuration": {
+    "student_weight": 0.15,
+    "weight_predeclared": true,
+    "private_execution_ref": "prvsiyan/bee-s-knees-rsna-knees-final-push",
+    "execution_version": 8
+  },
+  "bindings": {
+    "source_sha256": "d7882e88689153a5af16f1889d0402b9b1aa16baef5dd6705eb6d09a88f8edd7",
+    "visible_submission_sha256": "8f0c5e7b2b561538dae55439a4d2e9173141096da3defd9bc0a4bac351eef37a"
+  },
+  "visible_runtime": {
+    "all_12_branches_passed": true,
+    "five_student_folds_used": true,
+    "student_fallbacks": 0
+  },
+  "interpretation": "Ties the reference at reported precision; no demonstrated official improvement.",
+  "limits": [
+    "A displayed tie does not establish equality of unrounded scores.",
+    "Report-label validation is a proxy; current native ensemble lacks a shared clean validation set.",
+    "The study-ID student split contains repeated-report groups across folds; this establishes report overlap, not patient overlap."
+  ]
+}
