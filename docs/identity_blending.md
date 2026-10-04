@@ -10,6 +10,8 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 The 32 synthetic tests cover identity collisions, missing studies, malformed probabilities, zero-weight inputs, and numeric overflow. They validate the table contract; they do not measure MRI model accuracy.
 
+For the import example below, start Python from the repository root with `PYTHONPATH=src python`, or run your own script with `PYTHONPATH=src python your_script.py`.
+
 ```python
 from prediction_blend import blend_prediction_tables
 
