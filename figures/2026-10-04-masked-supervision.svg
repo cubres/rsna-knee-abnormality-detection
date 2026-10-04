@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820" role="img" aria-labelledby="title desc">
+  <title id="title">A prospective paired Knee training experiment</title>
+  <desc id="desc">Two ConvNeXtTiny arms share a fresh ImageNet initialization, report-group split, view sampler, augmentation, optimizer, and twenty-epoch exposure. Only ordinary versus explicit report-addressed BCE differs. Both fits and held prediction arrays must be sealed before held numerical targets are read. No training has run; physical weights and image arrays are missing.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8Z" fill="#526a81"/></marker>
+    <style>
+      text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;fill:#173049}
+      .title{font-size:34px;font-weight:700}.sub{font-size:18px;fill:#50667b}
+      .label{font-size:21px;font-weight:700}.body{font-size:17px}.small{font-size:15px;fill:#50667b}
+      .box{fill:#fff;stroke:#c7d4df;stroke-width:2;rx:16}.flow{fill:none;stroke:#526a81;stroke-width:2.5;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1280" height="820" fill="#f4f7fa"/>
+  <text x="56" y="66" class="title">Does explicit report-addressed supervision help?</text>
+  <text x="56" y="98" class="sub">Original paired ConvNeXtTiny protocol • prospective and untrained • no official score claim</text>
+  <rect x="56" y="128" width="1168" height="66" rx="12" fill="#fff3d6" stroke="#deb563"/>
+  <text x="80" y="155" class="body" font-weight="700">Execution is closed until the exact physical assets are supplied.</text>
+  <text x="80" y="180" class="small">Pinned ImageNet-22K → ImageNet-1K weight file and all 4,345 owned twelve-view image arrays are absent locally.</text>
+  <rect x="56" y="224" width="350" height="162" class="box"/>
+  <text x="80" y="258" class="label">Frozen report-group split</text>
+  <text x="80" y="293" class="body">Fit: 3,479 studies / 3,275 groups</text>
+  <text x="80" y="322" class="body">Held: 866 studies / 815 groups</text>
+  <text x="80" y="354" class="small">Fold 4 held • group overlap 0 • Gold 58 excluded</text>
+  <rect x="446" y="224" width="778" height="162" class="box"/>
+  <text x="472" y="258" class="label">One shared fresh initialization and training schedule</text>
+  <text x="472" y="292" class="body">ConvNeXtTiny 768 → 512 • six-slot attention MIL • twelve fixed views</text>
+  <text x="472" y="322" class="body">Same seed, epoch order, flips, AdamW, FP32, effective batch 4</text>
+  <text x="472" y="354" class="small">Only the loss weights differ. Both arms load the same sealed initial tensor state.</text>
+  <path d="M835 386V408H354V430" class="flow"/>
+  <path d="M835 386V408H932V430" class="flow"/>
+  <rect x="56" y="434" width="556" height="148" rx="16" fill="#e7effb" stroke="#5481bd" stroke-width="2"/>
+  <text x="82" y="470" class="label">Arm A · ordinary soft BCE</text>
+  <text x="82" y="501" class="body">Every finding receives weight 1.</text>
+  <text x="82" y="530" class="body">Exactly 20 epochs; final checkpoint only.</text>
+  <text x="82" y="558" class="small">Unmentioned findings retain the supplied soft probabilities.</text>
+  <rect x="668" y="434" width="556" height="148" rx="16" fill="#e5f3ee" stroke="#4a9277" stroke-width="2"/>
+  <text x="694" y="470" class="label">Arm B · addressed soft BCE</text>
+  <text x="694" y="501" class="body">Use explicit source m_finding masks.</text>
+  <text x="694" y="530" class="body">Exactly 20 epochs; final checkpoint only.</text>
+  <text x="694" y="558" class="small">Each finding is normalized by its effective-batch support.</text>
+  <path d="M334 582V610H640V630" class="flow"/>
+  <path d="M946 582V610H640" class="flow"/>
+  <rect x="56" y="634" width="1168" height="110" class="box"/>
+  <text x="82" y="668" class="label">Both fits sealed → both held prediction arrays sealed → numerical held labels</text>
+  <text x="82" y="701" class="body">Paired AUC against addressed report targets; 5,000 report-group bootstrap draws; all twelve findings retained.</text>
+  <text x="82" y="725" class="small">Same-source, reused-fold diagnostic. Passing the prospective screen permits further independent validation only.</text>
+  <text x="56" y="782" class="small">CPU loss-gradient and sampler contracts passed. Actual pretrained loading, image authentication, training and score quality remain untested.</text>
+</svg>

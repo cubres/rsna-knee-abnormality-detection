@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "experiment": "Prospective fresh ConvNeXtTiny supervision comparison",
+  "status": "PREPARED_AND_RANDOM_CPU_MECHANICS_CHECKED_UNTRAINED",
+  "registered_utc": "2026-10-04T20:33:52Z",
+  "arms": {
+    "ordinary": "Soft BCE on all supplied probabilities",
+    "addressed": "Soft BCE weighted by explicit report-addressed m_finding columns"
+  },
+  "sole_training_change": "Per-finding supervision weights; effective-batch support normalization is frozen before fitting.",
+  "cohort": {
+    "fit_studies": 3479,
+    "fit_report_groups": 3275,
+    "held_studies": 866,
+    "held_report_groups": 815,
+    "held_fold": 4,
+    "report_group_overlap": 0,
+    "gold58_identity_overlap": 0
+  },
+  "shared": {
+    "seed": 20260922,
+    "epochs": 20,
+    "initialization": "timm convnext_tiny.fb_in22k_ft_in1k",
+    "views": 12,
+    "slot_embeddings": 6,
+    "precision": "float32",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0001,
+    "final_learning_rate": 0.000001,
+    "effective_batch": 4,
+    "microbatch": 2,
+    "final_epoch_only": true
+  },
+  "boundaries": "One sealed shared initial state and identical epoch orders/flips. Seal both complete fits before held inference, and both ordered prediction arrays before held numerical label access.",
+  "labels": {
+    "source": "nartaa/rsna-knee-hpo-assets",
+    "source_metadata_snapshot_version": 9,
+    "soft_targets": "labels_v1_gemlow.parquet",
+    "mask_source": "train_labels_v1.parquet explicit binary m_finding columns",
+    "Gold_values_read": false,
+    "held_numerical_labels_read": false,
+    "Gold_tuned_labels_v1_perlabel_excluded": true
+  },
+  "validation": {
+    "loss_gradient_sampler_and_dataset_contracts": "PASS",
+    "random_encoder_CPU_integration": "PASS",
+    "synthetic_studies": 1,
+    "present_views": 2,
+    "masked_views": 10,
+    "actual_logits_shape": [
+      1,
+      12
+    ],
+    "finite_nonzero_gradient_parameter_tensors": 189,
+    "unaddressed_logit_gradients_exactly_zero": true,
+    "masked_pixel_perturbation_delta": 0,
+    "all_missing_rejected_before_encoder": true,
+    "encoder_forward_calls": 3,
+    "seconds": 9.278072250002879,
+    "optimizer_steps": 0
+  },
+  "asset_sha256": {
+    "source": "53fedbe7dd60f847e407057c8940613fe9a00ec320bb75f538234b3d740017b5",
+    "protocol": "1f28a087c4e80b78f8396dee22832c7690ffa8ff5ac5209344e04cf0e33f3928",
+    "architecture_receipt": "50af6da71f8240b84cd1dd83e1da1961af4fcca0cbafe01c353133309cab270a",
+    "diagram": "61d13220c38449b9f1dac19fdcc3f36b898ad23349d14f20d6ecc06dd5c06e0f",
+    "cohort": "f07ae6596feceff8c1b6b8fff6d72bbd014dc9e2693fc1322e98b9ca7824503e",
+    "gemlow": "77a3857a25a81d7e1ab4e360b1b86bb2fba8620cb43d14d02b97c6cd16004f00",
+    "mask_source": "a134cfce2f751f90f4219d791a563ee677b6223ac28f32e456bb3759c1d3fba9",
+    "owned_cache_manifest": "662539743960f7d9d9f84c43a70aa7e8e6d0ebca7b16dafa3fbc71aa80a7e413",
+    "required_initialization": "77b619e187de71bce58721689da0c009e84cc20677293d7d43105307e34d868a"
+  },
+  "required_missing_assets": [
+    "Exact owned 4345-study sparse 12x3x288x288 image cache, authenticated against its original manifest",
+    "114374272-byte model.safetensors at timm HF revision bc48a87f119bae1b06418f5340bfa97ef75d4609"
+  ],
+  "asset_distinction": "Raptor full-volume arrays are a different representation and cannot substitute for the authenticated sparse-view cache.",
+  "actual_pretrained_loading_validated": false,
+  "actual_image_authentication_executed": false,
+  "training_executed": false,
+  "MPS_training_executed": false,
+  "GPU_training_executed": false,
+  "scientific_quality_evidence": false,
+  "official_score": null,
+  "production_promotion": false,
+  "prospective_evaluation": "Addressed report-derived target AUC, all 12 findings, 5000 paired report-group bootstrap draws; permits further independent validation only.",
+  "limitations": [
+    "Same-source report labels and reused fold; report groups do not prove patient independence.",
+    "CPU random-weight mechanics do not establish pretrained compatibility, device training, clinical quality or official score.",
+    "Physical assets remain unavailable; no acquisition or installation was attempted in this preparation."
+  ],
+  "figure": "../figures/2026-10-04-masked-supervision.svg"
+}
