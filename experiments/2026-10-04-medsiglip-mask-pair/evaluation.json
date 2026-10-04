@@ -1,0 +1,204 @@
+{
+  "status": "REAL_FROZEN_EMBEDDING_REPORT_TARGET_DIAGNOSTIC_COMPLETE",
+  "per_target": [
+    {
+      "target": "ACL",
+      "addressed_studies": 829,
+      "positive": 109,
+      "negative": 720,
+      "unaddressed": 37,
+      "ordinary_auc": 0.8049566768603466,
+      "addressed_auc": 0.7823649337410805,
+      "delta": -0.02259174311926604,
+      "finite_paired_bootstrap_draws": 5000,
+      "paired_ci95": [
+        -0.03568044820787721,
+        -0.01050704979168652
+      ]
+    },
+    {
+      "target": "MCL",
+      "addressed_studies": 823,
+      "positive": 28,
+      "negative": 795,
+      "unaddressed": 43,
+      "ordinary_auc": 0.8035938903863432,
+      "addressed_auc": 0.7814914645103325,
+      "delta": -0.022102425876010745,
+      "finite_paired_bootstrap_draws": 5000,
+      "paired_ci95": [
+        -0.08183654075496799,
+        0.03983641621619696
+      ]
+    },
+    {
+      "target": "Medial Meniscus",
+      "addressed_studies": 838,
+      "positive": 333,
+      "negative": 505,
+      "unaddressed": 28,
+      "ordinary_auc": 0.7987571730145988,
+      "addressed_auc": 0.8011238961734011,
+      "delta": 0.002366723158802264,
+      "finite_paired_bootstrap_draws": 5000,
+      "paired_ci95": [
+        -0.0020355069996904115,
+        0.007051637485502139
+      ]
+    },
+    {
+      "target": "Lateral Meniscus",
+      "addressed_studies": 827,
+      "positive": 131,
+      "negative": 696,
+      "unaddressed": 39,
+      "ordinary_auc": 0.7387580064929368,
+      "addressed_auc": 0.7229753443888742,
+      "delta": -0.01578266210406254,
+      "finite_paired_bootstrap_draws": 5000,
+      "paired_ci95": [
+        -0.03513665611087415,
+        0.005007765648869
+      ]
+    },
+    {
+      "target": "Medial OA",
+      "addressed_studies": 828,
+      "positive": 149,
+      "negative": 679,
+      "unaddressed": 38,
+      "ordinary_auc": 0.8772078955431892,
+      "addressed_auc": 0.8786411125717845,
+      "delta": 0.001433217028595224,
+      "finite_paired_bootstrap_draws": 5000,
+      "paired_ci95": [
+        -0.00741671967703491,
+        0.011033122415179716
+      ]
+    },
+    {
+      "target": "Lateral OA",
+      "addressed_studies": 823,
+      "positive": 78,
+      "negative": 745,
+      "unaddressed": 43,
+      "ordinary_auc": 0.8640681466184822,
+      "addressed_auc": 0.848236103940802,
+      "delta": -0.015832042677680236,
+      "finite_paired_bootstrap_draws": 5000,
+      "paired_ci95": [
+        -0.03716468491848111,
+        0.004997430916018169
+      ]
+    },
+    {
+      "target": "PF OA",
+      "addressed_studies": 827,
+      "positive": 176,
+      "negative": 651,
+      "unaddressed": 39,
+      "ordinary_auc": 0.8244571288926128,
+      "addressed_auc": 0.8229995810640972,
+      "delta": -0.001457547828515593,
+      "finite_paired_bootstrap_draws": 5000,
+      "paired_ci95": [
+        -0.008842720599748258,
+        0.006107771855040693
+      ]
+    },
+    {
+      "target": "Effusion",
+      "addressed_studies": 825,
+      "positive": 215,
+      "negative": 610,
+      "unaddressed": 41,
+      "ordinary_auc": 0.9068776210446055,
+      "addressed_auc": 0.9069919939001144,
+      "delta": 0.0001143728555089707,
+      "finite_paired_bootstrap_draws": 5000,
+      "paired_ci95": [
+        -0.0030921775154863856,
+        0.003272718177873468
+      ]
+    },
+    {
+      "target": "Synovitis",
+      "addressed_studies": 439,
+      "positive": 92,
+      "negative": 347,
+      "unaddressed": 427,
+      "ordinary_auc": 0.9228480140333292,
+      "addressed_auc": 0.9256672096228543,
+      "delta": 0.0028191955895251475,
+      "finite_paired_bootstrap_draws": 5000,
+      "paired_ci95": [
+        -0.012611764549014902,
+        0.020599764399197373
+      ]
+    },
+    {
+      "target": "Baker's",
+      "addressed_studies": 544,
+      "positive": 115,
+      "negative": 429,
+      "unaddressed": 322,
+      "ordinary_auc": 0.8772879294618425,
+      "addressed_auc": 0.8640518901388466,
+      "delta": -0.013236039322995885,
+      "finite_paired_bootstrap_draws": 5000,
+      "paired_ci95": [
+        -0.040817244220169385,
+        0.01499826620261101
+      ]
+    },
+    {
+      "target": "Contusion",
+      "addressed_studies": 791,
+      "positive": 167,
+      "negative": 624,
+      "unaddressed": 75,
+      "ordinary_auc": 0.85076961461692,
+      "addressed_auc": 0.8535717027483495,
+      "delta": 0.002802088131429459,
+      "finite_paired_bootstrap_draws": 5000,
+      "paired_ci95": [
+        -0.008245860083739422,
+        0.014860208690680317
+      ]
+    },
+    {
+      "target": "Fracture",
+      "addressed_studies": 791,
+      "positive": 53,
+      "negative": 738,
+      "unaddressed": 75,
+      "ordinary_auc": 0.8411310528199621,
+      "addressed_auc": 0.8188628112696221,
+      "delta": -0.022268241550340018,
+      "finite_paired_bootstrap_draws": 5000,
+      "paired_ci95": [
+        -0.055705281914850704,
+        0.009569073484167688
+      ]
+    }
+  ],
+  "ordinary_macro": 0.8425594291487641,
+  "addressed_macro": 0.8339148370058465,
+  "addressed_minus_ordinary": -0.008644592142917684,
+  "paired_macro_ci95": [
+    -0.016580013960021227,
+    -0.0007311189114404959
+  ],
+  "finite_macro_bootstrap_draws": 5000,
+  "all12_findings_retained": true,
+  "minimum_per_target_support_pass": true,
+  "reused_fold": true,
+  "same_source_pseudo_targets": true,
+  "independent_clinical_validation": false,
+  "official_score": null,
+  "production_promotion": false,
+  "Gold58_values_used": false,
+  "representation_is_ConvNeXt": false,
+  "source_sha256": "7a3da8d45d2d3dfd36aef91df698743fd383e85e40508af74b34102ca326d797",
+  "protocol_sha256": "86324e8e857d8796c55f78fd06b917824d03e9cd77c7d325236c807b7ee31cb6"
+}
