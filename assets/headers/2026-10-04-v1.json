@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-04",
+  "campaign": "RSNA Knee",
+  "image": "2026-10-04-v1.png",
+  "sha256": "f00396293f2f7deadd83f24ec653b2f14f00e93b40543daf0c1ed28456f2d77b",
+  "style": "Sumi-e ink, paper and copper",
+  "generation_mode": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset type: high-quality opening cover art for a serious RSNA knee MRI machine-learning notebook. Create an exquisite wide landscape editorial illustration, 16:9. A sculptural human knee joint rendered in restrained ivory, anatomically plausible femur/tibia/patella, emerging from layers of flowing Japanese sumi-e ink and subtly translucent MRI slice planes. Small fine copper registration lines suggest multiview medical image analysis. Museum-quality ink wash on warm handmade paper, charcoal and indigo shadows, very restrained copper accents. Beautiful negative space and sophisticated balanced composition, crisp central forms and quiet paper texture. Conceptual research art, no numerical charts, no labels, no scores, no lettering, no watermarks. No gore, no extra bones, no sci-fi implants. Polished and visually arresting, suitable at the beginning of a useful scientific notebook.",
+  "intended_use": "Opening artwork for the campaign notebook and repository",
+  "illustrative": true,
+  "cadence": "Refresh approximately every 10 versions, rotating art styles and retaining versioned assets",
+  "kaggle_versions_using_asset": [],
+  "diagram_policy": "Include readable pipeline, data, validation and experiment diagrams throughout; measured charts use reproducible plotting.",
+  "notebook_identity_preserved": true
+}
