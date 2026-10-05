@@ -1,0 +1,51 @@
+{
+  "actual_data_queries_labels_weights_study_ids_included": false,
+  "bootstrap_limits": "Joint class-support-conditioned whole-study percentile intervals; pointwise/descriptive only. Attempt exhaustion and cooperative resampling deadline raise ValueError. Patient independence is not claimed.",
+  "caller_obligation": "Both prediction seals and approved target-read boundary must be established externally; pure statistics cannot attest file seals.",
+  "copyright_holder": "cubres",
+  "created_utc": "2026-10-05T21:18:22.068511+00:00",
+  "independent_validation_claim": false,
+  "independent_verifier": {
+    "independence": "Integer-rational small-stratum cardinalities; explicit row counts; all-permutation oracle fed through actual sampler; explicit resampled-row positive-negative pair AUC and bootstrap without internal module helpers.",
+    "optimized_mode_refused": true,
+    "path": "verify_numpy_methods.py",
+    "reports_path": "VERIFICATION_REPORT.json",
+    "return_code": 0,
+    "sha256": "98ef5c4303bfd5a321eb3e34964e4ce56db44699f471f1b368fec19e7fbe555b",
+    "stdout_only": true
+  },
+  "license_path": "LICENSE",
+  "model_quality_or_official_score_claim": false,
+  "native_adapter": false,
+  "native_ready": false,
+  "no_executor_model_torch_native_private_data_required": true,
+  "notebook_metadata_or_source_included": false,
+  "original_modules": {
+    "post_seal_statistics.py": {
+      "bytes": 6701,
+      "exact_bytes_preserved": true,
+      "sha256": "abfddbef9b51fc45dae31cd2916aa8c6cc1e57fee9e512d41e2352c927d1f59d",
+      "source_filename": "post_seal_statistics.py",
+      "source_packet": "codex_knee_peer_random_control_20261005T204212Z"
+    },
+    "selection_controls.py": {
+      "bytes": 3106,
+      "exact_bytes_preserved": true,
+      "sha256": "a06503929c8feb6de448f34d01cdccd6f8a1c905c34246ff448f9db080e9c983",
+      "source_filename": "selection_controls.py",
+      "source_packet": "codex_knee_peer_random_control_20261005T204212Z"
+    }
+  },
+  "original_source_packet_preserved": true,
+  "publication_review_pending": false,
+  "remote_calls": false,
+  "root_review": "ROOT_REVIEW.json",
+  "second_environment_report": "SECOND_ENVIRONMENT_REPORT.json",
+  "software_license": "MIT",
+  "status": "SOURCE_ONLY_PORTABLE_ROOT_REVIEWED_AND_VERIFIED",
+  "validation_environment": {
+    "compute": "CPU synthetic arrays only",
+    "numpy": "2.2.6",
+    "python": "3.12.14"
+  }
+}

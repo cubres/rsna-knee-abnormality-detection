@@ -1,0 +1,42 @@
+{
+  "files": {
+    "LICENSE": {
+      "bytes": 1063,
+      "sha256": "eed854701ae3433dccb0da2fc34fb3a8b70460bb4cad7f9e1abb4145a6cdbf0e"
+    },
+    "PROVENANCE.json": {
+      "bytes": 2411,
+      "sha256": "c2c5f5bd704ba54d18eaab733fdd50a8335884b0ea2ed48b9a3416ea079d90ed"
+    },
+    "README.md": {
+      "bytes": 4676,
+      "sha256": "642d3ad0685128067c0af90d1130d29f1eca6267aa605c5c43beed2575df0bcc"
+    },
+    "ROOT_REVIEW.json": {
+      "bytes": 733,
+      "sha256": "cf77668f84cc48f8776c887fbf4e809503fd1d79cf83b3acb85bf2e83939ab7d"
+    },
+    "SECOND_ENVIRONMENT_REPORT.json": {
+      "bytes": 2603,
+      "sha256": "dda69f949ebe66da81f339b152187ddefc55a5da091f0caba2076cd80551ac10"
+    },
+    "VERIFICATION_REPORT.json": {
+      "bytes": 2604,
+      "sha256": "1f4a258911a6c680fd011013ed3d19e9ea7ff847bb0a7fa0120b3abe36391d16"
+    },
+    "post_seal_statistics.py": {
+      "bytes": 6701,
+      "sha256": "abfddbef9b51fc45dae31cd2916aa8c6cc1e57fee9e512d41e2352c927d1f59d"
+    },
+    "selection_controls.py": {
+      "bytes": 3106,
+      "sha256": "a06503929c8feb6de448f34d01cdccd6f8a1c905c34246ff448f9db080e9c983"
+    },
+    "verify_numpy_methods.py": {
+      "bytes": 14124,
+      "sha256": "98ef5c4303bfd5a321eb3e34964e4ce56db44699f471f1b368fec19e7fbe555b"
+    }
+  },
+  "manifest_excludes_itself": true,
+  "status": "ROOT_REVIEWED_SOURCE_ONLY_PUBLIC_METHOD_HASHES"
+}

@@ -1,0 +1,19 @@
+{
+  "checked_utc": "2026-10-05T21:20:56.547747+00:00",
+  "independent_count_permutation_auc_oracles_reviewed": true,
+  "limitations": [
+    "Cooperative resampling deadline; preparation and one operation not hard timed",
+    "Joint class-support-conditioned pointwise descriptive intervals on an exposed report-proxy panel",
+    "Native integration and accelerator cost remain unqualified"
+  ],
+  "manifest_entries": 7,
+  "native_execution": false,
+  "official_score_gain_claim": false,
+  "original_modules_byte_identical": true,
+  "real_targets_or_models_read": false,
+  "second_environment": {
+    "numpy": "2.0.2",
+    "python": "3.9.6"
+  },
+  "status": "PASS_ROOT_PORTABLE_SOURCE_REVIEW_AND_SECOND_ENVIRONMENT_SYNTHETIC_CHECK"
+}

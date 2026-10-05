@@ -1,0 +1,104 @@
+{
+  "bootstrap_identity": true,
+  "bootstrap_independent_reference_cases": 4,
+  "bootstrap_oracle": "independent explicit row-resampling and positive-negative pair enumeration; no module private AUC helpers used",
+  "bootstrap_replicates_per_case": 128,
+  "bootstrap_reproducible": true,
+  "bootstrap_sign_swap": true,
+  "deadline_rejection": true,
+  "dedicated_stream_replay": true,
+  "enumerated_permutation_mask_calls": 119,
+  "executor_imported_or_run": false,
+  "exhaustive_single_finding_configurations": 150,
+  "exhaustive_two_finding_configurations": 1700,
+  "global_numpy_rng_unchanged": true,
+  "global_python_rng_unchanged": true,
+  "inputs_preserved": true,
+  "mask_calls_across_two_selectors": 3700,
+  "max_attempt_rejection": true,
+  "models_or_native": false,
+  "network_calls": false,
+  "no_finding_dropped_on_rejection": true,
+  "numpy": "2.0.2",
+  "optimized_mode_refused": true,
+  "python": "3.9.6",
+  "rare_class_joint_rejected_draws": 67,
+  "real_data_or_private_assets": false,
+  "rejection_contract_cases": 10,
+  "retained_count_oracle": "independent integer-rational cardinalities and row enumeration",
+  "selector_stream_isolation": true,
+  "small_batch_sizes": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "status": "PASS_PORTABLE_NUMPY_ONLY_SYNTHETIC",
+  "synthetic_wall_seconds": 0.42063170800000005,
+  "torch_required_or_imported": false,
+  "uniform_cases": [
+    {
+      "equal_permutation_preimages": true,
+      "k": 1,
+      "n": 1,
+      "subsets": 1
+    },
+    {
+      "equal_permutation_preimages": true,
+      "k": 1,
+      "n": 2,
+      "subsets": 2
+    },
+    {
+      "equal_permutation_preimages": true,
+      "k": 2,
+      "n": 2,
+      "subsets": 1
+    },
+    {
+      "equal_permutation_preimages": true,
+      "k": 1,
+      "n": 3,
+      "subsets": 3
+    },
+    {
+      "equal_permutation_preimages": true,
+      "k": 2,
+      "n": 3,
+      "subsets": 3
+    },
+    {
+      "equal_permutation_preimages": true,
+      "k": 3,
+      "n": 3,
+      "subsets": 1
+    },
+    {
+      "equal_permutation_preimages": true,
+      "k": 1,
+      "n": 4,
+      "subsets": 4
+    },
+    {
+      "equal_permutation_preimages": true,
+      "k": 2,
+      "n": 4,
+      "subsets": 6
+    },
+    {
+      "equal_permutation_preimages": true,
+      "k": 3,
+      "n": 4,
+      "subsets": 4
+    },
+    {
+      "equal_permutation_preimages": true,
+      "k": 4,
+      "n": 4,
+      "subsets": 1
+    }
+  ],
+  "uniformity_oracle": "all permutations fed through actual mask sampler; equal k-subset preimage counts",
+  "unrelated_order_generator_unchanged": true,
+  "warmup_consumes_no_rng": true
+}
