@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-05T19:37:40.373438+00:00",
+  "tool": "built-in image_gen.imagegen",
+  "final_prompt": "Use case: stylized-concept. Asset type: premium wide opening artwork for an original RSNA knee MRI machine-learning Kaggle notebook. Create a stunning landscape cover illustration: one sculptural human knee joint, anatomically recognizable femur, patella and tibia, built from luminous layered MRI-like cross sections and delicate engraving lines. Two balanced ribbons of tiny abstract image tiles flow around the joint, suggesting a matched comparison of learning methods. Style: refined Japanese woodcut meets contemporary scientific copperplate illustration, exquisite linework and handmade paper texture, cinematic restrained light, deep midnight indigo with warm burnt copper and ivory. Give the image one strong focal point and generous breathing room; elegant professional editorial cover, beautifully composed and highly detailed, readable as a banner. This is clearly illustrative concept artwork, not a scan, chart, clinical diagram or measured result. No text, numbers, logos, score badges, axes or watermark.",
+  "transparent_background": false,
+  "asset_file": "2026-10-05-knee-woodcut-v1.png",
+  "asset_sha256": "c9b461261ac032daea7102b6d180a8a83cb9cb068958c11b0b2d23720ff51d6c",
+  "asset_bytes": 3106342,
+  "scope": "Illustrative generated opening artwork; no scan, clinical evidence, validation or score claim",
+  "publication_state": "Preserved public artwork asset for a subsequent identity-preserving Kaggle notebook update; not yet inserted into a Kaggle notebook",
+  "version_policy": "Retain every artwork version; select at a subsequent identity-preserving notebook update"
+}
