@@ -1,0 +1,29 @@
+{
+  "input_sha256": "a8e2d0c17daf59c1f9f187b2931ed2018381385c9a583a26fffea2854c8786f7",
+  "script_sha256": "add239f30af476886bba43807beb3014106140a5e5545bc99b1ad4f28624f08b",
+  "source_version": 54,
+  "source_native_sha256": "1d9265cbf224641e22b89235182179e339fe801057e2894c6de0ebd862955585",
+  "available_cells_per_network": 41844,
+  "selected_cells_per_network": 29309,
+  "realized_retention_percent": [
+    70.04349488576618,
+    69.45039953225492,
+    71.69470066919878
+  ],
+  "panels_A_C": "Measured deidentified V54 epoch-2 aggregates; one peer network",
+  "panels_B_D": "Mathematical examples; no real target values used",
+  "terminal_status": "HOLD_NATIVE_TRIAL",
+  "quality_or_speed_or_official_score_claim": null,
+  "numpy_version": "2.2.6",
+  "matplotlib_version": "3.11.0",
+  "files": {
+    "peer_support_reviewed.png": {
+      "bytes": 240241,
+      "sha256": "04bbddec56a3eeeb3abfa491f7a1e383063628c91fe0c51958db0226158d9381"
+    },
+    "peer_support_reviewed.svg": {
+      "bytes": 168701,
+      "sha256": "69d80e2501ebb09d30a60d93172739c6d87f0421d17c83764a4631b23069fd17"
+    }
+  }
+}

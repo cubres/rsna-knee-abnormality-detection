@@ -1,0 +1,30 @@
+{
+  "plot_support.py": {
+    "bytes": 7141,
+    "sha256": "add239f30af476886bba43807beb3014106140a5e5545bc99b1ad4f28624f08b"
+  },
+  "v54_support_counts.json": {
+    "bytes": 1663,
+    "sha256": "a8e2d0c17daf59c1f9f187b2931ed2018381385c9a583a26fffea2854c8786f7"
+  },
+  "peer_support_reviewed.svg": {
+    "bytes": 168701,
+    "sha256": "69d80e2501ebb09d30a60d93172739c6d87f0421d17c83764a4631b23069fd17"
+  },
+  "peer_support_reviewed.png": {
+    "bytes": 240241,
+    "sha256": "04bbddec56a3eeeb3abfa491f7a1e383063628c91fe0c51958db0226158d9381"
+  },
+  "peer_support_reviewed.json": {
+    "bytes": 1099,
+    "sha256": "f6129819714e9fb7740b4bd1ffcda123a08b2dddc4943da0795ecddb14878326"
+  },
+  "ARTIFACT_USAGE.txt": {
+    "bytes": 2064,
+    "sha256": "b0c87d549767c4c3f079561705db6a3805941577ab6200ca3506a95447dd1328"
+  },
+  "SOURCE_PROVENANCE.json": {
+    "bytes": 1926,
+    "sha256": "e81b26d231767e7811c2895cf99bf669b9789e8cb922cf65f274fb60746a55a5"
+  }
+}
