@@ -1,0 +1,74 @@
+{
+  "evidence_kind": "completed_native_preview_with_reader_timing_hold",
+  "notebook_ref": "prvsiyan/bee-s-knees-rsna-knees-final-push",
+  "notebook_version": 10,
+  "session_id": 355404858,
+  "server_source_sha256": "e079e81932e1c2d0893278bd99fa38565eccb64d5988e535e08f454bd934132a",
+  "native_evidence_sha256": {
+    "run_receipt.json": "8d5df56cb43bc6eea9fd014107743f779fa9f5acd7d0cd3766646fbe440674c3",
+    "released_reader_gate.json": "cf748e86e4cb879161359370ca0d913f51892a81b4d5d51c9ab328390fa36333"
+  },
+  "visible_test_studies": 3,
+  "devices": [
+    "Tesla T4",
+    "Tesla T4"
+  ],
+  "native_receipt_elapsed_seconds": 432.3,
+  "block_seconds": {
+    "coat_d4": 33.29,
+    "coat_family": 0.01,
+    "coat_global96": 43.87,
+    "coat_repairv1": 39.14,
+    "coat_resgated": 48.01,
+    "extra_family": 93.94,
+    "inventory": 2.25,
+    "raptor": 30.51,
+    "t_a5": 10.91,
+    "t_assembly": 0.03,
+    "t_dino": 96.49,
+    "t_rad": 7.06
+  },
+  "block_status": {
+    "coat_d4": "ok",
+    "coat_family": "ok",
+    "coat_global96": "ok",
+    "coat_repairv1": "ok",
+    "coat_resgated": "ok",
+    "extra_family": "failed: RuntimeError: RuntimeError: Fixed timing cohort does not support the registered 90-minute allowance",
+    "inventory": "ok",
+    "raptor": "ok",
+    "t_a5": "ok",
+    "t_assembly": "ok",
+    "t_dino": "ok",
+    "t_rad": "ok"
+  },
+  "fusion_used": {
+    "C": true,
+    "R": true,
+    "T": true,
+    "extra": false
+  },
+  "base_csv_schema_checks": {
+    "all_finite": true,
+    "all_in_0_1": true,
+    "columns_match_sample": true,
+    "ids_match_sample_order": true,
+    "ids_unique": true,
+    "rows_match_sample": true
+  },
+  "base_csv_sha256": "8f0c5e7b2b561538dae55439a4d2e9173141096da3defd9bc0a4bac351eef37a",
+  "final_gate": {
+    "status": "HOLD",
+    "base_ok": true,
+    "reader_ok": false,
+    "official_quality_measured": false
+  },
+  "registered_reader_allowance_seconds": 5400,
+  "registered_reader_headroom_seconds": 900,
+  "reader_projected_seconds": null,
+  "native_child_timing_receipts_recovered": false,
+  "reader_predictions_blended": false,
+  "official_submission_made_for_this_candidate": false,
+  "official_quality_measured_for_this_candidate": false,
+  "scope": "Timings from this small visible run are observations, not a full-test runtime estimate or quality result."
+}
