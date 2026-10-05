@@ -1,0 +1,15 @@
+Portable V54 timing figure
+
+This visual artifact contains four deidentified completed-epoch log observations, a plotting CLI, and SHA-256 provenance. It contains no patients, labels, targets or model weights.
+
+From this directory, with Python 3 and matplotlib available:
+
+    python plot_epoch_timing.py --input epoch_observations.json
+
+Each invocation creates a fresh timestamped output directory in the current working directory. To choose a new directory explicitly:
+
+    python plot_epoch_timing.py --input epoch_observations.json --out my-new-figure
+
+An existing output directory is refused, so prior figures remain intact. The input JSON is loaded directly; no original local log path or notebook is required. PNG, SVG and figure_provenance.json are generated. JSON retains exact elapsed seconds; labels round measured differences to two decimal minutes. Image bytes may differ across matplotlib, fonts or SVG timestamps; the provenance records the actual input, script, environment version and output hashes.
+
+The markers report 872 and 1,744 cumulative updates per network. The dashed line is the required 3,488-update fit seal, not achieved progress. The bars show the measured interval between epoch 1 and epoch 2 events, including checkpoint writes and hashes. V54 ended HOLD_NATIVE_TRIAL after exceeding the shared training deadline. Partial checkpoints are ineligible; this figure establishes no model-quality or official-score improvement.

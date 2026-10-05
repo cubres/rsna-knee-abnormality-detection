@@ -1,0 +1,66 @@
+{
+  "artifact": "Measured V54 completed-epoch timing",
+  "input_json_sha256": "778464c4fe66767284a5cedb8ddf930d1bf0de3c729d51c29bb6a3ea39a84378",
+  "plot_script_sha256": "c03a8dcd8fba14776d4e17b8902689837311abec97ca4cf7c97b62bbba2c7410",
+  "source": {
+    "notebook_ref": "prvsiyan/the-knee-is-not-the-machine-mc4-dual-t4-worker",
+    "exact_version": 54,
+    "native_source_sha256": "1d9265cbf224641e22b89235182179e339fe801057e2894c6de0ebd862955585",
+    "bounded_log_sha256": "432bab799e343cfb022f3abfe57b9005d1b5efc26901a51ee483d29d85e44ae4",
+    "log_clock": "Kaggle platform elapsed seconds"
+  },
+  "observed_events": [
+    {
+      "event": "NATIVE_EPOCH_COMPLETE",
+      "arm": "peer_selection",
+      "epoch": 1,
+      "updates": 872,
+      "platform_elapsed_seconds": 1933.785273958
+    },
+    {
+      "event": "NATIVE_EPOCH_COMPLETE",
+      "arm": "ordinary",
+      "epoch": 1,
+      "updates": 872,
+      "platform_elapsed_seconds": 1933.936883576
+    },
+    {
+      "event": "NATIVE_EPOCH_COMPLETE",
+      "arm": "ordinary",
+      "epoch": 2,
+      "updates": 1744,
+      "platform_elapsed_seconds": 3023.025946658
+    },
+    {
+      "event": "NATIVE_EPOCH_COMPLETE",
+      "arm": "peer_selection",
+      "epoch": 2,
+      "updates": 1744,
+      "platform_elapsed_seconds": 3023.039602439
+    }
+  ],
+  "terminal": {
+    "status": "HOLD_NATIVE_TRIAL",
+    "failure": {
+      "type": "ValueError",
+      "message": "Native completed batch exceeded shared training deadline",
+      "traceback": "Traceback (most recent call last):\n  File \"/kaggle/working/knee_native_peer_runtime_stage_20261005T181614Z/native_peer_trial.py\", line 357, in main\n    run(config,args.input_root,args.out,began)\n  File \"/kaggle/working/knee_native_peer_runtime_stage_20261005T181614Z/native_peer_trial.py\", line 300, in run\n    trained = {arm:f.result() for arm,f in futures.items()}\n                   ^^^^^^^^^^\n  File \"/usr/lib/python3.12/concurrent/futures/_base.py\", line 456, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/concurrent/futures/_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"/usr/lib/python3.12/concurrent/futures/thread.py\", line 59, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/working/knee_native_peer_runtime_stage_20261005T181614Z/native_peer_trial.py\", line 293, in protected_fit\n    return fit_arm(arm,index)\n           ^^^^^^^^^^^^^^^^^^\n  File \"/kaggle/working/knee_native_peer_runtime_stage_20261005T181614Z/native_peer_trial.py\", line 269, in fit_arm\n    require(time.monotonic() < deadline, 'Native completed batch exceeded shared training deadline')\n  File \"/kaggle/working/knee_native_peer_runtime_stage_20261005T181614Z/native_peer_trial.py\", line 27, in require\n    raise ValueError(message)\nValueError: Native completed batch exceeded shared training deadline\n"
+    },
+    "receipt_sha256": "edacc76a51958a2e13d21f77526289cdb30dc60e651d074f81a2c3e54acc4fef",
+    "partial_checkpoints_eligible": false,
+    "quality_metric": null,
+    "official_score": null
+  },
+  "measurement_scope": [
+    "Counters are source-backed completed-epoch updates per network, not independent optimizer-internal observations.",
+    "Elapsed intervals include checkpoint writes and hashes.",
+    "First-epoch elapsed times include worker startup.",
+    "No unobserved batch trajectory, loss comparison, held-target metric or accuracy improvement is drawn."
+  ],
+  "quality_claim": false,
+  "matplotlib_version": "3.11.0",
+  "figure_files": {
+    "epoch_timing.svg": "470e2a683d4f8ce5d5e1fcdb231ee61a6f9aca24a47dc2da881567e55b46bbc0",
+    "epoch_timing.png": "a744ae4fb5af0cb0f3daf06db5a15dd61be8e198d1125eb01f850c9cc1e00e23"
+  }
+}
