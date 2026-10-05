@@ -1,0 +1,72 @@
+{
+  "status": "PASS_STANDALONE_SYNTHETIC_METHOD_CHECKS",
+  "exhaustive_cases_by_batch": {
+    "3": 1080,
+    "4": 6480
+  },
+  "exhaustive_total_cases": 7560,
+  "exhaustive_retain_values": [
+    0.0,
+    0.2,
+    0.5,
+    0.8,
+    1.0
+  ],
+  "randomized_cases": 1000,
+  "randomized_multicolumn_cases": 664,
+  "randomized_parameter_combinations": 108,
+  "tied_priority_cases": 24,
+  "random_masks_different_from_low_loss": 580,
+  "contract_rejection_cases": 18,
+  "global_numpy_rng_preserved": true,
+  "v54_aggregate_counts_checked": true,
+  "v54_balanced_b4_finding_batches_inferred": [
+    138,
+    84,
+    312,
+    77,
+    278,
+    191,
+    323,
+    309,
+    67,
+    173,
+    99,
+    20
+  ],
+  "v54_peer_epoch2_retained": 29309,
+  "v54_full_exposure": 41844,
+  "v54_realized_retention_fraction": 0.7004349488576618,
+  "v54_counts_scope": "Per-network finding/class aggregates; balanced batch counts are inferred, not independently logged.",
+  "python": "3.12.14",
+  "numpy": "2.2.6",
+  "torch": {
+    "status": "synthetic_cpu_pass",
+    "version": "2.8.0",
+    "synthetic_cpu_cases": 1612,
+    "supported_dtype_cases": 9,
+    "unsupported_dtypes_explicitly_rejected": [
+      "uint16",
+      "uint32",
+      "uint64",
+      "float8_e4m3fn",
+      "float8_e5m2",
+      "bool",
+      "complex64"
+    ],
+    "accelerator_tests": 0
+  },
+  "source_files_sha256": {
+    "peer_selection_dense.py": "cda7e934a05d9f60080921e0b2274c22bf6dfbc0f719370fccc20a3df1d02da2",
+    "verify_method.py": "b3df6c664d6ca52d8fbd862e273793291656752aa0545cca89c6e69273838218",
+    "v54_support_counts.json": "a8e2d0c17daf59c1f9f187b2931ed2018381385c9a583a26fffea2854c8786f7"
+  },
+  "model_calls": 0,
+  "target_or_weight_reads": false,
+  "gpu_tpu_runs": 0,
+  "speed_measurement": null,
+  "quality_metric": null,
+  "official_score": null,
+  "current_v55_modified": false,
+  "remote_mutations": false
+}

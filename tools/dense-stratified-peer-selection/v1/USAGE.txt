@@ -1,0 +1,25 @@
+Standalone fixed-shape peer-selection method
+
+This is an isolated semantic artifact. It is not connected to any notebook, trainer, current V55 run, Kaggle job, TPU or GPU experiment. NumPy is required. The optional Torch function imports only already-installed Torch when explicitly called. No package installation is performed.
+
+Functions in peer_selection_dense.py:
+
+    dense_peer_mask(loss, positive, retain)
+    random_stratified_mask(positive, retain, seed=42)
+    selected_support(mask, positive)
+
+loss is a finite real array of shape (batch, findings); positive is an identically shaped Boolean array. For the original source semantics, derive positive = soft_target > .5 explicitly. Both masks retain max(1, floor(retain * class_count)) entries per finding/class. Ties follow original row order. retain must be a finite real scalar in [0,1]; retain=0 still keeps one cell per present class. Empty dimensions, non-Boolean classes and invalid losses are refused. Inputs are untouched.
+
+The random control uses independent row/finding priorities from a private PCG64 generator. It is separately named and always opt-in. Its counts match the low-loss mask exactly for each finding/class, while identities can differ. Stable priority ties can favor earlier rows; this is not a claim of exact unbiased sampling. Record the seed and NumPy version.
+
+Run the synthetic checks from this directory:
+
+    python verify_method.py --report a-new-verification-report.json
+
+Existing report files are refused. Checks exhaust every B3/B4 binary class pattern and every loss vector from {-1,0,1}, including ties, against a separately written scalar sorted-list reference. They also check random count parity, repeated seeds, input preservation, contracts, deidentified V54 aggregate support and optional already-installed Torch on synthetic CPU tensors. No models, patient examples, target tables or weights are loaded.
+
+Dense ranks replace variable-length class gathers with B-by-B-by-finding comparisons. Their storage and arithmetic grow quadratically in batch size; this semantic equivalence does not establish acceleration or compilation behavior. Torch contract checks can synchronize an accelerator. No CUDA/TPU testing or speed measurement is provided.
+
+V54 measured retention was 29,309/41,844 = 70.0435% per peer network in epoch 2, despite nominal retain=.8. At B4, a 2/2 class split keeps 2/4; other splits keep 3/4. The final B3 batch keeps 2/3. v54_support_counts.json contains only finding/class aggregates and source identity, no patient IDs or targets. V54 ended HOLD_NATIVE_TRIAL; its partial checkpoints are ineligible. This artifact establishes no accuracy or score improvement.
+
+Reviewed revision: optional Torch accepts uint8, int8/int16/int32/int64 and float16/bfloat16/float32/float64 losses. Wider unsigned, float8, Boolean and complex loss tensors are explicitly refused rather than cast. Synthetic random test parameters vary independently across all 108 batch/finding/retention combinations; reports distinguish all randomized cases from actual multicolumn cases. The predecessor remains preserved.

@@ -1,0 +1,29 @@
+{
+  "artifact_scope": "New isolated semantic method and separately named random control; no notebook, trainer, protocol or device adapter.",
+  "original_helper_sha256": "3c507058e23d783d23af9b922906c8e232e05d1b15ec33a6876808fc8d136d67",
+  "original_protocol_sha256": "53d17f261b84881839d005da8d4aa0f6455dc6185adfc5206e6b8eb4e4c424d9",
+  "original_selection_semantics": "For each finding/class, stable ascending peer loss; max(1,floor(retain*n)); report class is soft target >.5.",
+  "epoch_receipts_sha256": {
+    "ordinary/epoch_1.json": "69a921aad27b1480b99b75bb8f0fc89666e4152cf423df0307524fe3c19cff2a",
+    "ordinary/epoch_2.json": "883c607f8c3517c8d69ec28353c53c626bc7218ecac7e5a7a849893821104b5c",
+    "peer_selection/epoch_1.json": "71cb04d2b5d16fed0a39648bb2116bcc67a80d210ccb95329717deea000ff0d9",
+    "peer_selection/epoch_2.json": "a047ddae104231b9ca0ae67b5a39a729fcf89b3c1e8b3b89040941b8ed40e520"
+  },
+  "v54_realized_peer_epoch2_cells_per_network": 29309,
+  "v54_full_cells_per_network": 41844,
+  "v54_realized_retention_fraction": 0.7004349488576618,
+  "fixture_sha256": "a8e2d0c17daf59c1f9f187b2931ed2018381385c9a583a26fffea2854c8786f7",
+  "current_v55_modified": false,
+  "models_or_patient_examples_or_targets_or_weights_loaded": false,
+  "native_compute_or_remote_mutations": false,
+  "measured_speed": null,
+  "quality_metric": null,
+  "official_score": null,
+  "preserved_predecessor": "codex_knee_dense_peer_method_20261005T200407540333Z",
+  "predecessor_source_sha256": "5e7a5557f4839f12672bff905a9d2dc2f7e34a654569637eff6bc5d86496b163",
+  "review_corrections": [
+    "Restrict optional Torch losses to explicitly supported dtypes; retain exact integer ordering rather than unsafe uint64 cast.",
+    "Decouple randomized batch/finding/retention coverage and report actual multicolumn count separately."
+  ],
+  "current_source_sha256": "cda7e934a05d9f60080921e0b2274c22bf6dfbc0f719370fccc20a3df1d02da2"
+}

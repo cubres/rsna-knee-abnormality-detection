@@ -1,0 +1,36 @@
+{
+  "status": "REVIEW_CORRECTED_STANDALONE_METHOD_PREPARED",
+  "files": {
+    "VERIFICATION_RESULT.json": {
+      "bytes": 1875,
+      "sha256": "d07259804121aef36c7c2842fcffb16cadbc578156601348ff206b4bbd1a3cc0"
+    },
+    "SOURCE_PROVENANCE.json": {
+      "bytes": 1926,
+      "sha256": "e81b26d231767e7811c2895cf99bf669b9789e8cb922cf65f274fb60746a55a5"
+    },
+    "v54_support_counts.json": {
+      "bytes": 1663,
+      "sha256": "a8e2d0c17daf59c1f9f187b2931ed2018381385c9a583a26fffea2854c8786f7"
+    },
+    "verify_method.py": {
+      "bytes": 12516,
+      "sha256": "b3df6c664d6ca52d8fbd862e273793291656752aa0545cca89c6e69273838218"
+    },
+    "peer_selection_dense.py": {
+      "bytes": 6682,
+      "sha256": "cda7e934a05d9f60080921e0b2274c22bf6dfbc0f719370fccc20a3df1d02da2"
+    },
+    "USAGE.txt": {
+      "bytes": 3117,
+      "sha256": "d5751b171d8a54dd563ef10ccda92e6521d1d4f3f852db3900856eec585c8105"
+    }
+  },
+  "predecessor_source_and_verifier_preserved": true,
+  "guard_rejections": 0,
+  "frozen_v55_modified": false,
+  "model_runs": 0,
+  "remote_mutations": false,
+  "speed_measurement": null,
+  "accuracy_or_score_claim": false
+}

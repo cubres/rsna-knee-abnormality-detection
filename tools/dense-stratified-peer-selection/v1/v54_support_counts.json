@@ -1,0 +1,131 @@
+{
+  "source_exact_version": 54,
+  "source_native_sha256": "1d9265cbf224641e22b89235182179e339fe801057e2894c6de0ebd862955585",
+  "finding_order": [
+    "ACL",
+    "MCL",
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Lateral OA",
+    "PF OA",
+    "Effusion",
+    "Synovitis",
+    "Baker's",
+    "Contusion",
+    "Fracture"
+  ],
+  "full_support_per_network": [
+    [
+      2778,
+      709
+    ],
+    [
+      2971,
+      516
+    ],
+    [
+      2087,
+      1400
+    ],
+    [
+      2976,
+      511
+    ],
+    [
+      2204,
+      1283
+    ],
+    [
+      2573,
+      914
+    ],
+    [
+      1885,
+      1602
+    ],
+    [
+      1439,
+      2048
+    ],
+    [
+      3062,
+      425
+    ],
+    [
+      2652,
+      835
+    ],
+    [
+      2906,
+      581
+    ],
+    [
+      3253,
+      234
+    ]
+  ],
+  "peer_epoch2_support_per_network": [
+    [
+      1925,
+      552
+    ],
+    [
+      2107,
+      424
+    ],
+    [
+      1366,
+      937
+    ],
+    [
+      2114,
+      424
+    ],
+    [
+      1465,
+      872
+    ],
+    [
+      1756,
+      668
+    ],
+    [
+      1238,
+      1054
+    ],
+    [
+      964,
+      1342
+    ],
+    [
+      2192,
+      356
+    ],
+    [
+      1823,
+      619
+    ],
+    [
+      2050,
+      466
+    ],
+    [
+      2381,
+      214
+    ]
+  ],
+  "warmup_support_parity_all_four_networks": true,
+  "both_peer_epoch2_support_aggregates_equal": true,
+  "nominal_retain_fraction": 0.8,
+  "fit_studies_per_epoch": 3487,
+  "batch_size": 4,
+  "drop_last": false,
+  "support_columns": [
+    "report_target_le_0.5",
+    "report_target_gt_0.5"
+  ],
+  "terminal_status": "HOLD_NATIVE_TRIAL",
+  "quality_metric": null,
+  "official_score": null
+}
