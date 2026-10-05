@@ -1,0 +1,109 @@
+{
+  "schema": "knee-v55-exposed-report-proxy-auc-v1",
+  "experiment": {
+    "competition": "RSNA Knee",
+    "notebook_version": 55,
+    "numeric_session": "355561260",
+    "arm_a": "ordinary",
+    "arm_b": "peer_selection"
+  },
+  "scope": {
+    "studies": 128,
+    "previously_exposed_panel": true,
+    "report_overlap": "UNKNOWN",
+    "patient_independence_proven": false,
+    "official_kaggle_score": null,
+    "automatic_promotion": false,
+    "error_bars": false,
+    "significance_claim": false
+  },
+  "matched_training_design": {
+    "models_per_arm": 2,
+    "epochs_per_network": 4,
+    "updates_per_network": 3488
+  },
+  "macro_auc": {
+    "ordinary": 0.8776848377687311,
+    "peer_selection": 0.8784436272064116,
+    "delta": 0.0007587894376804849
+  },
+  "direction_counts": {
+    "gains": 5,
+    "losses": 7,
+    "ties": 0
+  },
+  "per_finding": [
+    {
+      "finding": "ACL",
+      "ordinary_auc": 0.8822709857192617,
+      "peer_selection_auc": 0.8812260536398467,
+      "delta_auc": -0.0010449320794149175
+    },
+    {
+      "finding": "MCL",
+      "ordinary_auc": 0.8223981900452487,
+      "peer_selection_auc": 0.8220211161387632,
+      "delta_auc": -0.00037707390648555883
+    },
+    {
+      "finding": "Medial Meniscus",
+      "ordinary_auc": 0.9474470734744708,
+      "peer_selection_auc": 0.9484433374844333,
+      "delta_auc": 0.0009962640099625553
+    },
+    {
+      "finding": "Lateral Meniscus",
+      "ordinary_auc": 0.8261709319169482,
+      "peer_selection_auc": 0.8285852245292128,
+      "delta_auc": 0.002414292612264557
+    },
+    {
+      "finding": "Medial OA",
+      "ordinary_auc": 0.9196696696696697,
+      "peer_selection_auc": 0.9179179179179179,
+      "delta_auc": -0.0017517517517517955
+    },
+    {
+      "finding": "Lateral OA",
+      "ordinary_auc": 0.8578947368421053,
+      "peer_selection_auc": 0.8640350877192983,
+      "delta_auc": 0.0061403508771930015
+    },
+    {
+      "finding": "PF OA",
+      "ordinary_auc": 0.8629329403095064,
+      "peer_selection_auc": 0.857283222795382,
+      "delta_auc": -0.005649717514124353
+    },
+    {
+      "finding": "Effusion",
+      "ordinary_auc": 0.8482302011713777,
+      "peer_selection_auc": 0.8472116119174943,
+      "delta_auc": -0.0010185892538834285
+    },
+    {
+      "finding": "Synovitis",
+      "ordinary_auc": 0.8681796233703525,
+      "peer_selection_auc": 0.8836310960888459,
+      "delta_auc": 0.015451472718493453
+    },
+    {
+      "finding": "Baker's",
+      "ordinary_auc": 0.8883040935672515,
+      "peer_selection_auc": 0.8847953216374269,
+      "delta_auc": -0.0035087719298245723
+    },
+    {
+      "finding": "Contusion",
+      "ordinary_auc": 0.8488612836438924,
+      "peer_selection_auc": 0.8451345755693582,
+      "delta_auc": -0.003726708074534124
+    },
+    {
+      "finding": "Fracture",
+      "ordinary_auc": 0.9598583234946871,
+      "peer_selection_auc": 0.961038961038961,
+      "delta_auc": 0.0011806375442738881
+    }
+  ]
+}

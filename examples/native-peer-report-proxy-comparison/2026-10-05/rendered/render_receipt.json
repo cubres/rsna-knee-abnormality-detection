@@ -1,0 +1,40 @@
+{
+  "status": "PASS_AGGREGATE_VALIDATION_AND_RENDER_ONLY",
+  "schema": "knee-v55-exposed-report-proxy-auc-v1",
+  "input_sha256": "9902a720e87982a1742808a053e151ec33df9c5c2dd829282e1c3305a50d7ab5",
+  "row_count": 12,
+  "gains": 5,
+  "losses": 7,
+  "macro_delta_auc": 0.0007587894376804849,
+  "scope": {
+    "studies": 128,
+    "previously_exposed_panel": true,
+    "report_overlap": "UNKNOWN",
+    "patient_independence_proven": false,
+    "official_kaggle_score": null,
+    "automatic_promotion": false,
+    "error_bars": false,
+    "significance_claim": false
+  },
+  "matched_training_design": {
+    "models_per_arm": 2,
+    "epochs_per_network": 4,
+    "updates_per_network": 3488
+  },
+  "display_order": "descending delta_auc, then finding name",
+  "python_version": "3.9.6",
+  "matplotlib_version": "3.9.4",
+  "files": {
+    "knee_v55_proxy_auc_delta.png": {
+      "bytes": 432724,
+      "sha256": "94cfb1f437648f742bf53df1519d0df88247f76027f3bbbcd98c322ab07328c1"
+    },
+    "knee_v55_proxy_auc_delta.svg": {
+      "bytes": 30477,
+      "sha256": "daf250f9c9531e507a197de8e5d94dcaf455a8edda9899c1a639378c64cc92c5"
+    }
+  },
+  "models_executed": false,
+  "private_data_read": false,
+  "source_receipts_required_at_render_time": false
+}

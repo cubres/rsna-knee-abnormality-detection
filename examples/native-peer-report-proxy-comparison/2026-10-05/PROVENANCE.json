@@ -1,0 +1,78 @@
+{
+  "created_utc": "2026-10-05T21:36:02Z",
+  "original_author": "cubres",
+  "license": "MIT",
+  "artifact": "Original aggregate-only Knee V55 report-proxy comparison figure and portable renderer",
+  "source_notebook_sha256": "7673c64975c6a49fbbe74a2efb9a70995f50135aa999d755aa75cbe986db42b1",
+  "comparison_artifact_sha256_as_bound_by_review": "35a5c083f6efdf0e6e35ebad9e1bf406d0af10b2def4aa18b124fc8760c03b47",
+  "sources": [
+    {
+      "source_repository_relative_path": "research/codex_knee_native_peer_selection_20261005T172249Z/runtime_budget_correction_20261005T193058Z/candidate_v3/native_comparison_v55/20261005T213130635189Z/COMPARISON_GATE_REVIEW.json",
+      "source_sha256": "3a32d69dbb33e19575f3c0d0e5a4e6c5772965ab11699c4f4ef7a23be366edaf",
+      "source_bytes": 3962,
+      "role": "All 12 per-finding AUC pairs and deltas; macro AUC; exposed-panel limitations",
+      "public_packet_copy": null
+    },
+    {
+      "source_repository_relative_path": "research/codex_knee_native_peer_selection_20261005T172249Z/runtime_budget_correction_20261005T193058Z/candidate_v3/native_watch_v55/20261005T212558200247Z/FIT_PREDICTION_GATE_REVIEW.json",
+      "source_sha256": "3cf5e037adad12d34c7362059fddf2e75903adb721b7db0c03464f58d9c66910",
+      "source_bytes": 10238,
+      "role": "Version/session/source binding, two models per arm, four cumulative update milestones",
+      "public_packet_copy": null
+    },
+    {
+      "source_repository_relative_path": "research/codex_knee_native_peer_selection_20261005T172249Z/runtime_budget_correction_20261005T193058Z/candidate_v3/native_watch_v55/20261005T212558200247Z/small_receipts/knee_native_peer_budget_v3_result_20261005T193058Z/both_fit_seal.json",
+      "source_sha256": "d6b6a96cb0ceffed62355d5778a22646b0f314db55136cee16157b9e48afdf00",
+      "source_bytes": 148,
+      "role": "Both native fits completed",
+      "public_packet_copy": "source_receipts/both_fit_seal.json"
+    },
+    {
+      "source_repository_relative_path": "research/codex_knee_native_peer_selection_20261005T172249Z/runtime_budget_correction_20261005T193058Z/candidate_v3/native_watch_v55/20261005T212558200247Z/small_receipts/knee_native_peer_budget_v3_result_20261005T193058Z/ordinary/fit_seal.json",
+      "source_sha256": "42d0ae2dd4e2c980cbcdde1d9dfd675e3ca4c1b412d64b9e6317d23e70ec030c",
+      "source_bytes": 325,
+      "role": "Ordinary arm: four epochs, 3488 updates and two model hash entries",
+      "public_packet_copy": "source_receipts/ordinary_fit_seal.json"
+    },
+    {
+      "source_repository_relative_path": "research/codex_knee_native_peer_selection_20261005T172249Z/runtime_budget_correction_20261005T193058Z/candidate_v3/native_watch_v55/20261005T212558200247Z/small_receipts/knee_native_peer_budget_v3_result_20261005T193058Z/peer_selection/fit_seal.json",
+      "source_sha256": "98e1957e5983d0d9179628c8f18094f11b0efda7ad390cc88b7ae713efbc3c0f",
+      "source_bytes": 331,
+      "role": "Peer-selection arm: four epochs, 3488 updates and two model hash entries",
+      "public_packet_copy": "source_receipts/peer_selection_fit_seal.json"
+    }
+  ],
+  "extraction": {
+    "numeric_mapping": "target -> finding; ordinary_auc and peer_selection_auc unchanged; peer_minus_ordinary -> delta_auc; full binary64 JSON values retained",
+    "macro": "Unweighted mean across the 12 finding AUCs, exactly as the comparison gate",
+    "training_design": "epochs=4 and updates=3488 in both exact fit seals; two model hashes per arm and models=2 in each aggregate prediction timing receipt; four update milestones in the fit gate",
+    "shipped_fixture_excludes": [
+      "study IDs",
+      "labels",
+      "prediction arrays",
+      "weights",
+      "patient graphs",
+      "target tables"
+    ]
+  },
+  "scope": {
+    "studies": 128,
+    "previously_exposed_panel": true,
+    "report_overlap": "UNKNOWN",
+    "patient_independence_proven": false,
+    "official_kaggle_score": null,
+    "automatic_promotion": false,
+    "error_bars": false,
+    "significance_claim": false
+  },
+  "verification_boundary": "Only five already-completed small aggregate JSON receipts were read; no models, native runs, notebooks, weights, arrays or labels were read or executed by this figure workflow.",
+  "publication_status": "HELD_FOR_ROOT_SOURCE_AND_VISUAL_REVIEW",
+  "original_sources_preserved": true,
+  "no_notebook_card_readme_ledger_changes": true,
+  "scientific_limits": [
+    "Previously exposed held fold; panel is not a fresh independent validation set",
+    "Report overlap UNKNOWN",
+    "Patient independence unproven",
+    "No error bars, significance inference, official Kaggle score, score-gain claim or automatic promotion"
+  ]
+}

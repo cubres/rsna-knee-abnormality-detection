@@ -1,0 +1,12 @@
+{
+  "status": "COMPLETE_FIXED_NATIVE_FIT",
+  "arm": "ordinary",
+  "updates": 3488,
+  "epochs": 4,
+  "files_sha256": [
+    "1ad90daace9411acf0087b8ea1231dedbfe08c3a5725c6bd86cb9065d5d1a785",
+    "ca2c2ebce6d5ac137976a1390481a43f2193f9f1ef0e4253c6751540ba372bdb"
+  ],
+  "held_labels_read": false,
+  "gold_values_read": false
+}

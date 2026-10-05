@@ -1,0 +1,107 @@
+{
+  "schema": "original-aggregate-figure-artifact-manifest-v1",
+  "publication_status": "HELD_FOR_ROOT_SOURCE_AND_VISUAL_REVIEW",
+  "public_packet_files": [
+    {
+      "path": "render_proxy_auc_delta.py",
+      "bytes": 14388,
+      "sha256": "b47cb393dab449876d0121328f5e85270025a434eeb99d4beea85b23820f3bdf"
+    },
+    {
+      "path": "aggregate_proxy_auc.json",
+      "bytes": 2946,
+      "sha256": "9902a720e87982a1742808a053e151ec33df9c5c2dd829282e1c3305a50d7ab5"
+    },
+    {
+      "path": "USAGE.txt",
+      "bytes": 1863,
+      "sha256": "18d52d28204ff8451dcd2a595a8477e8823663e13c910b3e3204a919cae71c89"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1063,
+      "sha256": "eed854701ae3433dccb0da2fc34fb3a8b70460bb4cad7f9e1abb4145a6cdbf0e"
+    },
+    {
+      "path": "CAPTION.txt",
+      "bytes": 837,
+      "sha256": "b4651a171a542535d0bf02c67d3dc11a22389d78bb392a10afa4c430ff448749"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "bytes": 4677,
+      "sha256": "98ffd739c210f5b166fe9becddb6d666aa543f9cc2252d9d6e930f536c01e1c1"
+    },
+    {
+      "path": "VERIFICATION_RECEIPT.json",
+      "bytes": 1683,
+      "sha256": "e4f6515399e46b27628247bde222fff0246573e8a2688990e1a8caac2263b668"
+    },
+    {
+      "path": "source_receipts/both_fit_seal.json",
+      "bytes": 148,
+      "sha256": "d6b6a96cb0ceffed62355d5778a22646b0f314db55136cee16157b9e48afdf00"
+    },
+    {
+      "path": "source_receipts/ordinary_fit_seal.json",
+      "bytes": 325,
+      "sha256": "42d0ae2dd4e2c980cbcdde1d9dfd675e3ca4c1b412d64b9e6317d23e70ec030c"
+    },
+    {
+      "path": "source_receipts/peer_selection_fit_seal.json",
+      "bytes": 331,
+      "sha256": "98e1957e5983d0d9179628c8f18094f11b0efda7ad390cc88b7ae713efbc3c0f"
+    },
+    {
+      "path": "rendered/knee_v55_proxy_auc_delta.png",
+      "bytes": 432724,
+      "sha256": "94cfb1f437648f742bf53df1519d0df88247f76027f3bbbcd98c322ab07328c1"
+    },
+    {
+      "path": "rendered/knee_v55_proxy_auc_delta.svg",
+      "bytes": 30477,
+      "sha256": "daf250f9c9531e507a197de8e5d94dcaf455a8edda9899c1a639378c64cc92c5"
+    },
+    {
+      "path": "rendered/render_receipt.json",
+      "bytes": 1241,
+      "sha256": "e14a51d7fe9d94ac2757e8a10dec2c5cbc622340bf91056be8ae6a0f0afe7f40"
+    }
+  ],
+  "local_verification_only_files": [
+    {
+      "path": "portability_verification/aggregate_proxy_auc.json",
+      "bytes": 2946,
+      "sha256": "9902a720e87982a1742808a053e151ec33df9c5c2dd829282e1c3305a50d7ab5"
+    },
+    {
+      "path": "portability_verification/fresh_output/knee_v55_proxy_auc_delta.png",
+      "bytes": 432724,
+      "sha256": "94cfb1f437648f742bf53df1519d0df88247f76027f3bbbcd98c322ab07328c1"
+    },
+    {
+      "path": "portability_verification/fresh_output/knee_v55_proxy_auc_delta.svg",
+      "bytes": 30477,
+      "sha256": "daf250f9c9531e507a197de8e5d94dcaf455a8edda9899c1a639378c64cc92c5"
+    },
+    {
+      "path": "portability_verification/fresh_output/render_receipt.json",
+      "bytes": 1241,
+      "sha256": "e14a51d7fe9d94ac2757e8a10dec2c5cbc622340bf91056be8ae6a0f0afe7f40"
+    },
+    {
+      "path": "portability_verification/render_proxy_auc_delta.py",
+      "bytes": 14388,
+      "sha256": "b47cb393dab449876d0121328f5e85270025a434eeb99d4beea85b23820f3bdf"
+    }
+  ],
+  "self_not_hashed_in_manifest": true,
+  "portable_runtime_input": "aggregate_proxy_auc.json",
+  "renderer": "render_proxy_auc_delta.py",
+  "source_and_data_scope": "Original renderer and measured aggregate fixture only; no study IDs, labels, prediction arrays, models or weights",
+  "exclude_from_public_packet": [
+    "portability_verification/",
+    "__pycache__/"
+  ],
+  "preservation": "Original campaign receipts and all initially rendered outputs remain unchanged; no old-flow notebook, metadata, Card, README or ledger edits"
+}

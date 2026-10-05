@@ -1,0 +1,31 @@
+Knee V55: portable aggregate report-proxy AUC figure
+
+From this directory, with Python 3.9+ and Matplotlib already available:
+
+  python render_proxy_auc_delta.py --input aggregate_proxy_auc.json --output-dir new_figure
+
+The output parent must already exist. The output directory must not exist.
+The renderer refuses existing output directories, writes each new file
+exclusively, and does not edit the fixture or any source receipt. It outputs
+PNG, SVG with editable text, and a JSON render receipt. No model, weights,
+study IDs, labels, predictions, network connection, or campaign source checkout
+is needed. It validates the numerical differences and the unweighted macro
+means before creating the output directory.
+
+The supplied figure is a descriptive comparison on a previously exposed
+128-study held report-proxy panel. Report overlap is UNKNOWN, and patient
+independence is unproven. There are no error bars or significance claims.
+The result is not an official Kaggle leaderboard score and authorizes no
+automatic promotion. The two arms use matched 2-model ensembles, four epochs,
+and 3,488 updates per network, bound to the pinned aggregate fit receipts.
+
+The chart sorts findings by signed peer-selection minus ordinary AUC. Teal
+means higher proxy AUC, terracotta means lower proxy AUC, and the dashed line
+shows the unweighted macro delta. All deltas use raw AUC units. Full precision
+is retained in aggregate_proxy_auc.json; displayed values are rounded.
+
+Provenance and artifact_manifest.json identify the numeric and design sources
+and all shipped bytes. Source receipts are provenance only and never required
+by the renderer. This original visualization and renderer are MIT licensed.
+Versions of Python, Matplotlib, and fonts can affect rendering bytes; the render
+receipt records the actual runtime. No installation is performed by this packet.

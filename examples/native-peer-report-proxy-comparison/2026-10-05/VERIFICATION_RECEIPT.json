@@ -1,0 +1,48 @@
+{
+  "status": "PASS_AGGREGATE_PARITY_PORTABILITY_NO_OVERWRITE_AND_FORMAT_CHECKS",
+  "exact_source_projection_verified": true,
+  "original_source_hashes_unchanged": true,
+  "source_receipt_copies_exact": true,
+  "per_finding_count": 12,
+  "direction_counts": {
+    "gains": 5,
+    "losses": 7,
+    "ties": 0
+  },
+  "recomputed_macro": {
+    "ordinary": 0.8776848377687311,
+    "peer_selection": 0.8784436272064117,
+    "delta": 0.0007587894376807255
+  },
+  "input_sha256": "9902a720e87982a1742808a053e151ec33df9c5c2dd829282e1c3305a50d7ab5",
+  "renderer_sha256": "b47cb393dab449876d0121328f5e85270025a434eeb99d4beea85b23820f3bdf",
+  "output_dir_refusal_return_code": 2,
+  "existing_packet_hashes_unchanged_after_refusal_and_portable_run": true,
+  "portable_run_only_required_files": [
+    "render_proxy_auc_delta.py",
+    "aggregate_proxy_auc.json"
+  ],
+  "portable_run_return_code": 0,
+  "portable_png_svg_identical_to_initial_render": true,
+  "invalid_aggregate_cases_rejected": [
+    "inconsistent_row_delta",
+    "inconsistent_macro",
+    "wrong_direction_count",
+    "dropped_exposed_panel_limit",
+    "injected_official_score",
+    "nonfinite_auc",
+    "nonaggregate_row_field",
+    "duplicate_finding",
+    "duplicate_json_key"
+  ],
+  "png_dimensions": [
+    2844,
+    1944
+  ],
+  "svg_has_editable_text_and_all_required_findings_values_and_limits": true,
+  "visual_inspection": "Author viewed PNG: all 12 rows, values, summaries, table, legend and caveats readable; root independent review pending",
+  "models_or_private_data_executed_or_read": false,
+  "official_score": null,
+  "automatic_promotion": false,
+  "publication_status": "HELD_FOR_ROOT_SOURCE_AND_VISUAL_REVIEW"
+}

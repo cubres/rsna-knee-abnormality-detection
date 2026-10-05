@@ -1,0 +1,19 @@
+{
+  "status": "PASS_ROOT_SOURCE_VISUAL_AGGREGATE_AND_PROVENANCE_REVIEW",
+  "reviewed_utc": "2026-10-05T21:59:24.517406+00:00",
+  "source_original_bytes_preserved": true,
+  "all_manifest_hashes_verified": true,
+  "all_five_provenance_sources_verified": true,
+  "copied_fit_receipts_byte_identical": true,
+  "portable_validator_executed_without_models": true,
+  "per_finding_rows": 12,
+  "gains": 5,
+  "losses": 7,
+  "macro_delta_auc": 0.0007587894376804849,
+  "visual_review": "PNG inspected independently at 2844x1944: all 12 rows, sign colors, values, zero and macro references, paired arm AUCs, training budget and exposed-panel limits readable. No error bars or leaderboard claim.",
+  "scope": "descriptive previously exposed report-proxy comparison only",
+  "native_execution": false,
+  "target_prediction_weight_or_study_id_reads": false,
+  "publication_approved_new_prefix_only": true,
+  "existing_notebooks_cards_readmes_ledgers_untouched": true
+}

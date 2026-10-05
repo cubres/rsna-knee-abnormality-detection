@@ -1,0 +1,12 @@
+Knee V55 peer-selection comparison on a previously exposed 128-study held
+report-proxy panel. Bars show peer-selection minus ordinary AUC for each of
+the 12 findings, sorted by signed difference. Both arms use matched two-model
+ensembles, four epochs, and 3,488 updates per network. The unweighted macro
+delta is +0.0007587894: five findings gain and seven lose. The dashed vertical
+line marks this macro mean; the right columns show each arm's proxy AUC.
+
+This is descriptive local evidence, not a Kaggle leaderboard result or a
+promotion decision. Report overlap is UNKNOWN and patient independence is
+unproven; the panel was previously exposed. No error bars or significance
+claims are shown. Values are rounded for display; the aggregate JSON retains
+the exact source values. No study IDs, labels, or prediction arrays are included.
