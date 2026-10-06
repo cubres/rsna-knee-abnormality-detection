@@ -1,0 +1,37 @@
+{
+  "diagram_bytes_reproducible": true,
+  "documented_example_dtype": "torch.float32",
+  "documented_example_shape": [
+    1,
+    12,
+    3,
+    336,
+    336
+  ],
+  "real_data_targets_models_used": false,
+  "runtime": {
+    "binary_output_max": 1.0,
+    "binary_output_min": 0.0,
+    "device": "cpu",
+    "dtype": "float32",
+    "identity_max_abs_error": 2.9802322387695312e-08,
+    "models_or_targets_used": false,
+    "native_shape_identity_max_abs_error": 3.552436828613281e-05,
+    "native_shape_identity_tolerance": 0.0001,
+    "numpy_cpu_torch_initialized_cuda_rng_unchanged": true,
+    "numpy_version": "2.2.6",
+    "outer_autocast_max_abs_error": 0.0,
+    "real_data_used": false,
+    "saturated_and_binary_stress_grid_count_each": 81,
+    "saturated_output_max": 1.0,
+    "saturated_output_min": 0.0,
+    "status": "PASS_SYNTHETIC_RUNTIME_ONLY",
+    "strict_output_range_without_clipping": true,
+    "synthetic_parameter_center_outside_fraction": 0.07747395833333333,
+    "torch_version": "2.8.0",
+    "translation_max_abs_error": 5.960464477539063e-08,
+    "window_channel_alignment_max_abs_error": 0.0
+  },
+  "status": "PASS_PUBLIC_SYNTHETIC_USAGE_AND_DIAGRAM",
+  "svg_xml_valid": true
+}

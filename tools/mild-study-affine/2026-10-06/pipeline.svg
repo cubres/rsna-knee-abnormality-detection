@@ -1,0 +1,291 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="980" viewBox="0 0 1440 980" role="img" aria-labelledby="title desc">
+<title id="title">A single mild affine grid shared across a study</title>
+<desc id="desc">Invented study UID, epoch and seed select four dedicated PCG64 draws. One inverse grid is reused across twelve image windows and three channels per window, then sampled with bilinear zero padding before normalization. Synthetic CPU measurements distinguish center-outside fraction and missing bilinear mass.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#1d817a"/></marker></defs>
+<rect width="1440" height="980" fill="#f4f7f7"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#193546} .caption{fill:#516a77} .small{font-size:19px} .body{font-size:24px} .label{font-size:22px;font-weight:700} .card{fill:#fff;stroke:#d5e2e5;stroke-width:2} .link{fill:none;stroke:#1d817a;stroke-width:3;marker-end:url(#arrow)}</style>
+<text x="48" y="64" class="body" style="font-size:44px;font-weight:700">One study. One transform.</text>
+<text x="48" y="105" class="caption body" >Deterministic in-plane geometry for raw-image windows</text>
+<text x="1392" y="64" class="caption small" text-anchor="end">SYNTHETIC · CPU CHECKS</text>
+<rect x="48" y="143" width="408" height="142" rx="18" class="card"/>
+<rect x="516" y="143" width="408" height="142" rx="18" class="card"/>
+<rect x="984" y="143" width="408" height="142" rx="18" class="card"/>
+<text x="70" y="181" class="label" >1   Stable study key</text>
+<text x="70" y="221" class="body" >exact UID + epoch + seed</text>
+<text x="70" y="255" class="caption small" >SHA256 → owned PCG64</text>
+<text x="538" y="181" class="label" >2   Four small draws</text>
+<text x="538" y="221" class="body" >±5°   ·   ±2% x/y   ·   .98–1.02</text>
+<text x="538" y="255" class="caption small" >Independent of training RNG</text>
+<text x="1006" y="181" class="label" >3   One inverse grid</text>
+<text x="1006" y="221" class="body" >Same map for every plane</text>
+<text x="1006" y="255" class="caption small" >Shared 2D coordinates · no 3D rotation</text>
+<path d="M462,214 H502" class="link"/>
+<path d="M930,214 H970" class="link"/>
+<rect x="48" y="330" width="600" height="337" rx="18" class="card"/>
+<rect x="792" y="330" width="600" height="337" rx="18" class="card"/>
+<text x="70" y="370" class="label" >Raw study windows</text>
+<text x="70" y="403" class="caption small" >12 windows × 3 adjacent channels</text>
+<text x="814" y="370" class="label" >Coherent augmented study</text>
+<text x="814" y="403" class="caption small" >One grid reused across all 36 planes</text>
+<rect x="76" y="430" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(76,430)" fill="none" stroke="#466d86" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="209" y="430" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(209,430)" fill="none" stroke="#466d86" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="342" y="430" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(342,430)" fill="none" stroke="#466d86" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="475" y="430" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(475,430)" fill="none" stroke="#466d86" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="76" y="497" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(76,497)" fill="none" stroke="#466d86" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="209" y="497" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(209,497)" fill="none" stroke="#466d86" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="342" y="497" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(342,497)" fill="none" stroke="#466d86" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="475" y="497" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(475,497)" fill="none" stroke="#466d86" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="76" y="564" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(76,564)" fill="none" stroke="#466d86" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="209" y="564" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(209,564)" fill="none" stroke="#466d86" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="342" y="564" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(342,564)" fill="none" stroke="#466d86" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="475" y="564" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(475,564)" fill="none" stroke="#466d86" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="820" y="430" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(874,454.5) rotate(5) scale(.98) translate(-54,-24.5)" fill="none" stroke="#19897f" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="953" y="430" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(1007,454.5) rotate(5) scale(.98) translate(-54,-24.5)" fill="none" stroke="#19897f" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="1086" y="430" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(1140,454.5) rotate(5) scale(.98) translate(-54,-24.5)" fill="none" stroke="#19897f" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="1219" y="430" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(1273,454.5) rotate(5) scale(.98) translate(-54,-24.5)" fill="none" stroke="#19897f" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="820" y="497" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(874,521.5) rotate(5) scale(.98) translate(-54,-24.5)" fill="none" stroke="#19897f" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="953" y="497" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(1007,521.5) rotate(5) scale(.98) translate(-54,-24.5)" fill="none" stroke="#19897f" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="1086" y="497" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(1140,521.5) rotate(5) scale(.98) translate(-54,-24.5)" fill="none" stroke="#19897f" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="1219" y="497" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(1273,521.5) rotate(5) scale(.98) translate(-54,-24.5)" fill="none" stroke="#19897f" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="820" y="564" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(874,588.5) rotate(5) scale(.98) translate(-54,-24.5)" fill="none" stroke="#19897f" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="953" y="564" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(1007,588.5) rotate(5) scale(.98) translate(-54,-24.5)" fill="none" stroke="#19897f" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="1086" y="564" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(1140,588.5) rotate(5) scale(.98) translate(-54,-24.5)" fill="none" stroke="#19897f" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<rect x="1219" y="564" width="108" height="49" rx="5" fill="#e8f0f2" stroke="#afc4cc"/>
+<g transform="translate(1273,588.5) rotate(5) scale(.98) translate(-54,-24.5)" fill="none" stroke="#19897f" stroke-width="1.6">
+<path d="M20,7 V42"/>
+<path d="M42,7 V42"/>
+<path d="M64,7 V42"/>
+<path d="M86,7 V42"/>
+<path d="M12,11 H96"/>
+<path d="M12,24 H96"/>
+<path d="M12,37 H96"/>
+<circle cx="66" cy="17" r="4" fill="#c89330" stroke="none"/></g>
+<path d="M672,500 H768" class="link"/>
+<text x="720" y="452" class="caption small" text-anchor="middle">shared</text>
+<text x="720" y="477" class="caption small" text-anchor="middle">grid</text>
+<text x="70" y="643" class="caption small" >Finite raw values in [0,1]</text>
+<text x="814" y="643" class="caption small" >Normalize channels afterward</text>
+<rect x="48" y="707" width="408" height="178" rx="18" class="card"/>
+<rect x="516" y="707" width="408" height="178" rx="18" class="card"/>
+<rect x="984" y="707" width="408" height="178" rx="18" class="card"/>
+<text x="70" y="747" class="label" >Interpolation</text>
+<text x="70" y="788" class="body" >Bilinear · zero padding</text>
+<text x="70" y="824" class="caption small" >align_corners=False</text>
+<text x="70" y="860" class="caption small" >Float32/64; autocast disabled locally</text>
+<text x="538" y="747" class="label" >Actual-grid hold gate</text>
+<text x="538" y="790" class="body" >Center-outside fraction ≤ 10%</text>
+<text x="538" y="828" class="caption small" >Pixel-center bounds govern the gate</text>
+<text x="538" y="860" class="caption small" >No clipping or recovery fallback</text>
+<text x="1006" y="747" class="label" >81 configurations screened</text>
+<text x="1006" y="791" class="body" >7.42% center outside</text>
+<text x="1006" y="829" class="body" >7.07% missing bilinear mass</text>
+<text x="1006" y="860" class="caption small" >Different metrics; finite screen only</text>
+<text x="48" y="936" class="caption small" >Illustration only. Synthetic checks establish geometry and RNG behavior, not anatomical safety or a score gain.</text>
+</svg>

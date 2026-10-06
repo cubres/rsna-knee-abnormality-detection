@@ -1,0 +1,25 @@
+{
+  "figure_role": "illustrative pipeline, with numeric values from synthetic CPU receipt",
+  "observations": [
+    "Title, process cards, arrows, captions and metric labels readable",
+    "No text overlap or clipping observed",
+    "Twelve windows illustrated with one shared map across all 36 planes",
+    "Shared in-plane 2D treatment explicitly distinct from physical 3D rotation",
+    "Illustrative geometry and synthetic CPU measured metrics explicitly labeled",
+    "No real medical images, IDs, labels or score claims"
+  ],
+  "rasterizer": "bundled Sharp, density144",
+  "rendered_png_sha256": "de430f669caae316b3280e4d96d9c9cce3a4113c705508e3b8f06a46fb6714a5",
+  "rendered_png_size": [
+    2880,
+    1960
+  ],
+  "review_raster_in_public_packet": false,
+  "reviewed_at_utc": "2026-10-06T13:47:40.488749+00:00",
+  "status": "PASS_VISUAL_REVIEW_ILLUSTRATIVE_SVG",
+  "svg_sha256": "48b18d3d8eb3e1453b399e1db427ebc7eb8bedb06d6207a06178e1f19a0a5987",
+  "svg_size": [
+    1440,
+    980
+  ]
+}

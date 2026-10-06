@@ -1,0 +1,81 @@
+{
+  "anatomical_safety_training_benefit_score_improvement_attested": false,
+  "code_license": "MIT; original files only, dependencies retain their own licenses",
+  "cpu_execution": {
+    "device": "cpu",
+    "normal_named_checks": 27,
+    "numpy": "2.2.6",
+    "optimized_named_checks": 27,
+    "python": "3.12.14",
+    "torch": "2.8.0"
+  },
+  "created_at_utc": "2026-10-06T13:49:56.435409+00:00",
+  "cuda_native_execution_attested": false,
+  "destination_repo": "cubres/rsna-knee-abnormality-detection",
+  "evidence_scope": "original reusable helper and synthetic geometry/RNG/CPU interpolation only",
+  "file_count_excluding_manifest": 13,
+  "files": {
+    "LICENSE": {
+      "bytes": 1063,
+      "sha256": "eed854701ae3433dccb0da2fc34fb3a8b70460bb4cad7f9e1abb4145a6cdbf0e"
+    },
+    "PROVENANCE.md": {
+      "bytes": 2582,
+      "sha256": "6ed6b34519f792897513639be293b908ae6a71a7ad90b2b3ea981126a4fd0746"
+    },
+    "README.md": {
+      "bytes": 7251,
+      "sha256": "27f4ee68006caad44170cfb5206f8b4c4ef477f7832a7d1a0f29dbcae9a15252"
+    },
+    "VISUAL_REVIEW.json": {
+      "bytes": 994,
+      "sha256": "94879fe00d94cffb3fb9c9a6a14bdcfbb146be87be7842e38d1ded231bc02616"
+    },
+    "mild_affine.py": {
+      "bytes": 16960,
+      "sha256": "a47e8dfa175706b61946b3c21c819711c7047e682cd9e6c97e022d63e8a64dbc"
+    },
+    "pipeline.svg": {
+      "bytes": 14304,
+      "sha256": "48b18d3d8eb3e1453b399e1db427ebc7eb8bedb06d6207a06178e1f19a0a5987"
+    },
+    "public_usage_verification.json": {
+      "bytes": 1199,
+      "sha256": "969b82ed84be09e570ac126605823104ad84a4a8f87c6487c3ebc6720eae1eb4"
+    },
+    "render_pipeline.py": {
+      "bytes": 7448,
+      "sha256": "41cdb3da6ca09f6418fc8ea1bd0c0f41801b087ae36dfed4acc992c9aa91eacc"
+    },
+    "renderer_verification.json": {
+      "bytes": 133,
+      "sha256": "f7e80ca1b61add2c5d97535e3fe38d2236d9ddb678afa1f8cbb44d21122f404d"
+    },
+    "requirements-cpu-tested.txt": {
+      "bytes": 103,
+      "sha256": "f6bad98fa4f0348acc32be86a2c0d7ada61223110697d45e4e4cb26f6068af6e"
+    },
+    "verification_cpu_normal.json": {
+      "bytes": 2941,
+      "sha256": "12a7bf6474951c44dacdcfd74bd104a7baa7aaebb94291a60fb7ac1280275720"
+    },
+    "verification_cpu_optimized.json": {
+      "bytes": 2940,
+      "sha256": "b9a7b48d212790337b419db7fa375b7c4dceadca22c83024136fa814df00fb7f"
+    },
+    "verify_geometry.py": {
+      "bytes": 13791,
+      "sha256": "c8cdd272492482e9ef7290fc97cde85c424865a85aa9748b9ba34f3283bcd221"
+    }
+  },
+  "native_trial_files_included": false,
+  "new_public_prefix": "tools/mild-study-affine/2026-10-06",
+  "notebook_identity_artifacts_included": false,
+  "original_reviewed_source_preserved_byte_for_byte": true,
+  "publication_authorized_by_this_manifest": false,
+  "real_ids_images_targets_weights_included": false,
+  "root_sole_publication_coordinator": true,
+  "source_review": "PASS_PUBLIC_SOURCE_SUITABILITY; independent reviewer found no blocker in the 13-file packet before this manifest",
+  "status": "READY_FOR_ROOT_PUBLICATION_REVIEW",
+  "svg_role": "illustrative pipeline with numeric values from pinned synthetic CPU receipt"
+}
