@@ -1,0 +1,19 @@
+{
+  "repository": "cubres/rsna-knee-abnormality-detection",
+  "suggested_new_add_only_root": "native-paired-affine-2026-10-07",
+  "prior_public_commit_verified": "8887939e402c526664f756e8e7d580280b1bd318",
+  "geometry_public_origin": "https://github.com/cubres/rsna-knee-abnormality-detection/blob/8887939e402c526664f756e8e7d580280b1bd318/tools/mild-study-affine/2026-10-06/mild_affine.py",
+  "geometry_source_sha256": "a47e8dfa175706b61946b3c21c819711c7047e682cd9e6c97e022d63e8a64dbc",
+  "geometry_and_demo_license": "MIT, copyright 2026 cubres; exact original license text included under tools.",
+  "geometry_license_sha256": "eed854701ae3433dccb0da2fc34fb3a8b70460bb4cad7f9e1abb4145a6cdbf0e",
+  "private_statistics_source_sha256": "f9150ff124eb199d7f818db2ecb65ce4da16c1d97ec47042066cd63b850f2f5b",
+  "private_statistics_source_published": false,
+  "full_native_source_published": false,
+  "complete_private_protocol_published": false,
+  "private_initializations_target_fixture_or_study_ids_published": false,
+  "dataset_or_model_payloads_published": false,
+  "credentials_or_signed_urls_published": false,
+  "official_submission_or_score_claim": false,
+  "native_benefit_or_upvote_gain_claim": false,
+  "publication_state": "Prepared for independent review; no GitHub mutation at preparation."
+}

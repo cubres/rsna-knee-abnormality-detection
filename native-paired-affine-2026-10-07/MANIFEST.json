@@ -1,0 +1,96 @@
+{
+  "kind": "Public documentation packet, immutable observed snapshot; manifest excludes itself.",
+  "repository": "cubres/rsna-knee-abnormality-detection",
+  "suggested_add_only_root": "native-paired-affine-2026-10-07",
+  "status_snapshot_utc": "2026-10-07T21:09:51.023229+00:00",
+  "official_submission": false,
+  "official_score": null,
+  "data_or_model_payloads_included": false,
+  "prior_repo_entries_must_retain_mode_type_sha": true,
+  "files": [
+    {
+      "path": "DATA_SOURCES.json",
+      "bytes": 5641,
+      "sha256": "a4831ac7406fdc25a1875cf22d7fe022d1e3ef8b065855e1cfe597ee33e2fe9c",
+      "git_mode": "100644",
+      "git_type": "blob"
+    },
+    {
+      "path": "EVIDENCE.json",
+      "bytes": 3812,
+      "sha256": "3395923a87c3f95dc75ec8fe42acfbebbab863cb16e59b2a036199944b9b6dfe",
+      "git_mode": "100644",
+      "git_type": "blob"
+    },
+    {
+      "path": "EXPERIMENT_PROTOCOL.json",
+      "bytes": 5378,
+      "sha256": "af29404aca880ca07f4172ae9490edd39db6dc46813af40006db5267412e4883",
+      "git_mode": "100644",
+      "git_type": "blob"
+    },
+    {
+      "path": "PROVENANCE.json",
+      "bytes": 1300,
+      "sha256": "6c2a3bcca482b9c2524d57bb3c7228e05d2e7049a509c190307878b736c7a5d7",
+      "git_mode": "100644",
+      "git_type": "blob"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7532,
+      "sha256": "afab5501442c67ee01867b4f691c12405232ea591c3586f28bbc07084993ba8b",
+      "git_mode": "100644",
+      "git_type": "blob"
+    },
+    {
+      "path": "assets/observed-training-progress.svg",
+      "bytes": 60667,
+      "sha256": "eed14e37e870b6b368ba83dc6e8a39684e3f4de8b3e6fe00426122fac6a2741c",
+      "git_mode": "100644",
+      "git_type": "blob"
+    },
+    {
+      "path": "assets/paired-native-protocol.svg",
+      "bytes": 114009,
+      "sha256": "bb51874e0b3f854a47afb78018203456bc4af3c5f058c29afcfc9b69644c73cd",
+      "git_mode": "100644",
+      "git_type": "blob"
+    },
+    {
+      "path": "assets/render_figures.py",
+      "bytes": 5849,
+      "sha256": "8c621a8735734c58934eb2f6b1d7d14325cdef446923c36db1e38988d613339c",
+      "git_mode": "100644",
+      "git_type": "blob"
+    },
+    {
+      "path": "tools/LICENSE",
+      "bytes": 1063,
+      "sha256": "eed854701ae3433dccb0da2fc34fb3a8b70460bb4cad7f9e1abb4145a6cdbf0e",
+      "git_mode": "100644",
+      "git_type": "blob"
+    },
+    {
+      "path": "tools/SYNTHETIC_GEOMETRY_RECEIPT.json",
+      "bytes": 1103,
+      "sha256": "329b142a8e048c42a38c0d67474e5da910e7f03c56c0d3626780a5affd900ac8",
+      "git_mode": "100644",
+      "git_type": "blob"
+    },
+    {
+      "path": "tools/demo_synthetic_geometry.py",
+      "bytes": 741,
+      "sha256": "f30b7dfb89e45b98a8b256ef979de85b7cc4f1fe87640466e52dbc5d7ff0df89",
+      "git_mode": "100644",
+      "git_type": "blob"
+    },
+    {
+      "path": "tools/mild_affine.py",
+      "bytes": 16960,
+      "sha256": "a47e8dfa175706b61946b3c21c819711c7047e682cd9e6c97e022d63e8a64dbc",
+      "git_mode": "100644",
+      "git_type": "blob"
+    }
+  ]
+}

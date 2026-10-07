@@ -1,0 +1,107 @@
+{
+  "scope": "Registered exploratory native experiment; sanitized documentation, not the complete private executable protocol.",
+  "registered_utc": "2026-10-07T20:32:32.376150+00:00",
+  "hypothesis": "Study-coherent mild affine augmentation changes fixed final-epoch native image ranking relative to plain full-retention BCE from exactly shared initial states; zero-update ranking is a secondary descriptive reference.",
+  "model_identifier": "convnext_tiny.fb_in22k_ft_in1k",
+  "fit_studies": 3487,
+  "report_proxy_studies": 862,
+  "findings": 12,
+  "panel_interpretation": "Exposed or exposure-unknown soft report-label proxy. Previously inspected 128 studies are included; report overlap unknown and patient independence unproven.",
+  "not_independent_oof": true,
+  "not_clinical_or_official_score_evidence": true,
+  "held_order": "Frozen lexicographic study order before training or held-target numeric conversion; actual IDs withheld.",
+  "report_targets": "Five-source mean soft report targets, selected fit subset only during training.",
+  "gold_target_boundary": "Registered execution excludes official Gold target-value tables. The observed partial log does not independently audit every future data read.",
+  "initialization": "Two exactly shared original initialized tensor states per arm; four training networks total. Private checkpoint tensors and identity are withheld.",
+  "training": {
+    "seed": 20261005,
+    "epochs": 4,
+    "warmup_epochs": 0,
+    "retain_fraction": 1.0,
+    "batch_size": 4,
+    "windows_per_study": 12,
+    "learning_rate": 1e-05,
+    "weight_decay": 0.05,
+    "gradient_clip": 1.0,
+    "precision": "FP16 native autocast with FP32 loss, GradScaler initial256. Any skipped/nonfinite update invalidates fixed exposure; HOLD preserves partial artifacts.",
+    "cudnn_benchmark": true,
+    "augmentation_seed": 2026100623,
+    "fixed_actual_updates_per_network": 3488
+  },
+  "training_optimizer": "Independent AdamW per network, cosine learning rate 1e-5 to 1e-6.",
+  "training_shape_per_study": [
+    12,
+    3,
+    336,
+    336
+  ],
+  "image_order": "Float raw intensity [0,1], optional coherent affine, then ImageNet normalization.",
+  "dropout": "Matched per-device dropout seed; heuristic native CUDA kernels are not claimed deterministic.",
+  "loader_workers": 0,
+  "arm_devices": {
+    "plain_bce": 0,
+    "mild_affine_bce": 1
+  },
+  "augmentation_geometry_limits": {
+    "max_source_center_outside_fraction": 0.1,
+    "angle_degrees": [
+      -5.0,
+      5.0
+    ],
+    "translation_fraction": [
+      -0.02,
+      0.02
+    ],
+    "scale": [
+      0.98,
+      1.02
+    ],
+    "physical_3d_rotation": false,
+    "padding": "zeros",
+    "interpolation": "bilinear",
+    "align_corners": false,
+    "no_flips": true
+  },
+  "augmentation_rng": "Separate study-key/epoch-derived PCG64 stream; no global training RNG consumption.",
+  "predictions": "All predictions unaugmented; final epoch 4 only, no EMA/checkpoint/weight/epoch/LR selection.",
+  "first_production_batch_gate": "Actual update 1, no extra optimizer step or reset: matching ordered input/window/raw/target hashes across arms, all four finite nonzero gradients, positive parameter deltas, AdamW step 1 and no scaler skip. Partial log events are not the full gate receipt.",
+  "actual_update_contract": "Exactly 3488 AdamW steps per network; skipped, nonfinite or incomplete schedules remain HOLD and preserve partial artifacts.",
+  "prediction_target_boundary": "Both complete fit seals and all three ordered 862-by-12 prediction files (plain, affine, zero-update), with schema/order/file hashes, before any held-target numeric conversion. Recheck disjointness and prediction hashes before target access.",
+  "target_fixture": "Private ordered soft-target fixture; no fixture values or study identities published.",
+  "primary_metric": "mild_affine_bce minus plain_bce macro report-proxy AUC over fixed all12 findings",
+  "secondary_metrics": [
+    "plain_bce minus zero_update macro AUC",
+    "mild_affine_bce minus zero_update macro AUC",
+    "registered per-finding differences"
+  ],
+  "statistics": {
+    "target_binarization": "soft report target > 0.5",
+    "sampling_unit": "Whole study; identical resampling weights across all 12 findings and 3 prediction arms.",
+    "generator": "Dedicated NumPy PCG64",
+    "seed": 2026100522,
+    "valid_replicates": 2000,
+    "alpha": 0.05,
+    "max_attempt_factor": 20,
+    "rejection": "Reject entire draw if any finding loses either class; disclose rejected draws and never change the macro denominator.",
+    "interval": "Pointwise conditional percentile intervals with NumPy linear quantiles; descriptive, not simultaneous or confirmatory."
+  },
+  "caps_seconds": {
+    "source_only_v58_server": 300,
+    "preflight": 300,
+    "first_production_batch": 900,
+    "training": 8400,
+    "prediction_reserve": 1800,
+    "child": 10500,
+    "owned_outer": 10620,
+    "kaggle_server": 10800
+  },
+  "quota": {
+    "conservative_gpu_factor": 2,
+    "maximum_assumed_quota_hours": 6.0,
+    "billing_factor_freshly_verified": false,
+    "native_affine_and_full_inference_speed_qualified": false
+  },
+  "automatic_submission_or_promotion": false,
+  "checkpoint_preservation": "All completed epoch checkpoints and receipts preserved; partial artifacts ineligible for submission or promotion.",
+  "full_volume_sha_available": false
+}

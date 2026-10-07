@@ -1,0 +1,107 @@
+{
+  "kind": "Sanitized immutable observation snapshot; no patient data, private source or raw logs.",
+  "v58": {
+    "version": 58,
+    "native_session_id": 356177133,
+    "source_sha256": "bd4fe86b5cd8e2c1b54e140f88eaf3d7c9d9ae1ba38d83d5e87927d4e5f9b89b",
+    "source_bytes": 522302,
+    "sdk_source_audit_utc": "2026-10-07T20:45:11.995695+00:00",
+    "ui_audit_utc_date": "2026-10-07",
+    "terminal_status": "ERROR",
+    "explanation": "Intentional source-only false gate at about 1.2 seconds; native training authorization was false.",
+    "ui_run_duration_seconds": 8.1,
+    "native_training_authorized": false,
+    "models_trained": false,
+    "output_bytes": 0,
+    "attachment_scope": "Exact V58 authenticated Input tab displayed all eight requested dataset version labels; numeric attachment IDs were not exposed. The private attachment identity is withheld.",
+    "sdk_caveat": "Requested version-qualified refs normalized to unversioned refs in raw SDK metadata; that metadata alone did not prove version binding.",
+    "all_notebook_versions_preserved": true,
+    "official_submission": false,
+    "official_score": null
+  },
+  "v59": {
+    "version": 59,
+    "native_session_id": 356180297,
+    "source_sha256": "c05f2bc25e69376fdb1276b22732b1750d2dd2ea06e47c39a7aa704edec87ec7",
+    "status_checked_utc": "2026-10-07T21:09:49.801474+00:00",
+    "observed_status": "RUNNING",
+    "root_ui_checked_utc": "2026-10-07T21:02:54.951665+00:00",
+    "runtime": {
+      "torch": "2.10.0+cu128",
+      "timm": "1.0.26",
+      "numpy": "2.0.2"
+    },
+    "hardware": "Two Tesla T4 GPUs",
+    "preflight_seconds": 42.306441562,
+    "both_arm_setup_complete_observed": true,
+    "first_update_log_events": [
+      {
+        "time_seconds": 90.5,
+        "arm": "plain_bce",
+        "updates": 1
+      },
+      {
+        "time_seconds": 90.5,
+        "arm": "mild_affine_bce",
+        "updates": 1
+      }
+    ],
+    "progress_snapshot_observed_utc": "2026-10-07T21:09:51.023229+00:00",
+    "training_progress_events": [
+      {
+        "log_time_seconds": 213.603098258,
+        "arm": "plain_bce",
+        "epoch": 1,
+        "updates_per_network": 64
+      },
+      {
+        "log_time_seconds": 213.78438567,
+        "arm": "mild_affine_bce",
+        "epoch": 1,
+        "updates_per_network": 64
+      },
+      {
+        "log_time_seconds": 342.367665491,
+        "arm": "plain_bce",
+        "epoch": 1,
+        "updates_per_network": 128
+      },
+      {
+        "log_time_seconds": 342.541745872,
+        "arm": "mild_affine_bce",
+        "epoch": 1,
+        "updates_per_network": 128
+      },
+      {
+        "log_time_seconds": 474.635174964,
+        "arm": "plain_bce",
+        "epoch": 1,
+        "updates_per_network": 192
+      },
+      {
+        "log_time_seconds": 474.808601201,
+        "arm": "mild_affine_bce",
+        "epoch": 1,
+        "updates_per_network": 192
+      }
+    ],
+    "latest_observed_updates_per_network": {
+      "plain_bce": 192,
+      "mild_affine_bce": 192
+    },
+    "latest_observed_epoch": 1,
+    "full_first_update_pair_json_downloaded": false,
+    "complete_fit_seals_downloaded": false,
+    "all_three_prediction_seals_downloaded": false,
+    "held_proxy_comparison_available": false,
+    "model_quality_or_native_gain_proven": false,
+    "official_submission": false,
+    "official_score": null
+  },
+  "source_release": {
+    "difference": "Source-only authorization false to native authorization true; the four scientific Python payloads and dispatcher were byte-preserved.",
+    "prior_sources_versions_and_receipts_preserved": true
+  },
+  "container_digest": "37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "meaning": "Training progress is not a completed comparison, successful full native qualification or official leaderboard score."
+}

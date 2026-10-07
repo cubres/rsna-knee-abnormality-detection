@@ -1,0 +1,142 @@
+{
+  "scope": "Requested public dataset pins and current metadata only; no dataset files redistributed or license changed.",
+  "public_datasets": [
+    {
+      "ref": "riadmohamed42/jev-knee-labels",
+      "dataset_id": 12114723,
+      "requested_version": 5,
+      "requested_license_names": [
+        "CC0-1.0"
+      ],
+      "observed_current_version": 5,
+      "observed_current_license_names": [
+        "CC0-1.0"
+      ],
+      "is_private": false,
+      "requested_version_ready": true,
+      "checked_at_utc": "2026-10-07T21:07:37.127459+00:00",
+      "file_payloads_read": false,
+      "historical_version_license_verified": false,
+      "url": "https://www.kaggle.com/datasets/riadmohamed42/jev-knee-labels",
+      "version_qualified_request": "riadmohamed42/jev-knee-labels/5"
+    },
+    {
+      "ref": "dreaddevelopment/knee-raptor-corpus",
+      "dataset_id": 11703975,
+      "requested_version": 2,
+      "requested_license_names": [
+        "CC0-1.0"
+      ],
+      "observed_current_version": 2,
+      "observed_current_license_names": [
+        "CC0-1.0"
+      ],
+      "is_private": false,
+      "requested_version_ready": true,
+      "checked_at_utc": "2026-10-07T21:07:37.754519+00:00",
+      "file_payloads_read": false,
+      "historical_version_license_verified": false,
+      "url": "https://www.kaggle.com/datasets/dreaddevelopment/knee-raptor-corpus",
+      "version_qualified_request": "dreaddevelopment/knee-raptor-corpus/2"
+    },
+    {
+      "ref": "dreaddevelopment/knee-raptor-corpus-ext",
+      "dataset_id": 11735963,
+      "requested_version": 1,
+      "requested_license_names": [
+        "CC0-1.0"
+      ],
+      "observed_current_version": 1,
+      "observed_current_license_names": [
+        "CC0-1.0"
+      ],
+      "is_private": false,
+      "requested_version_ready": true,
+      "checked_at_utc": "2026-10-07T21:07:38.434646+00:00",
+      "file_payloads_read": false,
+      "historical_version_license_verified": false,
+      "url": "https://www.kaggle.com/datasets/dreaddevelopment/knee-raptor-corpus-ext",
+      "version_qualified_request": "dreaddevelopment/knee-raptor-corpus-ext/1"
+    },
+    {
+      "ref": "stevenleehans/rsna-knee-llm-report-labels",
+      "dataset_id": 11549447,
+      "requested_version": 6,
+      "requested_license_names": [
+        "CC0-1.0"
+      ],
+      "observed_current_version": 6,
+      "observed_current_license_names": [
+        "CC0-1.0"
+      ],
+      "is_private": false,
+      "requested_version_ready": true,
+      "checked_at_utc": "2026-10-07T21:07:38.987539+00:00",
+      "file_payloads_read": false,
+      "historical_version_license_verified": false,
+      "url": "https://www.kaggle.com/datasets/stevenleehans/rsna-knee-llm-report-labels",
+      "version_qualified_request": "stevenleehans/rsna-knee-llm-report-labels/6"
+    },
+    {
+      "ref": "lixin73/rsna-knee-llm-report-labels-sol56",
+      "dataset_id": 11551808,
+      "requested_version": 1,
+      "requested_license_names": [
+        "CC0-1.0"
+      ],
+      "observed_current_version": 1,
+      "observed_current_license_names": [
+        "CC0-1.0"
+      ],
+      "is_private": false,
+      "requested_version_ready": true,
+      "checked_at_utc": "2026-10-07T21:07:39.534681+00:00",
+      "file_payloads_read": false,
+      "historical_version_license_verified": false,
+      "url": "https://www.kaggle.com/datasets/lixin73/rsna-knee-llm-report-labels-sol56",
+      "version_qualified_request": "lixin73/rsna-knee-llm-report-labels-sol56/1"
+    },
+    {
+      "ref": "pilkwang/rsna-knee-llm-labels",
+      "dataset_id": 11529209,
+      "requested_version": 1,
+      "requested_license_names": [
+        "CC0-1.0"
+      ],
+      "observed_current_version": 1,
+      "observed_current_license_names": [
+        "CC0-1.0"
+      ],
+      "is_private": false,
+      "requested_version_ready": true,
+      "checked_at_utc": "2026-10-07T21:07:40.104844+00:00",
+      "file_payloads_read": false,
+      "historical_version_license_verified": false,
+      "url": "https://www.kaggle.com/datasets/pilkwang/rsna-knee-llm-labels",
+      "version_qualified_request": "pilkwang/rsna-knee-llm-labels/1"
+    },
+    {
+      "ref": "nartaa/rsna-knee-hpo-assets",
+      "dataset_id": 12032129,
+      "requested_version": 9,
+      "requested_license_names": [
+        "CC0-1.0"
+      ],
+      "observed_current_version": 9,
+      "observed_current_license_names": [
+        "CC0-1.0"
+      ],
+      "is_private": false,
+      "requested_version_ready": true,
+      "checked_at_utc": "2026-10-07T21:07:41.310986+00:00",
+      "file_payloads_read": false,
+      "historical_version_license_verified": false,
+      "url": "https://www.kaggle.com/datasets/nartaa/rsna-knee-hpo-assets",
+      "version_qualified_request": "nartaa/rsna-knee-hpo-assets/9"
+    }
+  ],
+  "private_component": "Original owned initialization asset, requested version 2; identity and files withheld. Exact native reproduction requires authorized access to the original initialization states.",
+  "license_limit": "Fresh current metadata labels match requested labels. Historical-version license terms and underlying clinical-image rights were not independently audited; these labels are not permission to redistribute data.",
+  "mount_binding": "V58 exact UI mounted version labels verified. Requested refs, current-version readiness and file shape are different evidence. Runtime small-file/order hashes remain required; full volume hashes unavailable.",
+  "pretrained_model_limit": "Model identifier is documented, but pretrained weight licensing is not independently qualified here; no weights or third-party model code included."
+}
