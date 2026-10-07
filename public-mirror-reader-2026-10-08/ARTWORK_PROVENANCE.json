@@ -1,0 +1,11 @@
+{
+  "bytes": 2820477,
+  "caption": "AI-generated artistic illustration; not measured MRI data.",
+  "file": "figures/knee-anatomical-mirror-hero-v1.png",
+  "generated_utc": "2026-10-07T21:47:18.159207+00:00",
+  "prompt": "Use case: stylized-concept. Asset type: wide opening banner for an original scientific Kaggle notebook about knee MRI inference and anatomical mirror augmentation. Create exceptional editorial art in a refined mixed-media scientific cut-paper / translucent watercolor style. A graceful anatomically plausible human knee joint in side profile, luminous ivory bone, layered indigo and teal MRI slice planes arranged in space, mirrored anatomical silhouettes and carefully composed geometric reflection motifs. Elegant art-book composition, sophisticated restrained warm ivory, midnight blue, teal, soft copper palette, crisp sculptural forms mixed with delicate paper grain, beautiful high detail and luminous depth, wide landscape banner with calm negative space. No words, no numbers, no score, no chart, no logo, no medical measurement, no brand, no watermark. This is an artistic illustration rather than measured MRI data. Entirely new original composition, not an imitation of any named artist.",
+  "scientific_data": false,
+  "sha256": "b6ec7986c4a87239135a4442081be4ff210e3f6686054476c15500a5431fee61",
+  "tool": "built-in image_gen.imagegen",
+  "visual_review": "PASS: original knee/mirror composition, no text/logos/score/watermark"
+}

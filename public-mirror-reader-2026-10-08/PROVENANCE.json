@@ -1,0 +1,60 @@
+{
+  "checkpoint": {
+    "dataset_ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+    "dataset_version": 1,
+    "downloaded_by_packet_build": false,
+    "included": false,
+    "license_category": "Other",
+    "name": "raptor_ft_alldata_t16_blendjev_oai_d96_r384_swa.pt",
+    "permission": "Research and educational use, including the RSNA Knee competition; no raw OAI data rights or explicit separate checkpoint redistribution/sublicensing grant",
+    "sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+    "sha256_evidence": "Publisher-provided digest pinned from public source/manifest; payload not yet independently fetched or hashed by this implementation.",
+    "url": "https://www.kaggle.com/datasets/nartaa/rsna-knee-publication-swa-weights-20261007/versions/1"
+  },
+  "distribution": {
+    "prediction_tables": false,
+    "private_notebook_sources": false,
+    "raw_data": false,
+    "runtime_logs": false,
+    "study_uids": false,
+    "weights": false
+  },
+  "independent_permission_math_review": {
+    "native_fastreader_byte_equivalence_proven": false,
+    "nda_acknowledgement_sha256": "d546c5c5edf2cb3ed76079a06c564687a74b0bdd3a0e16330a8ae262a85a0cdd",
+    "receipt_sha256": "f7b67ed49e6b119052f1acbdc95b392387ddf14cdceb6ee982ce9224bf0ed1d2",
+    "status": "PASS_SOURCE_PERMISSION_AND_HEALTHY_INPUT_MATH_NATIVE_HOLD"
+  },
+  "original_reader": {
+    "bytes": 19735,
+    "license": "Apache-2.0",
+    "path": "src/public_mirror_reader.py",
+    "sha256": "4c0f5e4ef362941927e79ca3ab7e98a2c17a46d5a9230928b9057ce3e4a7b387"
+  },
+  "our_full_inference": "UNRUN",
+  "our_native_canary": "UNRUN",
+  "our_new_official_score": null,
+  "prepared_utc": "2026-10-07T21:49:24.931861+00:00",
+  "scope": "Public source/documentation only; original reader native inference UNRUN",
+  "source_review": {
+    "checkpoints_downloaded": 0,
+    "finding": "Healthy-input source math/configuration reviewed; native DICOM, strict checkpoint loading, CUDA prediction equivalence and full-test runtime remain unverified",
+    "models_executed": 0,
+    "native_equivalence_proven": false,
+    "reviewed_utc": "2026-10-07T21:23:44.753550+00:00",
+    "status": "PASS_INDEPENDENT_SOURCE_REVIEW_NATIVE_HOLD"
+  },
+  "upstream_notebook": {
+    "inference_cell_sha256": "bcd864cbf349882e876959b49cb348cbb89b4c62fc204d4e4261049c5e3a79c5",
+    "public_score_displayed": "0.949",
+    "ref": "nartaa/rsna-knee-0949-anatomical-mirror",
+    "score_is_ours": false,
+    "score_owner": "nartaa",
+    "scorecard_observed_utc": "2026-10-07T21:14:59Z",
+    "script_version_id": 356175397,
+    "source_license": "Apache-2.0",
+    "source_sha256": "8f1f96530b08543bd6caeed48489eea7c01657d6994f22e21a8400047fd4e100",
+    "url": "https://www.kaggle.com/code/nartaa/rsna-knee-0949-anatomical-mirror?scriptVersionId=356175397",
+    "version": 2
+  }
+}
