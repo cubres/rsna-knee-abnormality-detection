@@ -1,0 +1,27 @@
+{
+  "repository": "cubres/rsna-knee-abnormality-detection",
+  "new_prefix": "native-results-2026-10-08",
+  "base_commit": "454a541e769edec700ea25d2e649c1e9c43d4e71",
+  "material_scope": "Original aggregate-only result notes and reproduction tools; no private sources or raw study/model artifacts",
+  "evidence_projection_sha256": "f894ed3de4ad0a548d6076510b40754608f1d33ac305894d0bc3c9873b014281",
+  "source_receipts": {
+    "native_V12_snapshot_sha256": "39f3bb93be6195759b07f0a1edae7069fdb6740a9b71d178bd94f71df0c18df9",
+    "MC4_V59_qualification_sha256": "9e6b4ac32bda0d80579a40e5ded75997636f018a7b90ae49a01451c64c455d02",
+    "MC4_recovery_sha256": "60a5153a3a595dcbb8c1f6be872415213eb37e7bb09604fff9bfbccbf04d9628",
+    "MC4_original_notes_sha256": "2da322a2d2263191daac6fcb65b2c395e86357ee9b01d7ca7ebda75188ab5158",
+    "MC4_original_plot_source_sha256": "254b8c479b824c4a57a4884ce5b71149543a5af90400cbfefbe8286fed968f84"
+  },
+  "original_measured_figures": {
+    "SVG_sha256": "69a2176c9fa4204fe9edfb5376dd37686a679d16fba60154a0936f7c3b15e080",
+    "PNG_sha256": "4760e751171cda2c2a9fba1fb9c56f32847b2e253e7acbea28d61429cf4d90b5"
+  },
+  "scalar_projection_original_receipts_are_not_bundled": true,
+  "own_new_official_score": null,
+  "prior_public_mirror_packet_url": "https://github.com/cubres/rsna-knee-abnormality-detection/tree/454a541e769edec700ea25d2e649c1e9c43d4e71/public-mirror-reader-2026-10-08",
+  "prior_public_mirror_reader_sha256": "4c0f5e4ef362941927e79ca3ab7e98a2c17a46d5a9230928b9057ce3e4a7b387",
+  "prior_source_only_status_preserved_as_historical": true,
+  "existing_MC4_progress_entry_preserved": true,
+  "code_documents_tools_license": "MIT for this original packet only",
+  "referenced_reader_license": "Apache-2.0 with retained upstream attribution",
+  "referenced_model_license": "Publisher custom Other research and educational model use; no checkpoint redistribution grant inferred"
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS_PUBLISHED_SCALAR_ARITHMETIC",
+  "comparisons": {
+    "affine_minus_plain": {
+      "recomputed_macro_difference": 0.0005294080272789659,
+      "mean_of_twelve_finding_differences": 0.0005294080272791971,
+      "descriptive_95pct_interval": [
+        -0.0008699291226969485,
+        0.0019289299940249104
+      ],
+      "includes_zero": true
+    },
+    "plain_minus_zero_update": {
+      "recomputed_macro_difference": -0.0024734573577617214,
+      "mean_of_twelve_finding_differences": -0.002473457357761851,
+      "descriptive_95pct_interval": [
+        -0.004198659782464583,
+        -0.0008672286159181389
+      ],
+      "includes_zero": false
+    },
+    "affine_minus_zero_update": {
+      "recomputed_macro_difference": -0.0019440493304827555,
+      "mean_of_twelve_finding_differences": -0.0019440493304826538,
+      "descriptive_95pct_interval": [
+        -0.003233648731686309,
+        -0.0006248405237975535
+      ],
+      "includes_zero": false
+    }
+  },
+  "decision": "Retain unchanged initialization; neither final fine-tune is promoted",
+  "original_AUC_and_bootstrap_recomputed": false,
+  "study_level_inputs_read": false,
+  "official_score": null
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "knee-v13-full-visible-inference-v1",
+  "note_recorded_utc": "2026-10-07T23:15:48.733897+00:00",
+  "qualification_observed_utc": "2026-10-07T23:01:19.062415+00:00",
+  "qualification_sha256": "e08a03ea13098d6752d6ff7c114108506341b8bee452d53f5fda1ef8f3cc2c54",
+  "version": 13,
+  "exact_primary_status": "COMPLETE",
+  "status": "PASS_ACTUAL_V13_FULL_INFERENCE_FILE_ONLY",
+  "current_visible_studies": 3,
+  "current_visible_test_coverage": true,
+  "whole_native_elapsed_seconds": 60.36050063600001,
+  "first_three_volume_mask_byte_parity": true,
+  "reader_source_sha256": "4c0f5e4ef362941927e79ca3ab7e98a2c17a46d5a9230928b9057ce3e4a7b387",
+  "worker_source_sha256": "3ad5d4d8f593ab9ffe8c4159bc1cf2cee6c3981ef541fa9fb84a202144e70f9d",
+  "checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+  "complete_typed_notebook_equal": true,
+  "complete_canonical_notebook_sha256": "51ef0c1cd661daef18b477f885a195bbff64413cf38bfc4705e66963ba8ea139",
+  "SDK_presend_source_sha256": "b4923cc18b0fd9a961b7ecbd779a6ae375e026d8487b36193fd620eaba9d3bf8",
+  "postpull_raw_source_sha256": "596f551118f32bb5af71223e98bee5e277bb5417d80133b3905783e55ce99a13",
+  "output_file": {
+    "name": "submission.csv",
+    "bytes": 470,
+    "sha256": "faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede",
+    "contents_distributed": false
+  },
+  "state_at_note_recording": "Official submission preparing; exact completed competition row not yet supplied to this note",
+  "official_submission_receipt_in_this_note": false,
+  "own_official_score": null,
+  "independent_validation": false,
+  "limits": "Ordinary committed visible test cohort only; full hidden-test behavior and official score remain unknown.",
+  "prior_V12_and_MC4_records_unchanged": true
+}

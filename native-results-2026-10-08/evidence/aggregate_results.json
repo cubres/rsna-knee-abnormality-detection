@@ -1,0 +1,145 @@
+{
+  "schema": "knee-native-aggregate-results-v1",
+  "recorded_utc": "2026-10-07T23:00:00Z",
+  "upstream_reference": {
+    "public_notebook_scorecard": 0.949,
+    "score_owner": "nartaa",
+    "not_our_official_score": true,
+    "notebook_version": 2,
+    "notebook_url": "https://www.kaggle.com/code/nartaa/rsna-knee-0949-anatomical-mirror?scriptVersionId=356175397",
+    "checkpoint_dataset_version": 1,
+    "checkpoint_license": "Publisher custom Other research and educational model-use permission; payload not distributed"
+  },
+  "native_canary": {
+    "version": 12,
+    "observed_utc": "2026-10-07T22:44:22.133025+00:00",
+    "status": "PASS_ACTUAL_V12_THREE_STUDY_NATIVE_CANARY",
+    "visible_studies": 3,
+    "volume_mask_byte_parity": true,
+    "twelve_label_rank_parity": true,
+    "whole_native_elapsed_seconds": 53.630134489000056,
+    "competition_submitted": false,
+    "own_official_score": null,
+    "scope": "Three visible studies only; not hidden-test score, full population parity or probability-byte equality",
+    "snapshot_sha256": "39f3bb93be6195759b07f0a1edae7069fdb6740a9b71d178bd94f71df0c18df9",
+    "reader_source_sha256": "4c0f5e4ef362941927e79ca3ab7e98a2c17a46d5a9230928b9057ce3e4a7b387",
+    "worker_source_sha256": "a4670b18c0706bff00b86473f9a26017097154502f33a626be95d8ded238fe97",
+    "checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+    "postpull_source_sha256": "3fcd7cf56716c9fe5f28a201eb4da3d4a6cfb4d4d1ccd8492cb5b33b3052d34a",
+    "SDK_presend_source_sha256": "c7b19ccc88ca0cd68fed34e368f891b4c1d134e5ac9bf2e66cd3f276b6858337",
+    "complete_canonical_notebook_sha256": "784c23411bd43697b7a02a70ab0189a0b5e9423394028095df960901c0fd4378",
+    "volume_parity_receipt_sha256": "b35eb89aa974c682ddda010d04537cf4f829997c31ac2a9bc1132270c70cfd09",
+    "rank_parity_receipt_sha256": "c9518b7d3550c914b21c18432b3ce78f115b710f5a225f004e92f9825e0a1f8d"
+  },
+  "MC4": {
+    "version": 59,
+    "observed_utc": "2026-10-07T22:43:17.132620+00:00",
+    "status": "PASS_NATIVE_EXECUTION_AND_EXPOSED_PROXY_AGGREGATE_QUALIFICATION",
+    "source_sha256": "c05f2bc25e69376fdb1276b22732b1750d2dd2ea06e47c39a7aa704edec87ec7",
+    "qualification_sha256": "9e6b4ac32bda0d80579a40e5ded75997636f018a7b90ae49a01451c64c455d02",
+    "aggregate_recovery_sha256": "60a5153a3a595dcbb8c1f6be872415213eb37e7bb09604fff9bfbccbf04d9628",
+    "studies": 862,
+    "findings": 12,
+    "trained_networks_per_arm": 2,
+    "epochs_per_network": 4,
+    "actual_AdamW_updates_per_network": 3488,
+    "registered_training_seed_count": 1,
+    "matched_initial_states": true,
+    "predictions_sealed_before_target_open": true,
+    "macro_report_proxy_auc": {
+      "plain_bce": 0.8769435245443774,
+      "mild_affine_bce": 0.8774729325716564,
+      "zero_update": 0.8794169819021391
+    },
+    "comparisons": {
+      "affine_minus_plain": {
+        "delta": 0.0005294080272789659,
+        "descriptive_95pct_interval": [
+          -0.0008699291226969485,
+          0.0019289299940249104
+        ],
+        "per_finding_deltas": [
+          -0.0008064194179407957,
+          0.0095128168133507,
+          0.0012017309335464743,
+          -7.451495421983978e-05,
+          0.0017596156628946202,
+          0.0037085759068518076,
+          -0.0011513347259001216,
+          0.0009456211548961591,
+          -0.00037526972511492396,
+          0.0012726244343891358,
+          -0.002285002077274556,
+          -0.007355547678128294
+        ]
+      },
+      "plain_minus_zero_update": {
+        "delta": -0.0024734573577617214,
+        "descriptive_95pct_interval": [
+          -0.004198659782464583,
+          -0.0008672286159181389
+        ],
+        "per_finding_deltas": [
+          -0.001493073575791426,
+          -0.009310825758668817,
+          -0.002634988010253303,
+          -0.0012481254831829824,
+          -0.0039012531473389123,
+          -0.006234605911330071,
+          0.0020120944971683263,
+          -0.005251574628083788,
+          -4.690871563939325e-05,
+          -0.004464285714285698,
+          0.00098670544245949,
+          0.0019053527118043645
+        ]
+      },
+      "affine_minus_zero_update": {
+        "delta": -0.0019440493304827555,
+        "descriptive_95pct_interval": [
+          -0.003233648731686309,
+          -0.0006248405237975535
+        ],
+        "per_finding_deltas": [
+          -0.0022994929937322217,
+          0.0002019910546818826,
+          -0.0014332570767068287,
+          -0.0013226404374028222,
+          -0.002141637484444292,
+          -0.0025260300044782635,
+          0.0008607597712682047,
+          -0.004305953473187629,
+          -0.0004221784407543172,
+          -0.0031916612798965627,
+          -0.001298296634815066,
+          -0.005450194966323929
+        ]
+      }
+    },
+    "bootstrap": {
+      "requested_valid_draws": 2000,
+      "valid_draws": 2000,
+      "attempts": 2000,
+      "rejected_joint_draws": 0,
+      "unit": "whole study, paired across all arms and findings",
+      "intervals": "pointwise descriptive 95 percent, conditional on surviving class support"
+    },
+    "shared_training_seconds": 4803.70612577,
+    "native_total_seconds": 5694.457552226,
+    "evaluation_kind": "Previously exposed report-proxy panel",
+    "patient_independence": "UNPROVEN",
+    "report_overlap": "UNKNOWN",
+    "OOF_claim": false,
+    "clinical_validation_claim": false,
+    "official_score": null,
+    "competition_submission": false,
+    "automatic_promotion": false,
+    "decision": "Retain unchanged initialization; neither final fine-tune is promoted",
+    "limitations": [
+      "Previously exposed fold; report overlap unknown and patient independence unproven.",
+      "Report proxies are not independent structured MRI finding labels.",
+      "Pointwise descriptive intervals are not simultaneous or confirmatory.",
+      "One training seed/device assignment; study resampling does not measure training-seed variability."
+    ]
+  }
+}
