@@ -6,7 +6,7 @@ On 2026-10-08 we ran a private bench version of the mirror arm that tries to be 
 
 - The gate accepted one approximate flag (fused two-view TTA) alongside three exact flags (shared gather, pooled header and pixel reads). The bench's mirror output is byte-identical to the public mirror output (CSV sha256 `faa20e95…`). The largest per-cell probability deviation measured was 6.1e-5, against a predeclared tolerance of 1e-4.
 - Chunk size 32 and channels-last failed the gate, at about 1.5e-4 each.
-- Steady-state study time (studies 1 and 2 on the three visible studies, one T4) is 4.3% lower with the accepted path. The GPU forward is 3.0% slower, and only the preprocessing is faster. Preprocessing runs under the GPU in the pipeline, so the saving does not reach the total.
+- Steady-state study time (studies 1 and 2 on the three visible studies, one T4) is about 4% lower with the accepted path. The GPU forward is 3.0% slower, and only the preprocessing is faster. Preprocessing runs under the GPU in the pipeline, so the saving does not reach the total.
 - The parity gate itself costs 95 seconds on the commit, on the first GPU only.
 
 ## Projection for about 1,300 studies on two T4 GPUs
