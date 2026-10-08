@@ -1,0 +1,791 @@
+{
+  "cases": {
+    "all_series_garbage": {
+      "ref_lut": {
+        "raised": false
+      },
+      "ref_v2": {
+        "raised": false
+      },
+      "ref_v2_equals_ref_lut": true,
+      "v13": {
+        "error": "InvalidDicomError",
+        "message": "File is missing DICOM File Meta Information header or the 'DICM' prefix is missing from the header. Use force=True to force reading.",
+        "raised": true
+      },
+      "v13_equals_v14": null,
+      "v14": {
+        "counters": {
+          "header_failures": 150,
+          "missing_slots": 0,
+          "pixel_failures": 96,
+          "selected_slices": 0,
+          "study_build_error": null,
+          "study_build_error_type": null,
+          "study_build_failed": false
+        },
+        "mask_sum": 0,
+        "raised": false,
+        "shapes_ok": true,
+        "volume_sha": "0d8faa7114602436"
+      },
+      "v14_equals_ref_lut": true,
+      "v14_equals_ref_v2": true
+    },
+    "garbage_header_and_pixels": {
+      "ref_lut": {
+        "raised": false
+      },
+      "ref_v2": {
+        "raised": false
+      },
+      "ref_v2_equals_ref_lut": true,
+      "v13": {
+        "error": "InvalidDicomError",
+        "message": "File is missing DICOM File Meta Information header or the 'DICM' prefix is missing from the header. Use force=True to force reading.",
+        "raised": true
+      },
+      "v13_equals_v14": null,
+      "v14": {
+        "counters": {
+          "header_failures": 1,
+          "missing_slots": 0,
+          "pixel_failures": 1,
+          "selected_slices": 95,
+          "study_build_error": null,
+          "study_build_error_type": null,
+          "study_build_failed": false
+        },
+        "mask_sum": 95,
+        "raised": false,
+        "shapes_ok": true,
+        "volume_sha": "0da610c55a73fc90"
+      },
+      "v14_equals_ref_lut": true,
+      "v14_equals_ref_v2": true
+    },
+    "healthy": {
+      "ref_lut": {
+        "raised": false
+      },
+      "ref_v2": {
+        "raised": false
+      },
+      "ref_v2_equals_ref_lut": true,
+      "v13": {
+        "counters": {
+          "missing_slots": 0,
+          "selected_slices": 96
+        },
+        "mask_sum": 96,
+        "raised": false,
+        "volume_sha": "d27fa8f55accd2fb"
+      },
+      "v13_equals_v14": true,
+      "v14": {
+        "counters": {
+          "header_failures": 0,
+          "missing_slots": 0,
+          "pixel_failures": 0,
+          "selected_slices": 96,
+          "study_build_error": null,
+          "study_build_error_type": null,
+          "study_build_failed": false
+        },
+        "mask_sum": 96,
+        "raised": false,
+        "shapes_ok": true,
+        "volume_sha": "d27fa8f55accd2fb"
+      },
+      "v14_equals_ref_lut": true,
+      "v14_equals_ref_v2": true
+    },
+    "healthy_no_geometry": {
+      "ref_lut": {
+        "raised": false
+      },
+      "ref_v2": {
+        "raised": false
+      },
+      "ref_v2_equals_ref_lut": true,
+      "v13": {
+        "counters": {
+          "missing_slots": 0,
+          "selected_slices": 96
+        },
+        "mask_sum": 96,
+        "raised": false,
+        "volume_sha": "05f090b6d0d35406"
+      },
+      "v13_equals_v14": true,
+      "v14": {
+        "counters": {
+          "header_failures": 0,
+          "missing_slots": 0,
+          "pixel_failures": 0,
+          "selected_slices": 96,
+          "study_build_error": null,
+          "study_build_error_type": null,
+          "study_build_failed": false
+        },
+        "mask_sum": 96,
+        "raised": false,
+        "shapes_ok": true,
+        "volume_sha": "05f090b6d0d35406"
+      },
+      "v14_equals_ref_lut": true,
+      "v14_equals_ref_v2": true
+    },
+    "monochrome1": {
+      "ref_lut": {
+        "raised": false
+      },
+      "ref_v2": {
+        "raised": false
+      },
+      "ref_v2_equals_ref_lut": true,
+      "v13": {
+        "counters": {
+          "missing_slots": 0,
+          "selected_slices": 96
+        },
+        "mask_sum": 96,
+        "raised": false,
+        "volume_sha": "f22c4d5d25386dbf"
+      },
+      "v13_equals_v14": true,
+      "v14": {
+        "counters": {
+          "header_failures": 0,
+          "missing_slots": 0,
+          "pixel_failures": 0,
+          "selected_slices": 96,
+          "study_build_error": null,
+          "study_build_error_type": null,
+          "study_build_failed": false
+        },
+        "mask_sum": 96,
+        "raised": false,
+        "shapes_ok": true,
+        "volume_sha": "f22c4d5d25386dbf"
+      },
+      "v14_equals_ref_lut": true,
+      "v14_equals_ref_v2": true
+    },
+    "multiframe_non2d": {
+      "ref_lut": {
+        "error": "ValueError",
+        "message": "too many values to unpack (expected 2)",
+        "raised": true
+      },
+      "ref_v2": {
+        "error": "ValueError",
+        "message": "too many values to unpack (expected 2)",
+        "raised": true
+      },
+      "ref_v2_equals_ref_lut": true,
+      "v13": {
+        "error": "RuntimeError",
+        "message": "Invalid DICOM pixel array",
+        "raised": true
+      },
+      "v13_equals_v14": null,
+      "v14": {
+        "counters": {
+          "header_failures": 0,
+          "missing_slots": 0,
+          "pixel_failures": 0,
+          "selected_slices": 0,
+          "study_build_error": "Non-2D DICOM pixel array",
+          "study_build_error_type": "RuntimeError",
+          "study_build_failed": true
+        },
+        "mask_sum": 0,
+        "raised": false,
+        "shapes_ok": true,
+        "volume_sha": "0d8faa7114602436"
+      },
+      "v14_equals_ref_lut": true,
+      "v14_equals_ref_v2": true
+    },
+    "nan_pixels": {
+      "ref_lut": {
+        "raised": false
+      },
+      "ref_v2": {
+        "raised": false
+      },
+      "ref_v2_equals_ref_lut": true,
+      "v13": {
+        "error": "RuntimeError",
+        "message": "Invalid DICOM pixel array",
+        "raised": true
+      },
+      "v13_equals_v14": null,
+      "v14": {
+        "counters": {
+          "header_failures": 0,
+          "missing_slots": 0,
+          "pixel_failures": 0,
+          "selected_slices": 96,
+          "study_build_error": null,
+          "study_build_error_type": null,
+          "study_build_failed": false
+        },
+        "mask_sum": 78,
+        "raised": false,
+        "shapes_ok": true,
+        "volume_sha": "6f80fbed123634a7"
+      },
+      "v14_equals_ref_lut": true,
+      "v14_equals_ref_v2": true
+    },
+    "no_test_series_rows": {
+      "ref_lut": {
+        "raised": false
+      },
+      "ref_v2": {
+        "raised": false
+      },
+      "ref_v2_equals_ref_lut": true,
+      "v13": {
+        "error": "RuntimeError",
+        "message": "No usable acquisition; all-zero/model-prior predictions cannot qualify this experiment",
+        "raised": true
+      },
+      "v13_equals_v14": null,
+      "v14": {
+        "counters": {
+          "header_failures": 0,
+          "missing_slots": 5,
+          "pixel_failures": 0,
+          "selected_slices": 0,
+          "study_build_error": null,
+          "study_build_error_type": null,
+          "study_build_failed": false
+        },
+        "mask_sum": 0,
+        "raised": false,
+        "shapes_ok": true,
+        "volume_sha": "0d8faa7114602436"
+      },
+      "v14_equals_ref_lut": true,
+      "v14_equals_ref_v2": true
+    },
+    "only_two_planes_present": {
+      "ref_lut": {
+        "raised": false
+      },
+      "ref_v2": {
+        "raised": false
+      },
+      "ref_v2_equals_ref_lut": true,
+      "v13": {
+        "counters": {
+          "missing_slots": 3,
+          "selected_slices": 48
+        },
+        "mask_sum": 48,
+        "raised": false,
+        "volume_sha": "e727abf0fd10d874"
+      },
+      "v13_equals_v14": true,
+      "v14": {
+        "counters": {
+          "header_failures": 0,
+          "missing_slots": 3,
+          "pixel_failures": 0,
+          "selected_slices": 48,
+          "study_build_error": null,
+          "study_build_error_type": null,
+          "study_build_failed": false
+        },
+        "mask_sum": 48,
+        "raised": false,
+        "shapes_ok": true,
+        "volume_sha": "e727abf0fd10d874"
+      },
+      "v14_equals_ref_lut": true,
+      "v14_equals_ref_v2": true
+    },
+    "series_without_dcm": {
+      "ref_lut": {
+        "raised": false
+      },
+      "ref_v2": {
+        "raised": false
+      },
+      "ref_v2_equals_ref_lut": true,
+      "v13": {
+        "counters": {
+          "missing_slots": 1,
+          "selected_slices": 78
+        },
+        "mask_sum": 78,
+        "raised": false,
+        "volume_sha": "2c0ee37ff8fe7c53"
+      },
+      "v13_equals_v14": true,
+      "v14": {
+        "counters": {
+          "header_failures": 0,
+          "missing_slots": 1,
+          "pixel_failures": 0,
+          "selected_slices": 78,
+          "study_build_error": null,
+          "study_build_error_type": null,
+          "study_build_failed": false
+        },
+        "mask_sum": 78,
+        "raised": false,
+        "shapes_ok": true,
+        "volume_sha": "2c0ee37ff8fe7c53"
+      },
+      "v14_equals_ref_lut": true,
+      "v14_equals_ref_v2": true
+    },
+    "truncated_header": {
+      "ref_lut": {
+        "raised": false
+      },
+      "ref_v2": {
+        "raised": false
+      },
+      "ref_v2_equals_ref_lut": true,
+      "v13": {
+        "error": "InvalidDicomError",
+        "message": "File is missing DICOM File Meta Information header or the 'DICM' prefix is missing from the header. Use force=True to force reading.",
+        "raised": true
+      },
+      "v13_equals_v14": null,
+      "v14": {
+        "counters": {
+          "header_failures": 1,
+          "missing_slots": 0,
+          "pixel_failures": 1,
+          "selected_slices": 95,
+          "study_build_error": null,
+          "study_build_error_type": null,
+          "study_build_failed": false
+        },
+        "mask_sum": 95,
+        "raised": false,
+        "shapes_ok": true,
+        "volume_sha": "c4abafd73f511f49"
+      },
+      "v14_equals_ref_lut": true,
+      "v14_equals_ref_v2": true
+    },
+    "truncated_pixels": {
+      "ref_lut": {
+        "raised": false
+      },
+      "ref_v2": {
+        "raised": false
+      },
+      "ref_v2_equals_ref_lut": true,
+      "v13": {
+        "error": "ValueError",
+        "message": "The number of bytes of pixel data is less than expected (14218 vs 24000 bytes) - the dataset may be corrupted, have an invalid group 0028 element value, or the ",
+        "raised": true
+      },
+      "v13_equals_v14": null,
+      "v14": {
+        "counters": {
+          "header_failures": 0,
+          "missing_slots": 0,
+          "pixel_failures": 1,
+          "selected_slices": 95,
+          "study_build_error": null,
+          "study_build_error_type": null,
+          "study_build_failed": false
+        },
+        "mask_sum": 95,
+        "raised": false,
+        "shapes_ok": true,
+        "volume_sha": "6396866c4b7d3dfe"
+      },
+      "v14_equals_ref_lut": true,
+      "v14_equals_ref_v2": true
+    }
+  },
+  "checks": {
+    "comparator_pass_on_healthy_first_three": {
+      "detail": {
+        "report_status": "PASS_THREE_STUDY_VOLUME_MASK_PARITY",
+        "status": "PASS"
+      },
+      "ok": true
+    },
+    "happy_path_run_submission_byte_identical_v13_v14": {
+      "detail": {
+        "v13": "871e1016163880eff341492deaa2c2eaea84596cbe48d92b491d53bf518e2239",
+        "v14": "871e1016163880eff341492deaa2c2eaea84596cbe48d92b491d53bf518e2239"
+      },
+      "ok": true
+    },
+    "healthy_v13_v14_ref_identical": {
+      "detail": {
+        "healthy": [
+          true,
+          true,
+          true
+        ],
+        "healthy_no_geometry": [
+          true,
+          true,
+          true
+        ],
+        "monochrome1": [
+          true,
+          true,
+          true
+        ]
+      },
+      "ok": true
+    },
+    "pinned_sources_match": {
+      "detail": {
+        "canary_sha_ok": true,
+        "fastread_sha_ok": true,
+        "old_reader_sha_ok": true
+      },
+      "ok": true
+    },
+    "prepare_windows_old_new_identical": {
+      "detail": [
+        true,
+        true
+      ],
+      "ok": true
+    },
+    "strict_v13_raises_on_faults": {
+      "detail": {
+        "all_series_garbage": "InvalidDicomError",
+        "garbage_header_and_pixels": "InvalidDicomError",
+        "multiframe_non2d": "RuntimeError",
+        "nan_pixels": "RuntimeError",
+        "no_test_series_rows": "RuntimeError",
+        "truncated_header": "InvalidDicomError",
+        "truncated_pixels": "ValueError"
+      },
+      "ok": true
+    },
+    "v13_run_dies_on_build_exception_without_empty_study": {
+      "detail": {
+        "error": "ValueError",
+        "message": "The number of bytes of pixel data is less than expected (14218 vs 24000 bytes) - the dataset may be corrupted, have an invalid group 0028 element value, or the transfer syntax may be incorrect"
+      },
+      "ok": true
+    },
+    "v13_run_dies_on_faulty_cohort": {
+      "detail": "RuntimeError",
+      "ok": true
+    },
+    "v14_build_volume_never_raises": {
+      "detail": null,
+      "ok": true
+    },
+    "v14_faulty_run_ok_gpu1_and_gpu2": {
+      "detail": {
+        "gpu1": null,
+        "gpu2": null
+      },
+      "ok": true
+    },
+    "v14_faulty_submission_identical_gpu1_vs_gpu2": {
+      "detail": {
+        "gpu1": "7a630aaafdd4e9ffbc5827123a50dc96cc1a5ac1b7f9a5c9d29d9d6385e7aa87",
+        "gpu2": "7a630aaafdd4e9ffbc5827123a50dc96cc1a5ac1b7f9a5c9d29d9d6385e7aa87"
+      },
+      "ok": true
+    },
+    "v14_faulty_submission_rows_and_range": {
+      "detail": {
+        "rows": 12
+      },
+      "ok": true
+    },
+    "v14_matches_reference_study_lut_on_all_cases": {
+      "detail": {
+        "mismatch_vs_ref_lut": []
+      },
+      "ok": true
+    },
+    "v14_matches_reference_v2_on_all_cases": {
+      "detail": {
+        "mismatch_vs_ref_v2": []
+      },
+      "ok": true
+    },
+    "v14_receipt_coverage_and_fallbacks": {
+      "detail": {
+        "devices": [
+          "Tesla T4"
+        ],
+        "full_test_coverage": true,
+        "gpu_count": 1,
+        "header_failures": 152,
+        "missing_slots": 9,
+        "model_fallback_studies": 1,
+        "pixel_failures": 99,
+        "studies": 12,
+        "study_build_failures": 1
+      },
+      "ok": true
+    },
+    "v14_run_completes_on_faulty_cohort_with_injection": {
+      "detail": null,
+      "ok": true
+    },
+    "v14_shapes_and_dtypes_fallback": {
+      "detail": null,
+      "ok": true
+    }
+  },
+  "comparator": {
+    "faulty_first_three": {
+      "report_status": "PASS_THREE_STUDY_VOLUME_MASK_PARITY",
+      "status": "PASS"
+    },
+    "healthy_first_three": {
+      "report_status": "PASS_THREE_STUDY_VOLUME_MASK_PARITY",
+      "status": "PASS"
+    }
+  },
+  "finished_utc": "2026-10-08T10:17:21Z",
+  "pins": {
+    "canary_sha_ok": true,
+    "fastread_sha_ok": true,
+    "new_reader_sha256": "e9ec648e1b2f6121f36bbe6ae806a5714571db83804c719ea02d5c4bf7fe47d7",
+    "old_reader_sha_ok": true
+  },
+  "run": {
+    "v13_faulty_gpu2": {
+      "error": "RuntimeError",
+      "message": "A selected study has no test-series metadata",
+      "ok": false
+    },
+    "v13_faulty_without_empty_study_gpu2": {
+      "error": "ValueError",
+      "message": "The number of bytes of pixel data is less than expected (14218 vs 24000 bytes) - the dataset may be corrupted, have an invalid group 0028 element value, or the transfer syntax may be incorrect",
+      "ok": false
+    },
+    "v13_happy_gpu2": {
+      "ok": true,
+      "receipt": {
+        "checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+        "competition_submitted": false,
+        "dataset_ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+        "dataset_version": 1,
+        "devices": [
+          "Tesla T4",
+          "Tesla T4"
+        ],
+        "elapsed_s": 0.4420713330000581,
+        "fault_policy": "Decode/model errors fail the experiment; missing slots retain source geometry",
+        "full_test_coverage": true,
+        "missing_slots": 0,
+        "mode": "inference",
+        "native_inference_completed": true,
+        "official_score": null,
+        "prediction_file_sha256": "871e1016163880eff341492deaa2c2eaea84596cbe48d92b491d53bf518e2239",
+        "prep_workers": 2,
+        "public_numeric_session_id": 356175397,
+        "public_ref": "nartaa/rsna-knee-0949-anatomical-mirror",
+        "public_reference_score": 0.949,
+        "public_version": 2,
+        "source_sha256": "4c0f5e4ef362941927e79ca3ab7e98a2c17a46d5a9230928b9057ce3e4a7b387",
+        "studies": 3,
+        "versions": {
+          "numpy": "2.2.6",
+          "timm": "1.0.19",
+          "torch": "2.8.0"
+        }
+      },
+      "submission_sha": "871e1016163880eff341492deaa2c2eaea84596cbe48d92b491d53bf518e2239"
+    },
+    "v14_faulty_gpu1": {
+      "ok": true,
+      "receipt": {
+        "checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+        "competition_submitted": false,
+        "consumer_error_count": 0,
+        "consumer_error_examples": [],
+        "dataset_ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+        "dataset_version": 1,
+        "devices": [
+          "Tesla T4"
+        ],
+        "elapsed_s": 1.2751334170006885,
+        "fault_policy": "V14 reference-tolerant: header failure keeps (0.0, 0.5) record; pixel failure skips slice (zero slot, index advances); study build failure gives zero volume and mask; model failure gives 0.5 probabilities; no study is dropped",
+        "full_test_coverage": true,
+        "gpu_count": 1,
+        "header_failures": 152,
+        "missing_slots": 9,
+        "mode": "inference",
+        "model_fallback_examples": [],
+        "model_fallback_studies": 0,
+        "native_inference_completed": true,
+        "official_score": null,
+        "pixel_failures": 99,
+        "prediction_file_sha256": "7a630aaafdd4e9ffbc5827123a50dc96cc1a5ac1b7f9a5c9d29d9d6385e7aa87",
+        "prep_workers": 2,
+        "public_numeric_session_id": 356175397,
+        "public_ref": "nartaa/rsna-knee-0949-anatomical-mirror",
+        "public_reference_score": 0.949,
+        "public_version": 2,
+        "selected_slices": 795,
+        "source_sha256": "e9ec648e1b2f6121f36bbe6ae806a5714571db83804c719ea02d5c4bf7fe47d7",
+        "studies": 12,
+        "studies_without_series_metadata": 1,
+        "study_build_failures": 1,
+        "versions": {
+          "numpy": "2.2.6",
+          "timm": "1.0.19",
+          "torch": "2.8.0"
+        }
+      },
+      "submission_sha": "7a630aaafdd4e9ffbc5827123a50dc96cc1a5ac1b7f9a5c9d29d9d6385e7aa87"
+    },
+    "v14_faulty_gpu1_inject": {
+      "ok": true,
+      "receipt": {
+        "checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+        "competition_submitted": false,
+        "consumer_error_count": 0,
+        "consumer_error_examples": [],
+        "dataset_ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+        "dataset_version": 1,
+        "devices": [
+          "Tesla T4"
+        ],
+        "elapsed_s": 1.2782138330003363,
+        "fault_policy": "V14 reference-tolerant: header failure keeps (0.0, 0.5) record; pixel failure skips slice (zero slot, index advances); study build failure gives zero volume and mask; model failure gives 0.5 probabilities; no study is dropped",
+        "full_test_coverage": true,
+        "gpu_count": 1,
+        "header_failures": 152,
+        "missing_slots": 9,
+        "mode": "inference",
+        "model_fallback_examples": [
+          {
+            "device": "cuda:0",
+            "error_type": "RuntimeError",
+            "message": "injected model failure at call 5",
+            "study_id": "1.2.10.6"
+          }
+        ],
+        "model_fallback_studies": 1,
+        "native_inference_completed": true,
+        "official_score": null,
+        "pixel_failures": 99,
+        "prediction_file_sha256": "3a4c994e23888f6bf64dcf0b7f38ea4443fcc01fc0b9d4108fe9f51a5cc774c5",
+        "prep_workers": 2,
+        "public_numeric_session_id": 356175397,
+        "public_ref": "nartaa/rsna-knee-0949-anatomical-mirror",
+        "public_reference_score": 0.949,
+        "public_version": 2,
+        "selected_slices": 795,
+        "source_sha256": "e9ec648e1b2f6121f36bbe6ae806a5714571db83804c719ea02d5c4bf7fe47d7",
+        "studies": 12,
+        "studies_without_series_metadata": 1,
+        "study_build_failures": 1,
+        "versions": {
+          "numpy": "2.2.6",
+          "timm": "1.0.19",
+          "torch": "2.8.0"
+        }
+      },
+      "submission_sha": "3a4c994e23888f6bf64dcf0b7f38ea4443fcc01fc0b9d4108fe9f51a5cc774c5"
+    },
+    "v14_faulty_gpu2": {
+      "ok": true,
+      "receipt": {
+        "checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+        "competition_submitted": false,
+        "consumer_error_count": 0,
+        "consumer_error_examples": [],
+        "dataset_ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+        "dataset_version": 1,
+        "devices": [
+          "Tesla T4",
+          "Tesla T4"
+        ],
+        "elapsed_s": 1.2633486249997077,
+        "fault_policy": "V14 reference-tolerant: header failure keeps (0.0, 0.5) record; pixel failure skips slice (zero slot, index advances); study build failure gives zero volume and mask; model failure gives 0.5 probabilities; no study is dropped",
+        "full_test_coverage": true,
+        "gpu_count": 2,
+        "header_failures": 152,
+        "missing_slots": 9,
+        "mode": "inference",
+        "model_fallback_examples": [],
+        "model_fallback_studies": 0,
+        "native_inference_completed": true,
+        "official_score": null,
+        "pixel_failures": 99,
+        "prediction_file_sha256": "7a630aaafdd4e9ffbc5827123a50dc96cc1a5ac1b7f9a5c9d29d9d6385e7aa87",
+        "prep_workers": 2,
+        "public_numeric_session_id": 356175397,
+        "public_ref": "nartaa/rsna-knee-0949-anatomical-mirror",
+        "public_reference_score": 0.949,
+        "public_version": 2,
+        "selected_slices": 795,
+        "source_sha256": "e9ec648e1b2f6121f36bbe6ae806a5714571db83804c719ea02d5c4bf7fe47d7",
+        "studies": 12,
+        "studies_without_series_metadata": 1,
+        "study_build_failures": 1,
+        "versions": {
+          "numpy": "2.2.6",
+          "timm": "1.0.19",
+          "torch": "2.8.0"
+        }
+      },
+      "submission_sha": "7a630aaafdd4e9ffbc5827123a50dc96cc1a5ac1b7f9a5c9d29d9d6385e7aa87"
+    },
+    "v14_happy_gpu2": {
+      "ok": true,
+      "receipt": {
+        "checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+        "competition_submitted": false,
+        "consumer_error_count": 0,
+        "consumer_error_examples": [],
+        "dataset_ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+        "dataset_version": 1,
+        "devices": [
+          "Tesla T4",
+          "Tesla T4"
+        ],
+        "elapsed_s": 0.4234784159998526,
+        "fault_policy": "V14 reference-tolerant: header failure keeps (0.0, 0.5) record; pixel failure skips slice (zero slot, index advances); study build failure gives zero volume and mask; model failure gives 0.5 probabilities; no study is dropped",
+        "full_test_coverage": true,
+        "gpu_count": 2,
+        "header_failures": 0,
+        "missing_slots": 0,
+        "mode": "inference",
+        "model_fallback_examples": [],
+        "model_fallback_studies": 0,
+        "native_inference_completed": true,
+        "official_score": null,
+        "pixel_failures": 0,
+        "prediction_file_sha256": "871e1016163880eff341492deaa2c2eaea84596cbe48d92b491d53bf518e2239",
+        "prep_workers": 2,
+        "public_numeric_session_id": 356175397,
+        "public_ref": "nartaa/rsna-knee-0949-anatomical-mirror",
+        "public_reference_score": 0.949,
+        "public_version": 2,
+        "selected_slices": 288,
+        "source_sha256": "e9ec648e1b2f6121f36bbe6ae806a5714571db83804c719ea02d5c4bf7fe47d7",
+        "studies": 3,
+        "studies_without_series_metadata": 0,
+        "study_build_failures": 0,
+        "versions": {
+          "numpy": "2.2.6",
+          "timm": "1.0.19",
+          "torch": "2.8.0"
+        }
+      },
+      "submission_sha": "871e1016163880eff341492deaa2c2eaea84596cbe48d92b491d53bf518e2239"
+    }
+  },
+  "started_utc": "2026-10-08T10:17:06Z"
+}

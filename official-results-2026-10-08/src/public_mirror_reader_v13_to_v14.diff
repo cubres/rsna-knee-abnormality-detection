@@ -1,0 +1,322 @@
+--- work/v13_payload_decoded/public_mirror_reader.py	2026-10-08 12:59:43
++++ candidate_v14b/sources_for_review/public_mirror_reader.py	2026-10-08 13:07:27
+@@ -6,6 +6,14 @@
+ Notebook source is Apache-2.0. Weights have separate research/educational terms,
+ including this competition. This module grants no rights to OAI source data.
+ 
++Fault policy (V14): the same tolerant semantics as the public reference's
++reader (its header record, per-slice pixel skip and whole-study fallback).
++A header failure keeps the file as a (0.0, path, 0.5) record; a pixel failure
++leaves that slot zero and advances the slot index; a study whose volume cannot
++be built is predicted from a zero volume and zero mask; a model failure gives
++that study 0.5 probabilities. No study is dropped, and any CUDA device count
++of at least one is accepted.
++
+ Importing this file performs no model load, network request or native inference.
+ Only main() starts an explicitly requested local Kaggle experiment.
+ """
+@@ -13,6 +21,7 @@
+ 
+ import argparse
+ from concurrent.futures import ThreadPoolExecutor
++import glob
+ import hashlib
+ import json
+ import os
+@@ -42,6 +51,10 @@
+ CROP_MM = 140.0
+ IMAGE_MEAN = (0.485, 0.456, 0.406)
+ IMAGE_STD = (0.229, 0.224, 0.225)
++FAULT_POLICY = ("V14 reference-tolerant: header failure keeps (0.0, 0.5) record; pixel failure skips slice "
++                "(zero slot, index advances); study build failure gives zero volume and mask; model failure "
++                "gives 0.5 probabilities; no study is dropped")
++PROBABILITY_DEFAULT = 0.5
+ 
+ 
+ def require(condition, message):
+@@ -121,36 +134,69 @@
+     return model
+ 
+ 
++def _new_counters():
++    return {"missing_slots": 0, "selected_slices": 0, "header_failures": 0, "pixel_failures": 0,
++            "study_build_failed": False, "study_build_error_type": None, "study_build_error": None}
++
++
++def _zero_study(np, counters):
++    return (np.zeros((SLICE_COUNT, CORPUS_RES, CORPUS_RES), dtype=np.uint8),
++            np.zeros(SLICE_COUNT, dtype=np.uint8), counters)
++
++
+ def build_volume(study_id, rows, series_root, deps):
++    """Return (volume, mask, counters). Never raises (reference fault policy).
++
++    Per-header and per-pixel failures are absorbed exactly where the reference
++    absorbs them. Any exception that still escapes marks the whole study as
++    failed: the volume and mask are zero, as in the reference's study fallback.
++    """
++    np = deps[1]
++    try:
++        return _build_volume_checked(study_id, rows, series_root, deps)
++    except Exception as error:
++        counters = _new_counters()
++        counters.update(study_build_failed=True, study_build_error_type=type(error).__name__,
++                        study_build_error=str(error)[:300])
++        return _zero_study(np, counters)
++
++
++def _build_volume_checked(study_id, rows, series_root, deps):
+     cv2, np, _, pydicom, modality_lut, _, _ = deps
+     volume = np.zeros((SLICE_COUNT, CORPUS_RES, CORPUS_RES), dtype=np.uint8)
+     used = set()
+     offset = 0
+-    counters = {"missing_slots": 0, "selected_slices": 0}
++    counters = _new_counters()
+ 
+     def header(path):
+-        data = pydicom.dcmread(path, stop_before_pixels=True)
+-        orientation = getattr(data, "ImageOrientationPatient", None)
+-        position = getattr(data, "ImagePositionPatient", None)
+-        if orientation is not None and position is not None and len(orientation) == 6:
+-            normal = np.cross(np.asarray(orientation[:3], dtype=float),
+-                              np.asarray(orientation[3:], dtype=float))
+-            coordinate = float(np.dot(np.asarray(position, dtype=float), normal))
+-        else:
+-            coordinate = float(getattr(data, "InstanceNumber", 0) or 0)
+-        spacing = getattr(data, "PixelSpacing", None)
+-        spacing = float(spacing[0]) if spacing is not None else 0.5
+-        require(np.isfinite(coordinate) and np.isfinite(spacing), "Nonfinite DICOM geometry")
+-        return coordinate, path, spacing
++        # Reference _hdr: an unreadable header keeps the file as (0.0, path, 0.5, False).
++        try:
++            data = pydicom.dcmread(path, stop_before_pixels=True)
++            orientation = getattr(data, "ImageOrientationPatient", None)
++            position = getattr(data, "ImagePositionPatient", None)
++            if orientation is not None and position is not None and len(orientation) == 6:
++                normal = np.cross(np.asarray(orientation[:3], dtype=float),
++                                  np.asarray(orientation[3:], dtype=float))
++                coordinate = float(np.dot(np.asarray(position, dtype=float), normal))
++            else:
++                coordinate = float(getattr(data, "InstanceNumber", 0) or 0)
++            spacing = getattr(data, "PixelSpacing", None)
++            spacing = float(spacing[0]) if spacing is not None else 0.5
++            return coordinate, path, spacing, True
++        except Exception:
++            return 0.0, path, 0.5, False
+ 
+     def pixels(item):
+-        _, path, spacing = item
+-        data = pydicom.dcmread(path)
+-        image = modality_lut(data.pixel_array, data).astype(np.float32)
+-        require(image.ndim == 2 and np.isfinite(image).all(), "Invalid DICOM pixel array")
+-        if str(getattr(data, "PhotometricInterpretation", "")) == "MONOCHROME1":
+-            image = image.max() - image
+-        return image, spacing
++        # Reference _px: an unreadable pixel array gives None, and that slice is skipped.
++        _, path, spacing, _ = item
++        try:
++            data = pydicom.dcmread(path)
++            image = modality_lut(data.pixel_array, data).astype(np.float32)
++            if str(getattr(data, "PhotometricInterpretation", "")) == "MONOCHROME1":
++                image = image.max() - image
++            return image, spacing
++        except Exception:
++            return None, spacing
+ 
+     for plane, fluid, count in SLOTS:
+         candidates = [row for row in rows if row["Anatomical_Plane"] == plane
+@@ -164,15 +210,18 @@
+             continue
+         series_id = str(chosen["SeriesInstanceUID"])
+         used.add(series_id)
+-        paths = list((series_root / study_id / series_id).glob("*.dcm"))
++        # Reference uses glob.glob on the series directory; the same listing order is kept.
++        paths = glob.glob(f"{series_root}/{study_id}/{series_id}/*.dcm")
+         if not paths:
+             counters["missing_slots"] += 1
+             offset += count
+             continue
+         with ThreadPoolExecutor(max_workers=16) as executor:
+             records = list(executor.map(header, paths))
++        counters["header_failures"] += sum(1 for record in records if not record[3])
++        ok_spacings = [record[2] for record in records if record[3]]
++        median_spacing = float(np.median(ok_spacings)) if ok_spacings else 0.5
+         records.sort(key=lambda record: record[0])
+-        median_spacing = float(np.median([item[2] for item in records]))
+         total = len(records)
+         low = int(total * 0.02)
+         high = max(int(total * 0.98) - 1, low)
+@@ -180,10 +229,20 @@
+         selected = [records[min(int(index), total - 1)] for index in indices]
+         with ThreadPoolExecutor(max_workers=8) as executor:
+             arrays = list(executor.map(pixels, selected))
+-        low_value, high_value = np.percentile(np.concatenate([image.ravel() for image, _ in arrays]),
+-                                            [2.0, 98.0])
++        counters["pixel_failures"] += sum(1 for image, _ in arrays if image is None)
++        valid_images = [image for image, _ in arrays if image is not None]
++        if valid_images:
++            low_value, high_value = np.percentile(np.concatenate([image.ravel() for image in valid_images]),
++                                                [2.0, 98.0])
++        else:
++            low_value, high_value = 0.0, 1.0
+         for image, spacing in arrays:
++            if image is None:
++                offset += 1
++                continue
+             normalized = np.clip((image - low_value) / (high_value - low_value + 1e-6), 0, 1)
++            # A non-2D array fails the crop in the reference (unpacking h, w), so the whole study falls back.
++            require(normalized.ndim == 2, "Non-2D DICOM pixel array")
+             spacing = spacing if spacing > 0 else median_spacing
+             size = min(int(round(CROP_MM / max(spacing, 1e-3))), *normalized.shape)
+             require(size > 0, "Empty physical crop")
+@@ -195,8 +254,6 @@
+             counters["selected_slices"] += 1
+     require(offset == SLICE_COUNT, "Study slot count differs")
+     mask = (volume.reshape(SLICE_COUNT, -1).sum(1) > 0).astype(np.uint8)
+-    require(counters["selected_slices"] > 0 and int(mask.sum()) >= 3,
+-            "No usable acquisition; all-zero/model-prior predictions cannot qualify this experiment")
+     return volume, mask, counters
+ 
+ 
+@@ -248,6 +305,13 @@
+     return values, predictions[0], predictions[1]
+ 
+ 
++def _device_name(torch, index):
++    try:
++        return torch.cuda.get_device_name(index)
++    except Exception:
++        return "unavailable"
++
++
+ def run(args):
+     started = time.monotonic()
+     os.environ.setdefault("HF_HUB_OFFLINE", "1")
+@@ -256,8 +320,9 @@
+     deps = dependencies()
+     _, np, pd, _, _, timm, torch = deps
+     require(torch.cuda.is_available(), "This experiment requires CUDA/fp16")
+-    require(torch.cuda.device_count() == 2, "Initial qualification requires exactly two T4 GPUs")
+-    require(all("T4" in torch.cuda.get_device_name(index) for index in range(2)), "Expected T4 hardware")
++    gpu_count = int(torch.cuda.device_count())
++    require(gpu_count >= 1, "At least one CUDA device is required")
++    device_names = [_device_name(torch, index) for index in range(gpu_count)]
+     torch.backends.cudnn.benchmark = True
+     torch.backends.cuda.matmul.allow_tf32 = True
+     checkpoint = find_attached_checkpoint(args.input_root)
+@@ -277,10 +342,11 @@
+     require(bool(ids), "No studies selected")
+     series = pd.read_csv(root / "test_series.csv", dtype={"StudyInstanceUID": str, "SeriesInstanceUID": str})
+     grouped = {key: frame.to_dict("records") for key, frame in series.groupby("StudyInstanceUID", sort=False)}
+-    require(all(uid in grouped for uid in ids), "A selected study has no test-series metadata")
+-    models = [make_model(checkpoint, f"cuda:{index}", timm, torch) for index in range(2)]
++    # A study without series rows is predicted from a zero volume, as in the reference (no drop).
++    studies_without_series = sum(1 for uid in ids if uid not in grouped)
++    models = [make_model(checkpoint, f"cuda:{index}", timm, torch) for index in range(gpu_count)]
+     jobs = queue.Queue(maxsize=4)
+-    results, errors = {}, []
++    results, model_fallbacks, consumer_errors = {}, [], []
+     lock = threading.Lock()
+ 
+     def consumer(index):
+@@ -290,21 +356,37 @@
+                 if item is None:
+                     return
+                 study_id, volume, mask, counters = item
+-                values, plain, mirrored = predict_pair(models[index], volume, mask, f"cuda:{index}", np, torch)
++                try:
++                    values, plain, mirrored = predict_pair(models[index], volume, mask,
++                                                           f"cuda:{index}", np, torch)
++                    fallback = None
++                except Exception as error:
++                    # Reference arm default: a study whose model call fails keeps 0.5 probabilities.
++                    values = plain = mirrored = np.full(12, PROBABILITY_DEFAULT, dtype=np.float32)
++                    fallback = {"study_id": study_id, "device": f"cuda:{index}",
++                                "error_type": type(error).__name__, "message": str(error)[:300]}
++                    try:
++                        torch.cuda.empty_cache()
++                    except Exception:
++                        pass
+                 with lock:
+                     results[study_id] = (values, plain, mirrored, counters)
++                    if fallback is not None:
++                        model_fallbacks.append(fallback)
+                     count = len(results)
+                     if count % 25 == 0 or count == len(ids):
+                         print(json.dumps({"completed": count, "total": len(ids),
+-                                          "elapsed_s": round(time.monotonic() - started, 2)}), flush=True)
++                                          "elapsed_s": round(time.monotonic() - started, 2),
++                                          "model_fallbacks": len(model_fallbacks)}), flush=True)
+             except Exception as error:
++                # Keep the consumer alive so the producer is never stranded on a full queue.
+                 with lock:
+-                    errors.append({"study_id": item[0] if item else None,
+-                                   "error_type": type(error).__name__, "message": str(error)[:500]})
++                    consumer_errors.append({"study_id": item[0] if item else None,
++                                            "error_type": type(error).__name__, "message": str(error)[:300]})
+             finally:
+                 jobs.task_done()
+ 
+-    threads = [threading.Thread(target=consumer, args=(index,)) for index in range(2)]
++    threads = [threading.Thread(target=consumer, args=(index,)) for index in range(gpu_count)]
+     for thread in threads:
+         thread.start()
+     try:
+@@ -314,7 +396,12 @@
+                 batch = ids[offset:offset + 8]
+                 futures = [executor.submit(build_volume, uid, grouped.get(uid, []), series_root, deps) for uid in batch]
+                 for uid, future in zip(batch, futures):
+-                    volume, mask, counters = future.result()
++                    try:
++                        volume, mask, counters = future.result()
++                    except Exception as error:
++                        volume, mask, counters = _zero_study(np, _new_counters())
++                        counters.update(study_build_failed=True, study_build_error_type=type(error).__name__,
++                                        study_build_error=str(error)[:300])
+                     jobs.put((uid, volume, mask, counters))
+     finally:
+         for _ in threads:
+@@ -322,13 +409,21 @@
+         jobs.join()
+         for thread in threads:
+             thread.join()
+-    require(not errors, "Study inference failed: " + json.dumps(errors[:3]))
++    # Coverage guard: a study without a result gets the reference default instead of being dropped.
++    missing_results = [uid for uid in ids if uid not in results]
++    for uid in missing_results:
++        default = np.full(12, PROBABILITY_DEFAULT, dtype=np.float32)
++        results[uid] = (default, default, default, _new_counters())
++        model_fallbacks.append({"study_id": uid, "device": None, "error_type": "MissingResult",
++                                "message": "no consumer result; reference default applied"})
+     require(set(results) == set(ids) and len(results) == len(ids), "Incomplete study coverage")
+     probabilities = np.stack([results[uid][0] for uid in ids])
+     require(probabilities.shape == (len(ids), 12) and np.isfinite(probabilities).all(), "Output shape/finite gate")
+     require(bool(((probabilities >= 0) & (probabilities <= 1)).all()), "Probability range gate")
+     # Exact public ordinal rank transform; do not quietly substitute a different tie policy.
+     ranks = probabilities.argsort(0).argsort(0).astype(np.float64) / max(1, len(ids) - 1)
++    # Reference guard: any non-finite rank becomes the neutral 0.5.
++    ranks[~np.isfinite(ranks)] = 0.5
+     output = pd.DataFrame(ranks.astype(np.float32), columns=LABELS)
+     output.insert(0, "StudyInstanceUID", ids)
+     require(output.columns.tolist() == expected_columns and output["StudyInstanceUID"].tolist() == ids,
+@@ -352,10 +447,18 @@
+                "dataset_ref": DATASET_REF, "dataset_version": DATASET_VERSION,
+                "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+                "versions": {"torch": torch.__version__, "timm": timm.__version__, "numpy": np.__version__},
+-               "devices": [torch.cuda.get_device_name(index) for index in range(2)],
++               "gpu_count": gpu_count, "devices": device_names,
+                "elapsed_s": time.monotonic() - started, "prep_workers": args.prep_workers,
+-               "fault_policy": "Decode/model errors fail the experiment; missing slots retain source geometry",
++               "fault_policy": FAULT_POLICY,
+                "missing_slots": sum(results[uid][3]["missing_slots"] for uid in ids),
++               "selected_slices": sum(results[uid][3]["selected_slices"] for uid in ids),
++               "header_failures": sum(results[uid][3]["header_failures"] for uid in ids),
++               "pixel_failures": sum(results[uid][3]["pixel_failures"] for uid in ids),
++               "study_build_failures": sum(1 for uid in ids if results[uid][3]["study_build_failed"]),
++               "studies_without_series_metadata": studies_without_series,
++               "model_fallback_studies": len(model_fallbacks),
++               "model_fallback_examples": model_fallbacks[:5],
++               "consumer_error_count": len(consumer_errors), "consumer_error_examples": consumer_errors[:5],
+                "prediction_file_sha256": hashlib.sha256(destination.read_bytes()).hexdigest()}
+     receipt_path = args.output_dir / "native_inference_receipt.json"
+     with receipt_path.open("x") as stream:

@@ -1,0 +1,19 @@
+{
+ "utc": "2026-10-08T10:20:27Z",
+ "version": 14,
+ "checks": {
+  "csv_present": true,
+  "csv_sha_equals_v13": true,
+  "studies_3": true,
+  "full_coverage": true,
+  "model_fallback_studies_zero": true,
+  "study_build_failures_zero": true,
+  "header_failures_zero": true,
+  "pixel_failures_zero": true,
+  "consumer_error_count_zero": true,
+  "worker_status_pass": true,
+  "parity_pass": true,
+  "owned_pass": true,
+  "csv_sha_matches_receipt": true
+ }
+}
