@@ -1,0 +1,7 @@
+# The public notebook reaches 0.949
+
+Raw server row observed 2026-10-08 11:46 UTC: submission **56949940**, made from **version 34 of the public notebook** [The bee's knees - final RSNA push](https://www.kaggle.com/code/prvsiyan/the-bee-s-knees-final-rsna-push) (session 356373560, submitted 10:48:43 UTC), has raw status **COMPLETE** and **public score 0.949**. Exact row: [evidence/row_56949940_public_v34_complete.json](evidence/row_56949940_public_v34_complete.json).
+
+Version 34 is an in-place update of the same public notebook (identity, all 40 earlier cells and their history preserved as inactive cells): it runs the fault-tolerant anatomical-mirror reader from [RESULT_V14_0949.md](RESULT_V14_0949.md) under a corrected owned launcher (absolute first clock, owned process group, staged CSV, final checks before root export), explains the V13 hidden failure for readers, and credits nartaa (Apache-2.0 code; SWA weights under the publisher's research/educational terms). Its visible-cohort CSV is byte-identical to the private V14 run, and the hidden rerun completed within about an hour of submission.
+
+The public notebook's card therefore moves from 0.941 (versions 31 and 32) to 0.949. No private-split claim is made. The predeclared next step for this notebook is the mirror + ConvNeXt blend in [frontier-audits/2026-10-08-public-0950](../frontier-audits/2026-10-08-public-0950/), which will be published as a later version once its ConvNeXt arm has been proven natively on the private bench.

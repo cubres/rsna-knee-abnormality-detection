@@ -1,0 +1,14 @@
+{
+ "observed_utc": "2026-10-08T11:44:37.110423+00:00",
+ "row": {
+  "ref": 56949940,
+  "date": "2026-10-08T10:48:43.700Z",
+  "status": "COMPLETE",
+  "publicScore": "0.949",
+  "errorDescription": null,
+  "fileName": "submission.csv",
+  "url": "/code/prvsiyan/the-bee-s-knees-final-rsna-push?scriptVersionId=356373560",
+  "description": "Public V34: fault-tolerant anatomical-mirror reader (nartaa recipe, Apache code + V1 weights under their terms) with the corrected owned launcher | csv=faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede | same reader as private V14 row 56948803 | public card refresh",
+  "submittedByRef": "prvsiyan"
+ }
+}
