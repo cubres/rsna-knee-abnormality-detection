@@ -1,0 +1,15 @@
+{
+ "submitted_utc": "2026-10-08T11:43:52Z",
+ "kernel_version": 17,
+ "csv_sha256": "faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede",
+ "message": "Knee V17 validation: mirror r384 pair + permitted r224 single-view arm, predeclared ordinal rank blend 0.75/0.25 (E3) | r224 checkpoint sha verified 3394fdd7\u2026 | mirror arm unchanged from V14 (0.949) | bench row for the public notebook",
+ "new_rows": [
+  {
+   "ref": "56952077",
+   "date": "2026-10-08 11:43:41.890000",
+   "status": "SubmissionStatus.PENDING",
+   "description": "Knee V17 validation: mirror r384 pair + permitted r224 single-view arm, predeclared ordinal rank blend 0.75/0.25 (E3) | r224 checkpoint sha verified 3394fdd7\u2026 | mirror arm unchanged from V14 (0.949) | bench row for the public notebook"
+  }
+ ],
+ "official_score": null
+}

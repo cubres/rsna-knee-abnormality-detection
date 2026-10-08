@@ -1,0 +1,93 @@
+{
+ "arm_status": {
+  "checkpoint_bytes_expected": 292842755,
+  "checkpoint_bytes_observed": 292842755,
+  "checkpoint_name": "raptor_ft_alldata_t16_blendjev_oai_d96_c08_r224_swa.pt",
+  "checkpoint_sha256_computed": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+  "checkpoint_sha256_expected": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+  "checkpoint_sha256_verified": true,
+  "enabled": true,
+  "reason": null,
+  "strict_load_ok": true
+ },
+ "blend_mode": "R384_0.75_R224_0.25_ORDINAL_RANK_BLEND_V15",
+ "blend_weight_r224": 0.25,
+ "blend_weight_r384": 0.75,
+ "checkpoint_name": "raptor_ft_alldata_t16_blendjev_oai_d96_r384_swa.pt",
+ "checkpoint_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+ "competition_submitted": false,
+ "consumer_error_count": 0,
+ "dataset_ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+ "dataset_version": 1,
+ "device_count": 2,
+ "devices": [
+  "Tesla T4",
+  "Tesla T4"
+ ],
+ "elapsed_s": 23.36806022899998,
+ "fault_policy": "V14 reference-tolerant: header failure keeps (0.0, 0.5) record; pixel failure skips slice (zero slot, index advances); study build failure gives zero volume and mask; model failure gives 0.5 probabilities; no study is dropped",
+ "full_test_coverage": true,
+ "header_failures": 0,
+ "missing_slots": 2,
+ "mode": "inference",
+ "model_fallback_studies": 0,
+ "native_inference_completed": true,
+ "official_score": null,
+ "peak_cuda_memory": {
+  "cuda:0": {
+   "device_name": "Tesla T4",
+   "max_allocated_bytes": 3477989888,
+   "max_reserved_bytes": 5037359104
+  },
+  "cuda:1": {
+   "device_name": "Tesla T4",
+   "max_allocated_bytes": 3477989888,
+   "max_reserved_bytes": 5037359104
+  }
+ },
+ "pixel_failures": 0,
+ "prediction_file_sha256": "faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede",
+ "prep_workers": 2,
+ "probabilities_file_sha256": "5766103f32a44d43ea62d169f8e319291274828bbecbef72689a1afe87597a40",
+ "public_ref_r224": "nartaa/rsna-knee-0945-efficient-224crop",
+ "public_ref_r384": "nartaa/rsna-knee-0949-anatomical-mirror",
+ "public_reference_r224": 0.945,
+ "public_reference_r384": 0.949,
+ "r224_arm_enabled": true,
+ "r224_attempt_counts": {
+  "fp16_all94": 3
+ },
+ "r224_checkpoint_bytes_observed": 292842755,
+ "r224_checkpoint_sha256_expected": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6",
+ "r224_checkpoint_sha256_verified": true,
+ "r224_elapsed_s": {
+  "count": 3,
+  "max": 1.8552445910000017,
+  "mean": 1.3687726356666683,
+  "min": 0.45764083299999925,
+  "total": 4.106317907000005
+ },
+ "r224_elapsed_s_per_study": [
+  1.8552445910000017,
+  1.7934324830000037,
+  0.45764083299999925
+ ],
+ "r224_fallback_reason": null,
+ "r224_only_csv_sha256": "c12958fba2378e477d477908b57b87ee9b9fed690ea128d75498b2f18efee799",
+ "r224_source_sha256": "3da7dab84161a8aa7a52f05618f37255fd7866bc609bee49c190ecd9f0d7ac8c",
+ "r224_strict_load_ok": true,
+ "r224_study_fallback_examples": [],
+ "r224_study_fallbacks": 0,
+ "r384_only_csv_sha256": "faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede",
+ "reader_source_sha256": "e9ec648e1b2f6121f36bbe6ae806a5714571db83804c719ea02d5c4bf7fe47d7",
+ "selected_slices": 264,
+ "source_sha256": "1464321184051a9db00481e6b43e26428a85ea9435cf8c2508d7bf88332835d5",
+ "studies": 3,
+ "studies_without_series_metadata": 0,
+ "study_build_failures": 0,
+ "versions": {
+  "numpy": "2.1.3",
+  "timm": "1.0.29",
+  "torch": "2.11.0+cu128"
+ }
+}

@@ -1,0 +1,13 @@
+# Bench history, 2026-10-08: two blend arms, one qualified, one still failing
+
+Our private bench notebook is where candidate arms are proven before anything reaches the public notebook. Three versions ran today after the 0.949 mirror result; all preserve every earlier cell, and none claims a score.
+
+| Bench version | Arm added to the mirror reader | Commit-run outcome | Submitted? |
+|---|---|---|---|
+| 15 | goodpjw2008's three-fold ConvNeXt 2.5D reader (Apache-2.0), rank blend 0.70 / 0.30 | arm **skipped by its own time gate**: the gate was written for the 9-hour rerun (estimate 7,200 s + 900 s margin) and could never pass inside the 1,750 s commit budget; output fell back to mirror-only ([evidence/v15-run-receipt.json](evidence/v15-run-receipt.json)) | no |
+| 16 | same, gate threshold = min(8,100 s, half the whole budget) | arm **failed before inference**: the pinned JPEG decoder wheels are cp312 builds and the qualified container runs Python 3.13, so the offline pip install was refused; fallback to mirror-only worked as designed ([evidence/v16-run-receipt.json](evidence/v16-run-receipt.json)) | no |
+| 17 | the publisher's permitted r224 single-view checkpoint, ordinal rank blend 0.75 r384 / 0.25 r224 (predeclared E3) | **qualified**: checkpoint SHA-256 verified against the publisher's value, strict tensor-only load, all 94 windows in one fp16 pass, 1.4 s per study, 3.5 GB peak per T4; the r224-only CSV differs from the mirror CSV while the blended three-study CSV equals it, as expected when a 0.25 weight cannot flip any ordinal rank ([evidence/v17-native-inference-receipt.json](evidence/v17-native-inference-receipt.json)) | yes, as a validation row: 56952077, score unknown ([evidence/v17-row-accepted.json](evidence/v17-row-accepted.json)) |
+
+The fault-tolerance design held in both failures: the mirror arm always produced a complete, finite submission. The ConvNeXt arm gets a best-effort per-wheel decoder install and a decoder-capability probe next; it will be published to the public notebook only after a bench run proves it.
+
+Source for the r224 arm and the two-arm reader: [r224_arm.py](r224_arm.py), [public_mirror_blend_reader.py](public_mirror_blend_reader.py) (Apache-2.0, original implementations of the publisher's recipes; the r224 recipe follows nartaa's "0945 efficient 224crop" notebook: 384 field, central 307 crop, bilinear 224, one view). Weights are used under the publisher's research/educational terms and are not redistributed. Documentation is MIT like its siblings.
