@@ -1,0 +1,12 @@
+{
+ "observed_utc": "2026-10-08T12:25:33.164891+00:00",
+ "row": {
+  "ref": 56952077,
+  "date": "2026-10-08T11:43:41.890Z",
+  "status": "COMPLETE",
+  "publicScore": "0.949",
+  "fileName": "submission.csv",
+  "url": "/code/prvsiyan/bee-s-knees-rsna-knees-final-push?scriptVersionId=356387745",
+  "description": "Knee V17 validation: mirror r384 pair + permitted r224 single-view arm, predeclared ordinal rank blend 0.75/0.25 (E3) | r224 checkpoint sha verified 3394fdd7\u2026 | mirror arm unchanged from V14 (0.949) | bench row for the public notebook"
+ }
+}
