@@ -1,0 +1,14 @@
+{
+ "observed_utc": "2026-10-08T10:54:35.723617+00:00",
+ "row": {
+  "ref": 56948803,
+  "date": "2026-10-08T10:20:42.293Z",
+  "status": "COMPLETE",
+  "publicScore": "0.949",
+  "errorDescription": null,
+  "fileName": "submission.csv",
+  "url": "/code/prvsiyan/bee-s-knees-rsna-knees-final-push?scriptVersionId=356365376",
+  "description": "Knee V14 fault-tolerant anatomical mirror | ref=prvsiyan/bee-s-knees-rsna-knees-final-push v14 | candidate=73958c9f612721d0df368d7709a5ee82379ed812e68302d54ee42cf733bb87a5 | csv=faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede | V13 row 56923965 crashed on the hidden rerun (strict reader); V14 adopts the reference's fault semantics, happy path and checkpoint unchanged",
+  "submittedByRef": "prvsiyan"
+ }
+}
