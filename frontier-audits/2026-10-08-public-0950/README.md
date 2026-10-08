@@ -1,0 +1,11 @@
+# Public 0.950 frontier on 2026-10-08: what changed, and our predeclared next candidate
+
+Read-only audit of the nine notebooks at the top of the public scorecard on 2026-10-08 (six displaying 0.950, two 0.949, one 0.946 comparator), from their pulled sources and dataset metadata. Nothing here is a result of ours.
+
+**Finding.** All six 0.950 notebooks share one base and one addition: nartaa's 0.949 anatomical-mirror CoAtNet inference (public code, Apache-2.0; SWA checkpoint under the publisher's research/educational "Other" terms) rank-blended with goodpjw2008's three-fold 2.5D ConvNeXt reader (public dataset, Apache-2.0). They differ only in blend weights (per-label hand-set, gold-58 grid-searched, or one global weight), and all six round to the same card. The ConvNeXt blend is the only change common to all six; the same reader at 30 % added one tick on a different base in its author's own card. Full table and per-notebook notes: [COMPOSITION.md](COMPOSITION.md).
+
+**Predeclared candidate, written before any result.** Our next private version (V16 of `prvsiyan/bee-s-knees-rsna-knees-final-push`) replicates that mechanism with our own qualified parts: the fault-tolerant mirror arm from V14 (see [official-results-2026-10-08](../../official-results-2026-10-08/)) and the released goodpjw reader, which our notebook already integrates as an attributed extension hook. Blend: per finding, S = 0.70·rank(mirror) + 0.30·rank(ConvNeXt), one global weight, final ordinal rank of S. No per-label weights, no fitting on public labels. Decision rule: V16 is kept only if its completed official row beats our completed V14 row; a tie or a loss is recorded as such. The analyst's heavier proposal (our full BK-A stack + mirror at 0.45, about 6.7 h hidden runtime) is kept as a later candidate: [ANALYST_V16_PROPOSAL.md](ANALYST_V16_PROPOSAL.md).
+
+**Open questions we did not resolve.** Prize eligibility of publicly shared third-party weights and the OAI-access question are unanswered on the competition forum; the host's 2026-09-21 statement allows free, generally accessible OAI-derived use. These notes concern public scores only.
+
+Documentation here is MIT, like its siblings. Quoted material belongs to its authors; no third-party code is reproduced beyond short identifying snippets.
