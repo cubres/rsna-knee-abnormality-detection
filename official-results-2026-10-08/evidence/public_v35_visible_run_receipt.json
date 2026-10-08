@@ -1,0 +1,68 @@
+{
+ "status": "PASS_V35_BLENDED",
+ "final_source": "blended",
+ "final_csv_sha256": "faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede",
+ "mirror_csv_sha256": "faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede",
+ "studies": 3,
+ "whole_budget_s": 1750,
+ "remaining_budget_s": 1664.66599274,
+ "blend": {
+  "applied": true,
+  "convnext_weight": 0.3,
+  "mirror_weight": 0.7,
+  "transform": "argsort.argsort / max(1, N - 1), non-finite -> 0.5"
+ },
+ "convnext_arm": {
+  "status": "OK",
+  "ok_studies": 3,
+  "oracle": {
+   "all_studies_ok": true,
+   "max_abs_diff": 2.9753112751329525e-08,
+   "passed": true,
+   "studies": 3,
+   "tolerance": 0.0002
+  },
+  "elapsed_seconds": 23.299768445999973,
+  "decode": {
+   "available_transfer_syntaxes": [
+    "JPEG2000Decoder",
+    "JPEG2000LosslessDecoder",
+    "JPEGBaseline8BitDecoder",
+    "JPEGExtended12BitDecoder",
+    "RLELosslessDecoder"
+   ],
+   "decode_failed_studies": 0,
+   "rule": "any_decode_failure_is_study_half",
+   "series_failed_total": 0,
+   "slices_failed_total": 0,
+   "studies_with_series_failure": 0,
+   "studies_with_slice_failure": 0
+  },
+  "decoder_install": [
+   {
+    "installed": true,
+    "reason": null,
+    "returncode": 0,
+    "stderr_tail": null,
+    "wheel": "pylibjpeg-2.1.0-py3-none-any.whl"
+   },
+   {
+    "installed": false,
+    "reason": "OwnedProcessError: owned watchdog stopped without declaring native success",
+    "returncode": null,
+    "stderr_tail": null,
+    "wheel": "pylibjpeg_libjpeg-2.4.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl"
+   },
+   {
+    "installed": false,
+    "reason": "OwnedProcessError: owned watchdog stopped without declaring native success",
+    "returncode": null,
+    "stderr_tail": null,
+    "wheel": "pylibjpeg_openjpeg-2.6.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl"
+   }
+  ],
+  "gate_threshold_s": 875.0,
+  "name": "goodpjw2008 ConvNeXt 2.5D V1",
+  "weight": 0.3
+ }
+}
