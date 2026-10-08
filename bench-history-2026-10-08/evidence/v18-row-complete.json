@@ -1,0 +1,12 @@
+{
+ "observed_utc": "2026-10-08T14:32:48.508258+00:00",
+ "row": {
+  "ref": 56955785,
+  "date": "2026-10-08T13:26:42.273Z",
+  "status": "COMPLETE",
+  "publicScore": "0.948",
+  "fileName": "submission.csv",
+  "url": "/code/prvsiyan/bee-s-knees-rsna-knees-final-push?scriptVersionId=356409719",
+  "description": "Knee V18 validation: mirror r384 pair + goodpjw2008 three-fold ConvNeXt 2.5D reader (Apache-2.0), predeclared global ordinal rank blend 0.70/0.30 | ConvNeXt arm natively proven (oracle parity 3e-8) | mirror arm unchanged from V14 (0.949) | bench row for the public notebook's V35"
+ }
+}
