@@ -1,0 +1,95 @@
+{
+ "status": "PASS_V19_BLEND",
+ "final_source": "blend",
+ "elapsed_s": 330.78,
+ "studies": 3,
+ "whole_budget_s": 1750,
+ "blend": {
+  "a_weight": 0.55,
+  "mirror_weight": 0.45,
+  "transform": "pandas rank(average, pct=True) per column, applied to each arm and to the blend"
+ },
+ "spearman_a_vs_mirror_per_finding": [
+  1.0,
+  0.5,
+  0.5,
+  0.5,
+  0.5,
+  1.0,
+  0.5,
+  1.0,
+  1.0,
+  1.0,
+  0.5,
+  1.0
+ ],
+ "root_submission_sha256": "c1478aac771301a0bb7e884d766ce6638b04387e8cdeede5162269e81576e928",
+ "bka": {
+  "blocks_run": [
+   "inventory",
+   "t_dino",
+   "t_a5",
+   "raptor",
+   "coat_resgated",
+   "coat_d4",
+   "coat_global96",
+   "coat_repairv1"
+  ],
+  "config": {
+   "COAT_GEOMETRY": "dense",
+   "EXTRA_FAMILY_WEIGHT": 0.0,
+   "FINALIZE_S": 87.5,
+   "RAD_MODE": "off",
+   "SAFETY_RESERVE_S": 175.0,
+   "TOTAL_BUDGET_S": 1750
+  },
+  "gate": {
+   "blocks": [
+    "inventory",
+    "t_dino",
+    "t_a5",
+    "raptor",
+    "coat_resgated",
+    "coat_d4",
+    "coat_global96",
+    "coat_repairv1"
+   ],
+   "estimate_s": 1158.3,
+   "margin_s": 175.0,
+   "model_s": 1158.3,
+   "need_s": 1333.3,
+   "remaining_s": 1705.9,
+   "rerun": false,
+   "run": true,
+   "studies": 3,
+   "whole_budget_s": 1750
+  },
+  "submission_checks": {
+   "all_finite": true,
+   "all_in_0_1": true,
+   "columns_match_sample": true,
+   "ids_match_sample_order": true,
+   "ids_unique": true,
+   "rows_match_sample": true
+  },
+  "fusion_used": {
+   "C": true,
+   "R": true,
+   "T": true,
+   "extra": false
+  }
+ },
+ "mirror": {
+  "ok": true,
+  "degraded": false,
+  "csv_sha256": "faa20e95a1779658237252388407eaf6d835679dd43e4dae5bca18d95496bede",
+  "receipt_keys": {
+   "header_failures": 0,
+   "missing_slots": 2,
+   "model_fallback_studies": 0,
+   "pixel_failures": 0,
+   "studies_without_series_metadata": 0,
+   "study_build_failures": 0
+  }
+ }
+}
