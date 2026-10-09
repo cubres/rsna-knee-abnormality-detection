@@ -1,0 +1,103 @@
+{
+  "cases": [
+    {
+      "case": "clean_synthetic_ledger",
+      "engineering_pass": true,
+      "independent_evaluation_ready": true,
+      "passed": true,
+      "science_holds": []
+    },
+    {
+      "case": "study_disjoint_but_patient_leaks",
+      "engineering_pass": true,
+      "independent_evaluation_ready": false,
+      "passed": true,
+      "science_holds": [
+        "initialization_exposed_to_held_patient",
+        "patient_overlap"
+      ]
+    },
+    {
+      "case": "pretrained_model_saw_held",
+      "engineering_pass": true,
+      "independent_evaluation_ready": false,
+      "passed": true,
+      "science_holds": [
+        "initialization_exposed_to_held"
+      ]
+    },
+    {
+      "case": "pretrained_model_saw_other_knee_of_held_patient",
+      "engineering_pass": true,
+      "independent_evaluation_ready": false,
+      "passed": true,
+      "science_holds": [
+        "initialization_exposed_to_held_patient"
+      ]
+    },
+    {
+      "case": "unknown_positive_does_not_supply_class",
+      "engineering_pass": true,
+      "independent_evaluation_ready": false,
+      "passed": true,
+      "science_holds": [
+        "held_known_class_coverage_incomplete"
+      ]
+    },
+    {
+      "case": "patient_mapping_absent",
+      "engineering_pass": true,
+      "independent_evaluation_ready": false,
+      "passed": true,
+      "science_holds": [
+        "patient_isolation_unproven"
+      ]
+    },
+    {
+      "case": "held_chose_pretrained_checkpoint",
+      "engineering_pass": true,
+      "independent_evaluation_ready": false,
+      "passed": true,
+      "science_holds": [
+        "held_checkpoint_selection_unproven_or_present"
+      ]
+    },
+    {
+      "case": "nominal_amp_steps_but_no_updates",
+      "engineering_pass": false,
+      "independent_evaluation_ready": true,
+      "passed": true,
+      "science_holds": []
+    },
+    {
+      "case": "boolean_update_counter_is_not_integer_count",
+      "engineering_pass": false,
+      "independent_evaluation_ready": true,
+      "passed": true,
+      "science_holds": []
+    },
+    {
+      "case": "empty_findings",
+      "malformed_ledger_rejected": true,
+      "passed": true
+    },
+    {
+      "case": "empty_rows",
+      "malformed_ledger_rejected": true,
+      "passed": true
+    },
+    {
+      "case": "scalar_exposure_inventory",
+      "malformed_ledger_rejected": true,
+      "passed": true
+    }
+  ],
+  "cpu_seconds": 0.008499999999999994,
+  "helper_sha256": "b1ec2aea802e439fbec04793bd71b9af716e6093821c1e66b0497b6d9c69e504",
+  "model_runs": 0,
+  "passed": 12,
+  "schema": "original-knee-ledger-synthetic-proof-v1",
+  "scope": "Invented schema/isolation/update-counter controls only; no models, real identifiers, AUC or official score",
+  "synthetic_only": true,
+  "wall_seconds": 0.008656875004817266
+}

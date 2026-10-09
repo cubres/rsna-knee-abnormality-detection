@@ -1,0 +1,98 @@
+{
+  "declared_adoption": {
+    "arm_minus_control_minimum": 0.002,
+    "control_official_range": [
+      0.948,
+      0.95
+    ],
+    "final_epoch_only": true,
+    "fold0_diagnostic_non_regression": true,
+    "statistical_significance_established": false
+  },
+  "declared_cohort": {
+    "canary_evaluation_studies": 8,
+    "canary_fit_studies": 8,
+    "canary_nominal_updates": 2,
+    "consumed_fit_studies_per_epoch": 3472,
+    "fit_studies": 3479,
+    "fold0_studies": 870,
+    "gold_studies": 58,
+    "nominal_full_arm_updates": 1302,
+    "nominal_full_epoch_updates": 434
+  },
+  "facts": {
+    "actual_patient_overlap_observed": null,
+    "base_fold0_prior_training_exposed": true,
+    "checkpoint_initializer_sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef",
+    "checkpoint_resume_full_state": false,
+    "data_content_manifest_complete": false,
+    "full_arm_pass_enforces_all_G0_predicates": false,
+    "gold58_prior_selection_exposed": true,
+    "macro_auc_omits_single_class_findings": true,
+    "native_memory_runtime_measured_by_this_review": false,
+    "native_model_runs": 0,
+    "notebook_mutations": 0,
+    "patient_group_isolation_implemented": false,
+    "prepared_canary_success_receipt_process_exit": 2,
+    "remote_calls": 0,
+    "soft_stop_checked_during_evaluation": false,
+    "training_loss_known_label_mask": false,
+    "wrapper_zero_exit_proves_native_success": false
+  },
+  "schema": "original-finetune-readiness-source-audit-v1",
+  "scope": "Prepared source and design inspection only; no native outcome or official score",
+  "sessions": [
+    {
+      "arm": "control",
+      "build_status": "OFFLINE_BUILT_NO_PUSH",
+      "canary": true,
+      "hard_budget_s": 600,
+      "native_result_observed_by_this_review": false,
+      "official_score": null,
+      "session": "A_canary",
+      "session_timeout_s": 900,
+      "soft_budget_s": 420,
+      "source_bytes": 577957,
+      "source_sha256": "824a72ccf390745c0fa82d0a1457a190472059c4387f7fb9539de8b7cf7727b9"
+    },
+    {
+      "arm": "control",
+      "build_status": "OFFLINE_BUILT_NO_PUSH",
+      "canary": false,
+      "hard_budget_s": 9000,
+      "native_result_observed_by_this_review": false,
+      "official_score": null,
+      "session": "B_control_3ep",
+      "session_timeout_s": 9300,
+      "soft_budget_s": 8400,
+      "source_bytes": 577938,
+      "source_sha256": "40fc8d466fe7b73882a4d80e088d58d6a239ed3d9b5dc7d28e6592381ec8d919"
+    },
+    {
+      "arm": "gemlow",
+      "build_status": "OFFLINE_BUILT_NO_PUSH",
+      "canary": false,
+      "hard_budget_s": 9000,
+      "native_result_observed_by_this_review": false,
+      "official_score": null,
+      "session": "C_gemlow_3ep",
+      "session_timeout_s": 9300,
+      "soft_budget_s": 8400,
+      "source_bytes": 577935,
+      "source_sha256": "09654b5e871a98e3e197543677fd69b4f37a1c04b0764ae374e70b125f541b2b"
+    },
+    {
+      "arm": "lexblend",
+      "build_status": "OFFLINE_BUILT_NO_PUSH",
+      "canary": false,
+      "hard_budget_s": 9000,
+      "native_result_observed_by_this_review": false,
+      "official_score": null,
+      "session": "D_lexblend_3ep",
+      "session_timeout_s": 9300,
+      "soft_budget_s": 8400,
+      "source_bytes": 577941,
+      "source_sha256": "4496618c78fb738b2d05d8793c7d09b4451cece423ccaefca71462d40f49fcdb"
+    }
+  ]
+}

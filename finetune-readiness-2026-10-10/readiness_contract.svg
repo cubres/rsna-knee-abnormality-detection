@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1160" height="760" viewBox="0 0 1160 760" role="img" aria-labelledby="title desc">
+<title id="title">Four distinct gates before adopting a knee fine-tune</title>
+<desc id="desc">An engineering canary, a sealed data and patient split, exposure-aware validation and a completed official comparison are separate requirements. The prepared canary has a source-proven receipt versus process-exit mismatch.</desc>
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#f7fafb"/><stop offset="1" stop-color="#edf3f7"/></linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#183b52" flood-opacity=".10"/></filter>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10" fill="none" stroke="#537084" stroke-width="1.5"/></marker>
+</defs>
+<rect width="1160" height="760" fill="url(#bg)"/>
+<g font-family="system-ui, -apple-system, sans-serif" fill="#173247">
+  <text x="50" y="58" font-size="30" font-weight="700">Before a fine-tune can mean an improvement</text>
+  <text x="50" y="91" font-size="17" fill="#506b7c">Separate native execution, data identity, independent evidence and official results.</text>
+  <rect x="50" y="118" width="1060" height="78" rx="14" fill="#fff0eb" stroke="#e7b4a1"/>
+  <circle cx="81" cy="157" r="14" fill="#b45135"/><text x="77" y="163" font-size="19" font-weight="700" fill="white">!</text>
+  <text x="108" y="150" font-size="18" font-weight="700" fill="#853a28">Prepared A: PASS_CANARY still maps to process exit 2</text>
+  <text x="108" y="176" font-size="15" fill="#8b5140">Source-proven contract mismatch. No new native failure was observed in this review.</text>
+  <g filter="url(#shadow)">
+    <rect x="50" y="229" width="250" height="292" rx="18" fill="white"/>
+    <rect x="320" y="229" width="250" height="292" rx="18" fill="white"/>
+    <rect x="590" y="229" width="250" height="292" rx="18" fill="white"/>
+    <rect x="860" y="229" width="250" height="292" rx="18" fill="white"/>
+  </g>
+  <rect x="50" y="229" width="250" height="8" rx="4" fill="#2b7d8a"/>
+  <rect x="320" y="229" width="250" height="8" rx="4" fill="#5c6daf"/>
+  <rect x="590" y="229" width="250" height="8" rx="4" fill="#b78a34"/>
+  <rect x="860" y="229" width="250" height="8" rx="4" fill="#658f56"/>
+  <g font-size="15">
+    <text x="70" y="271" font-size="20" font-weight="700">1 · Engineering</text>
+    <text x="70" y="307">8 fit + 8 evaluation studies</text>
+    <text x="70" y="334">2 effective updates required</text>
+    <text x="70" y="371">Real DICOM · strict load</text>
+    <text x="70" y="398">Finite gradients · AMP skips</text>
+    <text x="70" y="425">Memory · cold I/O · timing</text>
+    <rect x="70" y="459" width="210" height="40" rx="8" fill="#e8f3f4"/>
+    <text x="84" y="484" fill="#276977">Nominal steps are insufficient</text>
+    <text x="340" y="271" font-size="20" font-weight="700">2 · Data and split</text>
+    <text x="340" y="307">3,479 fit / 870 fold-0</text>
+    <text x="340" y="334">58 gold diagnostic studies</text>
+    <text x="340" y="371">Freeze input content hashes</text>
+    <text x="340" y="398">Check complete assignment</text>
+    <text x="340" y="425">Verify patient-group isolation</text>
+    <rect x="340" y="459" width="210" height="40" rx="8" fill="#eceef8"/>
+    <text x="354" y="484" fill="#536397">Study split ≠ patient proof</text>
+    <text x="610" y="271" font-size="20" font-weight="700">3 · Validation</text>
+    <text x="610" y="307">Initializer saw fold-0 already</text>
+    <text x="610" y="334">Gold used in prior selection</text>
+    <text x="610" y="371">Known + / − counts by finding</text>
+    <text x="610" y="398">Frozen macro denominator</text>
+    <text x="610" y="425">Distinct patients · uncertainty</text>
+    <rect x="610" y="459" width="210" height="40" rx="8" fill="#faf2df"/>
+    <text x="624" y="484" fill="#866825">Current OOF: diagnostic only</text>
+    <text x="880" y="271" font-size="20" font-weight="700">4 · Adoption</text>
+    <text x="880" y="307">Final epoch · valid G0 first</text>
+    <text x="880" y="334">Qualify inference checkpoint</text>
+    <text x="880" y="371">Exact completed control row</text>
+    <text x="880" y="398">Arm − control ≥ 0.002</text>
+    <text x="880" y="425">No diagnostic regression</text>
+    <rect x="880" y="459" width="210" height="40" rx="8" fill="#ecf4e9"/>
+    <text x="894" y="484" fill="#537449">Rounded ticks ≠ significance</text>
+  </g>
+  <path d="M175 534 V557 H985 V534" fill="none" stroke="#90a5b1" stroke-width="2"/>
+  <path d="M580 557 V588" fill="none" stroke="#537084" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="280" y="600" width="600" height="59" rx="14" fill="#173247"/>
+  <text x="580" y="637" text-anchor="middle" font-size="20" font-weight="700" fill="white">All gates need their own retained evidence</text>
+  <text x="50" y="704" font-size="16" fill="#506b7c">Original ledger tool: aggregate intersections and known-class coverage; no model, patient export or AUC.</text>
+  <text x="50" y="731" font-size="14" fill="#6a8190">Local source review · prepared artifacts only · native memory, throughput and official outcomes remain unqualified</text>
+</g>
+</svg>
