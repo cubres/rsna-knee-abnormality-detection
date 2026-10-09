@@ -1,0 +1,34 @@
+{
+  "repository": "cubres/rsna-knee-abnormality-detection",
+  "prefix": "independent-review-2026-10-09",
+  "files": [
+    {
+      "name": "README.md",
+      "bytes": 4950,
+      "sha256": "423993cb4e581c0777db7380e4933455f18e03f70ba95ec0cd25eb8336fa7546"
+    },
+    {
+      "name": "evidence.json",
+      "bytes": 10099,
+      "sha256": "71aa17a9c1ea6a32697d02b78c41e823f24a2fea24fb39f81d0234e0a57cf3cf"
+    },
+    {
+      "name": "inference-contract.svg",
+      "bytes": 3126,
+      "sha256": "ec7598f926c3247f75bea368f79d3e0d26af687ed9a131ce72a33c048ab15596"
+    },
+    {
+      "name": "v22_command_only.diff",
+      "bytes": 780,
+      "sha256": "32647d225033432f29472de5dc593050578ab1a73f42902873ac7e6e8b86a816"
+    },
+    {
+      "name": "v23_command_only.diff",
+      "bytes": 727,
+      "sha256": "fe7cac6b371f81fe24fa848ac8c5b77f4d6a56bbb4853214a19a4077d217fb4c"
+    }
+  ],
+  "source_only": true,
+  "notebook_files": 0,
+  "private_data_files": 0
+}

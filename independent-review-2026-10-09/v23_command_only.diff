@@ -1,0 +1,11 @@
+--- captured_V23_G2
++++ proposed_V23_G2_command_only
+@@ -61,7 +61,7 @@
+     _end = FULL_DEADLINE - CHAIN_CONFIG['MIRROR_RESERVE_S']
+     _cmd = [sys.executable, '-u', '-c', DRIVER, str(SOURCE_DIR), '--input-root', str(INPUT_ROOT),
+             '--competition-root', str(COMP_ROOT), '--output-dir', str(MIRROR_DIR), '--mode', 'inference',
+-            '--max-studies', str(N_STUDIES), '--fast-config',
++             '--fast-config',
+             '{"shared_triplets": true, "header_parallel": true, "pixel_parallel": true}']
+     _o = _watchdog.run_owned(_cmd, timeout=_end - time.monotonic() + 2.0, absolute_deadline=_end + 2.0,
+                              cleanup_on_success=True, cwd=str(SOURCE_DIR), env=os.environ.copy())

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="460" viewBox="0 0 1000 460" role="img" aria-labelledby="title desc">
+<title id="title">Canary limits and full inference are different contracts</title>
+<desc id="desc">The original inference command supplies a count larger than the canary limit and fails before inference. Omitting the optional count keeps the valid parser default while full inference still selects every study.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L0 6L9 3Z" fill="#64748b"/></marker></defs>
+<rect width="1000" height="460" rx="20" fill="#f8fafc"/>
+<g font-family="Arial, sans-serif" fill="#0f172a">
+<text x="40" y="48" font-size="25" font-weight="700">A small visible cohort did not exercise the inference contract</text>
+<text x="40" y="79" font-size="15" fill="#475569">Original captured parser and export control flow; outcomes below use a synthetic worker</text>
+<g stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"><path d="M310 174H357"/><path d="M650 174H697"/><path d="M310 335H357"/><path d="M650 335H697"/></g>
+<rect x="40" y="114" width="270" height="120" rx="14" fill="#e2e8f0"/>
+<text x="60" y="148" font-size="18" font-weight="700">Original inference command</text>
+<text x="60" y="179" font-size="16">--max-studies N</text><text x="60" y="208" font-size="15">N = number of all test studies</text>
+<rect x="360" y="114" width="290" height="120" rx="14" fill="#ffedd5"/>
+<text x="380" y="148" font-size="18" font-weight="700">Parser applies canary bound</text>
+<text x="380" y="179" font-size="16">1 ≤ max_studies ≤ 16</text><text x="380" y="208" font-size="15">N ≥ 17 rejects before inference</text>
+<rect x="700" y="114" width="260" height="120" rx="14" fill="#fee2e2"/>
+<text x="720" y="148" font-size="18" font-weight="700">Parent refuses root export</text>
+<text x="720" y="179" font-size="16">No qualified submission.csv</text><text x="720" y="208" font-size="15">Successful N = 3 hid this path</text>
+<rect x="40" y="275" width="270" height="120" rx="14" fill="#dbeafe"/>
+<text x="60" y="309" font-size="18" font-weight="700">Proposed command repair</text>
+<text x="60" y="340" font-size="16">Omit the optional count pair</text><text x="60" y="369" font-size="15">--mode inference stays unchanged</text>
+<rect x="360" y="275" width="290" height="120" rx="14" fill="#dbeafe"/>
+<text x="380" y="309" font-size="18" font-weight="700">Valid parser default = 3</text>
+<text x="380" y="340" font-size="16">Inference selects all_ids</text><text x="380" y="369" font-size="15">Canary mode still keeps its limit</text>
+<rect x="700" y="275" width="260" height="120" rx="14" fill="#dcfce7"/>
+<text x="720" y="309" font-size="18" font-weight="700">Every synthetic row exported</text>
+<text x="720" y="340" font-size="16">N = 3, 17 and 1,300</text><text x="720" y="369" font-size="15">Native and score checks remain</text>
+<text x="40" y="433" font-size="14" fill="#475569">V23 also needs a separate shared-resolution concurrency repair. This diagram reports no new model score.</text>
+</g></svg>

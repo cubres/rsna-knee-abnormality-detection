@@ -1,0 +1,314 @@
+{
+  "scope": "Source-only command repair and synthetic control-flow qualification; not native qualification",
+  "observed_utc": "2026-10-09T17:57:57.038748+00:00",
+  "raw_snapshot_sha256": "32276b0c89bd9487236f2f83e3ac37b2b4c41c9f09aeaca4dfddb38930fcbe51",
+  "highest_completed_own_score": 0.949,
+  "official_rows": [
+    {
+      "date": "2026-10-09T17:55:57.310Z",
+      "errorDescription": null,
+      "publicScore": null,
+      "ref": 57016763,
+      "status": null,
+      "url": "/code/prvsiyan/zz-gpuchk-knee-bench-2?scriptVersionId=356527070"
+    },
+    {
+      "date": "2026-10-09T17:55:26.073Z",
+      "errorDescription": "Your notebook did not output the expected submission file. The rerun of your notebook appears to have completed, but when we looked for your submission file, it wasn't there.",
+      "publicScore": null,
+      "ref": 57016750,
+      "status": "COMPLETE",
+      "url": "/code/prvsiyan/bee-s-knees-rsna-knees-final-push?scriptVersionId=356520735"
+    },
+    {
+      "date": "2026-10-09T17:54:54.490Z",
+      "errorDescription": "Your notebook did not output the expected submission file. The rerun of your notebook appears to have completed, but when we looked for your submission file, it wasn't there.",
+      "publicScore": null,
+      "ref": 57016738,
+      "status": "COMPLETE",
+      "url": "/code/prvsiyan/bee-s-knees-rsna-knees-final-push?scriptVersionId=356486430"
+    },
+    {
+      "date": "2026-10-09T17:54:19.680Z",
+      "errorDescription": null,
+      "publicScore": null,
+      "ref": 57016729,
+      "status": null,
+      "url": "/code/prvsiyan/bee-s-knees-rsna-knees-final-push?scriptVersionId=356445299"
+    },
+    {
+      "date": "2026-10-08T14:19:54.207Z",
+      "errorDescription": null,
+      "publicScore": "0.948",
+      "ref": 56957785,
+      "status": "COMPLETE",
+      "url": "/code/prvsiyan/the-bee-s-knees-final-rsna-push?scriptVersionId=356433079"
+    },
+    {
+      "date": "2026-10-08T13:26:42.273Z",
+      "errorDescription": null,
+      "publicScore": "0.948",
+      "ref": 56955785,
+      "status": "COMPLETE",
+      "url": "/code/prvsiyan/bee-s-knees-rsna-knees-final-push?scriptVersionId=356409719"
+    },
+    {
+      "date": "2026-10-08T11:43:41.890Z",
+      "errorDescription": null,
+      "publicScore": "0.949",
+      "ref": 56952077,
+      "status": "COMPLETE",
+      "url": "/code/prvsiyan/bee-s-knees-rsna-knees-final-push?scriptVersionId=356387745"
+    },
+    {
+      "date": "2026-10-08T10:48:43.700Z",
+      "errorDescription": null,
+      "publicScore": "0.949",
+      "ref": 56949940,
+      "status": "COMPLETE",
+      "url": "/code/prvsiyan/the-bee-s-knees-final-rsna-push?scriptVersionId=356373560"
+    },
+    {
+      "date": "2026-10-08T10:20:42.293Z",
+      "errorDescription": null,
+      "publicScore": "0.949",
+      "ref": 56948803,
+      "status": "COMPLETE",
+      "url": "/code/prvsiyan/bee-s-knees-rsna-knees-final-push?scriptVersionId=356365376"
+    },
+    {
+      "date": "2026-10-07T23:22:21.553Z",
+      "errorDescription": "Your notebook hit an unhandled error while rerunning your code. Note that the hidden dataset can be larger/smaller/different than the public dataset",
+      "publicScore": null,
+      "ref": 56923965,
+      "status": "COMPLETE",
+      "url": "/code/prvsiyan/bee-s-knees-rsna-knees-final-push?scriptVersionId=356197744"
+    }
+  ],
+  "source_pins": [
+    {
+      "candidate_sha256": "257341ddcf2c913235fe1b23ba0d3172cd886c4f71c88470d61204706c98bb0c",
+      "g2_original_sha256": "3d9177917259b22397297abc489c93abd47a22f5ac903a9775bb0455915dd7ad",
+      "g2_repaired_sha256": "eda91a3f9d9901a67629cffcd600590de7b6425e174ee1995f198c7deebd0dbf",
+      "g4_unchanged_sha256": "0acc18ef4da198f161b17d2310f1e7599e46ebc8a381d3e37c676c0d2c55ccf3",
+      "production_visible_anchor_retained": null,
+      "reader_sha256_unchanged": "07c6a275720b74688387adcb7fb146534b023faf9c1b643f5ebbc9821bfbbda0",
+      "version": 22
+    },
+    {
+      "candidate_sha256": "c09daad10cc305f57e9723f83a368438b7fcfeb510c7236cd59633ab89be6357",
+      "g2_original_sha256": "0728885e2bbbfe297d96b935bf5aeaec0bd611e67955d0d976d3166419103e07",
+      "g2_repaired_sha256": "5a0cd6bf0839a82244f29c2154bdce1f525755069c370031bbd72554d25480d7",
+      "g4_unchanged_sha256": "5de29e02911659d8554263d9045d171979f34d77f6e5892d16964ddedfdcdd94",
+      "production_visible_anchor_retained": true,
+      "reader_sha256_unchanged": "cad7d48758f74da3745e836dbf44fc4f5635b6402e730b8187b729ea350663af",
+      "version": 23
+    }
+  ],
+  "synthetic_cases": [
+    {
+      "arm_ok": true,
+      "parent_failure": null,
+      "parser": {
+        "error": null,
+        "parser_pass": true
+      },
+      "repaired": false,
+      "root_exported": true,
+      "root_rows": 3,
+      "selected_studies": 3,
+      "synthetic_studies": 3,
+      "test_only_visible_anchor_substitutions": 0,
+      "version": 22
+    },
+    {
+      "arm_ok": true,
+      "parent_failure": null,
+      "parser": {
+        "error": null,
+        "parser_pass": true
+      },
+      "repaired": true,
+      "root_exported": true,
+      "root_rows": 3,
+      "selected_studies": 3,
+      "synthetic_studies": 3,
+      "test_only_visible_anchor_substitutions": 0,
+      "version": 22
+    },
+    {
+      "arm_ok": false,
+      "parent_failure": "RuntimeError: owned arm incomplete",
+      "parser": {
+        "error": "RuntimeError: Canary study count must be 1..16",
+        "parser_pass": false
+      },
+      "repaired": false,
+      "root_exported": false,
+      "selected_studies": null,
+      "synthetic_studies": 17,
+      "test_only_visible_anchor_substitutions": 0,
+      "version": 22
+    },
+    {
+      "arm_ok": true,
+      "parent_failure": null,
+      "parser": {
+        "error": null,
+        "parser_pass": true
+      },
+      "repaired": true,
+      "root_exported": true,
+      "root_rows": 17,
+      "selected_studies": 17,
+      "synthetic_studies": 17,
+      "test_only_visible_anchor_substitutions": 0,
+      "version": 22
+    },
+    {
+      "arm_ok": false,
+      "parent_failure": "RuntimeError: owned arm incomplete",
+      "parser": {
+        "error": "RuntimeError: Canary study count must be 1..16",
+        "parser_pass": false
+      },
+      "repaired": false,
+      "root_exported": false,
+      "selected_studies": null,
+      "synthetic_studies": 1300,
+      "test_only_visible_anchor_substitutions": 0,
+      "version": 22
+    },
+    {
+      "arm_ok": true,
+      "parent_failure": null,
+      "parser": {
+        "error": null,
+        "parser_pass": true
+      },
+      "repaired": true,
+      "root_exported": true,
+      "root_rows": 1300,
+      "selected_studies": 1300,
+      "synthetic_studies": 1300,
+      "test_only_visible_anchor_substitutions": 0,
+      "version": 22
+    },
+    {
+      "arm_ok": true,
+      "parent_failure": null,
+      "parser": {
+        "error": null,
+        "parser_pass": true
+      },
+      "repaired": false,
+      "root_exported": true,
+      "root_rows": 3,
+      "selected_studies": 3,
+      "synthetic_studies": 3,
+      "test_only_visible_anchor_substitutions": 1,
+      "version": 23
+    },
+    {
+      "arm_ok": true,
+      "parent_failure": null,
+      "parser": {
+        "error": null,
+        "parser_pass": true
+      },
+      "repaired": true,
+      "root_exported": true,
+      "root_rows": 3,
+      "selected_studies": 3,
+      "synthetic_studies": 3,
+      "test_only_visible_anchor_substitutions": 1,
+      "version": 23
+    },
+    {
+      "arm_ok": false,
+      "parent_failure": "RuntimeError: owned arm incomplete",
+      "parser": {
+        "error": "RuntimeError: Canary study count must be 1..16",
+        "parser_pass": false
+      },
+      "repaired": false,
+      "root_exported": false,
+      "selected_studies": null,
+      "synthetic_studies": 17,
+      "test_only_visible_anchor_substitutions": 0,
+      "version": 23
+    },
+    {
+      "arm_ok": true,
+      "parent_failure": null,
+      "parser": {
+        "error": null,
+        "parser_pass": true
+      },
+      "repaired": true,
+      "root_exported": true,
+      "root_rows": 17,
+      "selected_studies": 17,
+      "synthetic_studies": 17,
+      "test_only_visible_anchor_substitutions": 0,
+      "version": 23
+    },
+    {
+      "arm_ok": false,
+      "parent_failure": "RuntimeError: owned arm incomplete",
+      "parser": {
+        "error": "RuntimeError: Canary study count must be 1..16",
+        "parser_pass": false
+      },
+      "repaired": false,
+      "root_exported": false,
+      "selected_studies": null,
+      "synthetic_studies": 1300,
+      "test_only_visible_anchor_substitutions": 0,
+      "version": 23
+    },
+    {
+      "arm_ok": true,
+      "parent_failure": null,
+      "parser": {
+        "error": null,
+        "parser_pass": true
+      },
+      "repaired": true,
+      "root_exported": true,
+      "root_rows": 1300,
+      "selected_studies": 1300,
+      "synthetic_studies": 1300,
+      "test_only_visible_anchor_substitutions": 0,
+      "version": 23
+    }
+  ],
+  "native_phase_counts": {
+    "22": {
+      "sha256": "5863da3f846afff4f03b831f4b9c22a0a75dfd1d32d6d3fc672b13efa6716765",
+      "studies": 3,
+      "parity_studies": 3,
+      "phase_counts": {
+        "parity_candidate": 3,
+        "parity_reference": 3
+      }
+    },
+    "23": {
+      "sha256": "e215c66c35397ebf2e5d64604581220e482475d5a059523439602f9194d28435",
+      "studies": 3,
+      "parity_studies": 3,
+      "phase_counts": {
+        "parity_candidate": 3,
+        "parity_reference": 3
+      }
+    }
+  },
+  "independent_review_sha256": "a757276242107f9791cc052f1b0c19fef2a1c4a76a9b162cc23d61a807404494",
+  "V23_deployment_held": true,
+  "unresolved": [
+    "Actual hidden rerun trace is not available here; parser causality is source-deterministic for N>16.",
+    "V23 mutates process-global INPUT_RES during concurrent consumers; this separate defect is not repaired.",
+    "Fault-event count divided by study count may reject a large cohort; scientific policy requires review.",
+    "Synthetic worker receipts do not establish GPU execution, timing, model correctness or an official score."
+  ]
+}
