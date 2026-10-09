@@ -1,0 +1,16 @@
+# V25 regression: observed result and enforced gates
+
+The account **prvsiyan** received a completed public score of **0.505** on **2026-10-09**, submission **57017206**, file **submission.csv**, notebook version **25**, native session **356834227**. The exact completed row was observed at **18:51:08.613665 UTC**. [Submitted notebook version](https://www.kaggle.com/code/prvsiyan/bee-s-knees-rsna-knees-final-push?scriptVersionId=356834227). The verified incumbent remains **0.949**, submission **56949940**, public version 34 / native 356373560. [Incumbent notebook version](https://www.kaggle.com/code/prvsiyan/the-bee-s-knees-final-rsna-push?scriptVersionId=356373560).
+
+The accepted V25 source is bound by SHA256 **68845e92bbe7e05f19731430d6d0fb0f0fa19afaceff7a803e4dadaad9460941**. Its visible qualification completed on only three studies. The following weaknesses are established by source inspection:
+
+- The arm gate computes degradation counts, then sets candidate/reference success without enforcing the declared 0.5% limit. Recording a counter in a receipt does not reject a degraded export.
+- The per-study retry changes speed flags but still calls the patched four-view predictor. A 384-view exception discards already successful 320 outputs, retries four views, and can return neutral 0.5 probabilities. Genuine two-view process fallback runs only when the parent rejects the whole candidate.
+- The export uses ordinal `argsort().argsort()` ranks. Equal neutral probabilities become artificial distinct ranks. An original synthetic 17-row fixture confirms this behavior; it contains no competition data.
+- All visible timing records are serial parity measurements; none exercises simultaneous post-parity GPU consumers or cold device 1 full 384 construction. A matching three-row rank CSV does not establish equal raw predictions.
+
+**No hidden prediction artifact or hidden fault counters were observed. The resolution race's causal role in 0.505 remains unproven. Neither the official score nor the source audit establishes that the submitted CSV was a literal constant 0.5 table.** Ordinary row-order checks were present and no row-shuffle defect was found.
+
+The coordinator's accepted bench-2 **V5** uses a different public-V38 four-view driver. Its saved source SHA256 is **424f7146ba2503de4ad5d7cf1e2c4cbea4923d10a82544ce7572bbcdf7f44429**. That source preserves the original 320 pair when optional 384 views fail and does not mutate reader INPUT_RES after initialization. Its visible native receipt confirms three studies, zero recorded degradation and a four-view root; this is native qualification evidence, not a completed official score or full hidden-cohort measurement.
+
+**V5 still needs an enforced base-reader degradation gate:** its accepted export code also records CAND_DEG/REF_DEG without checking a threshold before success. The coordinator's newer policy therefore must be distinguished from the exact accepted source. Fixing 384 recovery does not remove the risk of underlying 320 model/build defaults being exported. Native concurrent parity, fault injection, distinct-study degradation enforcement, memory and whole-runtime checks remain necessary before promotion. Any future score claim requires its own exact completed official row; the 0.949 incumbent remains preserved.
