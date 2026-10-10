@@ -1,0 +1,68 @@
+{
+  "dataset": "prvsiyan/rsna-knee-2026-public-notebook-scores-and-assets",
+  "generated_utc": "2026-10-10T13:29:13Z",
+  "algorithm": "sha256",
+  "note": "Every file in this folder except MANIFEST.json. cover.png sits next to upload/ and is not listed.",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 3313,
+      "sha256": "2a6b659c7f055f39c94f4091a4e20bf9a31e6f1a214247b9618985f0a0d21c07"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 2883,
+      "sha256": "6f4d3a44ebacb25d1a3f8349c47b885ad01cffcbda1ccfd4fdfa40281db7d0a4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 40954,
+      "sha256": "6ace6027a8317a95fc14040bb4e4af65d0bbbd91bf9fa2175017d677b4c3fda5"
+    },
+    {
+      "path": "assets.csv",
+      "bytes": 7885,
+      "sha256": "98dd83298d9371baf279154e06b3bc5710cd83348b175510ea6eb6354abcb468"
+    },
+    {
+      "path": "dataset-metadata.json",
+      "bytes": 8129,
+      "sha256": "17d2386c25f5c0d20a8a66141c512c2d88653b38dd61411435c6a322197e23fa"
+    },
+    {
+      "path": "efficiency_board_20261008.csv",
+      "bytes": 358669,
+      "sha256": "80642e8ab4491d65f05a0f24ee283f156a38200aa3782a4ed58f34a25bf39a0f"
+    },
+    {
+      "path": "efficiency_board_20261009.csv",
+      "bytes": 364381,
+      "sha256": "ef6c95c19469b3b695fd990b892b6c8228471bac8bb9fdf3df34ff02c589929d"
+    },
+    {
+      "path": "efficiency_board_20261010.csv",
+      "bytes": 371385,
+      "sha256": "ca19cbe74465d379f6f2ab37ad50181f3b2d64f624b976ebca7ceb3820984a4e"
+    },
+    {
+      "path": "leaderboard_top3000_20261008.csv",
+      "bytes": 142949,
+      "sha256": "f427d3bb72d23cef9bea303b3a524e44d77798d17d3eac914b44985f922adc6c"
+    },
+    {
+      "path": "notebook_assets.csv",
+      "bytes": 4721,
+      "sha256": "f690db36a1f1f2aeb6ab72c37c3ea2db5b40ef532d68f4ea9d3bdac7e373d428"
+    },
+    {
+      "path": "public_notebooks.csv",
+      "bytes": 12035,
+      "sha256": "4845193daa5018e16144474128f9fc57f9ec050168323562f75522a6231158c0"
+    },
+    {
+      "path": "schema.json",
+      "bytes": 16179,
+      "sha256": "6ccc373b2f926e0b7c469624c2f161c0f4e0db736edea702f5da8da9597cd770"
+    }
+  ]
+}

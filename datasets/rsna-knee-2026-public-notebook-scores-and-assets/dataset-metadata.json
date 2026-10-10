@@ -1,0 +1,69 @@
+{
+  "id": "prvsiyan/rsna-knee-2026-public-notebook-scores-and-assets",
+  "title": "RSNA Knee 2026: public notebook scores and assets",
+  "subtitle": "24 public RSNA Knee notebooks: displayed scores, mounted datasets, licences",
+  "description": "# RSNA Knee 2026: public notebook scores and assets\n\n## What\n\nA snapshot, taken 8 to 10 October 2026, of the public Kaggle notebooks written for the RSNA Knee Abnormality Detection competition (rsna-knee-abnormality-detection). It holds the score each notebook's code page displays, the datasets and models each notebook attaches, each notebook's licence where it was read, and the Efficiency Prize board as saved on three days. It also holds the first 3,000 rows of the main leaderboard captured on 8 October 2026, and the publisher's own submission rows with their public scores. Team names are replaced by pseudonymous keys. The dataset contains no images, labels, study data, model weights or predictions.\n\n## Why\n\nIt answers three questions: which public notebooks show which score; which datasets each notebook attaches, and under which licence; and how the Efficiency Prize board moved over three days. Scores, votes and platform counts change daily, so every file carries its capture time. The README has a curated table of the 24 notebooks, with each one's owner, displayed score, method family, mounted datasets, licences and 10 October kernel-list rank.\n\n## Files\n\n- public_notebooks.csv: 24 rows, one per public notebook.\n- notebook_assets.csv: 38 rows, which notebook attaches which dataset or model.\n- assets.csv: 26 rows, one per dataset or model, with licence, size and platform counts.\n- efficiency_board_20261008.csv, efficiency_board_20261009.csv, efficiency_board_20261010.csv: 5,290, 5,374 and 5,477 rows.\n- leaderboard_top3000_20261008.csv: 3,000 rows.\n- schema.json, README.md, NOTICE.md, LICENSE, MANIFEST.json.\n\n## Columns\n\nAll 57 columns of the seven CSV files are documented in the README column guide and in schema.json, with type, unit, allowed values and meaning. Key columns: displayed_score and score_label (V = rendered on the code page; P = the author's claim); version (the notebook version the score refers to); PublicScore and EfficiencyRank (board values; rank is not score order, and tied rows share a rank value); team_key (pseudonymous: the first ten hexadecimal digits of the SHA-256 of the trimmed team name).\n\n## How to load\n\n```python\nimport pandas as pd\n\nnb = pd.read_csv(\"public_notebooks.csv\")\nlinks = pd.read_csv(\"notebook_assets.csv\")\nassets = pd.read_csv(\"assets.csv\")\nboard = pd.read_csv(\"efficiency_board_20261010.csv\")\nprint(nb.groupby(\"displayed_score\")[\"notebook_ref\"].count())\n```\n\n## Provenance\n\n- Notebook scorecard: rendered signed out on 8 October 2026 at about 15:03 UTC, top 20 by score. Other rows were read from their notebook pages, titles or the kernel list; each row's evidence label says which.\n- Dataset metadata: saved between 15:07 and 18:22 UTC on 8 October 2026, the range of metadata_captured_utc in assets.csv.\n- Team submission rows: row ids, times and public scores from the submission snapshot of 10 October 2026. Description excerpts in the README have build labels removed.\n- Efficiency board: printed by the Kaggle notebook ryanholbrook/rsna-knee-abnormalities-efficiency-lb. Team names were replaced by keys, scores printed to three decimals, and an ISO time column added. The board states no time zone.\n- Leaderboard: the first 3,000 rows the API returns, saved 8 October 2026 at 14:45 UTC.\n- The competition rules page could not be read signed out on 10 October 2026. The licence basis is therefore stated, and was not checked against the rules text.\n\n## Credits\n\nCompiled and published by prvsiyan. Notebooks and datasets are credited to their Kaggle owners in the owner columns. Competition: RSNA Knee Abnormality Detection (https://www.kaggle.com/competitions/rsna-knee-abnormality-detection). The README has the dependency and component credit table with licences.\n\n## Licence\n\nCC-BY-4.0 (Creative Commons Attribution 4.0 International) for the dataset as a compilation of public listing facts and the publisher's own submission rows. Legal code: https://creativecommons.org/licenses/by/4.0/legalcode. The tables contain no competition data. The example code in the README is Apache-2.0; NOTICE.md states which file is under which licence. Per-file terms, including the Apache-2.0 licence of the efficiency board's source notebook, are in LICENSE, NOTICE.md and the README Licence section. Asset licences are reported as the platform lists them; no asset is redistributed.\n\n## Changelog\n\n- Version 1, October 2026: first release. Notebook and dataset captures from 8 October 2026; efficiency boards saved 8, 9 and 10 October 2026; leaderboard capture from 8 October 2026; team submission rows from the snapshot of 10 October 2026.\n",
+  "isPrivate": false,
+  "licenses": [
+    {
+      "name": "CC-BY-4.0"
+    }
+  ],
+  "keywords": [
+    "medicine",
+    "health",
+    "tabular",
+    "benchmark",
+    "deep learning"
+  ],
+  "resources": [
+    {
+      "path": "public_notebooks.csv",
+      "description": "One row per public notebook (24 rows, 19 columns): displayed score and its label, notebook version, votes, method family, ConvNeXt blend weight, licence the page shows, assets-itemised status and notes. CC-BY-4.0 compilation."
+    },
+    {
+      "path": "notebook_assets.csv",
+      "description": "Join table (38 rows, 5 columns): which notebook attaches which dataset or model, how the link was established, and whether the asset has a row in assets.csv. CC-BY-4.0 compilation."
+    },
+    {
+      "path": "assets.csv",
+      "description": "One row per dataset or model the notebooks attach or the publisher's listing review found (26 rows, 14 columns): owner, licence as listed and normalised, size, update time, platform counts, capture time, status. Licences as the platform lists them."
+    },
+    {
+      "path": "efficiency_board_20261008.csv",
+      "description": "Efficiency Prize board as saved on 8 October 2026 (5,290 rows, 5 columns): EfficiencyRank (tied rows share a rank value), pseudonymous team_key, PublicScore, DateSubmitted as printed, DateSubmittedISO. CC-BY-4.0 compilation; source notebook Apache-2.0."
+    },
+    {
+      "path": "efficiency_board_20261009.csv",
+      "description": "Efficiency Prize board as saved on 9 October 2026 (5,374 rows, 5 columns). Same columns as the 8 October file. CC-BY-4.0 compilation; source notebook Apache-2.0."
+    },
+    {
+      "path": "efficiency_board_20261010.csv",
+      "description": "Efficiency Prize board as saved on 10 October 2026 (5,477 rows, 5 columns). Same columns as the 8 October file. CC-BY-4.0 compilation; source notebook Apache-2.0."
+    },
+    {
+      "path": "leaderboard_top3000_20261008.csv",
+      "description": "The first 3,000 rows of the main leaderboard, captured 8 October 2026 (4 columns): LeaderboardPosition, pseudonymous team_key, PublicScore, SubmissionDate as the API returns it. CC-BY-4.0 compilation."
+    },
+    {
+      "path": "schema.json",
+      "description": "Column dictionary for every CSV in this dataset (57 columns across 7 files): name, type, unit, allowed values, meaning, row counts."
+    },
+    {
+      "path": "README.md",
+      "description": "The dataset card: contents, column guide, curated frontier table of 24 notebooks, snapshot times, headline facts, what the figures show and do not show, limits, team submissions, licence, credits and changelog."
+    },
+    {
+      "path": "LICENSE",
+      "description": "Licence terms: CC-BY-4.0 for the dataset as a compilation, the per-file terms, and the source notebook licence note."
+    },
+    {
+      "path": "NOTICE.md",
+      "description": "Which licence applies to which kind of file: CC-BY-4.0 for the compiled tables and Apache-2.0 for the publisher's example code; attribution for the upstream notebooks."
+    },
+    {
+      "path": "MANIFEST.json",
+      "description": "SHA-256 and byte size of every other file in this dataset."
+    }
+  ]
+}

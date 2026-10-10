@@ -1,0 +1,160 @@
+{
+  "id": "prvsiyan/rsna-knee-inference-timing-t4",
+  "title": "RSNA Knee Inference Timing T4",
+  "subtitle": "Per-stage CPU and GPU timings from 10 knee MRI reader runs on two T4s",
+  "description": "## What\n\nHow much does one more test-time view cost a knee MRI reader on two Tesla T4 GPUs, and where does the time go? This dataset holds per-stage timing receipts from 10 benchmark runs of the reader on three visible studies, the summary tables derived from them, and a calculator that projects a 1,300-study hidden run and its efficiency score.\n\n- **One extra view.** Going from one view to two adds about 0.99 s of GPU time per study. Over 1,300 studies on two GPUs that is about 645 s of hidden runtime, worth about 0.009 AUC at the approximate efficiency constants (see Efficiency arithmetic).\n- **Four views** (two 320-pixel views plus a 384-pixel full-field pair) take about 4.8 s of GPU time per study, roughly 2.5 times the two-view cost.\n- **Speed flags.** Accepted speed flags cut CPU prep by 8% to 17% per study and added 1% to 9% GPU time. For two-view and four-view builds, whole-study time stayed within about 4% of the reference.\n- **Where the time goes.** CPU prep (DICOM header and pixel reads, volume build) is about 1.0 to 1.1 s per study in the parity reference rows (1.01 to 1.12 s). It is higher in the main-phase rows, 1.39 to 1.44 s per study (see Caveats). Prep is the binding term for one view and is hidden under GPU time for two and four views.\n\n### Key numbers\n\nSteady state, per study, on two Tesla T4s. The hidden projection is for 1,300 studies with prep and GPU overlapped.\n\n| Configuration | GPU s per study | CPU prep s per study | Projected 1,300-study run (s) |\n|---|---|---|---|\n| One view, reference (bench V22) | 0.94 | 1.08 | 717 |\n| One view, speed flags (bench V22) | 0.95 | 0.91 | 633 |\n| Two views, reference (bench V21) | 1.93 | 1.12 | 1,279 |\n| Two views, reference (bench-2 V3) | 1.95 | 1.01 | 1,278 |\n| Two views, reference, main phase (bench-2 V9) | 1.88 | 1.44 | 1,252 |\n| Four views, reference (bench V25) * | 4.84 | 1.10 | 3,153 |\n| Four views, speed flags (bench V25) * | 4.92 | 0.94 | 3,204 |\n\nEach row is a separately measured build. Compare GPU and prep within a row. Across rows, differences under about 7% fall within the two-view reference GPU range given in Caveats.\n\n\\* Four-view build. Official row 57017206 has a public score of 0.505, and the snapshot records no cause (see Caveats). These timings are visible-study measurements only.\n\n### Speed flags and the parity gate\n\nBefore a speed configuration is used, the reader runs it against the reference path on the three visible studies and compares the output probabilities. The gate tolerance is 0.0001 absolute. Only configurations that pass are eligible, and the table shows the one each build accepted.\n\n| Build | Accepted configuration | GPU change | CPU prep change | Study total change |\n|---|---|---|---|---|\n| bench V21, two views | fused TTA only | +3.0% | -16.7% | -4.2% |\n| bench V22, one view | all requested flags | +0.8% | -15.4% | n/a (see Timing scope) |\n| bench V23, four views | all requested flags | +4.5% | -14.0% | +1.5% |\n| bench V24, one view | all requested flags | +1.1% | -11.6% | n/a (see Timing scope) |\n| bench V25, four views | all requested flags | +1.6% | -15.1% | -1.5% |\n| bench-2 V2, two views | fused TTA only | +8.6% | -11.3% | +1.5% |\n| bench-2 V3, two views | fused TTA only | +4.3% | -8.0% | +0.1% |\n\nGPU and prep changes are against the same build's reference row. The study-total change compares whole-study wall time. It is marked n/a for plain-view builds (see Timing scope). bench V22, V23 and V24 passed the gate but were not scored: the reader rejected two at hidden-run startup and one was pulled before submission. Their timings are visible-study checks only.\n\n### Builds in this dataset\n\nEach build is one version of the same reader notebook. The build labels are our own measurement-run labels, numbered by the team: \"bench V21 to V25\" is one series and \"bench-2 V2 to V9\" is another. Names are kept so rows can be matched across files. The arm column says which views a build ran.\n\n| Build | Views | Per-stage timing file | Public row |\n|---|---|---|---|\n| bench V21 | two views (320 px) | yes | none |\n| bench V22 | one view (320 px) | yes | none |\n| bench V23 | four views (320 + 384 px) | yes | none |\n| bench V24 | one view (320 px) | yes | none |\n| bench V25 | four views (320 + 384 px) | yes | 57017206 |\n| bench-2 V2 | two views (320 px) | yes | none |\n| bench-2 V3 | two views (320 px) | yes | none |\n| bench-2 V4 | two views (320 px) | yes | none |\n| bench-2 V5 | four views (320 + 384 px) | no | none |\n| bench-2 V6 | one view (320 px) | no | 57024289 |\n| bench-2 V7 | two views (320 px) | yes | none |\n| bench-2 V8 | four views (320 + 384 px) | no | 57024205 |\n| bench-2 V9 | two views (320 px) | yes | 57024089 |\n\n- **One view** (`plain_320`): the plain view only, on the 320-pixel centre crop.\n- **Two views** (`two_view_320`): the plain view and a mirrored view (the same windows with the channel order reflected) on the 320-pixel crop, averaged with equal weight.\n- **Four views** (`four_view_320_384`): the two 320-pixel views plus a plain and a mirrored view on the 384-pixel full field, averaged with equal weight.\n\n## Why\n\nA test-time view is a runtime decision as well as an accuracy one. Each view adds forward passes on the GPU, and the efficiency formula in this card counts runtime against AUC. Anyone planning a build needs the measured per-stage cost to see whether an extra view pays for itself. This dataset gives those costs for each build on the same hardware, the parity checks that gate each speed flag, and the arithmetic that turns them into a projected hidden run. It is most useful for planning and for checking that arithmetic. It does not replace a run on the hidden studies, whose preprocessing cost was not measured (see Caveats).\n\n## Files\n\n| File | What it is |\n|---|---|\n| `README.md` | The complete dataset card. The Kaggle description field carries only its opening sections (What, Why and Files). |\n| `LICENSE` | Licence for this dataset (CC BY-NC-SA 4.0), with the link to the full legal code and the scope of the code-file exception. |\n| `LICENSE-APACHE-2.0` | Full Apache License 2.0 text, covering build_tables.py and efficiency_calculator.py. |\n| `NOTICE.md` | Per-file licence table and third-party notices. |\n| `MANIFEST.json` | SHA-256 and byte size of every other file in this folder. |\n| `timings.csv` | Long format: one row per stage, per study, per configuration, per build. 630 rows. |\n| `summary.csv` | One row per build, phase and configuration: steady-state seconds, projections and parity results. 26 rows. |\n| `native_runs.csv` | One row per build's native run (end-to-end on three visible studies): elapsed time, parity, library versions and failure counters. 13 rows. |\n| `efficiency_calculator.py` | Standard-library Python: hidden-run projection, efficiency score and break-even AUC. Command line and import. |\n| `build_tables.py` | Rebuilds timings.csv, summary.csv and native_runs.csv from the receipt files, indexed by receipts__index.csv. Standard library only. Apache-2.0. |\n| `schema.json` | Machine-readable column dictionary, stage glossary and licence fields. |\n| `receipts__index.csv` | Maps each receipt file to its kind (timing or native), build version and arm. |\n| `receipts__timing__BUILD.json` | Per-stage timing receipts, one per build with a timing file (10 files). Study and session identifiers removed. |\n| `receipts__native__BUILD.json` | Native inference receipts, one per build (13 files). Session identifiers removed. |\n\nbuild_tables.py rebuilds the three CSV files from the receipt files (`receipts__timing__*.json` and `receipts__native__*.json`), using `receipts__index.csv` to find them. Running it on the shipped receipts reproduces the tables exactly. Receipt files sit at the top level of this folder, with the prefix `receipts__` in place of the sub-folder path.\n\nThe rest of the dataset card is in README.md in this dataset's files: the column dictionary, how to load the tables, provenance, credits, licence and changelog. README.md is the complete card.\n",
+  "licenses": [
+    {
+      "name": "CC-BY-NC-SA-4.0"
+    }
+  ],
+  "keywords": [
+    "medicine",
+    "deep learning",
+    "computer vision",
+    "benchmark",
+    "tabular"
+  ],
+  "resources": [
+    {
+      "path": "README.md",
+      "description": "The complete dataset card. The Kaggle description field carries only its opening sections (What, Why and Files)."
+    },
+    {
+      "path": "LICENSE",
+      "description": "Licence for this dataset (CC BY-NC-SA 4.0), with the link to the full legal code and the scope of the code-file exception."
+    },
+    {
+      "path": "LICENSE-APACHE-2.0",
+      "description": "Full Apache License 2.0 text, covering build_tables.py and efficiency_calculator.py."
+    },
+    {
+      "path": "NOTICE.md",
+      "description": "Per-file licence table and third-party notices."
+    },
+    {
+      "path": "MANIFEST.json",
+      "description": "SHA-256 and byte size of every other file in this folder."
+    },
+    {
+      "path": "timings.csv",
+      "description": "Long format: one row per stage, per study, per configuration, per build. 630 rows."
+    },
+    {
+      "path": "summary.csv",
+      "description": "One row per build, phase and configuration: steady-state seconds, projections and parity results. 26 rows."
+    },
+    {
+      "path": "native_runs.csv",
+      "description": "One row per build's native run (end-to-end on three visible studies): elapsed time, parity, library versions and failure counters. 13 rows."
+    },
+    {
+      "path": "efficiency_calculator.py",
+      "description": "Standard-library Python: hidden-run projection, efficiency score and break-even AUC. Command line and import."
+    },
+    {
+      "path": "build_tables.py",
+      "description": "Rebuilds timings.csv, summary.csv and native_runs.csv from the receipt files, indexed by receipts__index.csv. Standard library only. Apache-2.0."
+    },
+    {
+      "path": "schema.json",
+      "description": "Machine-readable column dictionary, stage glossary and licence fields."
+    },
+    {
+      "path": "receipts__index.csv",
+      "description": "Maps each receipt file to its kind (timing or native), build version and arm."
+    },
+    {
+      "path": "receipts__native__bench2_v2_two_view_320.json",
+      "description": "Native inference receipt for bench2_v2 two_view_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__native__bench2_v3_two_view_320.json",
+      "description": "Native inference receipt for bench2_v3 two_view_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__native__bench2_v4_two_view_320.json",
+      "description": "Native inference receipt for bench2_v4 two_view_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__native__bench2_v5_four_view_320_384.json",
+      "description": "Native inference receipt for bench2_v5 four_view_320_384, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__native__bench2_v6_plain_320.json",
+      "description": "Native inference receipt for bench2_v6 plain_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__native__bench2_v7_two_view_320.json",
+      "description": "Native inference receipt for bench2_v7 two_view_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__native__bench2_v8_four_view_320_384.json",
+      "description": "Native inference receipt for bench2_v8 four_view_320_384, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__native__bench2_v9_two_view_320.json",
+      "description": "Native inference receipt for bench2_v9 two_view_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__native__bench_v21_two_view_320.json",
+      "description": "Native inference receipt for bench_v21 two_view_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__native__bench_v22_plain_320.json",
+      "description": "Native inference receipt for bench_v22 plain_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__native__bench_v23_four_view_320_384.json",
+      "description": "Native inference receipt for bench_v23 four_view_320_384, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__native__bench_v24_plain_320.json",
+      "description": "Native inference receipt for bench_v24 plain_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__native__bench_v25_four_view_320_384.json",
+      "description": "Native inference receipt for bench_v25 four_view_320_384, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__timing__bench2_v2_two_view_320.json",
+      "description": "Per-stage timing receipt for bench2_v2 two_view_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__timing__bench2_v3_two_view_320.json",
+      "description": "Per-stage timing receipt for bench2_v3 two_view_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__timing__bench2_v4_two_view_320.json",
+      "description": "Per-stage timing receipt for bench2_v4 two_view_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__timing__bench2_v7_two_view_320.json",
+      "description": "Per-stage timing receipt for bench2_v7 two_view_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__timing__bench2_v9_two_view_320.json",
+      "description": "Per-stage timing receipt for bench2_v9 two_view_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__timing__bench_v21_two_view_320.json",
+      "description": "Per-stage timing receipt for bench_v21 two_view_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__timing__bench_v22_plain_320.json",
+      "description": "Per-stage timing receipt for bench_v22 plain_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__timing__bench_v23_four_view_320_384.json",
+      "description": "Per-stage timing receipt for bench_v23 four_view_320_384, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__timing__bench_v24_plain_320.json",
+      "description": "Per-stage timing receipt for bench_v24 plain_320, as written by the reader. Identifiers removed."
+    },
+    {
+      "path": "receipts__timing__bench_v25_four_view_320_384.json",
+      "description": "Per-stage timing receipt for bench_v25 four_view_320_384, as written by the reader. Identifiers removed."
+    }
+  ]
+}

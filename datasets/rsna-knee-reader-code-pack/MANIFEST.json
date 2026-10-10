@@ -1,0 +1,114 @@
+{
+  "dataset": "prvsiyan/rsna-knee-reader-code-pack",
+  "generated": "2026-10-10",
+  "scope": "every file in this folder except MANIFEST.json",
+  "file_count": 21,
+  "total_bytes": 369430,
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 9635,
+      "sha256": "17031ea9f787b3c2a7909026edf39d073063d8f8630c56970700344a07a6e43f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 30267,
+      "sha256": "3f4771f249a74bd5d8f4156b02ede75b776917566b8b104784f4eac0f97e6f8a"
+    },
+    {
+      "path": "dataset-metadata.json",
+      "bytes": 10165,
+      "sha256": "92fd17dde358284b20d445dce2132ccdd66bdf506d2550371dd4cbb182295aa2"
+    },
+    {
+      "path": "docs__FAIL_CLOSED_RULES.md",
+      "bytes": 8088,
+      "sha256": "6f6c919b1874f23dccd5192ab42814879c705c0767a6a2c3b1cf4f6742af9af0"
+    },
+    {
+      "path": "docs__HOWTO_safe_hidden_reruns.md",
+      "bytes": 8935,
+      "sha256": "47510a68f8efaf6946171252056d575198992242827a691d05f758d64eb70480"
+    },
+    {
+      "path": "docs__V25_POSTMORTEM.md",
+      "bytes": 5282,
+      "sha256": "b0f953c743c190028e02fea7ac5fd2ab0030971402b483bf277c9f33ad87bbb7"
+    },
+    {
+      "path": "gate__launcher_v38g.py",
+      "bytes": 18674,
+      "sha256": "3c0cf115ae258ad521a523be42fc4b31d8fcfa722ac462bd13f8f4208a1d421d"
+    },
+    {
+      "path": "gate__validation_v38g.py",
+      "bytes": 2008,
+      "sha256": "a663adffaa1c3fa5e13571953f1ac4d4ac2fe0866160e0cc8bc4fd7228ff0593"
+    },
+    {
+      "path": "src__four_view_arm.py",
+      "bytes": 11678,
+      "sha256": "a76e9d7f2767e68e624c3b364a3d57a0d61c79cd5641fc1f43c131defbc51e65"
+    },
+    {
+      "path": "src__owned_watchdog.py",
+      "bytes": 15168,
+      "sha256": "54636411f9f20aeacdeec784b3cb4b5e5a3fbb8c6ea2ec334f0d0d41b6e6130e"
+    },
+    {
+      "path": "src__public_mirror_reader.py",
+      "bytes": 25197,
+      "sha256": "e9ec648e1b2f6121f36bbe6ae806a5714571db83804c719ea02d5c4bf7fe47d7"
+    },
+    {
+      "path": "src__public_mirror_reader_v20.py",
+      "bytes": 43994,
+      "sha256": "07c6a275720b74688387adcb7fb146534b023faf9c1b643f5ebbc9821bfbbda0"
+    },
+    {
+      "path": "src__public_mirror_reader_v24_canary_cap.py",
+      "bytes": 44037,
+      "sha256": "c3e760825755d2616c12bf763b343e6c92df6ec7b65e4b28f8fd3a0bab6dd407"
+    },
+    {
+      "path": "src__public_mirror_reader_v36_canary_cap.py",
+      "bytes": 25240,
+      "sha256": "96af4b84973b9c0cfa24d5fda904f622ae10a4bb44ac468fc96b0f452de5446f"
+    },
+    {
+      "path": "tests__replay_active_cells.py",
+      "bytes": 11508,
+      "sha256": "6474f7647636c075f68f8283228b40957a40bc878f476696d9d4220bf3a8826f"
+    },
+    {
+      "path": "tests__smoke_standalone.py",
+      "bytes": 8326,
+      "sha256": "428863b347a8ae328569f916978a17fab8e9aaab412f8beafe89dc50e8c56759"
+    },
+    {
+      "path": "tests__test_chain_v38_gated.py",
+      "bytes": 30109,
+      "sha256": "029933db16c5c48e9d25d816386f415b95211102330dc22b66f6d4e7e8d6215f"
+    },
+    {
+      "path": "tests__test_fourview_cpu.py",
+      "bytes": 7029,
+      "sha256": "d3258a647c3a92f1d652b4dd6c619f67023a75e022913a851fca5e8ae2cec1b4"
+    },
+    {
+      "path": "tests__test_reader_v20_cpu.py",
+      "bytes": 24653,
+      "sha256": "818141684d983cd050d2d490e58984bafb54fe18aea69f7b11af6fd35ed4a990"
+    },
+    {
+      "path": "tests__test_shared_state_v38_gated.py",
+      "bytes": 18080,
+      "sha256": "a08f3099678a72546b6a5012271f84c7385ef351b4dab600f19ae5a1d6d89b46"
+    }
+  ]
+}

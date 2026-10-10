@@ -1,0 +1,103 @@
+{
+  "id": "prvsiyan/rsna-knee-reader-code-pack",
+  "title": "RSNA Knee Fail-Closed Reader + Gate (Python code)",
+  "subtitle": "Mirror reader, four-view driver, fail-closed gate, watchdog, CPU smoke test",
+  "description": "# RSNA Knee Fail-Closed Reader + Gate (Python code)\n\n## What\nPython code for running an anatomical-mirror knee model on a hidden test set, and refusing to write a silently degraded submission. The pack holds an anatomical-mirror reader in four versions, a four-view driver, a fail-closed export gate with a reference fallback, an owned-process watchdog, and offline tests. It contains no model weights, no competition data, no labels and no predictions.\n\n## Why\nA hidden rerun fails silently unless the code makes it loud. This pack holds the checks that came out of three failure modes: a run refused at startup by a study-count check, a run whose output may have contained degraded neutral rows, and a race on a shared input-resolution setting. The gate counts degraded studies from the saved output before any file is exported. The watchdog reports whether a child process group really ended. The standalone smoke test runs on a plain CPU with no notebook.\n\n## Files\n22 files at the top level. Sub-folders are flattened with a double underscore, so `src/owned_watchdog.py` is `src__owned_watchdog.py`. README.md has the file guide with the original paths and a snippet that restores the folder layout. Every file is listed in `resources` except dataset-metadata.json, which is this metadata itself.\n\n## Columns\nThere are no tables or CSV files, so there are no data columns. MANIFEST.json has one record per file with three fields: `path` (text), `bytes` (integer) and `sha256` (64 hexadecimal characters). Its top-level keys are dataset, generated, scope, file_count and total_bytes. The results table in README.md has five columns: Kaggle submission id, What was tested, Notebook version id, Public score and Notes. Each is defined in README.md.\n\n## How to load\nThere is no data loader. The files are plain Python, Markdown and JSON. Attach the dataset (it mounts at /kaggle/input/rsna-knee-reader-code-pack/), run `python3 -I tests__smoke_standalone.py` from the upload folder, and restore the folder layout with the README snippet before running the reader or the gate. To check a file, compare its sha256 with MANIFEST.json.\n\n## Provenance\nThe reader and the four-view driver derive from nartaa's public [RSNA Knee 0949 Anatomical Mirror notebook](https://www.kaggle.com/code/nartaa/rsna-knee-0949-anatomical-mirror), whose Kaggle page states Apache 2.0 (checked 2026-10-10). The reader's architecture lineage is dreaddevelopment's Raptor CoAtNet / MIL work. The gate, the documents and the smoke test are this pack's own code. The owned-process watchdog is the publisher's own helper; its file header declares Apache-2.0 and names no upstream project. The learned checkpoint is not included; it is attached separately under its publisher's terms. The results table lists Kaggle submission ids, notebook version ids and public scores, taken from the Kaggle submission snapshot of 2026-10-10.\n\n## Credits\nnartaa (Danial Zakaria): the mirror-reader recipe and selected checkpoint. dreaddevelopment: the Raptor CoAtNet / MIL architecture lineage. timm (Ross Wightman and contributors): the CoAtNet implementation the reader instantiates. PyTorch, NumPy, pandas, SciPy, OpenCV, pydicom and timm are credited with their licences in README.md, Dependency credits. RSNA and the competition data contributors. The required OAI / NDA acknowledgement is reproduced in README.md and NOTICE.md. Publisher: prvsiyan.\n\n## Licence\nApache-2.0 for the code, tests and documents (see LICENSE and NOTICE.md). The results table in README.md compiles the publisher's Kaggle submission ids, notebook version ids and public scores, and is offered under CC-BY-4.0. No competition data, OAI data, label tables or checkpoint is included.\n\n## Changelog\n1.0 (2026-10-10): first release, with readers in four versions, a four-view driver, a fail-closed gate template, an owned-process watchdog, offline tests, a standalone smoke test and documents. The upstream notebook's licence was confirmed as Apache-2.0 before publication.\n",
+  "licenses": [
+    {
+      "name": "apache-2.0"
+    }
+  ],
+  "keywords": [
+    "python",
+    "deep learning",
+    "computer vision",
+    "medicine"
+  ],
+  "resources": [
+    {
+      "path": "README.md",
+      "description": "Full dataset card: file names and the restore snippet, what the pack is, the file guide with original paths, columns, Kaggle usage, runtime requirements, the results table with Kaggle submission ids, notebook version ids and public scores, licence terms, dependency credits, credits and citation."
+    },
+    {
+      "path": "NOTICE.md",
+      "description": "Attribution and lineage: upstream nartaa recipe (Apache 2.0 on its Kaggle page, checked 2026-10-10), dreaddevelopment and timm lineage, per-file changes and terms, the no-weights and no-data statement, and the publisher's OAI / NDA acknowledgement."
+    },
+    {
+      "path": "LICENSE",
+      "description": "Apache License 2.0 full text, covering the code, tests and documents of this pack."
+    },
+    {
+      "path": "MANIFEST.json",
+      "description": "sha256 and byte size of every other file in this folder, for integrity checks."
+    },
+    {
+      "path": "docs__FAIL_CLOSED_RULES.md",
+      "description": "Gate rules (original path docs/FAIL_CLOSED_RULES.md): the degraded-study definition, the limit max(0.5% x N, 1), the route order, root sources, every receipt field, a comparison with earlier gate versions, and known limits."
+    },
+    {
+      "path": "docs__HOWTO_safe_hidden_reruns.md",
+      "description": "Checklist for Kaggle hidden reruns (original path docs/HOWTO_safe_hidden_reruns.md): canary caps, competition mount layouts, resolution-switch races, degraded outputs, budgets, the pre-run checklist and offline reproductions."
+    },
+    {
+      "path": "docs__V25_POSTMORTEM.md",
+      "description": "Analysis of row 57017206, public score 0.505 (original path docs/V25_POSTMORTEM.md): the failure mechanisms considered, the evidence for each, the standing rule that followed, and open items. Dated note at the top."
+    },
+    {
+      "path": "gate__launcher_v38g.py",
+      "description": "Fail-closed gated four-view launcher (original path gate/launcher_v38g.py), a notebook-cell body with placeholders: degraded-fraction gate, reference route, receipts and root-last export."
+    },
+    {
+      "path": "gate__validation_v38g.py",
+      "description": "Final aggregate validation cell for the gated launcher (original path gate/validation_v38g.py): root digest, route and receipt consistency checks."
+    },
+    {
+      "path": "src__public_mirror_reader.py",
+      "description": "Pinned anatomical-mirror reader (original path src/public_mirror_reader.py), sha256 e9ec648e. Unmodified. Its study-count check applies in every mode."
+    },
+    {
+      "path": "src__public_mirror_reader_v36_canary_cap.py",
+      "description": "The pinned reader with one changed line (original path src/public_mirror_reader_v36_canary_cap.py): the study-count check applies only in canary mode. sha256 96af4b84."
+    },
+    {
+      "path": "src__public_mirror_reader_v20.py",
+      "description": "V20 mirror reader (original path src/public_mirror_reader_v20.py) with parity-gated speed flags, timing receipts and study-identifier-free receipts. Study-count check in every mode."
+    },
+    {
+      "path": "src__public_mirror_reader_v24_canary_cap.py",
+      "description": "The V20 reader with one changed line (original path src/public_mirror_reader_v24_canary_cap.py): the study-count check applies only in canary mode."
+    },
+    {
+      "path": "src__four_view_arm.py",
+      "description": "Four-view driver (original path src/four_view_arm.py), sha256 a76e9d7f. Uses the reader's own predict_pair for the 320 pair, adds 384 plain and mirrored views on one model per device, fails soft per view, and projects its budget."
+    },
+    {
+      "path": "src__owned_watchdog.py",
+      "description": "Owned process-group runner (original path src/owned_watchdog.py) with a success-cleanup contract. Apache-2.0 SPDX header. Unmodified, sha256 54636411. Stdlib only."
+    },
+    {
+      "path": "tests__smoke_standalone.py",
+      "description": "Standalone CPU smoke test (original path tests/smoke_standalone.py). Reads the flattened names, so run it from the upload folder. Needs no notebook, checkpoint or GPU. Checks the manifest and pins, the one-line variant claims, the study-count refusal, the watchdog, the gate arithmetic, the budget projection and the tie hazard."
+    },
+    {
+      "path": "tests__replay_active_cells.py",
+      "description": "Offline replay of a notebook's active cells in a fake /kaggle tree (original path tests/replay_active_cells.py), with fatal or non-fatal expectations. Takes a notebook path."
+    },
+    {
+      "path": "tests__test_chain_v38_gated.py",
+      "description": "Scenario harness for the gated launcher (original path tests/test_chain_v38_gated.py): visible commit, budget refusal, 1,300-study reruns with injected failures, fail-closed branches. Takes a notebook path."
+    },
+    {
+      "path": "tests__test_shared_state_v38_gated.py",
+      "description": "Shared-state test (original path tests/test_shared_state_v38_gated.py): two concurrent device consumers, bitwise equal to serial, no writes to the reader's input resolution, locks held. Takes a notebook path."
+    },
+    {
+      "path": "tests__test_reader_v20_cpu.py",
+      "description": "CPU equivalence tests for the V20 reader against an earlier reader (original path tests/test_reader_v20_cpu.py), on random weights and reduced geometry. Takes a notebook path and needs scipy."
+    },
+    {
+      "path": "tests__test_fourview_cpu.py",
+      "description": "CPU tests for the four-view driver (original path tests/test_fourview_cpu.py): bitwise combination, byte-identical rank exports, view differences and per-view timing stages. Takes a notebook path."
+    }
+  ]
+}

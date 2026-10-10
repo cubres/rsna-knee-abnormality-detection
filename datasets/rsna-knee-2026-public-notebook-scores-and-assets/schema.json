@@ -1,0 +1,440 @@
+{
+  "dataset": "prvsiyan/rsna-knee-2026-public-notebook-scores-and-assets",
+  "version": 1,
+  "files": {
+    "public_notebooks.csv": {
+      "row_count": 24,
+      "columns": [
+        {
+          "name": "notebook_ref",
+          "type": "text",
+          "unit": "owner/slug on Kaggle",
+          "allowed_values": "",
+          "description": "Notebook identifier, owner/slug."
+        },
+        {
+          "name": "owner",
+          "type": "text",
+          "unit": "Kaggle username",
+          "allowed_values": "",
+          "description": "Account that owns the notebook. The team notebook is owned by prvsiyan."
+        },
+        {
+          "name": "title_as_displayed",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "Title as shown on the code page or in the kernel list at capture time."
+        },
+        {
+          "name": "version",
+          "type": "text",
+          "unit": "Kaggle version",
+          "allowed_values": "",
+          "description": "Kaggle notebook version the score refers to (vN). Blank when not recorded."
+        },
+        {
+          "name": "votes",
+          "type": "integer",
+          "unit": "votes",
+          "allowed_values": "",
+          "description": "Votes at capture time (see votes_snapshot). Blank when not recorded."
+        },
+        {
+          "name": "votes_snapshot",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "Which capture the votes came from: scorecard 15:03 UTC or kernel list 14:42 UTC, both on 8 October 2026."
+        },
+        {
+          "name": "displayed_score",
+          "type": "decimal (3 dp)",
+          "unit": "score",
+          "allowed_values": "",
+          "description": "Score on the code page, rounded to three decimals by the platform. Blank when not recorded. For score_label P it is a claim, not a render."
+        },
+        {
+          "name": "score_label",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "V, P, -",
+          "description": "V: rendered on the code page on the capture date. P: author claim, title or listing, not on the render. -: no score recorded."
+        },
+        {
+          "name": "scorecard_rank",
+          "type": "integer",
+          "unit": "rank",
+          "allowed_values": "1 to 20",
+          "description": "Rank on the 8 October 15:03 UTC scorecard. Blank if the notebook is not on it."
+        },
+        {
+          "name": "method_family",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "Method as read from the source code, or the claim where marked P. \"not opened\" where the notebook was not read."
+        },
+        {
+          "name": "convnext_mean_weight",
+          "type": "decimal fraction",
+          "unit": "fraction of blend",
+          "allowed_values": "0 to 1",
+          "description": "Mean weight of the goodpjw2008 ConvNeXt reader in the blend of the displayed version. Blank when that version has no ConvNeXt reader or the weight is not recorded."
+        },
+        {
+          "name": "weight_origin",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "Where the blend weights come from: copied between notebooks, gated on gold58, hard-coded, or set by the author."
+        },
+        {
+          "name": "uses_oai_derived_checkpoint",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "yes, no, not established",
+          "description": "Whether the notebook uses the nartaa checkpoint, which the dataset description says was trained with masked supervision on OAI knees."
+        },
+        {
+          "name": "uses_nc_radimagenet_component",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "yes, likely, no, not established",
+          "description": "Whether a CC BY-NC-SA 4.0 RadImageNet-derived file is attached or used. \"likely\" when the stack the notebook builds on is documented to include one."
+        },
+        {
+          "name": "notebook_licence",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "Licence shown on the rendered page, or \"not read\"."
+        },
+        {
+          "name": "licence_label",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "V, -",
+          "description": "V: licence read on the rendered page. -: not read."
+        },
+        {
+          "name": "assets_itemised",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "yes, partial, no",
+          "description": "yes: every attached dataset is listed in notebook_assets.csv. partial: some are listed. no: none are listed."
+        },
+        {
+          "name": "assets_note",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "What is missing from notebook_assets.csv for this notebook, or how the link was established."
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "Verified facts, claims and caveats for the row. Evidence labels V, P and I."
+        }
+      ]
+    },
+    "notebook_assets.csv": {
+      "row_count": 38,
+      "columns": [
+        {
+          "name": "notebook_ref",
+          "type": "text",
+          "unit": "owner/slug on Kaggle",
+          "allowed_values": "",
+          "description": "Notebook from public_notebooks.csv."
+        },
+        {
+          "name": "asset_ref",
+          "type": "text",
+          "unit": "owner/slug on Kaggle",
+          "allowed_values": "",
+          "description": "Dataset or model the notebook attaches."
+        },
+        {
+          "name": "asset_type",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "dataset, model",
+          "description": "Kaggle dataset, or Kaggle Model (not in assets.csv)."
+        },
+        {
+          "name": "basis",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "attachment list read, source text, inferred from survey text",
+          "description": "How the link was established: read from the notebook's attachment list; stated in the source text; or inferred from the survey text."
+        },
+        {
+          "name": "in_assets_csv",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "yes, no",
+          "description": "Whether asset_ref has a row in assets.csv."
+        }
+      ]
+    },
+    "assets.csv": {
+      "row_count": 26,
+      "columns": [
+        {
+          "name": "asset_ref",
+          "type": "text",
+          "unit": "owner/slug on Kaggle",
+          "allowed_values": "",
+          "description": "Dataset identifier."
+        },
+        {
+          "name": "owner",
+          "type": "text",
+          "unit": "Kaggle username",
+          "allowed_values": "",
+          "description": "Dataset owner."
+        },
+        {
+          "name": "title",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "Dataset title as the platform reports it."
+        },
+        {
+          "name": "licence_as_listed",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "Licence as the platform reports it."
+        },
+        {
+          "name": "licence_normalised",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "CC0-1.0, Apache-2.0, MIT, CC-BY-4.0, CC-BY-NC-SA-4.0, other, unknown",
+          "description": "The same licence in one vocabulary. \"other\" means the licence is given in the description, and \"unknown\" means the platform gives none."
+        },
+        {
+          "name": "size_bytes",
+          "type": "integer",
+          "unit": "bytes",
+          "allowed_values": "",
+          "description": "Total size of the dataset as the platform reports it (decimal bytes)."
+        },
+        {
+          "name": "size_mb",
+          "type": "decimal",
+          "unit": "MB (10^6 bytes)",
+          "allowed_values": "",
+          "description": "size_bytes divided by 10^6, rounded to 0.1."
+        },
+        {
+          "name": "current_version",
+          "type": "integer",
+          "unit": "version",
+          "allowed_values": "",
+          "description": "Current version number as the platform reports it."
+        },
+        {
+          "name": "last_updated_utc",
+          "type": "text",
+          "unit": "UTC, ISO 8601",
+          "allowed_values": "",
+          "description": "Time of the last update, as the platform reports it."
+        },
+        {
+          "name": "api_kernel_count",
+          "type": "integer",
+          "unit": "count",
+          "allowed_values": "",
+          "description": "Number of public notebooks attaching the dataset, as the platform reports it, in the capture named in metadata_captured_utc. Blank if not reported."
+        },
+        {
+          "name": "api_download_count",
+          "type": "integer",
+          "unit": "count",
+          "allowed_values": "",
+          "description": "Download count as the platform reports it, in the same capture. Blank if not reported."
+        },
+        {
+          "name": "mounted_by_notebooks",
+          "type": "integer",
+          "unit": "count",
+          "allowed_values": "",
+          "description": "Number of rows in notebook_assets.csv that link this dataset to a notebook in public_notebooks.csv."
+        },
+        {
+          "name": "metadata_captured_utc",
+          "type": "text",
+          "unit": "UTC, ISO 8601",
+          "allowed_values": "",
+          "description": "Time of the saved metadata capture that supplies this row."
+        },
+        {
+          "name": "status_for_frontier",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "Publisher assessment: in use, candidate, training data, or not for use, with the reason. Source-cited."
+        }
+      ]
+    },
+    "efficiency_board_20261008.csv": {
+      "row_count": 5290,
+      "columns": [
+        {
+          "name": "EfficiencyRank",
+          "type": "integer",
+          "unit": "rank",
+          "allowed_values": "1 onwards",
+          "description": "Rank on the Efficiency Prize board as the board prints it. Ties leave gaps. Rows are in rank order, not score order."
+        },
+        {
+          "name": "team_key",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "Pseudonymous team key: \"t\" plus the first 10 hex digits of the SHA-256 of the trimmed team name. Blank where the board prints no name. Names are not published."
+        },
+        {
+          "name": "PublicScore",
+          "type": "decimal (3 dp)",
+          "unit": "score",
+          "allowed_values": "0.447 to 0.964 observed",
+          "description": "Public leaderboard score of the team entry, as the board prints it, shown to three decimals. Not the efficiency metric. The board's metric is not verified [P]."
+        },
+        {
+          "name": "DateSubmitted",
+          "type": "text",
+          "unit": "local date-time as printed",
+          "allowed_values": "",
+          "description": "Submission timestamp as the board prints it, kept as printed. The board states no time zone."
+        },
+        {
+          "name": "DateSubmittedISO",
+          "type": "text",
+          "unit": "ISO 8601, no time zone",
+          "allowed_values": "",
+          "description": "DateSubmitted in ISO form (YYYY-MM-DDTHH:MM:SS). No time zone is implied."
+        }
+      ]
+    },
+    "efficiency_board_20261009.csv": {
+      "row_count": 5374,
+      "columns": [
+        {
+          "name": "EfficiencyRank",
+          "type": "integer",
+          "unit": "rank",
+          "allowed_values": "1 onwards",
+          "description": "Rank on the Efficiency Prize board as the board prints it. Ties leave gaps. Rows are in rank order, not score order."
+        },
+        {
+          "name": "team_key",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "Pseudonymous team key: \"t\" plus the first 10 hex digits of the SHA-256 of the trimmed team name. Blank where the board prints no name. Names are not published."
+        },
+        {
+          "name": "PublicScore",
+          "type": "decimal (3 dp)",
+          "unit": "score",
+          "allowed_values": "0.447 to 0.964 observed",
+          "description": "Public leaderboard score of the team entry, as the board prints it, shown to three decimals. Not the efficiency metric. The board's metric is not verified [P]."
+        },
+        {
+          "name": "DateSubmitted",
+          "type": "text",
+          "unit": "local date-time as printed",
+          "allowed_values": "",
+          "description": "Submission timestamp as the board prints it, kept as printed. The board states no time zone."
+        },
+        {
+          "name": "DateSubmittedISO",
+          "type": "text",
+          "unit": "ISO 8601, no time zone",
+          "allowed_values": "",
+          "description": "DateSubmitted in ISO form (YYYY-MM-DDTHH:MM:SS). No time zone is implied."
+        }
+      ]
+    },
+    "efficiency_board_20261010.csv": {
+      "row_count": 5477,
+      "columns": [
+        {
+          "name": "EfficiencyRank",
+          "type": "integer",
+          "unit": "rank",
+          "allowed_values": "1 onwards",
+          "description": "Rank on the Efficiency Prize board as the board prints it. Ties leave gaps. Rows are in rank order, not score order."
+        },
+        {
+          "name": "team_key",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "Pseudonymous team key: \"t\" plus the first 10 hex digits of the SHA-256 of the trimmed team name. Blank where the board prints no name. Names are not published."
+        },
+        {
+          "name": "PublicScore",
+          "type": "decimal (3 dp)",
+          "unit": "score",
+          "allowed_values": "0.447 to 0.964 observed",
+          "description": "Public leaderboard score of the team entry, as the board prints it, shown to three decimals. Not the efficiency metric. The board's metric is not verified [P]."
+        },
+        {
+          "name": "DateSubmitted",
+          "type": "text",
+          "unit": "local date-time as printed",
+          "allowed_values": "",
+          "description": "Submission timestamp as the board prints it, kept as printed. The board states no time zone."
+        },
+        {
+          "name": "DateSubmittedISO",
+          "type": "text",
+          "unit": "ISO 8601, no time zone",
+          "allowed_values": "",
+          "description": "DateSubmitted in ISO form (YYYY-MM-DDTHH:MM:SS). No time zone is implied."
+        }
+      ]
+    },
+    "leaderboard_top3000_20261008.csv": {
+      "row_count": 3000,
+      "columns": [
+        {
+          "name": "LeaderboardPosition",
+          "type": "integer",
+          "unit": "position",
+          "allowed_values": "1 to 3000",
+          "description": "Position in the captured order of the main leaderboard (API order, highest score first)."
+        },
+        {
+          "name": "team_key",
+          "type": "text",
+          "unit": "",
+          "allowed_values": "",
+          "description": "Pseudonymous team key, computed as in the efficiency board files. Two entries share a key where the trimmed names are equal."
+        },
+        {
+          "name": "PublicScore",
+          "type": "decimal (3 dp)",
+          "unit": "score",
+          "allowed_values": "",
+          "description": "Public leaderboard score, three decimals."
+        },
+        {
+          "name": "SubmissionDate",
+          "type": "text",
+          "unit": "ISO 8601 UTC",
+          "allowed_values": "",
+          "description": "The submission date the API returns for the team's entry. Its exact meaning is not documented."
+        }
+      ]
+    }
+  }
+}

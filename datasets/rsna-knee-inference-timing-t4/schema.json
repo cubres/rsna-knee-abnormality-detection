@@ -1,0 +1,423 @@
+{
+  "name": "prvsiyan/rsna-knee-inference-timing-t4",
+  "version": 1,
+  "licence": "CC-BY-NC-SA-4.0",
+  "licence_file": "LICENSE",
+  "notice_file": "NOTICE.md",
+  "code_licences": {
+    "build_tables.py": "Apache-2.0",
+    "efficiency_calculator.py": "Apache-2.0"
+  },
+  "files": {
+    "timings.csv": {
+      "columns": [
+        {
+          "name": "run",
+          "unit": "-",
+          "description": "Build and arm key, for example bench_v22_plain_320 (version plus arm)."
+        },
+        {
+          "name": "version",
+          "unit": "-",
+          "description": "Build name: bench_v21 to bench_v25, or bench2_v2 to bench2_v9."
+        },
+        {
+          "name": "arm",
+          "unit": "-",
+          "description": "Views the build ran: two_view_320, plain_320 or four_view_320_384."
+        },
+        {
+          "name": "phase",
+          "unit": "-",
+          "description": "parity_reference (reference path on device 0), parity_candidate (one speed configuration on device 0) or main (three studies across both GPUs)."
+        },
+        {
+          "name": "config",
+          "unit": "-",
+          "description": "reference = no speed flags. full = every flag the build requested (the flags column is authoritative). single:FLAG = one flag switched on."
+        },
+        {
+          "name": "study_index",
+          "unit": "index",
+          "description": "Position of the study among the three visible studies: 0, 1 or 2. Not a study identifier."
+        },
+        {
+          "name": "stage",
+          "unit": "-",
+          "description": "Stage name. See the stage glossary."
+        },
+        {
+          "name": "seconds",
+          "unit": "s",
+          "description": "Wall-clock seconds for this stage on this study."
+        },
+        {
+          "name": "flags",
+          "unit": "-",
+          "description": "Speed flags in effect, as key=value pairs separated by semicolons: channels_last, chunk (windows per forward call), fused_tta, header_parallel, pixel_parallel, shared_triplets."
+        }
+      ],
+      "rows": 630
+    },
+    "summary.csv": {
+      "columns": [
+        {
+          "name": "run",
+          "unit": "-",
+          "description": "Build and arm key, as in timings.csv."
+        },
+        {
+          "name": "version",
+          "unit": "-",
+          "description": "Build name, as in timings.csv."
+        },
+        {
+          "name": "arm",
+          "unit": "-",
+          "description": "Views the build ran, as in timings.csv."
+        },
+        {
+          "name": "phase",
+          "unit": "-",
+          "description": "parity_reference, parity_candidate or main, as in timings.csv."
+        },
+        {
+          "name": "config",
+          "unit": "-",
+          "description": "Configuration name, as in timings.csv."
+        },
+        {
+          "name": "flags",
+          "unit": "-",
+          "description": "Speed flags in effect, as in timings.csv."
+        },
+        {
+          "name": "studies",
+          "unit": "count",
+          "description": "Studies recorded for this run and configuration (three in every case)."
+        },
+        {
+          "name": "steady_indices",
+          "unit": "index",
+          "description": "Study indices averaged for the steady-state columns: 1-2 for parity rows, 2 for main-phase rows."
+        },
+        {
+          "name": "study_total_by_index_s",
+          "unit": "s",
+          "description": "study_total_s for each study index, as index:seconds pairs separated by a vertical bar."
+        },
+        {
+          "name": "cold_study0_total_s",
+          "unit": "s",
+          "description": "study_total_s for study index 0 (the cold-start study in parity runs)."
+        },
+        {
+          "name": "steady_prep_s",
+          "unit": "s per study",
+          "description": "Mean CPU prep per steady study: select_s + header_s + pixel_s + volume_s."
+        },
+        {
+          "name": "steady_gpu_s",
+          "unit": "s per study",
+          "description": "Mean GPU time per steady study: windows_s + full_windows_s + forward_plain_s + forward_mirror_s + forward_fused_s + full_forward_plain_s + full_forward_mirror_s."
+        },
+        {
+          "name": "study_total_scope",
+          "unit": "-",
+          "description": "build+predict (parity rows: prep and GPU timed in one window) or predict_only (main rows: GPU consumer only, prep overlapped)."
+        },
+        {
+          "name": "steady_residual_s",
+          "unit": "s per study",
+          "description": "steady_study_total_s minus steady_prep_s minus steady_gpu_s. Blank for predict_only rows. About 0.01 s in every parity row except the two plain-view reference rows, about 1.9 s (see Timing scope)."
+        },
+        {
+          "name": "steady_study_total_s",
+          "unit": "s per study",
+          "description": "Mean study_total_s over the steady studies."
+        },
+        {
+          "name": "startup_s",
+          "unit": "s",
+          "description": "Startup before the first study (imports, model load, CUDA start), from the receipt."
+        },
+        {
+          "name": "projected_hidden_overlap_s",
+          "unit": "s",
+          "description": "Projected 1,300-study run, overlapped: startup + 1300 x max(prep / 2, gpu / 2)."
+        },
+        {
+          "name": "projected_hidden_serial_s",
+          "unit": "s",
+          "description": "Projected 1,300-study run, serial: startup + 1300 x (prep + gpu) / 2."
+        },
+        {
+          "name": "projected_hidden_overlap_prep3x_s",
+          "unit": "s",
+          "description": "As projected_hidden_overlap_s with prep three times larger. A sensitivity check for hidden studies that decode more slowly."
+        },
+        {
+          "name": "parity_passed",
+          "unit": "boolean",
+          "description": "parity_candidate rows only: whether this configuration passed the parity gate on the visible studies. Blank for other rows."
+        },
+        {
+          "name": "parity_max_abs_dev",
+          "unit": "probability",
+          "description": "parity_candidate rows only: largest absolute deviation from the reference probabilities on the visible studies. Gate tolerance is 0.0001. Blank for other rows."
+        },
+        {
+          "name": "accepted",
+          "unit": "boolean",
+          "description": "parity_candidate rows only: whether this is the configuration the reader accepted for the build. Blank for other rows."
+        },
+        {
+          "name": "gpu_vs_run_reference",
+          "unit": "ratio",
+          "description": "steady_gpu_s divided by the same build's reference row. 1.0 for reference rows."
+        }
+      ],
+      "rows": 26
+    },
+    "native_runs.csv": {
+      "columns": [
+        {
+          "name": "run",
+          "unit": "-",
+          "description": "Build and arm key, as in timings.csv."
+        },
+        {
+          "name": "version",
+          "unit": "-",
+          "description": "Build name, as in timings.csv."
+        },
+        {
+          "name": "arm",
+          "unit": "-",
+          "description": "Views the build ran, as in timings.csv."
+        },
+        {
+          "name": "has_timing_receipt",
+          "unit": "boolean",
+          "description": "true if a per-stage timing file for this build is in timings.csv."
+        },
+        {
+          "name": "mode",
+          "unit": "-",
+          "description": "Reader mode (inference)."
+        },
+        {
+          "name": "gpu_count",
+          "unit": "count",
+          "description": "GPUs used (two in every run)."
+        },
+        {
+          "name": "device_name",
+          "unit": "-",
+          "description": "GPU model reported by the reader (Tesla T4)."
+        },
+        {
+          "name": "studies",
+          "unit": "count",
+          "description": "Studies processed (three visible studies)."
+        },
+        {
+          "name": "selected_slices",
+          "unit": "count",
+          "description": "Slices selected across the studies."
+        },
+        {
+          "name": "missing_slots",
+          "unit": "count",
+          "description": "Series slots with no usable series across the studies, as counted by the reader."
+        },
+        {
+          "name": "elapsed_s",
+          "unit": "s",
+          "description": "End-to-end wall time of the native run, including startup. Not comparable to per-study totals."
+        },
+        {
+          "name": "startup_s",
+          "unit": "s",
+          "description": "Startup seconds, where the receipt records them. Blank where it does not."
+        },
+        {
+          "name": "fast_decision",
+          "unit": "-",
+          "description": "Gate outcome: accepted_full, accepted_subset (with the accepted flag), or reference_only when no speed flags were requested."
+        },
+        {
+          "name": "fast_config_accepted_name",
+          "unit": "-",
+          "description": "Name of the accepted configuration (full, subset or reference)."
+        },
+        {
+          "name": "prep_workers",
+          "unit": "count",
+          "description": "CPU prep workers (two in every run)."
+        },
+        {
+          "name": "header_failures",
+          "unit": "count",
+          "description": "DICOM header reads that failed. Zero in every receipt."
+        },
+        {
+          "name": "pixel_failures",
+          "unit": "count",
+          "description": "Pixel reads that failed. Zero in every receipt."
+        },
+        {
+          "name": "study_build_failures",
+          "unit": "count",
+          "description": "Studies whose volume could not be built. Zero in every receipt."
+        },
+        {
+          "name": "model_fallback_studies",
+          "unit": "count",
+          "description": "Studies that fell back to the 0.5 default. Zero in every receipt."
+        },
+        {
+          "name": "fast_fallback_studies",
+          "unit": "count",
+          "description": "Studies that fell back from the speed configuration to the reference. Zero in every receipt."
+        },
+        {
+          "name": "consumer_error_count",
+          "unit": "count",
+          "description": "Errors raised by GPU consumer threads. Zero in every receipt."
+        },
+        {
+          "name": "parity_studies",
+          "unit": "count",
+          "description": "Visible studies used by the parity gate."
+        },
+        {
+          "name": "parity_configs_passed",
+          "unit": "-",
+          "description": "Configurations that passed, as 'passed of tested'."
+        },
+        {
+          "name": "parity_max_abs_dev_passing",
+          "unit": "probability",
+          "description": "Largest deviation from the reference over passing configurations. Tolerance is 0.0001."
+        },
+        {
+          "name": "parity_max_abs_dev_all_tested",
+          "unit": "probability",
+          "description": "Largest deviation over every tested configuration, passing or not."
+        },
+        {
+          "name": "torch_version",
+          "unit": "-",
+          "description": "PyTorch version recorded by the reader."
+        },
+        {
+          "name": "timm_version",
+          "unit": "-",
+          "description": "timm version recorded by the reader."
+        },
+        {
+          "name": "visible_prediction_sha256",
+          "unit": "hex",
+          "description": "SHA-256 that the reader records for its prediction file on the three visible studies. Identical in all 13 native receipts. The snapshot gives the same value as the submission.csv sha256 of three public rows with different scores, so it does not link a receipt to a public row (see Caveats)."
+        },
+        {
+          "name": "official_row",
+          "unit": "Kaggle row id",
+          "description": "Public Kaggle row produced by the same notebook version, where the team recorded one. Read as text."
+        },
+        {
+          "name": "official_public_auc",
+          "unit": "AUC",
+          "description": "Public score of that row, as recorded in the Kaggle submissions snapshot of 2026-10-10."
+        },
+        {
+          "name": "official_note",
+          "unit": "-",
+          "description": "How the row relates to this build."
+        },
+        {
+          "name": "note",
+          "unit": "-",
+          "description": "Context for this build."
+        }
+      ],
+      "rows": 13
+    },
+    "receipts__index.csv": {
+      "columns": [
+        {
+          "name": "file",
+          "unit": "-",
+          "description": "Name of the receipt file in this folder, for example receipts__timing__bench_v21_two_view_320.json."
+        },
+        {
+          "name": "kind",
+          "unit": "-",
+          "description": "timing (per-stage timing receipt) or native (native inference receipt)."
+        },
+        {
+          "name": "version",
+          "unit": "-",
+          "description": "Build name, as in timings.csv: bench_v21 to bench_v25, or bench2_v2 to bench2_v9."
+        },
+        {
+          "name": "arm",
+          "unit": "-",
+          "description": "Views the build ran, as in timings.csv: two_view_320, plain_320 or four_view_320_384."
+        }
+      ],
+      "rows": 23
+    }
+  },
+  "stage_glossary": {
+    "select_s": {
+      "category": "CPU prep",
+      "description": "Choosing the slices for each series slot from the series metadata."
+    },
+    "header_s": {
+      "category": "CPU prep",
+      "description": "Reading DICOM headers."
+    },
+    "pixel_s": {
+      "category": "CPU prep",
+      "description": "Reading pixel data for the selected slices."
+    },
+    "volume_s": {
+      "category": "CPU prep",
+      "description": "Per-slot percentile normalisation, centre crop and resize into a 384-pixel volume."
+    },
+    "windows_s": {
+      "category": "GPU",
+      "description": "Building the three-slice windows for the 320-pixel views, including the host-to-device copy."
+    },
+    "forward_plain_s": {
+      "category": "GPU",
+      "description": "Forward pass over the plain windows at 320 px."
+    },
+    "forward_mirror_s": {
+      "category": "GPU",
+      "description": "Forward pass over the mirrored windows at 320 px."
+    },
+    "forward_fused_s": {
+      "category": "GPU",
+      "description": "Plain and mirrored windows in one forward call (fused TTA flag)."
+    },
+    "full_windows_s": {
+      "category": "GPU",
+      "description": "Building the 384-pixel full-field triplets, shared by the two full-field passes."
+    },
+    "full_forward_plain_s": {
+      "category": "GPU",
+      "description": "Plain full-field pass at 384 px, including gathering its windows from the shared triplets."
+    },
+    "full_forward_mirror_s": {
+      "category": "GPU",
+      "description": "Mirrored full-field pass at 384 px, including its window gather."
+    },
+    "study_total_s": {
+      "category": "total",
+      "description": "Study wall time as recorded by the reader. Scope is in study_total_scope."
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "dataset": "prvsiyan/kaggle-hidden-rerun-safety-kit",
+  "title": "Hidden-Rerun Safety Kit: Checklist + Tested Code",
+  "version": 2,
+  "licence": "apache-2.0",
+  "note": "sha256 and byte size of every content file in this folder, under its shipped (flattened) name. MANIFEST.json and dataset-metadata.json are not listed; the metadata file describes the resources through its own list.",
+  "file_count": 19,
+  "total_bytes": 158955,
+  "files": [
+    {
+      "path": "CHECKLIST.md",
+      "bytes": 8496,
+      "sha256": "2ce2403463f03b4ff9ca1f000f7f3e5e0363e75c396d4629e4d67a60f7e73ad9"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "NOTICE.md",
+      "bytes": 2925,
+      "sha256": "2e8f93ae4361290eb77e637d1a51299eed6d0c14b161fcf9339712826613c2b4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 19997,
+      "sha256": "6cf0f9831593862e9ccd9d78139487324888b7a9211d50e2cfdd2ab13f140fb2"
+    },
+    {
+      "path": "code__launch_preflight.py",
+      "bytes": 3004,
+      "sha256": "46e574e79428c725849fadd02264509d0e06299842faa8c1714901b181e5eb7e"
+    },
+    {
+      "path": "code__launch_worker.py",
+      "bytes": 6983,
+      "sha256": "4feadf9f642dee22053994197e3c0ec437fe5be31ed980d4707549e7f5f6c23d"
+    },
+    {
+      "path": "code__mount_resolver.py",
+      "bytes": 2522,
+      "sha256": "2ec71a141755e636b06d3261c00e43edcb0b77316cf899c322376d72d34485ec"
+    },
+    {
+      "path": "code__owned_process.py",
+      "bytes": 14219,
+      "sha256": "3a418dba32d43d49a2afa0ac4860381d3c24147d894b69b00cde1a739185aa52"
+    },
+    {
+      "path": "code__raw_submissions.py",
+      "bytes": 1997,
+      "sha256": "3ac23407a3016c9c8fd0a67cf4e2a39a13ff065fc9f0103f7a877eb4eaa4ba16"
+    },
+    {
+      "path": "code__replay_active_cells.py",
+      "bytes": 15811,
+      "sha256": "7074067a6490f4d27fafc7e883863ed78c1afcc489bd3f61e803f6f410c6f56c"
+    },
+    {
+      "path": "code__root_gate.py",
+      "bytes": 4987,
+      "sha256": "ae4c459773df68ca09bd6129f9461861f0f69935688d21ef32deca09bb20e468"
+    },
+    {
+      "path": "code__submission_guard.py",
+      "bytes": 8817,
+      "sha256": "90cc47d3b9ccbe2db3012bb56e85205b9df26ea5fc12dc07752eec4fa4d8cea8"
+    },
+    {
+      "path": "code__tests__test_kit.py",
+      "bytes": 27059,
+      "sha256": "58a1da23e83f4b8b544697169ff33f5ff29d5dd2c7de554b89a955d16a6211f4"
+    },
+    {
+      "path": "data__checklist.csv",
+      "bytes": 1540,
+      "sha256": "65e9ec0c2675770065cd14cea3a79525d591fc96d208d215e4e8080149247fe6"
+    },
+    {
+      "path": "data__ledger_excerpts.csv",
+      "bytes": 5672,
+      "sha256": "e94a870f9522c02544796394db31a57f0e72819ed8312a36e133f848701661ed"
+    },
+    {
+      "path": "data__platform_facts.csv",
+      "bytes": 5767,
+      "sha256": "1e711e9b0810cef53115fddd80ec4a502d67c5c71c5b6983ae8433d9b9982e8e"
+    },
+    {
+      "path": "docs__PLATFORM_FACTS.md",
+      "bytes": 7153,
+      "sha256": "e447208908b30c02db6314a2a922db9aa750b7c388c4ce5dce831e327b324483"
+    },
+    {
+      "path": "docs__degraded_output_postmortem.md",
+      "bytes": 9218,
+      "sha256": "ff37ca3514cd0dbfb2c24febe3c8612f3157251979a667510de8c69e4e17fa4c"
+    },
+    {
+      "path": "examples__example_notebook.ipynb",
+      "bytes": 1430,
+      "sha256": "f8b21c7cead632db0a6db5e659f137eebb2b9fe4ef8d7a92fdabbfa94e53bebe"
+    }
+  ]
+}

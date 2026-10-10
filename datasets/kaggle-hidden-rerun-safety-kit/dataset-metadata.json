@@ -1,0 +1,201 @@
+{
+  "title": "Hidden-Rerun Safety Kit: Checklist + Tested Code",
+  "id": "prvsiyan/kaggle-hidden-rerun-safety-kit",
+  "subtitle": "Checklist and tested code for notebooks that must survive the hidden rerun",
+  "description": "**Your notebook passed its commit run. Will it survive the hidden rerun that produces the score?**\n\n## What\n\nA tested kit for code-competition notebooks: a ten-point checklist (`CHECKLIST.md`), eight Python modules with 53 offline tests, an example notebook for an offline replay, platform facts observed on Kaggle in October 2026 (in prose and in CSV form), and a post-mortem of a degraded submission. The code makes no Kaggle calls unless you give it credentials.\n\n## Why\n\nThe hidden rerun can fail, or quietly degrade, where the commit run did not. The campaign ledger records a rerun that wrote a constant 0.5 table and links that table to the submission with public score 0.505 (official row 57017206). The row's public description does not mention the table. The degraded count was recorded and did not block the root. The kit replays your active cells in a fresh tree, gates the output at 0.5 percent degraded studies, and guards launches and submissions.\n\n## Files\n\nTwenty files: the checklist, the README, the licence, the licence notice, the manifest, and fifteen files from the kit's `code`, `data`, `docs` and `examples` folders. Sub-folders are flattened with a double underscore, so `code/root_gate.py` is `code__root_gate.py`. The README maps every file to its folder path and gives the restore step.\n\n## Columns\n\n- `data__checklist.csv`: `check_id`, `check`, `code_file`, `function`, `evidence_ref`.\n- `data__platform_facts.csv`: `fact_id`, `topic`, `fact`, `observed_value`, `observed_utc`, `source_ref`, `status`.\n- `data__ledger_excerpts.csv`: `excerpt_id`, `ledger_utc`, `ledger_area`, `excerpt`, `supports`, `removed_from_original`.\n\nEvery column is described in the field schema of its file and in the README.\n\n## How to load\n\nAn attached dataset is read-only, so copy it first, then restore the folders and run the offline tests:\n\n```bash\nmkdir -p /kaggle/working/kit && cp -r /kaggle/input/SLUG/. /kaggle/working/kit/\ncd /kaggle/working/kit\nfor f in *__*; do p=\"${f//__//}\"; mkdir -p \"$(dirname \"$p\")\"; mv \"$f\" \"$p\"; done\ncd code && python3 -I tests/test_kit.py\n```\n\nThe tests need Python 3.9 or later and no credentials.\n\n## Provenance\n\nObservations from the publisher's Kaggle campaign in October 2026, with campaign-ledger rows sanitised into paraphrases. The full ledger is not included. Official row IDs were checked against a public submissions-list snapshot taken on 2026-10-10: row 57017206 has public score 0.505 and row 56948803 has public score 0.949. The public row descriptions do not state a constant table or a rerun time limit; those two statements come from the campaign ledger alone. The watchdog is the campaign's owned process-group watchdog. Its campaign-only budget helper, the dataclass it used and the matching import are removed, and a header comment is added. The shipped copy is the canonical one. No competition data, model checkpoints or third-party notebook code are included.\n\n## Credits\n\nPublisher and copyright holder: prvsiyan. Apache License 2.0 text from the Apache Software Foundation. The observations were made on the Kaggle platform.\n\nThird-party packages imported by the shipped code, with licences as shown in their installed package metadata on 2026-10-10 (not independently re-verified against the package index): kaggle 2.2.3 (official Kaggle client), Apache-2.0; kagglesdk 0.1.34, Apache-2.0; requests 2.34.2, Apache-2.0. PyTorch 2.8.0, BSD-3-Clause, is named in the post-mortem among the exception sources of the reader arm behind PF-17; the kit does not import it. Every other import is from the Python standard library or from the kit's own modules, except safe_push, an external helper that launch_worker imports and that is not shipped. launch_worker also runs fetch_version_output.py as a separate process through FETCH_HELPER; that file is not shipped either.\n\nModel checkpoint: the four-view arm in the degraded-output observation ran a reader checkpoint from a public third-party notebook recipe. The checkpoint is not shipped and not loaded by this kit. Its licence is not stated in the public snapshot and was not checked.\n\n## Licence\n\nDataset licence field: apache-2.0 (Apache License, Version 2.0). The full text is in LICENSE. Per-file terms are in NOTICE.md: the code, tests, documentation and configuration are Apache-2.0. The three compilation files (data__platform_facts.csv, data__ledger_excerpts.csv and docs__PLATFORM_FACTS.md) compile the publisher's own submission rows and public scores and are CC-BY-4.0. Both licences require attribution. The files contain no competition data. Copyright: prvsiyan.\n\n## Changelog\n\n- **2, revision** (October 2026): licence by file recorded in NOTICE.md, naming the three CC-BY-4.0 compilation files. Dependency table with licences added to Credits. Row attribution corrected: the public descriptions of rows 57017206 and 56948803 do not state a constant table or a rerun limit, so those statements are attributed to the campaign ledger. The watchdog provenance names the shipped copy as the canonical one. An internal label is removed from the launch driver. The kaggle quota_view statement is version-specific.\n- **2** (October 2026): sub-folders flattened into double-underscore file names with a restore step; exact CSV column names documented; card restructured; licence set to apache-2.0; watchdog provenance named the shipped copy as the canonical one. Mount layouts reconciled across the checklist, platform facts and resolver. The replay translates IPython line and cell magics and treats a non-compiling cell as fatal. CSV validation returns False instead of raising. The submission guard matches version tokens exactly and writes receipts for failed submit calls. The pre-flight rules fail closed. The campaign-only budget helper is removed from the watchdog. Added the structured CSVs, ledger excerpts, an example notebook and 53 offline tests.\n- **1** (October 2026): first release. Checklist, platform facts, post-mortem, eight code modules and offline tests.\n",
+  "licenses": [
+    {
+      "name": "apache-2.0"
+    }
+  ],
+  "keywords": [
+    "python",
+    "programming",
+    "software",
+    "computer science"
+  ],
+  "resources": [
+    {
+      "path": "CHECKLIST.md",
+      "description": "The ten hidden-rerun checks, each naming the code that implements it and the evidence behind it. Read first."
+    },
+    {
+      "path": "LICENSE",
+      "description": "Apache License 2.0, full text. Covers the Apache-2.0 files listed in NOTICE.md. The CC-BY-4.0 data files are described there too."
+    },
+    {
+      "path": "NOTICE.md",
+      "description": "Licence by file. Apache-2.0 for the code, tests, documentation and configuration. CC-BY-4.0 for data__platform_facts.csv, data__ledger_excerpts.csv and docs__PLATFORM_FACTS.md, which compile the publisher's own submission rows and public scores. Explains how the two licences apply together."
+    },
+    {
+      "path": "README.md",
+      "description": "Dataset card: What, Why, Files, Columns, How to load, platform facts, provenance, credits, licence, limits, citation and changelog."
+    },
+    {
+      "path": "MANIFEST.json",
+      "description": "sha256 and byte size of every content file in this folder, under its shipped name, for integrity checking. Not itself or dataset-metadata.json."
+    },
+    {
+      "path": "code__launch_preflight.py",
+      "description": "Folder path code/launch_preflight.py. Pre-launch rules: quota parsing from the raw JSON that refuses on a missing or unparseable field, the two-session limit and a free-GPU check. Pure functions, tested offline."
+    },
+    {
+      "path": "code__launch_worker.py",
+      "description": "Folder path code/launch_worker.py. Reference driver for one GPU notebook version. Its quota helper is untested on kaggle 1.7.4.5 (checked against that release). It needs two helpers that are not included."
+    },
+    {
+      "path": "code__mount_resolver.py",
+      "description": "Folder path code/mount_resolver.py. Finds an input folder under the competition, legacy competition, dataset and owner-prefixed dataset layouts, and names the roots tried when none matches."
+    },
+    {
+      "path": "code__owned_process.py",
+      "description": "Folder path code/owned_process.py. POSIX owned process-group watchdog: runs one command in its own session with a deadline, signals only that group, and returns or raises with a receipt. The campaign-only budget helper and its dataclass are removed. The shipped copy is the canonical one."
+    },
+    {
+      "path": "code__raw_submissions.py",
+      "description": "Folder path code/raw_submissions.py. Read-only dump of the raw ListSubmissions JSON for the competitions named on the command line. Needs Kaggle credentials."
+    },
+    {
+      "path": "code__replay_active_cells.py",
+      "description": "Folder path code/replay_active_cells.py. Offline replay of a notebook's active code cells in a fresh tree, with GPU, data and pip stubbed. Translates IPython line and cell magics and flags writes into directories no active cell creates. Needs no credentials."
+    },
+    {
+      "path": "code__root_gate.py",
+      "description": "Folder path code/root_gate.py. Degraded-study gate (0.5 percent, fail closed), constant-row counter, CSV validation that returns False rather than raising, and staged-then-root publication with os.replace."
+    },
+    {
+      "path": "code__submission_guard.py",
+      "description": "Folder path code/submission_guard.py. Submission guard: sha256 check, daily count by UTC date, exact-token refusal of a duplicate pending version, a dry-run mode and a receipt for every outcome."
+    },
+    {
+      "path": "code__tests__test_kit.py",
+      "description": "Folder path code/tests/test_kit.py. 53 offline unit and regression tests with no Kaggle calls. Run from code/ after the restore step. The integrity tests check MANIFEST.json and the metadata against the files."
+    },
+    {
+      "path": "data__checklist.csv",
+      "description": "Folder path data/checklist.csv. The ten checks as a table. Columns: check_id, check, code_file, function, evidence_ref.",
+      "schema": {
+        "fields": [
+          {
+            "name": "check_id",
+            "type": "string",
+            "description": "Check number, 1 to 10, matching CHECKLIST.md."
+          },
+          {
+            "name": "check",
+            "type": "string",
+            "description": "The check, in one sentence."
+          },
+          {
+            "name": "code_file",
+            "type": "string",
+            "description": "The file in this kit that implements the check, or a note that it is a one-line rule."
+          },
+          {
+            "name": "function",
+            "type": "string",
+            "description": "The function or entry point in code_file."
+          },
+          {
+            "name": "evidence_ref",
+            "type": "string",
+            "description": "Evidence IDs (PF-nn) from platform_facts.csv, or a design-rule note."
+          }
+        ]
+      }
+    },
+    {
+      "path": "data__ledger_excerpts.csv",
+      "description": "Folder path data/ledger_excerpts.csv. Sanitised paraphrases of the campaign-ledger rows that the platform facts cite. Names and internal labels are removed. The full ledger is not included. Licence CC-BY-4.0 (see NOTICE.md).",
+      "schema": {
+        "fields": [
+          {
+            "name": "excerpt_id",
+            "type": "string",
+            "description": "Excerpt identifier, LX-nn."
+          },
+          {
+            "name": "ledger_utc",
+            "type": "string",
+            "description": "The timestamp of the ledger row, as written in the ledger. Matches source_ref in platform_facts.csv."
+          },
+          {
+            "name": "ledger_area",
+            "type": "string",
+            "description": "Short label for the subject of the row."
+          },
+          {
+            "name": "excerpt",
+            "type": "string",
+            "description": "Sanitised paraphrase of the ledger row."
+          },
+          {
+            "name": "supports",
+            "type": "string",
+            "description": "The platform fact IDs (PF-nn) that this row supports."
+          },
+          {
+            "name": "removed_from_original",
+            "type": "string",
+            "description": "What was removed from the original row before it was summarised."
+          }
+        ]
+      }
+    },
+    {
+      "path": "data__platform_facts.csv",
+      "description": "Folder path data/platform_facts.csv. Platform facts observed on Kaggle in October 2026, one row each, with status (observed, estimate, rule or unverified) and the ledger source. Licence CC-BY-4.0 (see NOTICE.md).",
+      "schema": {
+        "fields": [
+          {
+            "name": "fact_id",
+            "type": "string",
+            "description": "Fact identifier, PF-nn."
+          },
+          {
+            "name": "topic",
+            "type": "string",
+            "description": "Topic: push_size, gpu_sessions, rerun, daily_limit, mount_layout, canary_cap, degraded_output, root_publication, replay or rerun_flag."
+          },
+          {
+            "name": "fact",
+            "type": "string",
+            "description": "The fact, in one or two sentences."
+          },
+          {
+            "name": "observed_value",
+            "type": "string",
+            "description": "The observed value, or the estimate, or the rule."
+          },
+          {
+            "name": "observed_utc",
+            "type": "string",
+            "description": "The date and time of the observation, UTC, as written in the ledger or to the minute."
+          },
+          {
+            "name": "source_ref",
+            "type": "string",
+            "description": "Ledger timestamp(s) that match ledger_excerpts.csv, or 'none' with the reason in fact."
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "observed, estimate, rule or unverified."
+          }
+        ]
+      }
+    },
+    {
+      "path": "docs__PLATFORM_FACTS.md",
+      "description": "Folder path docs/PLATFORM_FACTS.md. The platform facts in prose, grouped by topic, with IDs, statuses and the mount-layout reconciliation. Licence CC-BY-4.0 (see NOTICE.md)."
+    },
+    {
+      "path": "docs__degraded_output_postmortem.md",
+      "description": "Folder path docs/degraded_output_postmortem.md. Design-level post-mortem of a constant 0.5 table that the campaign ledger records as written and submitted on a hidden rerun: the code path, the candidate causes and the standing fail-closed rule."
+    },
+    {
+      "path": "examples__example_notebook.ipynb",
+      "description": "Folder path examples/example_notebook.ipynb. Four-cell example for the replay: one markdown cell and three code cells."
+    }
+  ]
+}

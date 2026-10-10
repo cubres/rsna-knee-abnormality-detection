@@ -1,0 +1,179 @@
+{
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "9a257da35db5230197e071b4b683c440e3ad2c43a9f36fa7e97cc6327347ca5a",
+      "bytes": 1900
+    },
+    {
+      "path": "LICENSE-APACHE-2.0",
+      "sha256": "21860e6519f917902a902ec8ae3bc27c1f5bcd55186d8ec4b9e48f64883b8db7",
+      "bytes": 11338
+    },
+    {
+      "path": "NOTICE.md",
+      "sha256": "579007e713492d42e93021ce4bb865862e142b2e4d57626f284218a79fae7f9d",
+      "bytes": 2784
+    },
+    {
+      "path": "README.md",
+      "sha256": "e9fba88c69f9d91658849b654e58deef1f15d3ca769fac79960dd7dc4a2582ec",
+      "bytes": 31507
+    },
+    {
+      "path": "build_tables.py",
+      "sha256": "7e74ce5f4f0ac023a111889727aa25683e17d4f51940e8bc11eed735febe48f9",
+      "bytes": 13816
+    },
+    {
+      "path": "dataset-metadata.json",
+      "sha256": "82dd0256bebf08e29f85fe1ca6ce8d5dfc10248a4962556ded79484679f2c008",
+      "bytes": 15106
+    },
+    {
+      "path": "efficiency_calculator.py",
+      "sha256": "741cca2096e7abb2311232cfc7be918164e62226fc52873e82617b96ba78118d",
+      "bytes": 4830
+    },
+    {
+      "path": "native_runs.csv",
+      "sha256": "4ff5b1227fe6579016bedcbdd9e59790af841fdc73eafc6ca30d6027734a3123",
+      "bytes": 4959
+    },
+    {
+      "path": "receipts__index.csv",
+      "sha256": "8a1665ea6248b882d5411d50f17b18012ec60cef670b6c279fb8c9a13b5f3551",
+      "bytes": 1824
+    },
+    {
+      "path": "receipts__native__bench2_v2_two_view_320.json",
+      "sha256": "93fa5fbced68fa84a7f42997aff113ed4605760d82b751e55e73c8cc0858745d",
+      "bytes": 2679
+    },
+    {
+      "path": "receipts__native__bench2_v3_two_view_320.json",
+      "sha256": "d6c467eacfd1c20eb5cc8104189de312f36f6fe05eb8642d84481879dbe10aaf",
+      "bytes": 2680
+    },
+    {
+      "path": "receipts__native__bench2_v4_two_view_320.json",
+      "sha256": "a0bed1eed6a1b32b930ab1d6a401ca0415986a2b5aefaae0074e92fa5f098c8e",
+      "bytes": 2128
+    },
+    {
+      "path": "receipts__native__bench2_v5_four_view_320_384.json",
+      "sha256": "ff1d280c4098ef8273cae624eb521081663606a099e64b575eb0cb025773eea3",
+      "bytes": 1410
+    },
+    {
+      "path": "receipts__native__bench2_v6_plain_320.json",
+      "sha256": "716d00240ee18e21d26897ad871253c5db0d647e33892c9bef23abcb328cc9bb",
+      "bytes": 1409
+    },
+    {
+      "path": "receipts__native__bench2_v7_two_view_320.json",
+      "sha256": "cd04d92549abcb47dcfb7861df6f901579b65da33d6cc14cf48bd96b3d66f0be",
+      "bytes": 2128
+    },
+    {
+      "path": "receipts__native__bench2_v8_four_view_320_384.json",
+      "sha256": "143f08d1b24e7cf5914a1d469b27f383e247c0b43dbdebdecb190fc822270289",
+      "bytes": 1409
+    },
+    {
+      "path": "receipts__native__bench2_v9_two_view_320.json",
+      "sha256": "ada4db12f445bc00a741ecb89579b499d66339d2e032fd938f87590bdfcd8c8e",
+      "bytes": 2128
+    },
+    {
+      "path": "receipts__native__bench_v21_two_view_320.json",
+      "sha256": "3f8229fa97e8f6f99b22fa7bd88ea7a81b85cdcdef4d6fa5d3fe06dcd9f10088",
+      "bytes": 2679
+    },
+    {
+      "path": "receipts__native__bench_v22_plain_320.json",
+      "sha256": "c3031fec877f6c12817bd9f1236abfcf808fac3656aa95c323674d36599f6b86",
+      "bytes": 2208
+    },
+    {
+      "path": "receipts__native__bench_v23_four_view_320_384.json",
+      "sha256": "98b115206ad816beacddd3c11bf6371d17edf87263904e72826f509025a1c248",
+      "bytes": 2206
+    },
+    {
+      "path": "receipts__native__bench_v24_plain_320.json",
+      "sha256": "230df5bb1c6bcac8613dc95384ec141c8793022d9b8b3bed5fc45abbb80f4558",
+      "bytes": 2207
+    },
+    {
+      "path": "receipts__native__bench_v25_four_view_320_384.json",
+      "sha256": "b3c496f6572d1e04edce5c9ee5e65e8768f6c1cfd41261d03e882fb87f9f00ef",
+      "bytes": 2207
+    },
+    {
+      "path": "receipts__timing__bench2_v2_two_view_320.json",
+      "sha256": "2b5d3cb815fedde3166da3d21c2766726d9239de22b893bff2a9c92e25470959",
+      "bytes": 10592
+    },
+    {
+      "path": "receipts__timing__bench2_v3_two_view_320.json",
+      "sha256": "0c5f1593e0793e32cfd30414fb7d7afc5ff64cdb6b8afe4ef5667445778a3a7e",
+      "bytes": 10580
+    },
+    {
+      "path": "receipts__timing__bench2_v4_two_view_320.json",
+      "sha256": "b15d3fb90e4ec4f62563061fc77a7c7479d2098354922f258d21e35c8cd7e953",
+      "bytes": 2411
+    },
+    {
+      "path": "receipts__timing__bench2_v7_two_view_320.json",
+      "sha256": "f56641a2979d24519e1929ebfdc1e63ca34c3f9e4ebe6991336f9478bedd721d",
+      "bytes": 2410
+    },
+    {
+      "path": "receipts__timing__bench2_v9_two_view_320.json",
+      "sha256": "e8405205d2c5a55b430864151e2031fb19424fee5bbcdaddf998ccb3aca36f04",
+      "bytes": 2408
+    },
+    {
+      "path": "receipts__timing__bench_v21_two_view_320.json",
+      "sha256": "380ff8710ad1a1738174a753ebd4ddf07c64616ca2270951e0ee6c6b05c438ed",
+      "bytes": 10589
+    },
+    {
+      "path": "receipts__timing__bench_v22_plain_320.json",
+      "sha256": "72ee4258a4776c4c79b88f3d3fc7609cf7b205673df9ee53e8c72366308b5d7c",
+      "bytes": 4219
+    },
+    {
+      "path": "receipts__timing__bench_v23_four_view_320_384.json",
+      "sha256": "f279a99f7bc5c7bc316db6ff7a904ec64bbfebca687c61d7426c2321cf449f21",
+      "bytes": 5485
+    },
+    {
+      "path": "receipts__timing__bench_v24_plain_320.json",
+      "sha256": "519290541beccea9585ac5b492009d56cbac39834bbec8ec8e0224a2dabfc76d",
+      "bytes": 4215
+    },
+    {
+      "path": "receipts__timing__bench_v25_four_view_320_384.json",
+      "sha256": "0b8aa433fd4918e68a210f09eebe80eab8cc0693a7356aee6244aa7a5683228b",
+      "bytes": 5493
+    },
+    {
+      "path": "schema.json",
+      "sha256": "6fc0458c988f03d916565deb395d5d496649ee13c14edd2ef76e3eaf7bc63d22",
+      "bytes": 14975
+    },
+    {
+      "path": "summary.csv",
+      "sha256": "eedea1d0bf19e3ea3619d14a27fe2677bf43af4c938210206ad0004bc8ecab46",
+      "bytes": 8346
+    },
+    {
+      "path": "timings.csv",
+      "sha256": "b9911cc3706907d52dc9d065117d56e11b1b52e7d83ef9b940b459d5dce4aa39",
+      "bytes": 129380
+    }
+  ]
+}
