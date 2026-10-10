@@ -1,0 +1,209 @@
+{
+  "name": "rsna-knee-2026-experiment-ledger schema",
+  "version": "1.3.0",
+  "description": "Column definitions for submissions.csv (one row per official Kaggle submission) and experiments.csv (one row per method family). Scores are Kaggle public-leaderboard AUC values as returned by the submissions API, rounded by Kaggle to three decimals. Version 1.3.0 removes the runtime_note column and internal build labels, and quotes Kaggle submission descriptions verbatim in notes. Version 1.2.0 quoted Kaggle's errorDescription verbatim in no_score_reason.",
+  "files": {
+    "submissions.csv": {
+      "grain": "one row per official submission by team prvsiyan to rsna-knee-abnormality-detection",
+      "row_count": 90,
+      "primary_key": "row_id",
+      "columns": [
+        {
+          "name": "row_id",
+          "type": "string",
+          "unit": null,
+          "description": "Kaggle submission reference id (ref in the submissions API), stored as text: an integer written in digits. Unique."
+        },
+        {
+          "name": "utc",
+          "type": "datetime",
+          "unit": "UTC",
+          "description": "Submission timestamp as recorded by Kaggle, truncated to whole seconds. Format: ISO 8601 with Z suffix."
+        },
+        {
+          "name": "notebook_kind",
+          "type": "string",
+          "unit": null,
+          "allowed_values": [
+            "public",
+            "bench",
+            "unrecorded"
+          ],
+          "description": "public = the team's public notebook category; bench = the team's private validation notebook category; unrecorded = the sources do not establish the category (51 rows). Not a claim about current Kaggle visibility."
+        },
+        {
+          "name": "family_id",
+          "type": "string",
+          "unit": null,
+          "description": "Method family identifier. Joins to experiments.csv family_id."
+        },
+        {
+          "name": "method",
+          "type": "string",
+          "unit": null,
+          "description": "Short human-written method label. Campaign build labels are not used in this release; public notebook 'version N' is the Kaggle notebook version."
+        },
+        {
+          "name": "components",
+          "type": "string",
+          "unit": null,
+          "description": "Models, checkpoints and readers named in the row, with upstream credit where the row description names one. Checkpoints are named, not redistributed. Team annotations are labelled."
+        },
+        {
+          "name": "weights",
+          "type": "string",
+          "unit": null,
+          "description": "Blend weights as predeclared in the row description, or 'none (single arm)', or 'not recorded in the row description'."
+        },
+        {
+          "name": "public_score",
+          "type": "number",
+          "unit": "AUC (public split), 3 decimals",
+          "description": "Kaggle publicScore for the row. Empty when status is NO_SCORE. Higher is better. Differences of 0.001 are one leaderboard tick and are within noise."
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "unit": null,
+          "allowed_values": [
+            "SCORED",
+            "NO_SCORE"
+          ],
+          "description": "SCORED = Kaggle returned a public score. NO_SCORE = the hidden rerun failed or produced no file."
+        },
+        {
+          "name": "no_score_reason",
+          "type": "string",
+          "unit": null,
+          "description": "Kaggle's errorDescription for a NO_SCORE row, quoted verbatim from the Kaggle submissions API (snapshot of 10 October 2026, 11:47:18 UTC). Empty for SCORED rows."
+        },
+        {
+          "name": "outcome",
+          "type": "string",
+          "unit": null,
+          "allowed_values": [
+            "reference",
+            "plateau",
+            "tie",
+            "rejected",
+            "superseded",
+            "candidate_efficiency",
+            "failed_rerun",
+            "degraded_rerun"
+          ],
+          "description": "Outcome of the row relative to its family. reference = baseline, control or best of its family; plateau = same level as the reference; tie = within one tick, not adopted; rejected = below the reference or not adopted under the team's annotation; superseded = replaced by a later lineage; candidate_efficiency = a candidate for the efficiency final, pending the team's decision; failed_rerun = no score; degraded_rerun = scored but the output was degraded (near-constant table). The reference value covers three cases: a family baseline, a control reproduction, or the best arm of a family."
+        },
+        {
+          "name": "notes",
+          "type": "string",
+          "unit": null,
+          "description": "Verbatim quotes from the Kaggle submission description (marked with [...] where abridged), score comparisons and row ids. Judgements that are not in the Kaggle description are labelled Team annotation. No runtimes and no local identifiers are included."
+        }
+      ]
+    },
+    "experiments.csv": {
+      "grain": "one row per method family",
+      "row_count": 20,
+      "primary_key": "family_id",
+      "columns": [
+        {
+          "name": "family_id",
+          "type": "string",
+          "unit": null,
+          "description": "Family identifier, e.g. F13_mirror_reader. Joins to submissions.csv family_id."
+        },
+        {
+          "name": "family_name",
+          "type": "string",
+          "unit": null,
+          "description": "Human-readable family name."
+        },
+        {
+          "name": "method_summary",
+          "type": "string",
+          "unit": null,
+          "description": "One-sentence description of what the family tried."
+        },
+        {
+          "name": "n_rows",
+          "type": "integer",
+          "unit": "submissions",
+          "description": "Number of official submissions in the family, including NO_SCORE rows."
+        },
+        {
+          "name": "n_scored",
+          "type": "integer",
+          "unit": "submissions",
+          "description": "Number of family rows with a public score."
+        },
+        {
+          "name": "n_no_score",
+          "type": "integer",
+          "unit": "submissions",
+          "description": "Number of family rows without a score (failed reruns, runtime limit)."
+        },
+        {
+          "name": "best_public_score",
+          "type": "number",
+          "unit": "AUC (public split), 3 decimals",
+          "description": "Highest public score in the family."
+        },
+        {
+          "name": "best_row_id",
+          "type": "string",
+          "unit": null,
+          "description": "Earliest row id that attains best_public_score in the family. Stored as text, digits only."
+        },
+        {
+          "name": "min_public_score",
+          "type": "number",
+          "unit": "AUC (public split), 3 decimals",
+          "description": "Lowest scored public score in the family (shows degraded or failed arms)."
+        },
+        {
+          "name": "mean_public_score",
+          "type": "number",
+          "unit": "AUC (public split), 4 decimals",
+          "description": "Unweighted mean of scored rows in the family. Dominated by family size and by degraded rows; read with min and best."
+        },
+        {
+          "name": "first_utc",
+          "type": "datetime",
+          "unit": "UTC",
+          "description": "Earliest submission in the family. Format: ISO 8601 with Z suffix."
+        },
+        {
+          "name": "last_utc",
+          "type": "datetime",
+          "unit": "UTC",
+          "description": "Latest submission in the family. Format: ISO 8601 with Z suffix."
+        },
+        {
+          "name": "outcome",
+          "type": "string",
+          "unit": null,
+          "description": "Family-level status: reference, plateau, rejected, superseded, tie or candidate_efficiency (same vocabulary as submissions.csv outcome)."
+        },
+        {
+          "name": "verdict",
+          "type": "string",
+          "unit": null,
+          "description": "One-paragraph verdict with the evidence row ids; team annotations are labelled."
+        }
+      ]
+    },
+    "efficiency_formula.md": {
+      "grain": "document, not tabular",
+      "description": "Efficiency Prize formula as recorded by the team, constants (illustrative), worked examples and what is and is not measured in this dataset."
+    }
+  },
+  "units": {
+    "AUC": "area under the ROC curve on the Kaggle public split; dimensionless, 0 to 1",
+    "time": "UTC, ISO 8601 with Z suffix"
+  },
+  "missing_values": "Empty cell means not applicable or not recorded in the source. No sentinel values are used.",
+  "field_conventions": {
+    "build_labels": "Campaign build labels are not used in this release. In public-notebook rows, 'version N' is the Kaggle notebook version (see README.md Glossary).",
+    "reference_outcome": "reference covers three cases: a family baseline, a control reproduction, or the best arm of a family. Filter on family_id to tell them apart."
+  }
+}

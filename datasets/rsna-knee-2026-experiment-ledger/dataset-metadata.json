@@ -1,0 +1,195 @@
+{
+  "title": "RSNA Knee 2026: One Team's Submissions, Scored",
+  "id": "prvsiyan/rsna-knee-2026-experiment-ledger",
+  "subtitle": "One team's 90 RSNA Knee 2026 submissions: scores, methods, negative results",
+  "description": "# RSNA Knee 2026: One Team's Submissions, Scored\n\nAn annotated ledger of one team's **90 official submissions** to the RSNA Knee Abnormality Detection competition on Kaggle (6 August to 10 October 2026). Each row gives the public score, method, components, blend weights, outcome and notes, including the **negative results** that did not help. It also includes the Efficiency Prize formula with illustrative worked examples.\n\nThis is one team's campaign record (account prvsiyan). It is not a leaderboard, not an official publication, and it contains no competition images, labels or hidden-set content. It is not produced or endorsed by Kaggle, RSNA or the competition hosts.\n\n## What\n\n### Headline findings\n\n- **This team's best public score is 0.949**, reached by four rows: 56948803 (bench notebook), 56949940 (public notebook, version 34), 56952077 (mirror plus 224 px single view, validation) and 57024205 (four-view mirror TTA, clean replicate).\n- **The 0.949 reader is the anatomical mirror reader** (nartaa recipe): plain and mirror probabilities averaged on a 384 px SWA checkpoint, 320 px crop, per-finding percentile rank. It is +0.008 over the 0.941 plateau of the team's earlier public notebook (rows 56759401, 56779708, 56779710).\n- **Several plausible additions tied or lost:** a ConvNeXt 2.5D rank blend (0.948, rows 56955785 and 56957785), a 0.55 / 0.45 BK-A plus mirror blend (0.947, row 57024089) and a MaVIT standalone reader (0.935, row 57016763). None beat mirror-only.\n- **Hidden reruns can fail.** Of the six NO_SCORE rows, three raised unhandled errors, two wrote no submission file and one exceeded the runtime limit. One scored row (57017206, 0.505) is annotated as degraded.\n- **Efficiency:** under illustrative constants, one AUC tick (0.001) is worth about 70 s of runtime. The dataset publishes no runtime for any row. Row 57024289 (plain-view-only reader, 0.948) is the team's candidate efficiency final; the decision is pending.\n\n### Method families (experiments.csv)\n\n| Family | Scored / rows | Best public | Best row | Outcome |\n|---|---|---|---|---|\n| Report-text reader lineage | 5 / 5 | 0.891 | 55354294 | superseded |\n| Legacy target-specific DINOv2 blends | 9 / 9 | 0.894 | 55361195 | plateau |\n| RadImageNet rank blends | 4 / 4 | 0.906 | 55399732 | reference |\n| DINOv3 consensus and early H&S versions | 6 / 7 | 0.922 | 55646554 | plateau |\n| CPU students and depth-index fix | 5 / 5 | 0.883 | 55470873 | superseded |\n| Forks of public frontier notebooks | 4 / 4 | 0.920 | 55606155 | plateau |\n| DINOsaur and Raptor fusion (H&S lineage) | 15 / 15 | 0.936 | 55765530 | plateau |\n| Philosophical DINOsaur and SlotHead residual | 2 / 2 | 0.936 | 55909953 | rejected |\n| Public notebook versions and 2026-09-09 batch arms | 11 / 11 | 0.940 | 56107593 | plateau |\n| probe22 per-finding outer weights | 3 / 4 | 0.941 | 56354597 | plateau |\n| Public notebook versions 31 and 32 | 3 / 3 | 0.941 | 56759401 | superseded |\n| BK-A stack | 6 / 7 | 0.943 | 56795351 | plateau |\n| Anatomical mirror reader (nartaa recipe) | 2 / 3 | 0.949 | 56948803 | reference |\n| Mirror plus nartaa 224 px blend | 1 / 1 | 0.949 | 56952077 | tie |\n| Mirror plus goodpjw ConvNeXt blend | 2 / 2 | 0.948 | 56955785 | rejected |\n| BK-A without RadImageNet (scored alone) | 1 / 1 | 0.938 | 57016729 | reference |\n| Plain-view-only anatomical reader (candidate) | 1 / 2 | 0.948 | 57024289 | candidate_efficiency |\n| Four-view anatomical-mirror TTA | 2 / 3 | 0.949 | 57024205 | tie |\n| MaVIT 288 px standalone probe | 1 / 1 | 0.935 | 57016763 | rejected |\n| Mirror plus BK-A 0.55 / 0.45 blend | 1 / 1 | 0.947 | 57024089 | rejected |\n\n### Negative results: what did not help\n\nScores are public AUC. Terms are defined in the Glossary.\n\n- **Legacy DINOv2 blends (F02):** seven rows sit at 0.894 (rows 55361195 to 55363947). The row with an empty Kaggle description scored 0.893 (row 55360051), and the Lateral Meniscus blend fell to 0.891 (row 55364278). Target-specific weights gave no measurable public gain.\n- **ConvNeXt 2.5D on the mirror reader, 0.70 / 0.30:** 0.948 on validation (row 56955785) and 0.948 public (row 56957785), 0.001 below mirror-only (0.949).\n- **Mirror plus 224 px single view, 0.75 / 0.25:** tie at 0.949 (row 56952077).\n- **BK-A plus mirror, 0.55 / 0.45:** 0.947 (row 57024089), 0.002 below mirror-only.\n- **Four-view mirror TTA:** the clean replicate tied at 0.949 (row 57024205). Row 57016750 has no score, and row 57017206 scored 0.505 and is annotated as degraded.\n- **Plain-view-only reader:** 0.948 (row 57024289), 0.001 below mirror-only. An earlier run (row 57016738) has no score.\n- **BK-A without the RadImageNet member:** 0.938 (row 57016729), scored alone; the team annotates it as not a blend measurement. Full BK-A is 0.943 (row 56795351).\n- **Student fleet:** 0.918 alone (row 56800704); a 15 percent student blend on the BK native stack gave 0.943 (row 56818632), the same as the stack alone (row 56795351).\n- **MaVIT 288 px standalone:** 0.935 (row 57016763), below the 0.943 gate in its description, so no blend was run.\n- **DINOv3 consensus, two-view depth TTA and anatomy-query specialist:** 0.920 to 0.922 (rows 55676080, 55693183, 55693329, 55701391), no gain over the base reproduction (row 55646554, 0.922). The frozen D224 branch fell to 0.917 (row 55726212).\n- **DINOsaur overlays:** OrthoDiffusion 0.935 (rows 55805823, 55808850); OrthoFoundation Lateral OA 0.935 (row 55800346); a SlotHead residual dropped the 0.936 control to 0.934 (row 55943980).\n- **RadImageNet overlays:** an EfficientNet-B3 10 percent blend scored 0.898 (row 55396029), below 0.899 (row 55391852); a BiomedCLIP and ViTDet overlay fell to 0.887 (row 55424726).\n- **Batch arm G:** 0.922 alone (row 56122418) and 0.922 in A+B+G (row 56122723), against 0.940 for arms A, B and A+B.\n- **No score:** rows 56355206 (runtime limit), 56795572 and 55458627 (unhandled errors).\n\n### Positive results that stuck\n\n- **Mirror reader, 0.941 to 0.949 (+0.008):** rows 56948803 and 56949940.\n- **Depth-index alignment, 0.851 to 0.859 (+0.008):** row 55563720 against 55563560.\n- **20 percent RadImageNet rank blend, 0.899 to 0.906 (+0.007):** row 55399732.\n- **CC0 MaxSpan Raptor leg, 0.933 to 0.935 (+0.002):** row 55727399.\n\n### Efficiency Prize formula (illustrative constants)\n\n    Efficiency = AUC / (Benchmark - maxAUC) + RuntimeSeconds / 32400      (lower is better)\n\nThe team used Benchmark 0.5 and maxAUC 0.96, approximations not confirmed against the competition page in this release. Under them, one AUC tick is about 70 s of runtime. This dataset publishes no runtime for any row. `efficiency_formula.md` gives the worked examples and says what is measured.\n\n## Why\n\nKaggle's leaderboard shows one score per submission, not what was tried or what failed. This ledger records the method, components, blend weights, outcome and notes of each official submission, including the negative results.\n\n## Files\n\n| File | Contents |\n|---|---|\n| `submissions.csv` | One row per official submission (90 rows, 12 columns). |\n| `experiments.csv` | One row per method family (20 rows, 14 columns). |\n| `efficiency_formula.md` | Efficiency Prize formula and illustrative examples. |\n| `schema.json` | Column dictionary for both CSV files. |\n| `README.md` | This card. |\n| `LICENSE`, `NOTICE.md` | CC BY 4.0 licence and per-file terms. |\n| `LICENSE-APACHE-2.0` | Apache License 2.0 text for the two code snippets. |\n| `MANIFEST.json` | SHA-256 and byte size of each file above. |\n| `dataset-metadata.json` | Kaggle metadata. |\n\n## Columns\n\n### submissions.csv (90 rows)\n\nFull definitions, types and allowed values are in `schema.json`.\n\n| Column | Meaning |\n|---|---|\n| `row_id` | Kaggle submission reference. Unique key. |\n| `utc` | Submission time from Kaggle, UTC, to the second. |\n| `notebook_kind` | `public`, `bench` or `unrecorded`. `public` and `bench` are the team's notebook categories. `unrecorded` (51 rows): the sources do not establish the category. |\n| `family_id` | Joins to `experiments.csv`. |\n| `method`, `components`, `weights` | Short label; models used; blend weights as predeclared, or `not recorded in the row description`. |\n| `public_score` | Kaggle public AUC, 3 decimals. Empty for NO_SCORE rows. |\n| `status`, `no_score_reason` | `SCORED` or `NO_SCORE`. For NO_SCORE rows, `no_score_reason` is Kaggle's errorDescription, quoted verbatim. |\n| `outcome` | Relative to the family; allowed values and meanings are in `schema.json`. |\n| `notes` | Verbatim Kaggle description quotes (`[...]` marks an omission), score comparisons and row ids. Judgements not in the description are labelled `Team annotation`. |\n\nThe dataset publishes no runtimes. Kaggle does not return hidden-run runtimes, and the team's runtime receipts are not reproduced here.\n\n### experiments.csv (20 families)\n\n`family_id`, `family_name`, `method_summary`: identifiers and text. `n_rows`, `n_scored`, `n_no_score`: counts. `best_public_score`, `min_public_score` (3 decimals), `mean_public_score` (4 decimals): computed over scored rows. `best_row_id`: earliest row attaining the best score. `first_utc`, `last_utc`: UTC range. `outcome`: family-level status. `verdict`: paragraph with row ids.\n\n### Glossary\n\n- **Public score:** Kaggle's public-leaderboard AUC (area under the ROC curve), 3 decimals. One tick is 0.001.\n- **Predeclared:** a weight, gate or rule the row description states before the run.\n- **Team annotation:** a judgement the team recorded for a row that the Kaggle description does not contain. Labelled wherever it is used.\n- **Public notebook version N:** the Kaggle version number of a public notebook.\n- **Bench notebook:** the team's private validation notebook category (`notebook_kind` = `bench`).\n- **Hidden rerun:** the competition's private re-execution of a notebook. Kaggle does not return its runtime.\n- **Fail-closed:** a notebook chain writes no submission, or falls back to a reference path, instead of writing degraded output.\n- **Degraded table:** a near-constant output file.\n- **OOF:** out-of-fold predictions, used to choose weights without the public split.\n- **Rank blend:** a weighted average of ranks.\n- **Gold58:** the team's name for its 58-annotation gold set, as the row descriptions use it.\n- **TTA:** test-time augmentation, averaging predictions over transformed inputs.\n- **SWA checkpoint:** a model checkpoint from stochastic weight averaging.\n- **Plain view / mirror view:** the study as given, and a mirrored view whose probabilities are averaged with it.\n- **nartaa:** author of the public notebooks and SWA checkpoint dataset behind the mirror reader. See Credits.\n- **BK-A:** the team's own orchestration of a public stack. \"Rad off\" means without its RadImageNet member.\n- **RadImageNet:** a radiology-pretrained backbone used as one ensemble member.\n- **H&S:** the notebook title \"Head and shoulders, knees and toes\".\n- **DINOsaur, Raptor:** public model lines and checkpoints that the team forked or reproduced (see Credits).\n- **probe22:** the team's probe family with per-finding outer weights and a 55/10/15/20 view split.\n- **Target abbreviations** (ACL, MCL, Effusion, Synovitis, Medial OA, Lateral OA, PF OA, LM, LOA): knee finding names as the team's notes use them.\n\n## How to load\n\nThe loader below is Apache-2.0 code (see Licence).\n\n```python\nimport pandas as pd\n\nsubs = pd.read_csv(\"submissions.csv\", parse_dates=[\"utc\"])\nscored = subs[subs[\"status\"] == \"SCORED\"].astype({\"public_score\": float})\nprint(scored.nlargest(5, \"public_score\")[[\"row_id\", \"method\", \"public_score\"]])\n```\n\n## Provenance\n\n### Where each field comes from\n\n| Fields | Source |\n|---|---|\n| `row_id`, `utc`, `public_score`, `status`, `no_score_reason` | Kaggle submissions list, snapshot 10 October 2026, 11:47:18 UTC. |\n| Quoted text in `notes` | Kaggle submission description, same snapshot (verbatim). |\n| Other fields | The team's annotation of each submission. |\n| `experiments.csv` counts and aggregates | Computed from `submissions.csv`. |\n| Efficiency formula | Competition overview text as recorded by the team on 8 October 2026. Constants are approximations. |\n\n### How it was produced\n\n1. The team's submissions were read from the Kaggle submissions list: 90 rows, 84 with a public score and 6 with an error description.\n2. Each row was annotated from its Kaggle description and the team's records. Quoted text in `notes` was copied from the Kaggle description.\n3. Public scores, status and error descriptions were checked against the 11:47:18 UTC snapshot, with no mismatches. Counts and aggregates were computed by script. Runtime receipts, local paths, worker identifiers, credentials and internal review text were removed.\n\n### Caveats\n\n- **One team, public split only.** The private score is not in the data. The 0.949 rows may not rank the same on the private split. Differences of 0.001 are one leaderboard tick and are within noise.\n- **Notebook category is often unrecorded:** 51 of 90 rows are `unrecorded` in `notebook_kind`.\n- **Competition rules are not settled here.** Whether public weights trained on competition data may be used in prize-eligible submissions was an open question at the snapshot date. The components column describes what was used, not eligibility.\n- **Efficiency inputs are not published.** No row has a runtime here, and the constants are approximate. The runtime definition is unresolved.\n- **Snapshot date.** Scores are as of 10 October 2026. Later submissions are not included.\n\n## Credits\n\nUpstream authors and components named in the rows. \"Verified\" means checked on the Kaggle page on 2026-10-10 (nartaa notebooks only); \"as stated\" means the Kaggle row description says so; \"as recorded\" means the team's records of that date, not re-verified; \"not recorded\" means no licence was found. No third-party file is redistributed.\n\n| Upstream | Used for | Licence |\n|---|---|---|\n| nartaa (Danial Zakaria), notebook [rsna-knee-0949-anatomical-mirror](https://www.kaggle.com/code/nartaa/rsna-knee-0949-anatomical-mirror) | Mirror reader recipe (rows 56948803 to 57024289) | Apache-2.0, verified 2026-10-10 |\n| nartaa, notebook [rsna-knee-0945-efficient-224crop](https://www.kaggle.com/code/nartaa/rsna-knee-0945-efficient-224crop) | 224 px single-view arm (row 56952077) | Apache-2.0, verified 2026-10-10 |\n| nartaa, SWA checkpoint dataset `nartaa/rsna-knee-publication-swa-weights-20261007` | 384 px and 224 px checkpoints | \"Other (specified in description)\", as recorded (not re-verified). Not redistributed |\n| goodpjw2008, three-fold ConvNeXt 2.5D reader | Mirror blend (rows 56955785, 56957785) | Apache-2.0, as stated in the row descriptions |\n| mattiaangeli, public notebook | Exact public 0.922 reproduction (row 55646554) | Apache-2.0, as stated in the row description |\n| sofiaanjenje, saidmohamedomary, amanatar (public notebook forks) | Forks in rows 55573246, 55586830, 55645841 | Apache-2.0, as stated in the row descriptions |\n| Roman, DINOsaur public line | Reproduction (row 55768059) and port (row 55728923) | Apache-2.0, as stated in the row descriptions |\n| Protocol Fusion public recipe | Rows 55728658 and 55728823 | Author not named in the row descriptions. The port is Apache-2.0 as stated in row 55728823. The original recipe's licence is not recorded |\n| dreaddevelopment: raptor-knee-maxspan, raptor-knee-native384 | Raptor CoAtNet checkpoints (rows 55727399 onward) | CC0-1.0, as recorded on 2026-09-13 (not independently re-verified). Not redistributed |\n| BMEII-AI, RadImageNet (github.com/BMEII-AI/RadImageNet) | RadImageNet member (for example rows 55399732, 55470873) | CC-BY-NC-SA-4.0 on Kaggle copy `marwanmath/resnet-50-radimagenet-marwan`, as recorded 2026-08-09; another copy records \"other\". Not reconciled; check upstream before reuse |\n| Meta AI, DINOv2 and DINOv3 backbones | DINOv2 ensemble (F02); DINOv3 components (F06, F07) | Community copies as recorded: `ericwang03/rsna-knee-dinov2-mil-bundle` \"other\" (2026-08-10); `dragonseal/dinov2-fold2-train-weights` \"unknown\" (2026-08-10); `tonylica/rsna-knee-bend-dinov3-0917-repro-assets` \"other\" (2026-09-14). Meta's terms not recorded |\n| pilkwang/rsna-knee-weights | Attached as an input in the H&S notebook metadata; contents not inspected | CC0-1.0, as recorded on 2026-09-14 (not independently re-verified). Not redistributed |\n| OrthoDiffusion, Hugging Face model `lanstat0123/orthodiffusion` | OrthoDiffusion specialists (rows 55805823, 55808850) | MIT, as observed on the model page in the team's admission audit of 2026-09-14 (not independently re-verified) |\n| OrthoFoundation | OrthoFoundation Lateral OA specialist (row 55800346) | Not recorded in the team's sources |\n| BiomedCLIP and ViTDet | Four-target overlay (row 55424726) | Not recorded in the team's sources |\n| EfficientNet-B3 | Five-fold branch (row 55396029) | Not recorded in the team's sources |\n| ConvNeXtV2-B and EfficientNetV2-L | probe22 arms (row 56355204) | Not recorded in the team's sources |\n| Public MRI teacher families | Student distillation (row 55468012) | Not recorded in the team's sources |\n| Mattia (public reference notebook) and Renta recipe | Reproductions (rows 56107593, 56016348) | Not recorded in the team's sources. The Renta row depends on a pinned private checkpoint, not redistributed |\n| hengck23, MaVIT dataset `hengck23/hengck23-rnsa-knee` | Standalone probe (row 57016763) | \"MIT dataset\", as stated in the row description. Not redistributed |\n\nDependencies of the shipped code:\n\n| Package | Used by | Licence |\n|---|---|---|\n| pandas | README loader (\"How to load\") | BSD-3-Clause |\n\n`efficiency()` uses only the Python standard library. No other third-party package is imported by shipped code, and the readers' runtime libraries are not recorded in the sources.\n\n### How to cite\n\nprvsiyan (2026). *RSNA Knee 2026: One Team's Submissions, Scored* [Dataset]. Kaggle. https://www.kaggle.com/datasets/prvsiyan/rsna-knee-2026-experiment-ledger\n\n## Licence\n\n- **Dataset licence: CC-BY-4.0.** This is the single Kaggle licence field. The full legal code is at https://creativecommons.org/licenses/by/4.0/legalcode, and `LICENSE` gives the scope.\n- **Why this licence.** The primary content is the team's own submission rows and their public scores as displayed on Kaggle, with the team's annotations. That is a compilation for which attribution is the condition. It contains no competition images, labels, predictions or hidden-set content.\n- **Code under Apache-2.0.** Two code snippets are Apache-2.0: the pandas loader under How to load, and the `efficiency()` function in `efficiency_formula.md`, section 6. The full text is in `LICENSE-APACHE-2.0`. `NOTICE.md` says how the two licences coexist.\n- **Third-party material.** No checkpoint, weight or competition file is redistributed. Upstream licences are in Credits.\n- **Not official.** An independent record, not produced or endorsed by Kaggle, RSNA or the competition hosts.\n\n## Changelog\n\n- **1.3.0 (2026-10-10):** Licence changed to CC-BY-4.0, because the primary content is the team's submission rows and displayed public scores. Internal build labels removed from all text. Unsupported figures removed, including the runtime figures; the `runtime_note` column is removed. `notes` quote Kaggle descriptions verbatim. Credits added for the nartaa notebooks and the named components, with licences as recorded, and a dependency table added. An unsupported frontier-score claim is removed.\n- **1.2.0 (2026-10-10):** Licence set to CC-BY-NC-SA-4.0 (superseded by 1.3.0). `LICENSE-APACHE-2.0` and `NOTICE.md` added. `no_score_reason` quotes Kaggle's errorDescription verbatim. Credits for Raptor, RadImageNet, DINOv2, DINOv3 and rsna-knee-weights.\n- **1.1.0 (2026-10-10):** One-team title and subtitle; glossary and provenance added.\n- **1.0.0 (2026-10-10):** First release.\n",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0"
+    }
+  ],
+  "keywords": [
+    "medicine",
+    "computer vision",
+    "deep learning",
+    "tabular",
+    "benchmark",
+    "health"
+  ],
+  "resources": [
+    {
+      "path": "LICENSE",
+      "description": "CC BY 4.0 licence for this dataset, with a link to the full legal code and the scope."
+    },
+    {
+      "path": "LICENSE-APACHE-2.0",
+      "description": "Full Apache License 2.0 text, covering the two code snippets (the pandas loader in the README and the efficiency() function)."
+    },
+    {
+      "path": "MANIFEST.json",
+      "description": "SHA-256 digest and byte size of every file in this dataset except this manifest."
+    },
+    {
+      "path": "NOTICE.md",
+      "description": "Per-file licence terms (data and documentation under CC-BY-4.0, code snippets under Apache-2.0) and third-party notices."
+    },
+    {
+      "path": "README.md",
+      "description": "The dataset card: what the dataset is and why it exists, headline findings, method families, columns, provenance, credits and licence."
+    },
+    {
+      "path": "efficiency_formula.md",
+      "description": "Efficiency Prize formula as recorded by the team, illustrative constants, worked examples and what is and is not measured in this dataset."
+    },
+    {
+      "path": "experiments.csv",
+      "description": "One row per method family (20 rows, 14 columns): counts, best, minimum and mean public AUC over scored rows, first and last submission times, and the team's verdict with row ids.",
+      "schema": {
+        "fields": [
+          {
+            "name": "family_id",
+            "type": "string",
+            "description": "Family identifier, e.g. F13_mirror_reader. Joins to submissions.csv family_id."
+          },
+          {
+            "name": "family_name",
+            "type": "string",
+            "description": "Human-readable family name."
+          },
+          {
+            "name": "method_summary",
+            "type": "string",
+            "description": "One-sentence description of what the family tried."
+          },
+          {
+            "name": "n_rows",
+            "type": "integer",
+            "description": "Number of official submissions in the family, including NO_SCORE rows."
+          },
+          {
+            "name": "n_scored",
+            "type": "integer",
+            "description": "Number of family rows with a public score."
+          },
+          {
+            "name": "n_no_score",
+            "type": "integer",
+            "description": "Number of family rows without a score (failed reruns, runtime limit)."
+          },
+          {
+            "name": "best_public_score",
+            "type": "number",
+            "description": "Highest public score in the family."
+          },
+          {
+            "name": "best_row_id",
+            "type": "string",
+            "description": "Earliest row id that attains best_public_score in the family. Stored as text, digits only."
+          },
+          {
+            "name": "min_public_score",
+            "type": "number",
+            "description": "Lowest scored public score in the family (shows degraded or failed arms)."
+          },
+          {
+            "name": "mean_public_score",
+            "type": "number",
+            "description": "Unweighted mean of scored rows in the family. Dominated by family size and by degraded rows; read with min and best."
+          },
+          {
+            "name": "first_utc",
+            "type": "datetime",
+            "description": "Earliest submission in the family. Format: ISO 8601 with Z suffix."
+          },
+          {
+            "name": "last_utc",
+            "type": "datetime",
+            "description": "Latest submission in the family. Format: ISO 8601 with Z suffix."
+          },
+          {
+            "name": "outcome",
+            "type": "string",
+            "description": "Family-level status: reference, plateau, rejected, superseded, tie or candidate_efficiency (same vocabulary as submissions.csv outcome)."
+          },
+          {
+            "name": "verdict",
+            "type": "string",
+            "description": "One-paragraph verdict with the evidence row ids; team annotations are labelled."
+          }
+        ]
+      }
+    },
+    {
+      "path": "schema.json",
+      "description": "Machine-readable column dictionary for submissions.csv and experiments.csv: types, units and allowed values."
+    },
+    {
+      "path": "submissions.csv",
+      "description": "One row per official Kaggle submission by team prvsiyan to rsna-knee-abnormality-detection (90 rows, 12 columns). Public AUC and status from Kaggle; method, components, weights and notes are the team's annotations, with verbatim quotes of Kaggle submission descriptions.",
+      "schema": {
+        "fields": [
+          {
+            "name": "row_id",
+            "type": "string",
+            "description": "Kaggle submission reference id (ref in the submissions API), stored as text: an integer written in digits. Unique."
+          },
+          {
+            "name": "utc",
+            "type": "datetime",
+            "description": "Submission timestamp as recorded by Kaggle, truncated to whole seconds. Format: ISO 8601 with Z suffix."
+          },
+          {
+            "name": "notebook_kind",
+            "type": "string",
+            "description": "public = the team's public notebook category; bench = the team's private validation notebook category; unrecorded = the sources do not establish the category (51 rows). Not a claim about current Kaggle visibility."
+          },
+          {
+            "name": "family_id",
+            "type": "string",
+            "description": "Method family identifier. Joins to experiments.csv family_id."
+          },
+          {
+            "name": "method",
+            "type": "string",
+            "description": "Short human-written method label. Campaign build labels are not used in this release; public notebook 'version N' is the Kaggle notebook version."
+          },
+          {
+            "name": "components",
+            "type": "string",
+            "description": "Models, checkpoints and readers named in the row, with upstream credit where the row description names one. Checkpoints are named, not redistributed. Team annotations are labelled."
+          },
+          {
+            "name": "weights",
+            "type": "string",
+            "description": "Blend weights as predeclared in the row description, or 'none (single arm)', or 'not recorded in the row description'."
+          },
+          {
+            "name": "public_score",
+            "type": "number",
+            "description": "Kaggle publicScore for the row. Empty when status is NO_SCORE. Higher is better. Differences of 0.001 are one leaderboard tick and are within noise."
+          },
+          {
+            "name": "status",
+            "type": "string",
+            "description": "SCORED = Kaggle returned a public score. NO_SCORE = the hidden rerun failed or produced no file."
+          },
+          {
+            "name": "no_score_reason",
+            "type": "string",
+            "description": "Kaggle's errorDescription for a NO_SCORE row, quoted verbatim from the Kaggle submissions API (snapshot of 10 October 2026, 11:47:18 UTC). Empty for SCORED rows."
+          },
+          {
+            "name": "outcome",
+            "type": "string",
+            "description": "Outcome of the row relative to its family. reference = baseline, control or best of its family; plateau = same level as the reference; tie = within one tick, not adopted; rejected = below the reference or not adopted under the team's annotation; superseded = replaced by a later lineage; candidate_efficiency = a candidate for the efficiency final, pending the team's decision; failed_rerun = no score; degraded_rerun = scored but the output was degraded (near-constant table). The reference value covers three cases: a family baseline, a control reproduction, or the best arm of a family."
+          },
+          {
+            "name": "notes",
+            "type": "string",
+            "description": "Verbatim quotes from the Kaggle submission description (marked with [...] where abridged), score comparisons and row ids. Judgements that are not in the Kaggle description are labelled Team annotation. No runtimes and no local identifiers are included."
+          }
+        ]
+      }
+    }
+  ]
+}

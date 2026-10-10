@@ -1,0 +1,44 @@
+{
+  "dataset": "prvsiyan/rsna-knee-2026-experiment-ledger",
+  "generated_utc": "2026-10-10T13:06:42Z",
+  "algorithm": "sha256",
+  "note": "Digests cover every file in this dataset except this manifest.",
+  "files": {
+    "LICENSE": {
+      "sha256": "6406b3ad85025b8d7a821848f2c7c86da8358b486b00284183dbf80a0211d1e4",
+      "bytes": 1549
+    },
+    "LICENSE-APACHE-2.0": {
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    "NOTICE.md": {
+      "sha256": "7a806e9b6bd4424fcf03dc3392f1c340206d557b1f80f30658f41211948ed840",
+      "bytes": 3345
+    },
+    "README.md": {
+      "sha256": "b9018eef4a5b117b6396e4445cf6b3654bd75da538c0816d817768d71d386b9e",
+      "bytes": 19827
+    },
+    "dataset-metadata.json": {
+      "sha256": "de9c12e5ae07b893ca663400b5a8fe9d4eb3812708c6d929807e7d163177cad2",
+      "bytes": 28768
+    },
+    "efficiency_formula.md": {
+      "sha256": "9cc0f469a42d8aedcefda231079de77243fac5807da767271dad2fbefc8ffc25",
+      "bytes": 3996
+    },
+    "experiments.csv": {
+      "sha256": "46f3847b2dc28230771c851686fb00c439017bbc5d8c0bb8afbbfd66661952b7",
+      "bytes": 9405
+    },
+    "schema.json": {
+      "sha256": "95f742cdedaa3c4146c5a664840aa6dfc1a953a72fb296ca6f227f1e0ffaae28",
+      "bytes": 9047
+    },
+    "submissions.csv": {
+      "sha256": "85ebf6c3029bd078892cb559ca141d8c5f5b9cecf17686d901496207d4de7e89",
+      "bytes": 32954
+    }
+  }
+}
