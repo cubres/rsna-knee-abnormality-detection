@@ -1,0 +1,91 @@
+{
+  "schema": "dated-native-evidence-followup-1",
+  "account": "prvsiyan",
+  "official_snapshot_utc": "2026-10-11T16:52:19.428510+00:00",
+  "official_raw_inventory_sha256": "6831f8d5cc595669b190a40554c582bb6ba82d82e9548bac5bbae87b1a527333",
+  "official_row": {
+    "ref": 57043015,
+    "date": "2026-10-10T13:06:38.810Z",
+    "fileName": "submission.csv",
+    "publicScore": "0.949",
+    "status": "COMPLETE",
+    "submittedByRef": "prvsiyan",
+    "url": "/code/prvsiyan/zz-gpuchk-knee-bench-2?scriptVersionId=357057303",
+    "description": "Bench V10 (frontier replicate): Part A = our V36 anatomical-mirror reader (nartaa r384 recipe; public rows 56949940/56948803 = 0.949) + Part B = goodpjw2008 ConvNeXt-Tiny 2.5D reader as published (k=16 windows, fat-sat cross-fill, 3 folds, Apache-2.0; weights credited to goodpjw2008, per-finding table lineage sujanmajhisuzan) rank-blended at global w=0.30; fail-closed chain (Part A bytes on any Part B degradation); public lineage prvsiyan/the-bee-s-knees-final-rsna-push | prvsiyan/zz-gpuchk-knee-bench-2 v10 | submission.csv sha256 381253ef942b8f7da0488b13f9e6aabed6a9b660ae40e68b17533a9eba14b37b | prvsiyan/zz-gpuchk-knee-bench-2 v10 | submission.csv sha256 381253ef942b8f7da0488b13f9e6aabed6a9b660ae40e68b17533a9eba14b37b"
+  },
+  "native_evidence": {
+    "ref": "prvsiyan/the-knee-is-not-the-machine-mc4-dual-t4-worker",
+    "version": 64,
+    "native_session_id": "357083876",
+    "source_sha256": "6e57200f8a6d09bb7646832fe4775de1df8bc8bea46abe80ef9e547f68ba4dab",
+    "receipt_sha256": "7f10a12adcfe892793c3a0db8f8559deed422530574f51eda26226ecf20f22ad",
+    "native_status": "ERROR",
+    "receipt_status": "HOLD_PROJECTED_OVER_SOFT",
+    "actual_finished_utc": "20261010T155623Z",
+    "elapsed_s": 849.02,
+    "consumed_groups_observed": 50,
+    "groups_planned_epoch": 434,
+    "projected_session_s": 8640.4,
+    "soft_budget_s": 8400.0,
+    "projection_overage_s": 240.4,
+    "mean_stage_group_s": 15.8545,
+    "median_stage_group_s": 15.665,
+    "tree_metric_first_last_mb": [
+      2021.8,
+      6494.8
+    ],
+    "host_metric_first_last_pct": [
+      6.8,
+      21.71
+    ],
+    "tree_metric_slope_mb_per_group_20_50": 87.7629435483871,
+    "exact_tree_metric_kind": null,
+    "post_recycle_memory_observed": false,
+    "native_overflow_observed": false,
+    "native_oom_observed_in_this_version": false,
+    "checkpoint_exported": false,
+    "recovery_without_checkpoint": "cannot continue consumed V64 updates; preserve receipt and make any restart explicit",
+    "prospective_existing_checkpoint_grid_chunks": [
+      [
+        0,
+        100
+      ],
+      [
+        100,
+        200
+      ],
+      [
+        200,
+        300
+      ],
+      [
+        300,
+        400
+      ],
+      [
+        400,
+        434
+      ]
+    ],
+    "partition_control": {
+      "invented_order_indices": 3479,
+      "consumed_per_epoch": 3472,
+      "same_as_unchunked": true,
+      "duplicate_consumed_indices": false,
+      "same_seven_unused_positions": true,
+      "tensor_or_cuda_equivalence_proven": false
+    },
+    "next_proposal": "bounded100-group contiguous sessions, checkpoint before planned stop, evaluate OOF only when epoch finishes, preserve optimizer/scaler/RNG/schedule/data contract, measure first recycle reset before expansion",
+    "no_native_launch_by_agent": true,
+    "official_score": null
+  },
+  "private_review_sha256": "00a7134d28a23f555233c0183f98c6c03bd4aab1d9138f902f2ade49c36f1c11",
+  "fresh_native_metadata_sha256": "bc1b9e44b004cb4e791d62ddf82e2cb09609c7718c9abb1e77bf9935035702ed",
+  "fresh_worker_status_sha256": "37dd41a96d3329c8e8948c893e9bce6b88997a1eda4afd4df102df55a812727a",
+  "output_download_receipt_sha256": "275e7daf2917765e8f43010587f004878d5e2f037c1a147099114a4a675bdeb6",
+  "new_launches": 0,
+  "new_submissions": 0,
+  "notebook_changes": 0,
+  "official_score_gain_from_this_audit": false,
+  "scope": "Aggregate dated evidence, not a treatment qualification or submission permission"
+}
