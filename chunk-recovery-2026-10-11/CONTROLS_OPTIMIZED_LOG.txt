@@ -1,0 +1,30 @@
+test_build_and_missing_allowances_are_explicit (__main__.Controls.test_build_and_missing_allowances_are_explicit) ... ok
+test_callback_exception_permanently_taints (__main__.Controls.test_callback_exception_permanently_taints) ... ok
+test_changed_training_contract_is_hold (__main__.Controls.test_changed_training_contract_is_hold) ... ok
+test_epoch_loss_diagnostics_cannot_be_truncated (__main__.Controls.test_epoch_loss_diagnostics_cannot_be_truncated) ... ok
+test_existing_pair_never_overwritten_even_on_retry (__main__.Controls.test_existing_pair_never_overwritten_even_on_retry) ... ok
+test_external_optimizer_call_is_permanently_ineligible (__main__.Controls.test_external_optimizer_call_is_permanently_ineligible) ... ok
+test_fresh_mode_cannot_bypass_continuation (__main__.Controls.test_fresh_mode_cannot_bypass_continuation) ... ok
+test_full_fit_corpus_and_434_geometry_required (__main__.Controls.test_full_fit_corpus_and_434_geometry_required) ... ok
+test_live_gradients_cannot_be_captured (__main__.Controls.test_live_gradients_cannot_be_captured) ... ok
+test_malformed_sidecar_is_rejected_and_retained (__main__.Controls.test_malformed_sidecar_is_rejected_and_retained) ... ok
+test_missing_exact_predecessor_is_hold (__main__.Controls.test_missing_exact_predecessor_is_hold) ... ok
+test_missing_health_allowance_is_hold (__main__.Controls.test_missing_health_allowance_is_hold) ... ok
+test_nonfinite_loss_permanently_taints_ledger (__main__.Controls.test_nonfinite_loss_permanently_taints_ledger) ... ok
+test_nonzero_declared_missing_slots_can_pass (__main__.Controls.test_nonzero_declared_missing_slots_can_pass) ... ok
+test_orphan_is_preserved_and_not_reused (__main__.Controls.test_orphan_is_preserved_and_not_reused) ... ok
+test_partial_accumulation_is_hold (__main__.Controls.test_partial_accumulation_is_hold) ... ok
+test_partial_projection_excludes_434_tail_and_evaluation (__main__.Controls.test_partial_projection_excludes_434_tail_and_evaluation) ... ok
+test_same_count_reordered_consumed_prefix_is_hold (__main__.Controls.test_same_count_reordered_consumed_prefix_is_hold) ... ok
+test_saved_plan_geometry_must_match_declared_contract (__main__.Controls.test_saved_plan_geometry_must_match_declared_contract) ... ok
+test_scheduler_call_clock_cannot_be_invented (__main__.Controls.test_scheduler_call_clock_cannot_be_invented) ... ok
+test_skipped_call_permanently_taints_observer_and_ledger (__main__.Controls.test_skipped_call_permanently_taints_observer_and_ledger) ... ok
+test_unused_seven_position_tail_drift_is_hold (__main__.Controls.test_unused_seven_position_tail_drift_is_hold) ... ok
+test_wrong_absolute_predecessor_is_hold (__main__.Controls.test_wrong_absolute_predecessor_is_hold) ... ok
+test_wrong_checkpoint_hash_is_rejected_before_deserialization (__main__.Controls.test_wrong_checkpoint_hash_is_rejected_before_deserialization) ... ok
+test_wrong_source_binding_is_hold (__main__.Controls.test_wrong_source_binding_is_hold) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.414s
+
+OK

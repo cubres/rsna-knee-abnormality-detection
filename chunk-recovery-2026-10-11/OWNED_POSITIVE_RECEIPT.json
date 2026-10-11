@@ -1,0 +1,8 @@
+{
+  "status": "PASS_OWNED_TREE_POSITIVE_CONTROL",
+  "exit_code": 0,
+  "wall_cap_s": 1,
+  "cpu_cap_s": 2,
+  "runner_sha256": "d93899899afc7b1ff45de5d8a68c0f499277d799da58f355a656bdac6235d3cc",
+  "native_execution": false
+}

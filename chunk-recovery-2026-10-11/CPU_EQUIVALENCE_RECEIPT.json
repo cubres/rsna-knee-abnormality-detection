@@ -1,0 +1,219 @@
+{
+  "status": "PASS_CPU_TRAINING_AND_PROCESS_CRASH_WITNESS",
+  "torch": "2.8.0",
+  "device": "cpu",
+  "dtype": "float32",
+  "threads": 1,
+  "DataParallel": false,
+  "workers": 0,
+  "epochs": 2,
+  "groups_per_epoch": 434,
+  "schedule_total_groups": 1302,
+  "completed_groups": 868,
+  "microbatches": 3472,
+  "bitwise_cpu_comparisons": {
+    "model": true,
+    "optimizer": true,
+    "scheduler": true,
+    "scaler": true,
+    "model_training": true,
+    "rng": true,
+    "health_ledger": true,
+    "consumed_order": true,
+    "loader_generations": true
+  },
+  "final_health": {
+    "consumed_groups": 868,
+    "optimizer_calls": 868,
+    "scheduler_calls": 868,
+    "microbatches": 3472,
+    "studies": 6944,
+    "build_failures": 0,
+    "missing_slots": 410,
+    "finite_losses": 3472,
+    "finite_gradient_groups": 868,
+    "pending_micro": 0,
+    "loss_sum": 64.37228088635311,
+    "epoch_loss_sum": 10.536591310272343,
+    "epoch_loss_count": 1736,
+    "tainted": false,
+    "order_hash": "5b7e291ac1692aa9925e84020fbf8062ddb76a498ccfadfc4f5bb8447b610493"
+  },
+  "loader_generation_count_per_path": 18,
+  "cpu_s_main_process": 2.303875,
+  "wall_s_including_crash_workers": 4.40618770799847,
+  "process_crash_controls": [
+    {
+      "stage": "before_checkpoint",
+      "exit_code": 83,
+      "retained_files": [],
+      "outcome": "HOLD_PARTIAL_OR_MISSING_PAIR"
+    },
+    {
+      "stage": "after_checkpoint_fsync",
+      "exit_code": 83,
+      "retained_files": [
+        "chunk-after_checkpoint_fsync.pt"
+      ],
+      "outcome": "HOLD_PARTIAL_OR_MISSING_PAIR"
+    },
+    {
+      "stage": "after_sidecar_fsync",
+      "exit_code": 83,
+      "retained_files": [
+        "chunk-after_sidecar_fsync.json",
+        "chunk-after_sidecar_fsync.pt"
+      ],
+      "outcome": "EXACT_COMMITTED_PAIR_RECOVERABLE"
+    }
+  ],
+  "commits": [
+    {
+      "checkpoint": "chunk-e1-g100.pt",
+      "checkpoint_sha256": "68de89709ba78cbff54b73659dd54c09c375ccaa14f6e54f0b2828bc58528e94",
+      "sidecar": "chunk-e1-g100.json",
+      "sidecar_sha256": "041fea417c83b61eb2b944adbd5adf219c8970cf59451bab9b24d8eb7c9ab023",
+      "predecessor_source_sha256": "01d2166d348fbf4579c94a1b9031699e00df5fecc5f638393a92066c64d73bea",
+      "predecessor_origin": "cpu-toy-source-v1"
+    },
+    {
+      "checkpoint": "chunk-e1-g200.pt",
+      "checkpoint_sha256": "60e9a359ba05548138f23497922bd7a160e57fa24433d6552878d6599c7c17d3",
+      "sidecar": "chunk-e1-g200.json",
+      "sidecar_sha256": "680c60ce4cbf43329246a7155984e0e8a280c0afddf765dc134ad41133775753",
+      "predecessor_source_sha256": "01d2166d348fbf4579c94a1b9031699e00df5fecc5f638393a92066c64d73bea",
+      "predecessor_origin": "cpu-toy-source-v1"
+    },
+    {
+      "checkpoint": "chunk-e1-g300.pt",
+      "checkpoint_sha256": "c44b2404addb2830dc2ec8b444ec6dd9118c8db8d85e9ecb4c10ba15bdba72f7",
+      "sidecar": "chunk-e1-g300.json",
+      "sidecar_sha256": "193560a6cb8561c89b5c55708e1a74d5ae087800236bb9188ab36abad013b487",
+      "predecessor_source_sha256": "01d2166d348fbf4579c94a1b9031699e00df5fecc5f638393a92066c64d73bea",
+      "predecessor_origin": "cpu-toy-source-v1"
+    },
+    {
+      "checkpoint": "chunk-e1-g400.pt",
+      "checkpoint_sha256": "d2d04cc3ec994d96f21fd1c6106113d2c93ea060685a565d25ddeecf4ad20734",
+      "sidecar": "chunk-e1-g400.json",
+      "sidecar_sha256": "044c2079e6f790a36986209c20e704f8f4aef120e11c754af13d19b2de93d3e0",
+      "predecessor_source_sha256": "01d2166d348fbf4579c94a1b9031699e00df5fecc5f638393a92066c64d73bea",
+      "predecessor_origin": "cpu-toy-source-v1"
+    },
+    {
+      "checkpoint": "chunk-e1-g434.pt",
+      "checkpoint_sha256": "5134fbcc8f0ec5dd786b7ccc583be4989373da6abc704e16a7414244b1e6c4c5",
+      "sidecar": "chunk-e1-g434.json",
+      "sidecar_sha256": "caa1bb25808dae0a8d7623ae402d5504d7e3907b541601caf8c2b1ee5211beb3",
+      "predecessor_source_sha256": "01d2166d348fbf4579c94a1b9031699e00df5fecc5f638393a92066c64d73bea",
+      "predecessor_origin": "cpu-toy-source-v1"
+    },
+    {
+      "checkpoint": "chunk-e2-g100.pt",
+      "checkpoint_sha256": "1f8bcd0a004b0476f39d0e3ca96790043f65c319aa84cffc01f94170b8fc212d",
+      "sidecar": "chunk-e2-g100.json",
+      "sidecar_sha256": "225ee0f52cee42a8d456ef9aec51b4c65db7b59840f0e8d9aee2c03e8769b210",
+      "predecessor_source_sha256": "01d2166d348fbf4579c94a1b9031699e00df5fecc5f638393a92066c64d73bea",
+      "predecessor_origin": "cpu-toy-source-v1"
+    },
+    {
+      "checkpoint": "chunk-e2-g200.pt",
+      "checkpoint_sha256": "443a4ad716fdbdc80fa7cf0843813759e71149332ef0e80e382e2b63ed2de1a9",
+      "sidecar": "chunk-e2-g200.json",
+      "sidecar_sha256": "9e1ef69d600850948d6356703baa3903c7062a73d9de93be336c90b1596ac033",
+      "predecessor_source_sha256": "01d2166d348fbf4579c94a1b9031699e00df5fecc5f638393a92066c64d73bea",
+      "predecessor_origin": "cpu-toy-source-v1"
+    },
+    {
+      "checkpoint": "chunk-e2-g300.pt",
+      "checkpoint_sha256": "a558fdad2d951cd30fc0be4d0883938dccee831adc62c2fcb4c906574e597708",
+      "sidecar": "chunk-e2-g300.json",
+      "sidecar_sha256": "e75ceeefecf7027ba69fe948dad984cdf4642856243cb92126241c02ef9ac3e7",
+      "predecessor_source_sha256": "01d2166d348fbf4579c94a1b9031699e00df5fecc5f638393a92066c64d73bea",
+      "predecessor_origin": "cpu-toy-source-v1"
+    },
+    {
+      "checkpoint": "chunk-e2-g400.pt",
+      "checkpoint_sha256": "aa56207a4ff7e0a32d9f342f774aca5b9e11b931df4cd3824dc61e2ec32fdeab",
+      "sidecar": "chunk-e2-g400.json",
+      "sidecar_sha256": "6c6bb58d8cf0b2ff78668241c3248be21feb320a6dcce94ef63fb04a7c410e1a",
+      "predecessor_source_sha256": "01d2166d348fbf4579c94a1b9031699e00df5fecc5f638393a92066c64d73bea",
+      "predecessor_origin": "cpu-toy-source-v1"
+    },
+    {
+      "checkpoint": "chunk-e2-g434.pt",
+      "checkpoint_sha256": "47780b6f6359330394ea2cfedfd6a3430e6ab8e836ddca0a53e306fb4b25e82b",
+      "sidecar": "chunk-e2-g434.json",
+      "sidecar_sha256": "268cb7cff0f5f543f68edbc02aadf1bb1ae45d8e44ea6cc5c05aa894c829938e",
+      "predecessor_source_sha256": "01d2166d348fbf4579c94a1b9031699e00df5fecc5f638393a92066c64d73bea",
+      "predecessor_origin": "cpu-toy-source-v1"
+    }
+  ],
+  "contract": {
+    "schema": "chunk-contract/1",
+    "geometry": {
+      "groups": 434,
+      "fit_studies": 3479,
+      "micro": 2,
+      "accum": 4,
+      "checkpoint_every": 100,
+      "recycle": 50,
+      "train_epochs": 2,
+      "schedule_epochs": 3
+    },
+    "health_policy_sha256": "aecdbd3de6f653a5290a8ed50d3e4de5956797cbbed8860ecf521ea6a370041c",
+    "rng_handoff": "train-boundary-before-evaluation",
+    "invariants_sha256": "528cce7701363256d64acc2125feb952cf6125da2507814347c2380da12909bc",
+    "initialization_sha256": "84d4822d7f3cb43caaeb99a3b42a99eb7cda8b5ce0ea6debc6feb285552c528d",
+    "source_data_contract_sha256": "bda5511c5557e31b35ef8a8ebfa198e67f94194b786d645f82f5ef55e99462ca",
+    "augmentation_contract_sha256": "ead8ee213abbb2591568842420055767cfd4439199dc00e441b3d13c0b5e62cd",
+    "worker_contract_sha256": "f5ef74fc09f00f60a841797ebd3858227b822cfb26acb5e1f92f66b4bee25319",
+    "epoch_order_sha256": {
+      "1": "c428ad9eb64d87a56864cf47af8b7306f915ad11f051afccec8c1f038676b1bf",
+      "2": "829096156d334c289185eaa3db0abe8f9c58e2c1aada9f828733a73c652d80cb"
+    },
+    "consumed_prefix_sha256": {
+      "0": "0000000000000000000000000000000000000000000000000000000000000000",
+      "100": "d2dcdc2f850e51c96ede20ae8df7fb991c9f7ce23797492e31814e6143d92417",
+      "200": "ea0051cad0833edc5724c8831145865f6bcf1d549dae07566be4b8e35f343458",
+      "300": "3bda4877ba6ee42d720c0279600a56c810ca7ecbeefa3fb865f8c013a2e3c4db",
+      "400": "6158ef3a803f4df5c8092452e22e4296bd5a0c8a6d05dc4fcf758a169ae1e4ef",
+      "434": "614934b71393e52dbc125d9e7b0f34fe71f09d143ad21127c13d62119c4b5958",
+      "534": "a05637ee650a9284de03e69759dd6ecb18e515ac6b75c13a664c4957d3110f41",
+      "634": "51445706a79424bebe8c29aaaa45fb18003b39a7108d318d97cea1534fa07ed4",
+      "734": "e4ba3e1abd43a27ef9a7757106399e97189fed2783d6008eca119122d96bd4ec",
+      "834": "13eb6b19028ae10caf9ab492000e85d1baabf8d18ed5e7e4ae1e4987e34ca729",
+      "868": "5b7e291ac1692aa9925e84020fbf8062ddb76a498ccfadfc4f5bb8447b610493"
+    },
+    "declarations": {
+      "seed": 701,
+      "model": "8-16-dropout0.25-2",
+      "dtype": "float32",
+      "device": "cpu",
+      "AdamW": {
+        "lr": 0.001,
+        "weight_decay": 0.02
+      },
+      "cosine_floor": 0.1,
+      "scheduler_total": 1302,
+      "grad_clip": 3.0,
+      "cpu_scaler": {
+        "init_scale": 8.0,
+        "growth_interval": 80
+      },
+      "data": "3479 synthetic studies; stateless per-epoch/index torch augmentation",
+      "augmentation": "seed701+epoch*1000003+absolute_index",
+      "loader": "workers0; generator701+epoch*100003+absolute_chunk_start; recycle50",
+      "evaluation_coverage": "none; pre-evaluation handoff scoped explicitly",
+      "DataParallel": false,
+      "CUDA_topology": []
+    }
+  },
+  "evaluation_execution": false,
+  "native_knee_execution": false,
+  "CUDA_equivalence_proven": false,
+  "Knee_health_allowance_supplied": false,
+  "official_score": null,
+  "source_sha256": "01d2166d348fbf4579c94a1b9031699e00df5fecc5f638393a92066c64d73bea",
+  "library_sha256": "532a4d5b4aae27ccde208affe1f6543f8de8ac962d5476e907714f6ad542d4cd"
+}

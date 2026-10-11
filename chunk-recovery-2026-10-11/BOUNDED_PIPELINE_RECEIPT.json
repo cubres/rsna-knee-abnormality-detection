@@ -1,0 +1,43 @@
+{
+  "status": "PASS_BOUNDED_CPU_PIPELINE",
+  "workers": [
+    {
+      "worker": "training",
+      "status": "PASS",
+      "exit_code": 0,
+      "wall_s": 5.362220291997801,
+      "nice_increment": 5,
+      "cpu_cap_s": 90,
+      "wall_cap_s": 60
+    },
+    {
+      "worker": "fresh_suffix",
+      "status": "PASS",
+      "exit_code": 0,
+      "wall_s": 2.0942654159989615,
+      "nice_increment": 5,
+      "cpu_cap_s": 90,
+      "wall_cap_s": 60
+    },
+    {
+      "worker": "controls_normal",
+      "status": "PASS",
+      "exit_code": 0,
+      "wall_s": 1.3010517920010898,
+      "nice_increment": 5,
+      "cpu_cap_s": 90,
+      "wall_cap_s": 60
+    },
+    {
+      "worker": "controls_optimized",
+      "status": "PASS",
+      "exit_code": 0,
+      "wall_s": 1.41665758399904,
+      "nice_increment": 5,
+      "cpu_cap_s": 90,
+      "wall_cap_s": 60
+    }
+  ],
+  "native_execution": false,
+  "all_failed_or_partial_artifacts_preserved": true
+}

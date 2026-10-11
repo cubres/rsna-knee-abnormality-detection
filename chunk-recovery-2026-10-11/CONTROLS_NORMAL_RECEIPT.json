@@ -1,0 +1,13 @@
+{
+  "status": "PASS_TARGETED_CONTROLS",
+  "tests": 25,
+  "failures": 0,
+  "errors": 0,
+  "cpu_s": 0.411369,
+  "wall_s": 0.41412304199911887,
+  "source_sha256": "9bba624659a82bca274b587f18ed575cff623df8d05ecdf8b754c0f417e63dee",
+  "library_sha256": "532a4d5b4aae27ccde208affe1f6543f8de8ac962d5476e907714f6ad542d4cd",
+  "fixture_receipt_sha256": "cd6c2c4795e5d50e1614547357d69dffd598644b060f0a6036d78ec27ab0a8c8",
+  "optimized": 0,
+  "native_execution": false
+}

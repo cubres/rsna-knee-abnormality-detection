@@ -1,0 +1,67 @@
+{
+  "schema": "original-cpu-chunk-recovery-provenance/1",
+  "license": "MIT",
+  "author": "cubres",
+  "source": {
+    "original_implementation": true,
+    "copied_competition_or_upstream_source": false,
+    "redistributed_models_or_competition_data": false,
+    "input_data": "deterministic synthetic3479-study toy generated from documented formula"
+  },
+  "code_pins": {
+    "chunk_recovery.py": "532a4d5b4aae27ccde208affe1f6543f8de8ac962d5476e907714f6ad542d4cd",
+    "cpu_training_experiment.py": "01d2166d348fbf4579c94a1b9031699e00df5fecc5f638393a92066c64d73bea",
+    "cpu_suffix_process.py": "d25b337f11d0b93df158d81f1d71b1fcde569d909e1a85ccd33316763b4a3e54",
+    "run_cpu_witness.py": "d93899899afc7b1ff45de5d8a68c0f499277d799da58f355a656bdac6235d3cc",
+    "test_chunk_recovery.py": "9bba624659a82bca274b587f18ed575cff623df8d05ecdf8b754c0f417e63dee",
+    "test_owned_process_timeout.py": "c8c14bc83169b7a4315218a88dbef8224b4207fdedbbb4500e541d751cb71270"
+  },
+  "experiment": {
+    "epochs": 2,
+    "groups_per_epoch": 434,
+    "schedule_horizon": 1302,
+    "actual_studies_observed": 6944,
+    "cpu_float32_workers": 0,
+    "DataParallel": false,
+    "CUDA": false,
+    "evaluation": false,
+    "nine_final_comparisons": true,
+    "fresh_process_suffix_groups": 768,
+    "fresh_process_suffix_studies": 6144,
+    "declared_health": "finite loss and declared gradient witnesses plus calls/order/explicit toy allowance; no full tensor-finiteness or parameter-change proof"
+  },
+  "development_evidence": [
+    {
+      "revision": "R1",
+      "outcome": "FAIL",
+      "cause": "runner reattached observer post-hooks to one optimizer; old hooks correctly tainted ledger",
+      "all_artifacts_preserved": true
+    },
+    {
+      "revision": "R2",
+      "outcome": "PASS_CPU_ONLY",
+      "correction": "one observer per optimizer lifetime"
+    },
+    {
+      "revision": "R3",
+      "outcome": "PASS_CPU_ONLY",
+      "correction": "saved and next plan geometries both bind training contract; same-count prefix and unused-tail drift rejected"
+    },
+    {
+      "revision": "owned-tree watchdog",
+      "outcome": "PASS_TARGETED_TIMEOUT_AND_POSITIVE_CONTROL",
+      "correction": "terminate only the newly created CPU process group on wall timeout",
+      "scope": "fixed owned CPU scripts; no catastrophic parent/OS failure, arbitrary signal-detaching child or native job guarantee"
+    }
+  ],
+  "pipeline_wrapper_note": "retained positive numerical pipeline preceded process-group hardening; helper and numerical entrypoints unchanged; final watchdog has separate real timeout and positive controls",
+  "native_qualification": {
+    "Knee_allowance_resolved": false,
+    "MRI_reader": false,
+    "CUDA_DataParallel": false,
+    "multiprocessing_workers": false,
+    "OOF": false,
+    "persistence_memory_time": false,
+    "completed_official_score": null
+  }
+}
