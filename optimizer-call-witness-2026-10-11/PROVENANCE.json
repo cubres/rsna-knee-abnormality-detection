@@ -1,0 +1,55 @@
+{
+  "schema": "original-training-call-witness-provenance/1",
+  "created_utc": "2026-10-11T16:59:04.383054+00:00",
+  "license": "MIT",
+  "new_source_files": [
+    {
+      "file": "optimizer_call_witness.py",
+      "bytes": 7359,
+      "sha256": "8a890ea67cd8382d31d7b2a98d78ecf45b6604cc9b1eb284ba769737b1a5eef3",
+      "ownership": "original prvsiyan tool authored during this task"
+    },
+    {
+      "file": "test_optimizer_call_witness.py",
+      "bytes": 7834,
+      "sha256": "dba5d74f4c4d8ae7d39669543588414a8f7532b7a726d2cee21d5ae2fba25bbd",
+      "ownership": "original prvsiyan tool authored during this task"
+    },
+    {
+      "file": "cpu_amp_probe.py",
+      "bytes": 4168,
+      "sha256": "8099ff6358a0c47e3a9552353646b29906c6fffcbc9ef33678ebdbf1f966f3db",
+      "ownership": "original prvsiyan tool authored during this task"
+    }
+  ],
+  "privately_inspected_sources": [
+    {
+      "description": "accepted V64 control source, local source inspection",
+      "sha256": "6e57200f8a6d09bb7646832fe4775de1df8bc8bea46abe80ef9e547f68ba4dab",
+      "bytes": 880066,
+      "redistributed": false
+    },
+    {
+      "description": "prepared control continuation source; not launched by this task",
+      "sha256": "2045e75c76d53597811d551c1c5d3b0965ed61f2feca83578dc52fba405818d1",
+      "bytes": 776471,
+      "redistributed": false
+    },
+    {
+      "description": "existing offline receipt analyzer",
+      "sha256": "b4c2750f5cc8f8512f39a4686f01be1e2a545dd429f4be099dda02bdaf99d7e0",
+      "bytes": 2554,
+      "redistributed": false
+    }
+  ],
+  "primary_api_references": [
+    "https://docs.pytorch.org/docs/2.10/generated/torch.optim.Optimizer.register_step_post_hook.html",
+    "https://docs.pytorch.org/docs/2.10/notes/amp_examples.html"
+  ],
+  "third_party_notebook_code_in_packet": false,
+  "competition_records_in_packet": false,
+  "checkpoint_bytes_in_packet": false,
+  "native_gpu_execution_by_this_task": false,
+  "integration_status": "PROPOSED_NOT_INTEGRATED",
+  "official_score": null
+}

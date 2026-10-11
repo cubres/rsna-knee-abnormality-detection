@@ -1,0 +1,33 @@
+{
+  "schema": "training-call-witness-validation/1",
+  "python": "3.12.14",
+  "unit_control_count": 25,
+  "stdlib_controls_normal": "PASS",
+  "stdlib_controls_optimized": "PASS",
+  "normal_cpu_s": 0.044554,
+  "optimized_cpu_s": 0.106016,
+  "cpu_probe_status": "PASS_CPU_API_PROBE",
+  "cpu_probe_torch": "2.8.0",
+  "cpu_probe_cpu_s": 1.002392,
+  "cpu_probe_threads": 1,
+  "test_budget_cpu_s_each": 90,
+  "cpu_probe_device": "cpu",
+  "cpu_probe_source_sha256": "8099ff6358a0c47e3a9552353646b29906c6fffcbc9ef33678ebdbf1f966f3db",
+  "toy_unconditional": {
+    "batch_groups": 3,
+    "completed_optimizer_calls": 2,
+    "scheduler_calls": 3
+  },
+  "toy_witness": {
+    "batch_groups": 3,
+    "completed_optimizer_calls": 2,
+    "scheduler_calls": 2
+  },
+  "isolated_active_entrypoint_control_count": 7,
+  "isolated_active_entrypoint_status": "PASS",
+  "native_knee_model_executed": false,
+  "cuda_amp_or_data_parallel_proven": false,
+  "parameter_change_general_proof": false,
+  "fresh_independent_validation": false,
+  "official_score": null
+}

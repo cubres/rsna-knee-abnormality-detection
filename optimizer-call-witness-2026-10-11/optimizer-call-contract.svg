@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="710" viewBox="0 0 1200 710" role="img" aria-labelledby="title desc">
+ <title id="title">Training has two clocks</title>
+ <desc id="desc">Batch groups are consumed even when mixed precision skips an optimizer call. A public optimizer hook advances the scheduler only for completed calls, while ambiguous evidence holds the workflow. This is a schematic rather than measured Knee results.</desc>
+ <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#577187"/></marker></defs>
+ <rect width="1200" height="710" fill="#f7f4ec"/>
+ <circle cx="1080" cy="80" r="100" fill="#e1ece8"/>
+ <text x="58" y="68" font-family="Georgia,serif" font-size="38" fill="#20384b">Training has two clocks.</text>
+ <text x="60" y="108" font-family="Arial,sans-serif" font-size="19" fill="#526d7d">Consumed batch groups · Completed optimizer calls</text>
+ <rect x="58" y="155" width="274" height="105" rx="16" fill="#20384b"/>
+ <text x="83" y="196" font-family="Arial,sans-serif" font-size="22" fill="#fff">Batch group consumed</text>
+ <text x="84" y="231" font-family="Arial,sans-serif" font-size="17" fill="#d8e6ed">Record consumption once</text>
+ <path d="M333 208 H391" stroke="#577187" stroke-width="3" marker-end="url(#arrow)"/>
+ <rect x="405" y="155" width="262" height="105" rx="16" fill="#deebe7" stroke="#a0b8b0"/>
+ <text x="433" y="196" font-family="Arial,sans-serif" font-size="22" fill="#20384b">Attempt scaler.step</text>
+ <text x="433" y="231" font-family="Arial,sans-serif" font-size="17" fill="#526d7d">Public post-step hook</text>
+ <path d="M667 208 H733" stroke="#577187" stroke-width="3" marker-end="url(#arrow)"/>
+ <rect x="746" y="155" width="386" height="105" rx="16" fill="#e4eee4" stroke="#a1bba0"/>
+ <text x="772" y="196" font-family="Arial,sans-serif" font-size="22" fill="#2c553d">Hook fired once → schedule once</text>
+ <text x="772" y="231" font-family="Arial,sans-serif" font-size="17" fill="#526d7d">Completed call recorded separately</text>
+ <path d="M536 260 V304 H938 V331" fill="none" stroke="#577187" stroke-width="3" marker-end="url(#arrow)"/>
+ <rect x="746" y="344" width="386" height="104" rx="16" fill="#fae9d2" stroke="#d3b388"/>
+ <text x="772" y="385" font-family="Arial,sans-serif" font-size="22" fill="#835628">No hook → no scheduler advance</text>
+ <text x="772" y="420" font-family="Arial,sans-serif" font-size="17" fill="#835628">The consumed group still stays recorded</text>
+ <rect x="58" y="344" width="609" height="104" rx="16" fill="#f1dedb" stroke="#cfaaa2"/>
+ <text x="84" y="385" font-family="Arial,sans-serif" font-size="22" fill="#874d47">Exception, double call, incomplete receipt → HOLD</text>
+ <text x="84" y="420" font-family="Arial,sans-serif" font-size="17" fill="#874d47">Retain evidence. Do not invent successful history or retry.</text>
+ <rect x="58" y="495" width="1074" height="125" rx="16" fill="#fff" stroke="#cfdbdf"/>
+ <text x="84" y="533" font-family="Arial,sans-serif" font-size="20" fill="#20384b">A completed call proves that the optimizer call returned.</text>
+ <text x="84" y="568" font-family="Arial,sans-serif" font-size="18" fill="#526d7d">It does not prove finite gradients, changed parameters, independent validation or a higher score.</text>
+ <text x="84" y="600" font-family="Arial,sans-serif" font-size="17" fill="#526d7d">Bind model, optimizer, scaler, ordered data, loss weights and schedule when resuming a checkpoint.</text>
+ <text x="60" y="669" font-family="Arial,sans-serif" font-size="16" fill="#6b808c">Original schematic · CPU API probe supplied · Native Knee integration remains prospective</text>
+</svg>

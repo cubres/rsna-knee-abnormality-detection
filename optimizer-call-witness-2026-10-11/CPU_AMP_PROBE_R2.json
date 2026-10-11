@@ -1,0 +1,66 @@
+{
+  "status": "PASS_CPU_API_PROBE",
+  "torch_version": "2.8.0",
+  "device": "cpu",
+  "rows": [
+    {
+      "infinite_gradient_fixture": false,
+      "outcome": "COMPLETED_OPTIMIZER_CALL",
+      "parameter_changed": true,
+      "lr_before": 0.1,
+      "lr_after": 0.05
+    },
+    {
+      "infinite_gradient_fixture": true,
+      "outcome": "SKIPPED_OPTIMIZER_CALL",
+      "parameter_changed": false,
+      "lr_before": 0.05,
+      "lr_after": 0.05
+    },
+    {
+      "infinite_gradient_fixture": false,
+      "outcome": "COMPLETED_OPTIMIZER_CALL",
+      "parameter_changed": true,
+      "lr_before": 0.05,
+      "lr_after": 0.025
+    }
+  ],
+  "witness": {
+    "schema": "optimizer-call-witness/1",
+    "attempts": 3,
+    "completed_optimizer_calls": 2,
+    "skipped_optimizer_calls": 1,
+    "scheduler_calls": 2,
+    "tainted": false,
+    "active": false,
+    "parameter_change_proven": false,
+    "gradient_finiteness_proven": false
+  },
+  "unconditional_scheduler_fixture": {
+    "rows": [
+      {
+        "infinite_gradient_fixture": false,
+        "parameter_changed": true,
+        "lr_before": 0.1,
+        "lr_after": 0.05
+      },
+      {
+        "infinite_gradient_fixture": true,
+        "parameter_changed": false,
+        "lr_before": 0.05,
+        "lr_after": 0.025
+      },
+      {
+        "infinite_gradient_fixture": false,
+        "parameter_changed": true,
+        "lr_before": 0.025,
+        "lr_after": 0.0125
+      }
+    ],
+    "completed_optimizer_calls": 2,
+    "scheduler_calls": 3
+  },
+  "native_knee_execution": false,
+  "cuda_compatibility_proven": false,
+  "official_score": null
+}
