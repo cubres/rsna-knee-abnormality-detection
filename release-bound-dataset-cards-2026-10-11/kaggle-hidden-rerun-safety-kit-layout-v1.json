@@ -1,0 +1,25 @@
+{
+  "manifest_sha256": "0cb4bd97842c329dcdbabc89e29bb6226cbbb95058016bf8987021d33f90b88e",
+  "paths": {
+    "CHECKLIST.md": "CHECKLIST.md",
+    "LICENSE": "LICENSE",
+    "NOTICE.md": "NOTICE.md",
+    "README.md": "README.md",
+    "code__launch_preflight.py": "code/launch_preflight.py",
+    "code__launch_worker.py": "code/launch_worker.py",
+    "code__mount_resolver.py": "code/mount_resolver.py",
+    "code__owned_process.py": "code/owned_process.py",
+    "code__raw_submissions.py": "code/raw_submissions.py",
+    "code__replay_active_cells.py": "code/replay_active_cells.py",
+    "code__root_gate.py": "code/root_gate.py",
+    "code__submission_guard.py": "code/submission_guard.py",
+    "code__tests__test_kit.py": "code/tests/test_kit.py",
+    "data__checklist.csv": "data/checklist.csv",
+    "data__ledger_excerpts.csv": "data/ledger_excerpts.csv",
+    "data__platform_facts.csv": "data/platform_facts.csv",
+    "docs__PLATFORM_FACTS.md": "docs/PLATFORM_FACTS.md",
+    "docs__degraded_output_postmortem.md": "docs/degraded_output_postmortem.md",
+    "examples__example_notebook.ipynb": "examples/example_notebook.ipynb"
+  },
+  "schema": "flatpack-layout-1"
+}

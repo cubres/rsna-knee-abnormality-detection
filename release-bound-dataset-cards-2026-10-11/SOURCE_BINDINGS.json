@@ -1,0 +1,55 @@
+{
+  "gemma_packages": "EXCLUDED_UNDER_RULE6B_PUBLICATION_HOLD",
+  "kaggle_mutations": 0,
+  "payload_sha256_verification": "NOT_PERFORMED",
+  "public_helper_commit": "764878bd6d214ef8aedea18a3027793bb9b65273",
+  "public_helper_sha256": "560eed0c11f1f76a12f8f447d80bbb7130e796aa51fb8854160bd919aabd1b81",
+  "read_only": true,
+  "rows": [
+    {
+      "capture_completed_utc": "2026-10-11T17:48:58.739938+00:00",
+      "dataset_id": 12489920,
+      "description_sha256": "a4fc512fd43d81be2c08f502ec37081d0d0b6eaf15cced4875a2ee3dbb6b04b1",
+      "extra_live_content_names": [],
+      "files_listed": 21,
+      "live_manifest_equals_staged_bytes": true,
+      "manifest_bytes": 3597,
+      "manifest_capture_completed_utc": "2026-10-11T17:50:36.908808+00:00",
+      "manifest_sha256": "f053dcecce930d6ece08ca00d4a8706b2c6d4193cf7371a40e715687893ce254",
+      "manifested_file_count": 21,
+      "manifested_total_bytes": 369430,
+      "missing_manifested_names": [
+        "dataset-metadata.json"
+      ],
+      "ref": "prvsiyan/rsna-knee-reader-code-pack",
+      "scope": "Exact versioned live manifest and complete API filelist; content payload hashes have not been downloaded or verified",
+      "size_mismatches": [],
+      "status": "HOLD_CARD_MISSING_MANIFESTED_METADATA",
+      "verifier_source_sha256": "560eed0c11f1f76a12f8f447d80bbb7130e796aa51fb8854160bd919aabd1b81",
+      "version": 3
+    },
+    {
+      "capture_completed_utc": "2026-10-11T17:48:59.917271+00:00",
+      "dataset_id": 12489897,
+      "description_sha256": "77433fe5e6f4126f75824b0e7c35cf36d61417315e3d224d6670c72c0ab27ba6",
+      "explicit_layout_map_sha256": "da7b535576dd7b6fa3488b195c7d3f13109d459587928766753c553cc9213c02",
+      "extra_live_content_names": [],
+      "files_listed": 20,
+      "layout_map_scope": "Complete syntax/collision check only; no files restored or executed",
+      "live_manifest_equals_staged_bytes": true,
+      "manifest_bytes": 3431,
+      "manifest_capture_completed_utc": "2026-10-11T17:50:37.684682+00:00",
+      "manifest_sha256": "0cb4bd97842c329dcdbabc89e29bb6226cbbb95058016bf8987021d33f90b88e",
+      "manifested_file_count": 19,
+      "manifested_total_bytes": 158955,
+      "missing_manifested_names": [],
+      "ref": "prvsiyan/kaggle-hidden-rerun-safety-kit",
+      "scope": "Exact versioned live manifest and complete API filelist; content payload hashes have not been downloaded or verified",
+      "size_mismatches": [],
+      "status": "PASS_PROPOSAL_VERSION_AND_INVENTORY_BINDING",
+      "verifier_source_sha256": "560eed0c11f1f76a12f8f447d80bbb7130e796aa51fb8854160bd919aabd1b81",
+      "version": 1
+    }
+  ],
+  "schema": "dataset-card-source-bindings-1"
+}
