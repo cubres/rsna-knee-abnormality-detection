@@ -1,0 +1,37 @@
+{
+  "schema": "own-campaign-public-status-projection/1",
+  "campaign": "rsna-knee-abnormality-detection",
+  "dated_utc": "2026-10-11",
+  "official_result": {
+    "account": "prvsiyan",
+    "submission_ref": 57083743,
+    "version": 11,
+    "status": "COMPLETE",
+    "public_score": "0.949",
+    "observed_utc": "2026-10-11T20:31:29.097480+00:00",
+    "comparison": "TIES_OWN_INCUMBENT_0.949"
+  },
+  "research_target": {
+    "score": "0.956",
+    "achieved": false
+  },
+  "native_experiment": {
+    "name": "K24",
+    "version": 12,
+    "native_qualification": "PASS_UNSUBMITTED_NATIVE_CHECK",
+    "official_score": null,
+    "sample_output": "UNCHANGED_NO_GAIN_INFERENCE"
+  },
+  "cpu_readiness": {
+    "name": "S6",
+    "version": 13,
+    "qualification_revision": 4,
+    "checks_passed": 87,
+    "scope": "CPU asset/source and safe primitive state checks only",
+    "GPU_or_model_accuracy_qualified": false
+  },
+  "training_repair": "PENDING_MISSING_AWARE_QUALIFICATION",
+  "raw_study_data_or_metrics_published": false,
+  "new_rank_medal_or_vote_gain_claimed": false,
+  "current_opening_art_changed": false
+}
