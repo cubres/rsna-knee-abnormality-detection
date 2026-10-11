@@ -1,0 +1,112 @@
+{
+  "schema": "read-only-versioned-dataset-file-inventory/1",
+  "ref": "prvsiyan/rsna-knee-two-teacher-bundle-v1",
+  "dataset_id": 11626403,
+  "title": "RSNA Knee OrthoDiffusion Two Teacher Bundle V1",
+  "data_version": 1,
+  "license_metadata": [
+    {
+      "name": "unknown"
+    }
+  ],
+  "public_visibility_verified": true,
+  "observed_utc": "2026-10-11T19:35:16.790105+00:00",
+  "source_api_filelist_sha256": "de6fef3e4c5bc195ead278368ff1d36b2037ed76dd94cf60a576c8e353701e79",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1407
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_ridge_probe_v1/pca_axial_components_f32.npy",
+      "bytes": 917632
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_ridge_probe_v1/pca_axial_mean_f32.npy",
+      "bytes": 7296
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_ridge_probe_v1/pca_coronal_components_f32.npy",
+      "bytes": 917632
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_ridge_probe_v1/pca_coronal_mean_f32.npy",
+      "bytes": 7296
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_ridge_probe_v1/pca_sagittal_components_f32.npy",
+      "bytes": 917632
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_ridge_probe_v1/pca_sagittal_mean_f32.npy",
+      "bytes": 7296
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_ridge_probe_v1/receipt.json",
+      "bytes": 8532
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_ridge_probe_v1/teacher_ridge_head_bundle.npz",
+      "bytes": 39298
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/pca_axial_components_f32.npy",
+      "bytes": 1835136
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/pca_axial_mean_f32.npy",
+      "bytes": 7296
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/pca_coronal_components_f32.npy",
+      "bytes": 1835136
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/pca_coronal_mean_f32.npy",
+      "bytes": 7296
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/pca_sagittal_components_f32.npy",
+      "bytes": 1835136
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/pca_sagittal_mean_f32.npy",
+      "bytes": 7296
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/receipt.json",
+      "bytes": 24612
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/teacher_routed_head_bundle.npz",
+      "bytes": 34550
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/z_axial_mean_f32.npy",
+      "bytes": 1152
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/z_axial_scale_f32.npy",
+      "bytes": 1152
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/z_coronal_mean_f32.npy",
+      "bytes": 1152
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/z_coronal_scale_f32.npy",
+      "bytes": 1152
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/z_sagittal_mean_f32.npy",
+      "bytes": 1152
+    },
+    {
+      "path": "rsna_two_teacher_bundle_v1/rsna_teacher_routed_ridge_probe_v3/z_sagittal_scale_f32.npy",
+      "bytes": 1152
+    }
+  ],
+  "payload_hashes_downloaded": false,
+  "manifest_listed": false,
+  "schema_facts_scope": "Prior owner card unless explicitly API filename/size/version evidence."
+}

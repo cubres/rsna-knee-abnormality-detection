@@ -1,0 +1,49 @@
+{
+  "schema": "original-live-bound-dataset-card-package/1",
+  "campaign": "knee",
+  "prepared_utc": "2026-10-11T19:47:31.415809+00:00",
+  "datasets": [
+    {
+      "ref": "prvsiyan/rsna-knee-two-teacher-bundle-v1",
+      "numeric_id": 11626403,
+      "data_version": 1,
+      "title": "RSNA Knee OrthoDiffusion Two Teacher Bundle V1",
+      "slug": "rsna-knee-two-teacher-bundle-v1",
+      "license_metadata": [
+        {
+          "name": "unknown"
+        }
+      ],
+      "public_visibility_verified_in_retained_capture": true,
+      "before_description_sha256": "2ef5b7b17a79356fb204fdca363177d39d408e704b028ea11c745b47a13fe2cb",
+      "after_description_sha256": "65475af1b8c24ba59cfd1c3e27666d218535604f83afaf2dfb54b32ca1d6962f",
+      "before_chars": 6495,
+      "after_chars": 8931,
+      "original_how_to_load_bounds_zero_based_half_open": [
+        5311,
+        5777
+      ],
+      "allowed_changes": [
+        "How to load it section",
+        "Appended exact-version and limited-verification scope",
+        "Independent review's explicitly enumerated count/licence/provenance wording corrections",
+        "Accurate unknown licence description; no metadata licence change or new grant"
+      ],
+      "complete_versioned_filelist_sha256": "de6fef3e4c5bc195ead278368ff1d36b2037ed76dd94cf60a576c8e353701e79",
+      "file_count": 23,
+      "uncompressed_bytes": 8417391,
+      "manifest_listed": false,
+      "payloads_read": false,
+      "python_fences_compile_only": 1,
+      "fences_executed_on_real_payloads": false,
+      "new_score_or_medal_claim": false
+    }
+  ],
+  "live_api_writes_performed": 0,
+  "payload_downloads": 0,
+  "notebook_mutations": 0,
+  "source_capture_scope": "Retained primary Kaggle owner metadata and exact-version complete filename/size lists; no payload authentication.",
+  "current_description_published": false,
+  "independent_review_required_before_deployment": true,
+  "scientific_figure_or_art_changes": 0
+}
