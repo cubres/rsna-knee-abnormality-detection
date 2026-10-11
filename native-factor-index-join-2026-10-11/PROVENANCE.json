@@ -1,0 +1,12 @@
+{
+  "original_utility": true,
+  "license": "MIT",
+  "evidence_scope": "invented factor/index/receipt joins and single CPU minibatch only",
+  "native_execution": false,
+  "source_dependencies": [
+    "Python standard library",
+    "PyTorch"
+  ],
+  "module_sha256": "decef4ebdb58de3483c44258b8b83609df48384324a2367146692f4b50b8218d",
+  "test_sha256": "d1535709f065a1f2649593d90fc75518713d44740250b7a1011399abcb1819ba"
+}

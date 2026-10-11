@@ -1,0 +1,125 @@
+{
+  "status": "PASS_GENERIC_FACTOR_JOINS",
+  "invented_fixture_only": true,
+  "invented_records": 9,
+  "invented_findings": 2,
+  "actual_cpu_microbatches": 1,
+  "actual_observed_indices": [
+    4,
+    2
+  ],
+  "actual_cpu_parameter_change_observed": true,
+  "controls": [
+    {
+      "case": "matching saved and registered factors",
+      "status": "PASS_ACCEPTED"
+    },
+    {
+      "case": "changed labels with fresh matching registration",
+      "status": "PASS_REJECTED",
+      "reason": "current inputs differ from conserved saved bindings"
+    },
+    {
+      "case": "changed weights with fresh matching registration",
+      "status": "PASS_REJECTED",
+      "reason": "current inputs differ from conserved saved bindings"
+    },
+    {
+      "case": "changed ordered IDs with fresh matching registration",
+      "status": "PASS_REJECTED",
+      "reason": "current inputs differ from conserved saved bindings"
+    },
+    {
+      "case": "changed data with fresh matching registration",
+      "status": "PASS_REJECTED",
+      "reason": "current inputs differ from conserved saved bindings"
+    },
+    {
+      "case": "missing saved bindings",
+      "status": "PASS_REJECTED",
+      "reason": "current inputs differ from conserved saved bindings"
+    },
+    {
+      "case": "missing registration",
+      "status": "PASS_REJECTED",
+      "reason": "current inputs differ from explicit registration"
+    },
+    {
+      "case": "boolean dimension differs from integer dimension",
+      "status": "PASS_REJECTED",
+      "reason": "current inputs differ from conserved saved bindings"
+    },
+    {
+      "case": "malformed data pin",
+      "status": "PASS_REJECTED",
+      "reason": "explicit SHA256 required"
+    },
+    {
+      "case": "duplicate identity namespace",
+      "status": "PASS_REJECTED",
+      "reason": "full unique ordered identity namespace required"
+    },
+    {
+      "case": "noncontiguous labels",
+      "status": "PASS_REJECTED",
+      "reason": "explicit contiguous CPU tensor required"
+    },
+    {
+      "case": "nonfinite labels",
+      "status": "PASS_REJECTED",
+      "reason": "nonfinite labels or weights"
+    },
+    {
+      "case": "weight length mismatch",
+      "status": "PASS_REJECTED",
+      "reason": "weight length differs from labels"
+    },
+    {
+      "case": "base identity order drift",
+      "status": "PASS_REJECTED",
+      "reason": "base reader namespace differs"
+    },
+    {
+      "case": "base identity drift at observed index",
+      "status": "PASS_REJECTED",
+      "reason": "base reader identity changed at observed index"
+    },
+    {
+      "case": "negative index",
+      "status": "PASS_REJECTED",
+      "reason": "absolute base index required"
+    },
+    {
+      "case": "boolean index",
+      "status": "PASS_REJECTED",
+      "reason": "absolute base index required"
+    },
+    {
+      "case": "base reader must return exactly three values",
+      "status": "PASS_REJECTED",
+      "reason": "base reader must return exactly three values"
+    },
+    {
+      "case": "retry preserves prior receipt",
+      "status": "PASS_REJECTED",
+      "reason": "fresh receipt path required; preserve existing evidence"
+    },
+    {
+      "case": "partial bytes are not repaired",
+      "status": "PASS_REJECTED",
+      "reason": "fresh receipt path required; preserve existing evidence"
+    },
+    {
+      "case": "notebook metadata path rejected",
+      "status": "PASS_REJECTED",
+      "reason": "fresh receipt path required; preserve existing evidence"
+    }
+  ],
+  "count": 21,
+  "cpu_s": 0.449427,
+  "native_execution": false,
+  "metric_recomputed": false,
+  "module_sha256": "decef4ebdb58de3483c44258b8b83609df48384324a2367146692f4b50b8218d",
+  "tests_sha256": "d1535709f065a1f2649593d90fc75518713d44740250b7a1011399abcb1819ba",
+  "all_invalid_artifacts_preserved": true
+}
