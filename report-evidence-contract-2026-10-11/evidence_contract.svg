@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="510" viewBox="0 0 1040 510" role="img" aria-labelledby="t d">
+<title id="t">Two contracts for report supervision</title><desc id="d">Soft targets create a fixed prediction error. Likelihood evidence updates the image belief; an unknown likelihood ratio of one has zero gradient. All examples are invented.</desc>
+<rect width="1040" height="510" fill="#f5f3ed"/><g font-family="Arial,Helvetica,sans-serif">
+<text x="45" y="50" font-size="28" font-weight="700" fill="#1e3445">A missing mention is a modeling choice</text>
+<text x="45" y="82" font-size="16" fill="#506474">Invented example: image probability p = 0.3</text>
+<rect x="45" y="112" width="455" height="264" rx="16" fill="white" stroke="#c7d3d8"/>
+<rect x="540" y="112" width="455" height="264" rx="16" fill="white" stroke="#c7d3d8"/>
+<text x="70" y="151" font-size="22" font-weight="700" fill="#1e3445">A fixed soft target</text>
+<text x="565" y="151" font-size="22" font-weight="700" fill="#1e3445">Evidence about the image</text>
+<text x="70" y="190" font-size="16" fill="#506474">BCE gradient = p − q</text>
+<text x="565" y="190" font-size="16" fill="#506474">Gradient = p − updated image belief</text>
+<text x="70" y="236" font-size="19" fill="#9d5529">q = 0 → +0.30</text>
+<text x="70" y="270" font-size="19" fill="#9d5529">q = 0.5 → −0.20</text>
+<text x="70" y="314" font-size="16" fill="#506474">An addressed mask can remove either term.</text>
+<text x="565" y="236" font-size="19" fill="#146d61">Unknown L = 1 → 0.00</text>
+<text x="565" y="270" font-size="19" fill="#146d61">Positive L = 4 → −0.331579</text>
+<text x="565" y="314" font-size="16" fill="#506474">Likelihoods need their own calibration.</text>
+<rect x="45" y="401" width="950" height="76" rx="12" fill="#1e3445"/>
+<text x="70" y="431" font-size="17" fill="white">Matched experiment: same cells, initialization, geometry and completed optimizer calls.</text>
+<text x="70" y="458" font-size="16" fill="#cbdce4">Scalar math controls passed. No trained model, clinical result or official score gain is claimed.</text>
+</g></svg>
+
