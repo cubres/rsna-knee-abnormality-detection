@@ -1,0 +1,8 @@
+{
+  "schema": "public-card-validation-scope/1",
+  "full_load_snippets": "SYNTAX_CHECK_ONLY",
+  "real_dataset_payload_reads_for_this_packet": 0,
+  "API_calls_for_this_packet": 0,
+  "existing_invented_control_reexecuted_for_this_packet": false,
+  "native_inference_or_official_score_qualification": false
+}

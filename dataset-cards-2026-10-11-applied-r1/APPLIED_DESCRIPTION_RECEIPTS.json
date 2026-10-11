@@ -1,0 +1,33 @@
+{
+  "schema": "public-curated-dataset-description-readbacks/1",
+  "campaign": "knee",
+  "status": "APPLIED_AND_EXACT_DESCRIPTION_READBACK_VERIFIED_AT_STATED_TIMES",
+  "source_publication_commit": "636ffd70d1a830a8ca222a0a26a69828d02ab3e6",
+  "source_publication_repository": "cubres/rsna-knee-abnormality-detection",
+  "datasets": [
+    {
+      "dataset_ref": "prvsiyan/rsna-knee-two-teacher-bundle-v1",
+      "public_url": "https://www.kaggle.com/datasets/prvsiyan/rsna-knee-two-teacher-bundle-v1",
+      "pinned_data_version_url": "https://www.kaggle.com/datasets/prvsiyan/rsna-knee-two-teacher-bundle-v1/versions/1",
+      "numeric_dataset_id": 11626403,
+      "data_version_unchanged": 1,
+      "observed_utc": "2026-10-11T20:29:35.822548+00:00",
+      "description_utf8_sha256": "65475af1b8c24ba59cfd1c3e27666d218535604f83afaf2dfb54b32ca1d6962f",
+      "description_characters": 8931,
+      "description_utf8_bytes": 8932,
+      "exact_description_readback_both_routes": true,
+      "protected_available_sdk_fields_matched": true,
+      "last_updated_exception_used": false,
+      "metadata_rpc_attempts_for_successful_semantic_request": 1,
+      "file_or_version_uploads": 0,
+      "public_description_source_url": "https://github.com/cubres/rsna-knee-abnormality-detection/blob/636ffd70d1a830a8ca222a0a26a69828d02ab3e6/dataset-cards-2026-10-11-r1/cards/rsna-knee-two-teacher-bundle-v1/DESCRIPTION_PROPOSAL.md"
+    }
+  ],
+  "verification_scope": "Immediate before/after comparison of all available SDK-serialized fields, except intended top-level descriptions and declared observation counters; complete versioned file lists compared; no unavailable/unknown server-field guarantee.",
+  "server_omitted_setting_patch_semantics": "NOT_ESTABLISHED",
+  "atomic_update_guarantee": false,
+  "payload_bytes_authenticated": false,
+  "actual_native_or_competition_score_gain": null,
+  "new_medal_or_vote_gain_measured": false,
+  "raw_protected_metadata_or_task_data_published": false
+}
