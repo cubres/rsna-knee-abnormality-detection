@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="610" viewBox="0 0 1120 610" role="img" aria-labelledby="title desc">
+<title id="title">Gradient observation without changing training mathematics</title>
+<desc id="desc">Observe scaled gradients, keep the existing unscale call, observe unscaled gradients, then keep the original finite and present gate. A failed gate holds the run; a passed gate continues to existing clipping and optimizer calls. Observations distinguish missing, finite, NaN and Inf but do not establish an overflow cause.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#46627b"/></marker></defs>
+<rect width="1120" height="610" rx="24" fill="#f3f6fa"/>
+<text x="48" y="56" fill="#18334d" font-family="sans-serif" font-size="28" font-weight="700">A finite loss is only the beginning of the evidence</text>
+<text x="48" y="91" fill="#536c82" font-family="sans-serif" font-size="17">Conceptual order • Original gates and training mathematics remain intact</text>
+<g font-family="sans-serif" text-anchor="middle">
+<rect x="48" y="140" width="216" height="106" rx="16" fill="#e4edf6" stroke="#b6c9dc"/>
+<text x="156" y="183" fill="#18334d" font-size="19" font-weight="700">Scaled backward</text>
+<text x="156" y="214" fill="#536c82" font-size="15">Existing accumulation</text>
+<rect x="302" y="140" width="216" height="106" rx="16" fill="#e1f3ef" stroke="#83bcad"/>
+<text x="410" y="182" fill="#17614f" font-size="19" font-weight="700">Read scaled gradients</text>
+<text x="410" y="214" fill="#17614f" font-size="15">and actual scaler state</text>
+<rect x="556" y="140" width="216" height="106" rx="16" fill="#e4edf6" stroke="#b6c9dc"/>
+<text x="664" y="183" fill="#18334d" font-size="19" font-weight="700">Existing unscale</text>
+<text x="664" y="214" fill="#536c82" font-size="15">Exactly once</text>
+<rect x="810" y="140" width="262" height="106" rx="16" fill="#e1f3ef" stroke="#83bcad"/>
+<text x="941" y="182" fill="#17614f" font-size="19" font-weight="700">Read unscaled gradients</text>
+<text x="941" y="214" fill="#17614f" font-size="15">before clipping or stepping</text>
+<rect x="48" y="307" width="470" height="139" rx="16" fill="#ffffff" stroke="#ccd8e3"/>
+<text x="283" y="345" fill="#18334d" font-size="19" font-weight="700">Record what is present</text>
+<text x="283" y="379" fill="#536c82" font-size="18">None   •   finite   •   NaN   •   Inf</text>
+<text x="283" y="413" fill="#536c82" font-size="15">Counts, dtype, bounded metadata; no raw tensors</text>
+<rect x="702" y="307" width="370" height="79" rx="16" fill="#ffffff" stroke="#b6c9dc"/>
+<text x="887" y="341" fill="#18334d" font-size="19" font-weight="700">Original finite and present gate</text>
+<text x="887" y="369" fill="#536c82" font-size="15">Complete evidence is required</text>
+<rect x="606" y="459" width="210" height="66" rx="14" fill="#fbe9df" stroke="#dba17d"/>
+<text x="711" y="486" fill="#8b4925" font-size="18" font-weight="700">Fails → HOLD</text>
+<text x="711" y="511" fill="#8b4925" font-size="14">Retain exact observations</text>
+<rect x="848" y="459" width="224" height="66" rx="14" fill="#e4edf6" stroke="#b6c9dc"/>
+<text x="960" y="486" fill="#18334d" font-size="18" font-weight="700">Passes → existing step</text>
+<text x="960" y="511" fill="#536c82" font-size="14">Clip, optimizer, scheduler</text>
+</g>
+<g fill="none" stroke="#46627b" stroke-width="2.5" marker-end="url(#arrow)"><path d="M264 193H292"/><path d="M518 193H546"/><path d="M772 193H800"/><path d="M941 246V297"/><path d="M846 386L748 449"/><path d="M960 386V449"/></g>
+<text x="48" y="569" fill="#536c82" font-family="sans-serif" font-size="17">Location of a nonfinite value is evidence. Its cause, a training fix, and performance remain separate questions.</text>
+</svg>

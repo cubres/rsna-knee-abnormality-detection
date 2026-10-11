@@ -1,0 +1,68 @@
+{
+  "status": "ORIGINAL_GENERIC_PUBLIC_EXTRACTION_NOT_A_TRAINING_FIX",
+  "repository": "cubres/rsna-knee-abnormality-detection",
+  "prefix": "gradient-observation-2026-10-12",
+  "ownership": "Original project instrumentation, invented controls, prose and hand-written conceptual SVG; MIT. No upstream trainer or model code redistributed.",
+  "source_helper": {
+    "artifact": "original gradient_observability.py in private source-only gradient diagnostic freeze",
+    "bytes": 4389,
+    "sha256": "1b999b744a05eb3b77c6de82678cb526d1d8f939e8406fae85e25d59e3ac1daa",
+    "public_copy": "gradient_observability.py",
+    "exact_original_bytes_retained": true
+  },
+  "private_source_only_freeze": {
+    "artifact": "PRIVATE_FINAL_DIAGNOSTIC_FREEZE.json",
+    "bytes": 7820,
+    "sha256": "19b8ba96ae16f1e42721588b05ac8370ec2ccdc3184d4fa112256fca47414782",
+    "source_only_controls": 28,
+    "executed_training": false,
+    "controls_scope": "exact bytes, AST structure and invented exit-status dictionaries; not 28 native training tests"
+  },
+  "private_exact_failure_disposition": {
+    "artifact": "PRIVATE_ACTUAL_V67_FAILURE_DISPOSITION.json",
+    "bytes": 5832,
+    "sha256": "489a26d98e184e42a78ffa7ca3cd00db981eef385cd6e27ac1171f4901dbd781",
+    "version": 67,
+    "terminal_status": "ERROR",
+    "observed_finite_gradient_groups": 1,
+    "optimizer_calls": 1,
+    "scheduler_calls": 1,
+    "finite_losses": 8,
+    "failed_phase": "after unscale before clipping and second optimizer/scheduler calls",
+    "missing_vs_nonfinite_distinguished": false,
+    "actual_scaler_state_exported": false,
+    "AMP_overflow_cause_confirmed": false,
+    "root_cause_confirmed": false,
+    "checkpoint_qualified": false,
+    "parameter_updates_proven": false,
+    "official_score": null
+  },
+  "original_invented_tensor_controls": {
+    "artifact": "test_tensor_observations.py",
+    "sha256": "f0af9d06bbe094155526a4e7f2a7298ed1f668d94c192a399199a60927ceee11",
+    "control_count": 8,
+    "receipt_sha256": "a1c66305192d1c498731bdd04f56a860dd57e3eb0f6c7497f0119cabe72b8e99",
+    "scope": "invented CPU tensors and metadata-only collection/scaler; no model/optimizer/forward/backward/CUDA/native task"
+  },
+  "public_controls": {
+    "file": "test_gradient_observability.py",
+    "sha256": "0b511bba85609a765aad14af668823bb0ba09ab67ee1ae607892e0eb0eb7b363",
+    "test_methods": 13,
+    "scope": "invented CPU tensors and metadata-only collection/scaler only; generic public adaptation and extension of original controls"
+  },
+  "prior_publication_checked": {
+    "commit": "52023b65c4d4d8820c2a63137d79338a626d8448",
+    "folder": "optimizer-call-witness-2026-10-11",
+    "distinction": "Prior packet covers optimizer/scaler call witnesses and an invented CPU AMP probe. This additive packet records missing/finite/NaN/Inf at declared scaled and unscaled phases."
+  },
+  "diagram": {
+    "file": "gradient-observation.svg",
+    "sha256": "63c9ff46a71ec6cecec6f55500280b6e473439a187c3b5602675a4ccf710bbb1",
+    "type": "hand-written original conceptual SVG",
+    "measured_result": false,
+    "existing_opening_artwork_modified": false
+  },
+  "privacy_allowlist": "Generic instrumentation and invented control tensors; aggregate own failure observations and evidence hashes only. No actual patient/study/task identifiers, labels, medical matrices, model weights, signed URLs, raw native outputs, private datasets or upstream copied model code.",
+  "notebooks_and_global_guards_modified": false,
+  "SDK_auth_API_native_model_private_pickle_execution": false
+}
