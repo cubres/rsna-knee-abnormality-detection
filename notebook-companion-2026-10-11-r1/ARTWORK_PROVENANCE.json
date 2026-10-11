@@ -1,0 +1,17 @@
+{
+  "schema": "notebook-companion-opening-art/1",
+  "campaign": "knee",
+  "version": "2026-10-11-v1",
+  "relative_path": "assets/hero-knee-2026-10-11-v1.png",
+  "sha256": "745ac45f4080ce8e4224d46b5e4424f21cd8d5b998c36e6df9a4561ac7a66d11",
+  "bytes": 2208654,
+  "width": 1672,
+  "height": 941,
+  "source": "built-in imagegen",
+  "prompt": "Use case: stylized-concept. Asset type: wide opening illustration for a public RSNA Knee machine-learning notebook. Primary request: a beautiful, original editorial science artwork about learning from knee MRI. Subject: one anatomically plausible knee joint in elegant translucent sculpted glass, with a few floating scan-like slices and restrained flowing ribbons suggesting three-dimensional anatomical symmetry and careful reconstruction. Style/medium: luminous glass sculpture photographed against midnight indigo, with painterly teal and warm copper light, fine subtle texture. Composition: refined wide 16:9 banner, strong singular subject with generous breathing room, visually coherent at notebook width. Mood: calm, precise, curious. Constraints: no text, no logos, no patient imagery or real scan data, no chart, no watermark. The anatomy is illustrative concept art, not a diagnostic diagram. Exceptional lighting and craft; avoid clutter, generic stock imagery and repeated joints.",
+  "concept_art": true,
+  "measured_scientific_figure": false,
+  "official_branding": false,
+  "caption": "AI-generated concept art: glass knee anatomy and imagined scan-like panels. These are not patient images or measured MRI.",
+  "refresh_guidance": "Preserve current artwork and all older assets until the user requests a change."
+}

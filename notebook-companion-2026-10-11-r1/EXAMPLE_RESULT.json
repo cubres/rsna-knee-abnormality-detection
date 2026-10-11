@@ -1,0 +1,22 @@
+{
+  "status": "INVENTED_HOOK_PROTOCOL_ONLY",
+  "outcomes": [
+    "COMPLETED_OPTIMIZER_CALL",
+    "SKIPPED_OPTIMIZER_CALL",
+    "COMPLETED_OPTIMIZER_CALL"
+  ],
+  "witness": {
+    "schema": "optimizer-call-witness/1",
+    "attempts": 3,
+    "completed_optimizer_calls": 2,
+    "skipped_optimizer_calls": 1,
+    "scheduler_calls": 2,
+    "tainted": false,
+    "active": false,
+    "parameter_change_proven": false,
+    "gradient_finiteness_proven": false
+  },
+  "tensor_or_parameter_created": false,
+  "native_pytorch_or_cuda_test": false,
+  "official_score": null
+}

@@ -1,0 +1,12 @@
+{
+  "status": "ONE_EXECUTED_INVENTED_EXAMPLE_ONLY",
+  "python": "3.12.14",
+  "runner_sha256": "ed44ff81992dc9a4d546ea2a861bd61f983b4475c13aab11b5e668e0c98ae98d",
+  "tool_sha256": "8a890ea67cd8382d31d7b2a98d78ecf45b6604cc9b1eb284ba769737b1a5eef3",
+  "result_sha256": "7dd8ffa57aac672b0a4fac9dba63d8c6b8d52e52ca7d24e12147c1c8c2748c84",
+  "exit_code": 0,
+  "stderr_bytes": 0,
+  "native_or_competition_evaluation": false,
+  "network_calls": 0,
+  "existing_notebook_changes": 0
+}

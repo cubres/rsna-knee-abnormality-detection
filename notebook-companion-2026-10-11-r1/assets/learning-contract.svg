@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1260" height="570" viewBox="0 0 1260 570" role="img">
+<title>An attempt is the start of evidence</title>
+<desc>Invented synchronous hook example · no tensors, MRI or native training</desc>
+<rect width="1260" height="570" rx="22" fill="#f5f8fa"/>
+<g font-family="Arial, sans-serif" fill="#172a38">
+<text x="34" y="48" font-size="27" font-weight="700">An attempt is the start of evidence</text>
+<text x="34" y="78" font-size="16" fill="#526572">Invented synchronous hook example · no tensors, MRI or native training</text>
+<rect x="34" y="110" width="271" height="169" rx="15" fill="#fff" stroke="#d8e4e9"/>
+<rect x="34" y="110" width="271" height="5" rx="2" fill="#16877e"/>
+<text x="51" y="141" font-size="14" font-weight="700" fill="#16877e">01 · ATTEMPT</text>
+<text x="51" y="181" font-size="20" font-weight="700" fill="#172a38">3 callbacks</text>
+<text x="51" y="218" font-size="16" font-weight="400" fill="#172a38">Two call the optimizer.</text>
+<text x="51" y="243" font-size="16" font-weight="400" fill="#172a38">The middle one does nothing.</text>
+<path d="M312,194 h20 m-5,-5 l5,5 l-5,5" fill="none" stroke="#16877e" stroke-width="2.5"/>
+<rect x="341" y="110" width="271" height="169" rx="15" fill="#fff" stroke="#d8e4e9"/>
+<rect x="341" y="110" width="271" height="5" rx="2" fill="#16877e"/>
+<text x="358" y="141" font-size="14" font-weight="700" fill="#16877e">02 · WITNESS</text>
+<text x="358" y="181" font-size="20" font-weight="700" fill="#172a38">2 completed calls</text>
+<text x="358" y="218" font-size="16" font-weight="400" fill="#172a38">The public post-step hook</text>
+<text x="358" y="243" font-size="16" font-weight="400" fill="#172a38">fires inside the attempt.</text>
+<path d="M619,194 h20 m-5,-5 l5,5 l-5,5" fill="none" stroke="#16877e" stroke-width="2.5"/>
+<rect x="648" y="110" width="271" height="169" rx="15" fill="#fff" stroke="#d8e4e9"/>
+<rect x="648" y="110" width="271" height="5" rx="2" fill="#16877e"/>
+<text x="665" y="141" font-size="14" font-weight="700" fill="#16877e">03 · SCHEDULE</text>
+<text x="665" y="181" font-size="20" font-weight="700" fill="#172a38">2 scheduler ticks</text>
+<text x="665" y="218" font-size="16" font-weight="400" fill="#172a38">Advance only after a</text>
+<text x="665" y="243" font-size="16" font-weight="400" fill="#172a38">completed optimizer call.</text>
+<path d="M926,194 h20 m-5,-5 l5,5 l-5,5" fill="none" stroke="#16877e" stroke-width="2.5"/>
+<rect x="955" y="110" width="271" height="169" rx="15" fill="#fff" stroke="#d8e4e9"/>
+<rect x="955" y="110" width="271" height="5" rx="2" fill="#16877e"/>
+<text x="972" y="141" font-size="14" font-weight="700" fill="#16877e">04 · EVALUATE</text>
+<text x="972" y="181" font-size="20" font-weight="700" fill="#172a38">Separate experiment</text>
+<text x="972" y="218" font-size="16" font-weight="400" fill="#172a38">Finite checks, checkpoints</text>
+<text x="972" y="243" font-size="16" font-weight="400" fill="#172a38">and paired validation remain.</text>
+<text x="34" y="320" font-size="21" font-weight="700">The hook leaves these stronger claims unproved</text>
+<circle cx="46" cy="353" r="5" fill="#16877e"/>
+<text x="64" y="359" font-size="18" font-weight="700">Parameter movement</text>
+<text x="285" y="359" font-size="17" fill="#526572">No parameter exists in this toy.</text>
+<circle cx="46" cy="405" r="5" fill="#16877e"/>
+<text x="64" y="411" font-size="18" font-weight="700">Finite gradients</text>
+<text x="285" y="411" font-size="17" fill="#526572">The witness does not inspect gradients.</text>
+<circle cx="46" cy="457" r="5" fill="#16877e"/>
+<text x="64" y="463" font-size="18" font-weight="700">Score improvement</text>
+<text x="285" y="463" font-size="17" fill="#526572">Requires exact scientific and official evidence.</text>
+<path d="M34,503 H1226" stroke="#d8e4e9"/>
+<text x="34" y="537" font-size="16" fill="#526572">The real adapter and resumed schedule require their own reviewed native qualification.</text>
+</g></svg>

@@ -1,0 +1,129 @@
+{
+  "schema": "notebook-companion-export/1",
+  "campaign": "knee",
+  "revision": 1,
+  "repository": "cubres/rsna-knee-abnormality-detection",
+  "prospective_prefix": "notebook-companion-2026-10-11-r1",
+  "files_except_this_manifest": [
+    {
+      "path": "ARTWORK_PROVENANCE.json",
+      "encoding": "utf-8",
+      "bytes": 1671,
+      "sha256": "6acbd4eab314b92409edeb2adf78ee5286e3736e0e1020571344e06b7371a3db",
+      "git_blob_sha": "79e270084bfe41f3be396a59a5dc3f0a1a83ce9f"
+    },
+    {
+      "path": "COMPANION.html",
+      "encoding": "utf-8",
+      "bytes": 6079,
+      "sha256": "ec7fcf99eb6d18862ad92b1dda96dbc1adf4cf645d809d1d24ce5bc49d86628e",
+      "git_blob_sha": "d0ee8aca41df59d50d098911975f6b945dbb233a"
+    },
+    {
+      "path": "COMPANION.md",
+      "encoding": "utf-8",
+      "bytes": 5411,
+      "sha256": "706df5ccd7ed2aeacf9ce2701ed3758a82424b9c66a929ee07f7ff8f8a1feccb",
+      "git_blob_sha": "1dbc5e908b5f451f44a6e7118731b5f28dcd92c4"
+    },
+    {
+      "path": "DEPENDENCIES.json",
+      "encoding": "utf-8",
+      "bytes": 836,
+      "sha256": "9bc4aa3ad657ceb7b49e7b86fe327887ceb7eb4425257860935de31e3c5031ac",
+      "git_blob_sha": "d88ecb9e0d8f90c66a507e52be52117472f31596"
+    },
+    {
+      "path": "EXAMPLE_EXECUTION.json",
+      "encoding": "utf-8",
+      "bytes": 475,
+      "sha256": "133fb0418a34110e718118be1832d3f74e3b34f56a48da9eaf6e6591366f5281",
+      "git_blob_sha": "76fd036022a36e566ca884d2d540cb5c3b731eaf"
+    },
+    {
+      "path": "EXAMPLE_RESULT.json",
+      "encoding": "utf-8",
+      "bytes": 564,
+      "sha256": "7dd8ffa57aac672b0a4fac9dba63d8c6b8d52e52ca7d24e12147c1c8c2748c84",
+      "git_blob_sha": "c2adff4c1e36ec362f9de1a2b6049b1ef92b41e0"
+    },
+    {
+      "path": "LICENSE",
+      "encoding": "utf-8",
+      "bytes": 1063,
+      "sha256": "eed854701ae3433dccb0da2fc34fb3a8b70460bb4cad7f9e1abb4145a6cdbf0e",
+      "git_blob_sha": "f6371c8975e87d01580c5f3779471f7da51335df"
+    },
+    {
+      "path": "PREVIEW.html",
+      "encoding": "utf-8",
+      "bytes": 7421,
+      "sha256": "191bddf90018b677651a5e8711a5b0d9abf71962d0002c1ff8c02248745ceb23",
+      "git_blob_sha": "aeb8c99e4984b4dadc0e6e90e4cd4710acc555db"
+    },
+    {
+      "path": "README.md",
+      "encoding": "utf-8",
+      "bytes": 1470,
+      "sha256": "890d7bd2c47dca9f9f1f6a5681fad04317da1696d63ae4bc6fd8d490fad6ece2",
+      "git_blob_sha": "83d6f04d1a2e75a28c81816e79f1d9e1da3079ec"
+    },
+    {
+      "path": "assets/hero-knee-2026-10-11-v1.png",
+      "encoding": "binary",
+      "bytes": 2208654,
+      "sha256": "745ac45f4080ce8e4224d46b5e4424f21cd8d5b998c36e6df9a4561ac7a66d11",
+      "git_blob_sha": "2a19395cb688858ae4ee67666d6aaa499f4a8049"
+    },
+    {
+      "path": "assets/learning-contract.svg",
+      "encoding": "utf-8",
+      "bytes": 4011,
+      "sha256": "788cfa8d5549c22b2965d231f2ddc1e7e2b68c358431ffe59518f91865f66cc6",
+      "git_blob_sha": "5e796ecd98affe73f95bd67142fdeee8dd0fdf02"
+    },
+    {
+      "path": "make_diagram.py",
+      "encoding": "utf-8",
+      "bytes": 4062,
+      "sha256": "b7bef1f6b2f1c2d26bf4778b9738c986edee5c2d3bdf8599dc9743c0f31da10a",
+      "git_blob_sha": "ab5fe87272557d89aae711750aac288b960c3fc4"
+    },
+    {
+      "path": "toy_example.py",
+      "encoding": "utf-8",
+      "bytes": 2820,
+      "sha256": "ed44ff81992dc9a4d546ea2a861bd61f983b4475c13aab11b5e668e0c98ae98d",
+      "git_blob_sha": "fa19338045ef7fb4a131eff282e2de1bbe653016"
+    }
+  ],
+  "manifest_self_excluded": true,
+  "opening_art": {
+    "path": "assets/hero-knee-2026-10-11-v1.png",
+    "sha256": "745ac45f4080ce8e4224d46b5e4424f21cd8d5b998c36e6df9a4561ac7a66d11",
+    "git_blob_sha": "2a19395cb688858ae4ee67666d6aaa499f4a8049",
+    "bytes": 2208654,
+    "concept_art": true,
+    "measured_figure": false,
+    "keep_until_user_requests_change": true
+  },
+  "dependency": {
+    "repo": "cubres/rsna-knee-abnormality-detection",
+    "commit": "52023b65c4d4d8820c2a63137d79338a626d8448",
+    "path": "optimizer-call-witness-2026-10-11/optimizer_call_witness.py",
+    "source_sha256": "8a890ea67cd8382d31d7b2a98d78ecf45b6604cc9b1eb284ba769737b1a5eef3",
+    "source_bytes": 7359,
+    "url": "https://github.com/cubres/rsna-knee-abnormality-detection/blob/52023b65c4d4d8820c2a63137d79338a626d8448/optimizer-call-witness-2026-10-11/optimizer_call_witness.py",
+    "license": "MIT"
+  },
+  "example_result_sha256": "7dd8ffa57aac672b0a4fac9dba63d8c6b8d52e52ca7d24e12147c1c8c2748c84",
+  "example_execution_sha256": "133fb0418a34110e718118be1832d3f74e3b34f56a48da9eaf6e6591366f5281",
+  "official_score_snapshot_utc": "2026-10-11T18:27:45.053803+00:00",
+  "official_scalar_row": {
+    "submission": 57043015,
+    "status": "COMPLETE",
+    "public_score": "0.949"
+  },
+  "browser_or_kaggle_layout_qualified": false,
+  "live_notebook_changed": false
+}
