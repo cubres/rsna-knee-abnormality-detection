@@ -1,0 +1,11 @@
+flowchart LR
+  D[Original competition DICOM mounts] --> R[Raptor: native384 / central320 / K94 / anatomical mirror]
+  D --> G[Native geometry, knee anchors and side correction]
+  G --> C[R7: four ConvNeXt-small folds / crop352]
+  C --> S[Exact Effusion and Baker state/fluid stackers]
+  R --> PR[Per-finding percentile ranks]
+  S --> PC[Per-finding percentile ranks]
+  PR --> B[Fixed 0.5 Raptor + 0.5 R7]
+  PC --> B
+  B --> Q[Execution and finite row/column contracts]
+  Q --> H[Native qualification and own official-score evidence remain unrun]

@@ -1,0 +1,91 @@
+{
+  "status": "PASS_TWO_SYNTHETIC_PROCESS_CONTROLS",
+  "qualification_scope": "Local POSIX process closure only; no R7 science, checkpoint, GPU or Kaggle qualification",
+  "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "source_sha256": {
+    "owned_process.py": "a99723e64f7cf66f642148506022255cfa51387e544ff5f10b5e65c574b040e9",
+    "test_owned_process.py": "cca18e4602f60dabb731c81c0e7337089f2fdf01d200e3c8235faabec531461e",
+    "synthetic_fixture.py": "495291a361ca10104b5528006f5c20a93d95f5c8c80295ded29622e2910301d1"
+  },
+  "cases": [
+    {
+      "mode": "normal_exit",
+      "process_receipt": {
+        "status": "PASS_PROCESS_GROUP_CLOSED",
+        "pid": 94464,
+        "pgid": 94464,
+        "returncode": 0,
+        "leader_exited_observed": true,
+        "timed_out": false,
+        "signals": [
+          "SIGTERM",
+          "SIGKILL"
+        ],
+        "live_group_members_remaining": [],
+        "live_group_members_observed": [
+          94464,
+          94466
+        ],
+        "cleanup_proven": true,
+        "leader_reaped": true,
+        "log_closed": true,
+        "reader_thread_used": false,
+        "hard_deadline_exceeded": false,
+        "elapsed_seconds": 0.659722833,
+        "error": null,
+        "scope": "Processes remaining in this newly owned group only"
+      },
+      "fixture_pids": {
+        "leader_pid": 94464,
+        "child_pid": 94466,
+        "leader_pgid": 94464,
+        "mode": "normal_exit"
+      },
+      "independent_after_return_observation": [],
+      "caller_elapsed_seconds": 0.659743875,
+      "budget_seconds": 3.0,
+      "log_sha256": "f6236288791defc90bc13e0900b4c96a6493dada6d4e300a8200e302b2b047cf",
+      "control_passed": true
+    },
+    {
+      "mode": "timeout",
+      "process_receipt": {
+        "status": "HOLD_EXECUTION_TIMEOUT_GROUP_CLOSED",
+        "pid": 94488,
+        "pgid": 94488,
+        "returncode": -9,
+        "leader_exited_observed": true,
+        "timed_out": true,
+        "signals": [
+          "SIGTERM",
+          "SIGKILL"
+        ],
+        "live_group_members_remaining": [],
+        "live_group_members_observed": [
+          94488,
+          94490
+        ],
+        "cleanup_proven": true,
+        "leader_reaped": true,
+        "log_closed": true,
+        "reader_thread_used": false,
+        "hard_deadline_exceeded": false,
+        "elapsed_seconds": 1.525739083,
+        "error": null,
+        "scope": "Processes remaining in this newly owned group only"
+      },
+      "fixture_pids": {
+        "leader_pid": 94488,
+        "child_pid": 94490,
+        "leader_pgid": 94488,
+        "mode": "timeout"
+      },
+      "independent_after_return_observation": [],
+      "caller_elapsed_seconds": 1.5257643749999998,
+      "budget_seconds": 3.0,
+      "log_sha256": "f6236288791defc90bc13e0900b4c96a6493dada6d4e300a8200e302b2b047cf",
+      "control_passed": true
+    }
+  ]
+}

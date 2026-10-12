@@ -1,0 +1,95 @@
+{
+  "status": "SOURCE_ONLY_METHOD_AND_LOCALLY_PROCESS_QUALIFIED_HELPER_NO_NATIVE_RESULT",
+  "source": {
+    "author": "Heliosli",
+    "url": "https://www.kaggle.com/code/heliosli/0-957-latest-dataset-score-in-one-click?scriptVersionId=357456820",
+    "version": 1,
+    "run": 357456820,
+    "downloaded_bytes": 532191,
+    "downloaded_sha256": "54a238562b67b25617630806f752531b1f2b8900d5db54be7d2139ae0a3cbf55",
+    "notebook_source_licence_observed": "Apache-2.0",
+    "foreign_public_notebook_card_score": 0.956,
+    "title_approximate_score": 0.957,
+    "own_completed_score": null,
+    "saved_example_studies": 3
+  },
+  "r7_original_mount": {
+    "url": "https://www.kaggle.com/datasets/heliosli/rsna-knee-compact-r7cnxfsss",
+    "visible_version": 1,
+    "notebook_export_dataset_version_id": 20601735,
+    "bundle_id": "8c7b666e27dc0e8f",
+    "manifest_downloaded_bytes": 5211,
+    "manifest_downloaded_sha256": "c4bb0f7399ada9a020e0c15cae6252033cf0c4335e999961793a176063074ec6",
+    "model_hash_status": "Publisher declarations only; no model binaries downloaded or independently byte-attested",
+    "licence_label_observed": "Other (specified in description)",
+    "complete_weight_rehosting_or_relicensing_grant": "UNVERIFIED"
+  },
+  "proposal": {
+    "source_only_candidate_sha256": "eef20e2a89ba74bd0b5889d82a27c566518278abe6a9a61a805b0056278201ad",
+    "preserved_original_cells": 140,
+    "opening_artwork_and_notebook_metadata_preserved": true,
+    "public_visibility_preserved": true,
+    "exact_source_raptor_path_preserved": true,
+    "rank_blend": "Fixed per-finding 0.5 Raptor / 0.5 R7, author arithmetic retained",
+    "independent_source_peer_status": "PASS_SOURCE_ONLY_R2",
+    "independent_static_checks_passed": 591,
+    "independent_source_peer_sha256": "64c37a94208d102f3e673883dacb4adec179289206a8aee42b4f0d44653a89e0",
+    "native_execution_count": 0,
+    "restricted_checkpoint_compatibility": "UNVERIFIED",
+    "runtime_and_resources": "UNVERIFIED",
+    "new_own_official_score": null,
+    "independent_static_review_limit": "Later full source read found process-cleanup defect in preserved adapter. Static source pass does not qualify runtime or that adapter.",
+    "preserved_adapter_process_cleanup": "KNOWN_DEFECT_NOT_CHANGED_OR_DISTRIBUTED",
+    "new_helper_integrated_into_native_candidate": false
+  },
+  "launch_workflow": {
+    "status": "STOPPED_ON_NOTEBOOK_PRESERVATION_HOOK_REJECTION",
+    "rejected_action": "New read-only root-gate static AST/hash checker",
+    "reported_reason": "Reported hook excerpt: Blocked a Kaggle notebook/kernel deletion operation. GLOBAL NOTEBOOK PRESERVATION. The rejected checker included deletion identifiers in a forbidden-call set; full original payload was not provided to this agent.",
+    "sdk_auth_api_or_native_execution_occurred": false,
+    "retry_rephrase_or_guard_workaround_performed": false
+  },
+  "distribution": {
+    "included": [
+      "Authored method README and editable Mermaid diagram",
+      "MIT owned-process helper and synthetic controls",
+      "Process-control receipt",
+      "Apache-2.0 and MIT licence texts",
+      "Provenance declarations"
+    ],
+    "historical_notebook_included": false,
+    "models_reports_labels_or_predictions_included": false,
+    "auxiliary_helpers_or_wheels_included": false,
+    "publisher_training_declarations_independently_audited": false,
+    "clean_heldout_gain_established": false,
+    "old_flawed_r7_safety_helper_included": false
+  },
+  "process_helper": {
+    "source_sha256": "a99723e64f7cf66f642148506022255cfa51387e544ff5f10b5e65c574b040e9",
+    "test_source_sha256": "cca18e4602f60dabb731c81c0e7337089f2fdf01d200e3c8235faabec531461e",
+    "licence": "MIT",
+    "pattern_origin": "Own reviewed Enveda owned_process.py pattern, SPDX MIT",
+    "synthetic_control_receipt_sha256": "0699d9fbf09097be8c0f00ebc9757135183ba616125713c3d7dbe83a56373eb6",
+    "actual_controls": "Normal leader exit with live TERM-resistant descendant; timeout with TERM-resistant leader and descendant",
+    "actual_control_budgets_seconds": [
+      3.0,
+      3.0
+    ],
+    "actual_elapsed_seconds": [
+      0.659743875,
+      1.5257643749999998
+    ],
+    "platform": "macOS26.5.1 arm64 Python3.9.6",
+    "runtime_qualification_scope": "Exact tested local process behavior only",
+    "execution_timeout_is_accepted": false,
+    "logs": "Exclusive direct regular-file output; no pipe/reader thread; volume is NOT capped",
+    "process_scope": "Processes remaining in newly owned PGID only; no deliberate session-escape containment",
+    "linux_gpu_kaggle_or_checkpoint_qualified": false,
+    "independent_public_helper_peer_status": "PASS_SOURCE_ONLY_PUBLIC_PROCESS_R2",
+    "earlier_control_failures_preserved": "macOS getpgid on zombie leader returned ESRCH; helper corrected to exact unreaped leader PID/PGID process snapshots",
+    "independent_public_helper_peer_sha256": "0d783c0c37a18e669f26c4e1e4baade1960059fc32acbe68e2cc53650b0370f5",
+    "independent_public_helper_peer_blocking_findings": [],
+    "independent_public_helper_peer_consistency_checks": 38,
+    "independent_reviewer_reran_controls": false
+  }
+}
