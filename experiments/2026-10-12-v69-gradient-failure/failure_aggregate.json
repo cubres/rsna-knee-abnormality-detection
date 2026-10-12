@@ -1,0 +1,100 @@
+{
+  "schema": "knee-v69-public-failure-aggregate-v1",
+  "measurement_date_utc": "2026-10-12",
+  "evidence_scope": "completed private diagnostic failure; aggregate observations only",
+  "binding": {
+    "version": 69,
+    "native_session_id": "357661407",
+    "receipt_sha256": "a48cf24eb0c67f82d9cf383f1db2cc2ce105ec76995fd25b8d29b77c715ee365"
+  },
+  "run": {
+    "native_status": "ERROR",
+    "native_reported_runtime_seconds": 120.6,
+    "owned_status": "HOLD_CHILD_EXIT",
+    "owned_wall_seconds": 114.83066106700002,
+    "child_exit_code": 2,
+    "control_status": "HOLD_NATIVE_PILOT_GATE",
+    "reported_devices": ["Tesla T4", "Tesla T4"],
+    "native_hardware_or_resource_measurement_qualified": false
+  },
+  "progress": {
+    "finite_gradient_groups_completed": 3,
+    "optimizer_calls_observed": 3,
+    "scheduler_calls_observed": 3,
+    "failed_accumulation_group": 4,
+    "microbatches_per_group": 4,
+    "microbatches_observed": 16,
+    "fourth_optimizer_update_performed": false,
+    "hold_before_clipping": true
+  },
+  "groups_1_to_3": {
+    "snapshot_indices_zero_based": [0, 1, 2, 3, 4, 5],
+    "phases_per_group": ["after_scaled_backward_before_unscale", "after_unscale_before_clip"],
+    "gradient_parameters_observed_each_snapshot": 411,
+    "finite_gradient_parameters_each_snapshot": 411,
+    "nonfinite_gradient_parameters_each_snapshot": 0,
+    "missing_gradient_parameters_each_snapshot": 0,
+    "Inf_elements_each_snapshot": 0,
+    "NaN_elements_each_snapshot": 0
+  },
+  "group_4_snapshots": [
+    {
+      "index_zero_based": 6,
+      "phase": "after_scaled_backward_before_unscale",
+      "gradient_parameters_observed": 411,
+      "finite_gradient_parameters": 410,
+      "nonfinite_gradient_parameters": 1,
+      "missing_gradient_parameters": 0,
+      "Inf_elements": 18,
+      "NaN_elements": 54,
+      "gradient_dtype": "FP32",
+      "grad_scaler_scale": 65536.0,
+      "grad_scaler_growth_tracker": 3
+    },
+    {
+      "index_zero_based": 7,
+      "phase": "after_unscale_before_clip",
+      "gradient_parameters_observed": 411,
+      "finite_gradient_parameters": 410,
+      "nonfinite_gradient_parameters": 1,
+      "missing_gradient_parameters": 0,
+      "Inf_elements": 18,
+      "NaN_elements": 54,
+      "gradient_dtype": "FP32",
+      "grad_scaler_scale": 65536.0,
+      "grad_scaler_growth_tracker": 3
+    }
+  ],
+  "localized_gradient": {
+    "parameter_name": "backbone.stem.conv1.weight",
+    "gradient_shape": [64, 3, 3, 3],
+    "gradient_dtype": "FP32",
+    "cause": "UNKNOWN",
+    "AMP_cause_inferred": false,
+    "observer_changed_model_scaler_or_optimizer": false
+  },
+  "qualifications": {
+    "full_training_qualified": false,
+    "evaluation_performed": false,
+    "checkpoint_export_permitted": false,
+    "competition_submitted": false,
+    "official_score": null,
+    "repair_demonstrated": false,
+    "accuracy_gain_claimed": false
+  },
+  "prospective_precision_diagnostic": {
+    "status": "SOURCE_ONLY",
+    "executed": false,
+    "arms": ["FP16 autocast with scaled backward", "FP32 with unscaled backward"],
+    "required_start": "common earned and recorded pre-group-4 boundary",
+    "finite_gate_preserved": true,
+    "exact_V69_replay_claimed": false,
+    "bitwise_V69_replay_requires_recorded_boundary_state": true
+  },
+  "privacy": {
+    "raw_receipts_included": false,
+    "patient_identifiers_included": false,
+    "images_tensors_labels_or_weights_included": false,
+    "private_paths_included": false
+  }
+}

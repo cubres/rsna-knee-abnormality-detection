@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="864pt" height="468pt" viewBox="0 0 864 468" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <title>V69 gradient failure</title>
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>V69 gradient failure</dc:title>
+    <dc:date>2026-10-13T00:04:53.597295</dc:date>
+    <dc:description>Approved V69 failure aggregates; data SHA256 c066fea997c61856da51046d970255ea8dff13d7ef4cde6cfd487283313c47fc</dc:description>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Original MIT-licensed plot_failure.py</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 468 
+L 864 468 
+L 864 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 38.934 160.5708 
+L 204.606 160.5708 
+Q 210.222 160.5708 210.222 155.0124 
+L 210.222 74.4156 
+Q 210.222 68.8572 204.606 68.8572 
+L 38.934 68.8572 
+Q 33.318 68.8572 33.318 74.4156 
+L 33.318 155.0124 
+Q 33.318 160.5708 38.934 160.5708 
+z
+" clip-path="url(#p59b0b42aa9)" style="fill: #eaf3f8; stroke: #4c879e; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 246.024 160.5708 
+L 411.696 160.5708 
+Q 417.312 160.5708 417.312 155.0124 
+L 417.312 74.4156 
+Q 417.312 68.8572 411.696 68.8572 
+L 246.024 68.8572 
+Q 240.408 68.8572 240.408 74.4156 
+L 240.408 155.0124 
+Q 240.408 160.5708 246.024 160.5708 
+z
+" clip-path="url(#p59b0b42aa9)" style="fill: #f3f0e7; stroke: #a38a4f; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 453.114 160.5708 
+L 618.786 160.5708 
+Q 624.402 160.5708 624.402 155.0124 
+L 624.402 74.4156 
+Q 624.402 68.8572 618.786 68.8572 
+L 453.114 68.8572 
+Q 447.498 68.8572 447.498 74.4156 
+L 447.498 155.0124 
+Q 447.498 160.5708 453.114 160.5708 
+z
+" clip-path="url(#p59b0b42aa9)" style="fill: #fff0e8; stroke: #c47b4d; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 660.204 160.5708 
+L 825.876 160.5708 
+Q 831.492 160.5708 831.492 155.0124 
+L 831.492 74.4156 
+Q 831.492 68.8572 825.876 68.8572 
+L 660.204 68.8572 
+Q 654.588 68.8572 654.588 74.4156 
+L 654.588 155.0124 
+Q 654.588 160.5708 660.204 160.5708 
+z
+" clip-path="url(#p59b0b42aa9)" style="fill: #fceced; stroke: #bd5b63; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 213.626683 114.714 
+Q 224.613965 114.714 233.812394 114.714 
+" clip-path="url(#p59b0b42aa9)" style="fill: none; stroke: #526273; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 227.012394 111.314 
+L 233.812394 114.714 
+L 227.012394 118.114 
+z
+" clip-path="url(#p59b0b42aa9)" style="fill: #526273; stroke: #526273; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 420.716683 114.714 
+Q 431.703965 114.714 440.902394 114.714 
+" clip-path="url(#p59b0b42aa9)" style="fill: none; stroke: #526273; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 434.102394 111.314 
+L 440.902394 114.714 
+L 434.102394 118.114 
+z
+" clip-path="url(#p59b0b42aa9)" style="fill: #526273; stroke: #526273; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 627.806683 114.714 
+Q 638.793965 114.714 647.992394 114.714 
+" clip-path="url(#p59b0b42aa9)" style="fill: none; stroke: #526273; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 641.192394 111.314 
+L 647.992394 114.714 
+L 641.192394 118.114 
+z
+" clip-path="url(#p59b0b42aa9)" style="fill: #526273; stroke: #526273; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 38.232 430.1532 
+L 823.068 430.1532 
+Q 827.982 430.1532 827.982 425.2896 
+L 827.982 325.9332 
+Q 827.982 321.0696 823.068 321.0696 
+L 38.232 321.0696 
+Q 33.318 321.0696 33.318 325.9332 
+L 33.318 425.2896 
+Q 33.318 430.1532 38.232 430.1532 
+z
+" clip-path="url(#p59b0b42aa9)" style="fill: #f8fafc; stroke-dasharray: 4.44,1.92; stroke-dashoffset: 0; stroke: #8190a2; stroke-width: 1.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #182638" x="34.02" y="29.9484" transform="rotate(-0 34.02 29.9484)">V69 stopped before optimizer update 4</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #46566a" x="34.02" y="54.2664" transform="rotate(-0 34.02 54.2664)">Observed gradient failure; cause unknown; no repair or accuracy result</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'" transform="translate(92.643531 101.500227)">Groups 1–3</text>
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'" transform="translate(59.598234 117.556156)">411/411 gradients finite</text>
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'" transform="translate(79.381477 133.521156)">3 optimizer calls</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'" transform="translate(281.727844 101.591156)">Group 4 backward</text>
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'" transform="translate(254.077172 118.553969)">4 accumulated microbatches</text>
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'" transform="translate(274.605555 134.518969)">Probe before unscale</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'" transform="translate(487.608398 101.591156)">One stem gradient</text>
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'" transform="translate(494.523078 118.553969)">18 Inf + 54 NaN</text>
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'" transform="translate(464.492141 133.521156)">410 other parameters finite</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'" transform="translate(728.278008 102.498039)">HOLD</text>
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'" transform="translate(676.300023 117.556156)">Before clipping / update 4</text>
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'" transform="translate(685.106523 133.521156)">Fourth update blocked</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #182638" x="37.53" y="189.7524" transform="rotate(-0 37.53 189.7524)">The two group-4 observations agree</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="37.53" y="214.0704" transform="rotate(-0 37.53 214.0704)">Observed phase</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="374.49" y="214.0704" transform="rotate(-0 374.49 214.0704)">Finite parameters</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="549.99" y="214.0704" transform="rotate(-0 549.99 214.0704)">Nonfinite parameters</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: middle" x="732.51" y="214.0704" transform="rotate(-0 732.51 214.0704)">Missing</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="37.53" y="239.778" transform="rotate(-0 37.53 239.778)">6 · After scaled backward, before unscale</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="374.49" y="239.778" transform="rotate(-0 374.49 239.778)">410</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="549.99" y="239.778" transform="rotate(-0 549.99 239.778)">1</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="732.51" y="239.778" transform="rotate(-0 732.51 239.778)">0</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; text-anchor: start" x="37.53" y="266.8752" transform="rotate(-0 37.53 266.8752)">7 · After unscale, before clipping</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="374.49" y="266.8752" transform="rotate(-0 374.49 266.8752)">410</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="549.99" y="266.8752" transform="rotate(-0 549.99 266.8752)">1</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans'; text-anchor: middle" x="732.51" y="266.8752" transform="rotate(-0 732.51 266.8752)">0</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #46566a" x="37.53" y="295.362" transform="rotate(-0 37.53 295.362)">backbone.stem.conv1.weight  ·  FP32  ·  64 × 3 × 3 × 3  ·  scale 65,536 / tracker 3</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 12.7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #344b66" x="51.57" y="343.998" transform="rotate(-0 51.57 343.998)">SOURCE ONLY · proposed paired precision diagnostic</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 11.2px; font-family: 'DejaVu Sans'; text-anchor: start" x="51.57" y="371.79" transform="rotate(-0 51.57 371.79)">FP16 autocast with scaled backward</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 11.2px; font-family: 'DejaVu Sans'; text-anchor: start" x="455.22" y="371.79" transform="rotate(-0 455.22 371.79)">FP32 with unscaled backward</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'; text-anchor: start" x="51.57" y="399.582" transform="rotate(-0 51.57 399.582)">Earn and record a common pre-group-4 boundary; preserve the finite gate.</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #46566a" x="51.57" y="418.3416" transform="rotate(-0 51.57 418.3416)">No executed comparison or bitwise V69 replay is claimed.</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #6b7684" x="37.53" y="451.692" transform="rotate(-0 37.53 451.692)">Data: approved run and gradient aggregates. The figure is not an accuracy or throughput measurement.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p59b0b42aa9">
+   <rect x="12.96" y="7.02" width="842.4" height="451.62"/>
+  </clipPath>
+ </defs>
+</svg>
