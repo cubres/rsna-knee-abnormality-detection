@@ -1,0 +1,155 @@
+{
+  "Adam_step_progression": [
+    3,
+    4
+  ],
+  "Adam_unique_parameters": 411,
+  "GradScaler_enabled": true,
+  "after_original_clip": {
+    "all_present_finite": true,
+    "inf": 0,
+    "missing": 0,
+    "nan": 0,
+    "nonfinite_parameters": 0,
+    "present": 411,
+    "required": 411
+  },
+  "after_single_unscale": {
+    "all_present_finite": true,
+    "inf": 0,
+    "missing": 0,
+    "nan": 0,
+    "nonfinite_parameters": 0,
+    "present": 411,
+    "required": 411
+  },
+  "clocks": {
+    "native_kernel_UI_seconds": 178.5,
+    "owner_post_fsync_completed_seconds": 170.83621777400003,
+    "scopes_differ": true,
+    "speed_comparison_qualified": false
+  },
+  "complete_state_before_and_after_update_finite": true,
+  "cross_run_V72_bitwise_boundary_identity_claimed": false,
+  "earned_prefix_optimizer_updates": 3,
+  "fp16_autocast": true,
+  "microbatches": [
+    {
+      "forward_summaries_finite": {
+        "inputs": true,
+        "logits": true,
+        "loss": true,
+        "scaled_loss": true,
+        "targets": true
+      },
+      "gradient_counts": {
+        "all_present_finite": true,
+        "inf": 0,
+        "missing": 0,
+        "nan": 0,
+        "nonfinite_parameters": 0,
+        "present": 411,
+        "required": 411
+      },
+      "microbatch": 13
+    },
+    {
+      "forward_summaries_finite": {
+        "inputs": true,
+        "logits": true,
+        "loss": true,
+        "scaled_loss": true,
+        "targets": true
+      },
+      "gradient_counts": {
+        "all_present_finite": true,
+        "inf": 0,
+        "missing": 0,
+        "nan": 0,
+        "nonfinite_parameters": 0,
+        "present": 411,
+        "required": 411
+      },
+      "microbatch": 14
+    },
+    {
+      "forward_summaries_finite": {
+        "inputs": true,
+        "logits": true,
+        "loss": true,
+        "scaled_loss": true,
+        "targets": true
+      },
+      "gradient_counts": {
+        "all_present_finite": true,
+        "inf": 0,
+        "missing": 0,
+        "nan": 0,
+        "nonfinite_parameters": 0,
+        "present": 411,
+        "required": 411
+      },
+      "microbatch": 15
+    },
+    {
+      "forward_summaries_finite": {
+        "inputs": true,
+        "logits": true,
+        "loss": true,
+        "scaled_loss": true,
+        "targets": true
+      },
+      "gradient_counts": {
+        "all_present_finite": true,
+        "inf": 0,
+        "missing": 0,
+        "nan": 0,
+        "nonfinite_parameters": 0,
+        "present": 411,
+        "required": 411
+      },
+      "microbatch": 16
+    }
+  ],
+  "native_session_id": 358024320,
+  "native_status": "COMPLETE",
+  "observation": "ONE_ACTUAL_FOURTH_UPDATE_AND_COMPLETE_FINITE_STATE_ONLY",
+  "observed_utc": "2026-10-13T15:01:48.793823+00:00",
+  "original_gradient_clip": 3.0,
+  "provenance": {
+    "capture_sha256": "3941e63d6719ff906c25c0371059a76ad1a1f9c2e2f19fe1b5671e938e99fdc4",
+    "child_sha256": "3332af933981a732ecfa4f558d384874cdd5d87088686e4e7f32aa4e5593a43f",
+    "owned_receipt_sha256": "794e2aad64bd2d25c5f9ef91d76e55915f8608e1d34b9f1f28ca63db4119d538",
+    "protocol_sha256": "b39b1d1e9111e6aff0f621a5f58293efc813233a8d946b8789e706cffe0a345c",
+    "registration_sha256": "418507492eb6e2f1a76e32db6bee056d043ff6e0d14c3c9740a838cac348e2d4",
+    "scalar_receipt_sha256": "2d4a70c20bdfed089a1648c1a2706230bcb0b8887e344212b6ad00d0d6f5105e",
+    "source_bytes": 713613,
+    "source_sha256": "ff2c098ba3466cc359133a851a96523b45aca4a68e45d670db691f3c6cf1df63"
+  },
+  "public_payload_scope": "Original prose/diagram and selected scalar counts; no raw receipts, tensors, models, data, labels, private paths, logs or trainer source.",
+  "public_scale_after_update": 1.0,
+  "qualifications_not_established": {
+    "FP32_reference_agreement": false,
+    "additional_update_permission": false,
+    "causal_mechanism": false,
+    "checkpoint_export": false,
+    "competition_submission": false,
+    "evaluation": false,
+    "gradient_underflow_excluded": false,
+    "official_score": null,
+    "parameter_change": false,
+    "raw_detached_tensor_details": false,
+    "useful_training": false
+  },
+  "restored_public_scale": 1.0,
+  "scaler_growth_tracker_progression": [
+    3,
+    4
+  ],
+  "schema": "sanitized-single-scale1-fourth-update-observation/1",
+  "target_backwards": 4,
+  "target_optimizer_updates": 1,
+  "target_scaler_updates": 1,
+  "target_scheduler_updates": 1,
+  "version": 73
+}
