@@ -1,0 +1,131 @@
+{
+  "clocks": {
+    "clock_scopes_differ": true,
+    "native_UI_reported_kernel_seconds": 175.7,
+    "owner_completion_status": "PASS_DIAGNOSTIC_CHILD_CLOSED",
+    "owner_post_fsync_completion_seconds": 169.986419775,
+    "speed_or_overhead_comparison_qualified": false
+  },
+  "earned_finite_prefix_optimizer_updates": 3,
+  "experiment": "one common-boundary fixed-FP16 scale comparison",
+  "native_session_id": 357998030,
+  "native_status": "COMPLETE",
+  "observation_date_utc": "2026-10-13",
+  "observed_interpretation": "OBSERVED_SCALE_SENSITIVITY_AT_FIXED_FP16_DIAGNOSTIC_ONLY",
+  "only_declared_public_scaler_state_field_changed": "scale",
+  "precision_arms": [
+    {
+      "FP16_autocast_enabled": true,
+      "GradScaler_enabled": true,
+      "after_each_target_backward": {
+        "all_present_finite": false,
+        "inf": 4,
+        "missing": 0,
+        "nan": 50,
+        "nonfinite_parameters": 1,
+        "present": 411,
+        "required": 411
+      },
+      "after_single_unscale": {
+        "all_present_finite": false,
+        "inf": 4,
+        "missing": 0,
+        "nan": 50,
+        "nonfinite_parameters": 1,
+        "present": 411,
+        "required": 411
+      },
+      "all_five_forward_summaries_finite_at_each_target_microbatch": true,
+      "arm": "fp16_original_scaler",
+      "finite_gate_status": "HOLD",
+      "restored_initial_public_scale": 65536.0,
+      "single_unscale_counts_identical_to_target_backward_counts": true,
+      "target_microbatches": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "target_optimizer_steps": 0,
+      "target_scaler_updates": 0,
+      "target_scheduler_steps": 0
+    },
+    {
+      "FP16_autocast_enabled": true,
+      "GradScaler_enabled": true,
+      "after_each_target_backward": {
+        "all_present_finite": true,
+        "inf": 0,
+        "missing": 0,
+        "nan": 0,
+        "nonfinite_parameters": 0,
+        "present": 411,
+        "required": 411
+      },
+      "after_single_unscale": {
+        "all_present_finite": true,
+        "inf": 0,
+        "missing": 0,
+        "nan": 0,
+        "nonfinite_parameters": 0,
+        "present": 411,
+        "required": 411
+      },
+      "all_five_forward_summaries_finite_at_each_target_microbatch": true,
+      "arm": "fp16_scale1_scaler",
+      "finite_gate_status": "PASS",
+      "restored_initial_public_scale": 1.0,
+      "single_unscale_counts_identical_to_target_backward_counts": true,
+      "target_microbatches": [
+        13,
+        14,
+        15,
+        16
+      ],
+      "target_optimizer_steps": 0,
+      "target_scaler_updates": 0,
+      "target_scheduler_steps": 0
+    }
+  ],
+  "privacy": {
+    "model_or_upstream_source_included": false,
+    "patient_study_identifiers_or_labels_included": false,
+    "private_paths_or_urls_included": false,
+    "public_scalar_allowlist_only": true,
+    "raw_receipts_or_native_logs_included": false,
+    "tensor_arrays_or_weights_included": false
+  },
+  "provenance": {
+    "accepted_receipt_sha256": "78c29e96e4a2612a4573b9acc507b246b936e89ff8ec5296a495453cbe8880d0",
+    "capture_observed_utc": "2026-10-13T13:21:05.269824+00:00",
+    "capture_qualification": "PASS_V72_EXACT_DIAGNOSTIC_OBSERVATION_ONLY",
+    "diagnostic_scalar_receipt_sha256": "d64ecde41378adf7cdfa68197c58fd97d828bf5b9e863e204d71bb28897798bb",
+    "exact_capture_binding_sha256": "1d907bd29b25c0ffbc9252e92e76acc7107355580e9f726b46af9ca307404729",
+    "executed_child_sha256": "0048d8e4f27821f9bda1a146fa41b4a078896dea1bef01ca0468b01f9ec7f78f",
+    "official_RPC_calls_including_authentication": 8,
+    "owned_receipt_sha256": "ad1b654419f75e00953112d4109d3e1b06e22f5a43baf374c16d77eefd6077a5",
+    "precision_protocol_sha256": "a45ae6c22274961fda9b98b1039132b901023cea850b80e3cfbe25bac49a678b",
+    "remote_mutations_during_capture": 0,
+    "scientific_registration_sha256": "552370ee3f4478854eb16a770801639fe6925cfce810ecc5e641e836cf37fe0b",
+    "signed_GET_calls": 2,
+    "wrapper_source_bytes": 709967,
+    "wrapper_source_sha256": "36e4adda38cc2394a7fef312e59bded011c82ba494627890f48f8c64d68b1ac9"
+  },
+  "qualification": {
+    "AMP_or_GradScaler_cause_proven": false,
+    "diagnostic_observation_qualified": true,
+    "historical_exact_pattern_classifier_applied": false,
+    "official_score": null,
+    "official_submission_eligible": false,
+    "precision_policy_effect_qualified": false,
+    "scale1_underflow_or_nonzero_gradient_utility_qualified": false,
+    "scaling_policy_cause_proven": false,
+    "stem_raw_or_detached_tensor_details_qualified": false,
+    "training_qualified": false,
+    "useful_training_or_parameter_update_qualified": false
+  },
+  "same_boundary_full_state_RNG_and_four_microbatch_tape_restored": true,
+  "schema": "public-rsna-knee-fixed-FP16-scale-lab/1",
+  "training_finite_gate_status": "HOLD_NATIVE_PILOT_GATE",
+  "version": 72
+}
