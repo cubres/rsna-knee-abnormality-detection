@@ -1,0 +1,48 @@
+{
+  "companion_notebook": {
+    "analytic_goldens_passed": 43,
+    "existing_opening_artwork_preserved": true,
+    "expected_refusals_passed": 5,
+    "native_script_version_id": 358150421,
+    "ref": "prvsiyan/the-bee-s-knees-final-rsna-push",
+    "runtime_scope": "whole native notebook runtime",
+    "runtime_seconds": 35,
+    "status": "COMPLETE",
+    "version": 38
+  },
+  "competition_submission": false,
+  "cover": {
+    "bytes": 13273,
+    "file": "dataset-cover-640x320.png",
+    "height": 320,
+    "native_header_and_thumbnail_visually_verified": true,
+    "native_ui_upload_success_confirmed": true,
+    "original_analytic_golden_case": "ramp_3x11_i16_m2",
+    "portable_source": "render_cover_640x320.py",
+    "portable_source_actual_exit_code": 0,
+    "portable_source_reproduced_png_byte_for_byte": true,
+    "portable_source_sha256": "3e6e0b7973bab39a4675caeb8507ed209afa5f46424118cd113fb5aeaa115012",
+    "sha256": "36af37c59744c6e8f22c64fb0479f73779fabe1db7a318d441d162a96616cc11",
+    "width": 640
+  },
+  "dataset_id": 12569105,
+  "dataset_ref": "prvsiyan/rsna-knee-synthetic-dicom-fixtures",
+  "expected_update_frequency": "Never",
+  "file_descriptions": {
+    "api_readback_limit": "GetDatasetMetadata and ListDatasetFiles omit the description/column annotation fields; annotation counts are not inferred from those absent fields.",
+    "native_ui_examples_verified": [
+      "README.md",
+      "corpus/manifest.csv"
+    ],
+    "submitted_resources": 106
+  },
+  "frequency_scope": "This fixed arithmetic corpus is a static versioned release, without a recurring collection process.",
+  "native_ui_column_descriptions_saved_and_visible": 22,
+  "native_ui_inferred_header_names_and_icons_preserved": true,
+  "native_ui_usability_rating": 10.0,
+  "observed_utc": "2026-10-13T23:18:55.689272+00:00",
+  "public": true,
+  "score_claim": false,
+  "usability_scope": "Kaggle metadata completeness rating, not scientific or competition performance",
+  "version": 1
+}
