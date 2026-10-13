@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "seed": 20261013,
+  "dicom_count": 48,
+  "golden_count": 43,
+  "generator": "generate_corpus.py",
+  "numpy": "2.2.6",
+  "pydicom": "3.0.1",
+  "clinical_data": false,
+  "complete_clinical_iod_conformance_claim": false
+}

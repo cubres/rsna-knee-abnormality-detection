@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this original synthetic regression corpus if it helps your work."
+title: "Synthetic MRI DICOM Fixtures + Golden Arrays"
+type: dataset
+version: 1.0.0
+authors:
+  - name: prvsiyan
+license: MIT
+identifiers:
+  - type: url
+    value: "https://www.kaggle.com/datasets/prvsiyan/rsna-knee-synthetic-dicom-fixtures"

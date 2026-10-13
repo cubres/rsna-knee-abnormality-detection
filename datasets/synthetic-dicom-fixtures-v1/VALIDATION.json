@@ -1,0 +1,28 @@
+{
+  "release": "1.0.0",
+  "checked_utc": "2026-10-13T22:03:59.298052+00:00",
+  "synthetic": true,
+  "patient_data": false,
+  "competition_data": false,
+  "generator_and_verifier_exit": 0,
+  "dicom_cases": 48,
+  "accepted_analytic_goldens": 43,
+  "expected_refusals": 5,
+  "byte_reproduction_files": 93,
+  "all_reproduction_bytes_equal": true,
+  "reference_dependencies": {
+    "numpy": "2.2.6",
+    "pydicom": "3.0.1"
+  },
+  "verification_scope": "Explicit single-frame pixel contract only; no clinical or competition-score claim",
+  "first_run": {
+    "wall_seconds": 0.9304290000000037,
+    "cpu_seconds": 0.36777899999999997,
+    "peak_rss_bytes": 55148544
+  },
+  "reproduction_and_plot_run": {
+    "wall_seconds": 1.0396638750025886,
+    "cpu_seconds": 0.742427,
+    "peak_rss_bytes": 108036096
+  }
+}

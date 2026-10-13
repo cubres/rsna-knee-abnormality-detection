@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 640" role="img" aria-labelledby="title desc">
+  <title id="title">Synthetic DICOM corpus: invented pixels, independent truth, explicit outcomes</title>
+  <desc id="desc">A schematic shows simple arithmetic phantoms encoding into 48 small DICOM files. Forty-three accepted files have analytic golden intensity arrays and five negative cases must be refused. Geometry metadata stays separate from pixel axes.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#101a32"/><stop offset="1" stop-color="#253b59"/></linearGradient>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9" fill="#b8cee7"/></marker>
+  </defs>
+  <rect width="1120" height="640" rx="24" fill="url(#bg)"/>
+  <g font-family="system-ui, sans-serif" fill="#f6f8fb">
+    <text x="52" y="68" font-size="30" font-weight="700">Tiny pixels. Explicit truth. Useful failures.</text>
+    <text x="52" y="103" font-size="17" fill="#b8cee7">48 invented DICOM encoding fixtures · 43 goldens · 5 expected refusals</text>
+    <rect x="52" y="145" width="278" height="303" rx="16" fill="#152642" stroke="#527493"/>
+    <text x="76" y="179" font-size="21" font-weight="700">1. Arithmetic phantoms</text>
+    <g transform="translate(78 204)">
+      <rect width="42" height="42" fill="#050505"/><rect x="46" width="42" height="42" fill="#333"/><rect x="92" width="42" height="42" fill="#666"/><rect x="138" width="42" height="42" fill="#999"/><rect x="184" width="42" height="42" fill="#eee"/>
+      <rect y="46" width="42" height="42" fill="#eee"/><rect x="46" y="46" width="42" height="42" fill="#999"/><rect x="92" y="46" width="42" height="42" fill="#666"/><rect x="138" y="46" width="42" height="42" fill="#333"/><rect x="184" y="46" width="42" height="42" fill="#050505"/>
+    </g>
+    <text x="76" y="329" font-size="17">signed / unsigned integers</text>
+    <text x="76" y="358" font-size="17">ramps, constants, endpoints</text>
+    <text x="76" y="387" font-size="17">non-square row/column grids</text>
+    <text x="76" y="421" font-size="15" fill="#9cd3c6">No patient records. No anatomy.</text>
+    <path d="M341 296H382" stroke="#b8cee7" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="396" y="145" width="275" height="303" rx="16" fill="#152642" stroke="#527493"/>
+    <text x="420" y="179" font-size="21" font-weight="700">2. Explicit pixel contract</text>
+    <text x="420" y="221" font-size="17">DICOM native 16-bit bytes</text>
+    <text x="420" y="256" font-size="17">rescale → LINEAR window</text>
+    <text x="420" y="291" font-size="17">MONOCHROME1 / 2 polarity</text>
+    <text x="420" y="326" font-size="17">float32, 2D, range [0, 1]</text>
+    <path d="M422 350H643" stroke="#527493"/>
+    <text x="420" y="382" font-size="16" fill="#b8cee7">Orientation is metadata.</text>
+    <text x="420" y="410" font-size="16" fill="#b8cee7">Decoded axes stay intact.</text>
+    <path d="M682 248H722" stroke="#b8cee7" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="736" y="145" width="332" height="165" rx="16" fill="#193a3c" stroke="#68b8a7"/>
+    <text x="760" y="184" font-size="21" font-weight="700">43 accepted fixtures</text>
+    <text x="760" y="224" font-size="17">Golden = closed-form phantom truth</text>
+    <text x="760" y="256" font-size="17">Independent scalar oracle checks</text>
+    <text x="760" y="285" font-size="16" fill="#9cd3c6">file hashes · array values · geometry</text>
+    <path d="M682 384H722" stroke="#b8cee7" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="736" y="332" width="332" height="116" rx="16" fill="#47333c" stroke="#ca919d"/>
+    <text x="760" y="369" font-size="21" font-weight="700">5 intentional refusals</text>
+    <text x="760" y="406" font-size="16">missing / empty / short pixels</text>
+    <text x="760" y="433" font-size="16">two frames / RGB outside contract</text>
+    <rect x="52" y="485" width="1016" height="104" rx="16" fill="#0e1b30" stroke="#527493"/>
+    <text x="77" y="522" font-size="20" font-weight="700">What PASS means</text>
+    <text x="77" y="557" font-size="17" fill="#b8cee7">The specified synthetic pixel contract passed. No clinical, anatomical or competition-score claim.</text>
+  </g>
+</svg>
