@@ -1,0 +1,74 @@
+{
+  "clinical_validation": false,
+  "companion_source": {
+    "bytes": 3222,
+    "file": "companion.py",
+    "identical_to_native_demo_code": true,
+    "sha256": "bbe9157c9b64ead010be54e36f5b37a12ff30909ac23836538d56b820dc5530c"
+  },
+  "competition_submission": false,
+  "cover": {
+    "bytes": 12933,
+    "file": "dataset-cover-560x280.png",
+    "golden_case": "ramp_3x11_i16_m2",
+    "height": 280,
+    "sha256": "8da30cbdaba65a9eceb7b3ecf8c59e44cd2c33d821b5f6af7977120c7d86c3b7",
+    "source": "Released analytic golden array, plotted directly; no clinical data or generated artwork.",
+    "width": 560
+  },
+  "dataset": {
+    "id": 12569105,
+    "license": "MIT",
+    "public": true,
+    "ref": "prvsiyan/rsna-knee-synthetic-dicom-fixtures",
+    "url": "https://www.kaggle.com/datasets/prvsiyan/rsna-knee-synthetic-dicom-fixtures",
+    "version": 1
+  },
+  "evidence_basis": "Maintainer-recorded native terminal status, visible demo/control output and exact stored notebook source/cell readback.",
+  "native_demo": {
+    "accepted": 43,
+    "analytic_goldens": 43,
+    "dicom_count": 48,
+    "expected_refusals": 5,
+    "status": "PASS"
+  },
+  "notebook": {
+    "attached_dataset": "prvsiyan/rsna-knee-synthetic-dicom-fixtures",
+    "cell_sources_match_sent": true,
+    "cpu_only": true,
+    "internet_enabled": false,
+    "native_script_version_id": 358150421,
+    "observed_UI_notebook_runtime_seconds": 35,
+    "ref": "prvsiyan/the-bee-s-knees-final-rsna-push",
+    "runtime_scope": "Displayed whole-notebook runtime including setup and preserved process controls; not a pixel-reader benchmark.",
+    "status": "COMPLETE",
+    "stored_source_bytes": 782207,
+    "stored_source_sha256": "9db7dfc45d9d1dc2ead51dc2a55c181cc3b48f17a846eaf05110279540aaccce",
+    "url": "https://www.kaggle.com/code/prvsiyan/the-bee-s-knees-final-rsna-push",
+    "version": 38,
+    "versioned_logs_url": "https://www.kaggle.com/code/prvsiyan/the-bee-s-knees-final-rsna-push/log?scriptVersionId=358150421"
+  },
+  "official_score": null,
+  "portable_cover_render_actual": {
+    "exit_code": 0,
+    "matches_included_cover_byte_for_byte": true,
+    "output_bytes": 12933,
+    "output_sha256": "8da30cbdaba65a9eceb7b3ecf8c59e44cd2c33d821b5f6af7977120c7d86c3b7",
+    "performed_by": "maintainer",
+    "source_bytes": 2154,
+    "source_file": "render_cover.py",
+    "source_sha256": "e585d65bc28455499a982ee430da2092df4159eb015b8ecf4a998d0ce5ce2a98",
+    "verification_scope": "Actual portable-script reproduction check; not a rendering-speed benchmark."
+  },
+  "preserved_controls": {
+    "count": 2,
+    "scope": "Synthetic process-group closure controls preserved from the previous notebook; no MRI or clinical qualification.",
+    "status": "PASS_TWO_SYNTHETIC_PROCESS_CLOSURE_CONTROLS"
+  },
+  "qualification_scope": "Physical DICOM/golden hashes, 43 independent analytic reader comparisons, orientation/row-column contract, five exact refusals and preserved process controls in the recorded native CPU invocation only.",
+  "record_created_utc": "2026-10-13T23:08:11.634779Z",
+  "record_updated_utc": "2026-10-13T23:09:45.536335Z",
+  "schema": "synthetic-dicom-native-companion-validation/1",
+  "score_claim": false,
+  "source_only_followup_preparation": "The preparing author copied the native companion code and cover unchanged and statically parsed the portable renderer without execution. The maintainer subsequently executed that portable renderer successfully and verified byte-for-byte equality with the included cover."
+}
