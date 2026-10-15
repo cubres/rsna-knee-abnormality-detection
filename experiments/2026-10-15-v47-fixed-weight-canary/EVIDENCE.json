@@ -1,0 +1,42 @@
+{
+  "extra_model_passes": 0,
+  "full_attempt": {
+    "accepted_row": 57243942,
+    "api_error_present": false,
+    "api_observed_utc": "2026-10-15T20:57:53.152743+00:00",
+    "api_status": "PENDING",
+    "budget_seconds": 29880,
+    "native_ui_status": "Notebook Running",
+    "private_score": null,
+    "public_score": null,
+    "rss_cap_bytes": 30064771072,
+    "submitted_once_via_exact_public_version_menu": true
+  },
+  "limits": "Three public studies; no accuracy, hidden completion or representative throughput claim. RSS is sampled host process-group RSS.",
+  "mirror_averaging": false,
+  "native_version": 358804172,
+  "public_canary": {
+    "budget_seconds": 900,
+    "changed_prediction_values": 20,
+    "control_csv_byte_exact": true,
+    "finite_predictions": 36,
+    "maximum_absolute_prediction_delta": 0.03333339999999996,
+    "native_successful_seconds": 496.5,
+    "peak_sampled_group_rss_bytes": 22922706944,
+    "reported_arm_failures": 0,
+    "review": "PASS_EXACT_PUBLIC_CANARY_FOR_ROOT_FIRST_FULL_DECISION",
+    "rows": 3,
+    "validated_output_seconds": 471.34399695499997
+  },
+  "public_version": 47,
+  "schema": "bee-v47-fixed-weight-canary/1",
+  "snapshot_utc": "2026-10-15T20:59:07.828834+00:00",
+  "source_sha256": "07a50c3e6e5af6616cd6cd41a647adb40d30141e33f80cf9822e1cf8f8c41d3e",
+  "submission_csv_sha256": "ff4e63cb26dcc316dbb73eb3f8830cb9bfdaaab029223c5d8f53d454dcf7375c",
+  "url": "https://www.kaggle.com/code/prvsiyan/the-bee-s-knees-final-rsna-push?scriptVersionId=358804172",
+  "weights": {
+    "r6": 0.55,
+    "raptor224": 0.1575,
+    "raptor384": 0.2925
+  }
+}
