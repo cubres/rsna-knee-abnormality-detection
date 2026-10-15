@@ -1,0 +1,33 @@
+{
+  "schema": "uid-exposure-audit-public-provenance/1",
+  "date": "2026-10-15",
+  "authorship": "Original cubres tool and invented synthetic examples",
+  "license": "MIT for this package; no upstream data, labels, images, reports or weights redistributed",
+  "synthetic_checks": 20,
+  "passed": 20,
+  "independent_source_review": "Completed; FIFO blocking corrected before final checks",
+  "scientific_claim": "UID exposure audit only; neither independent evaluation nor ensemble OOF established",
+  "dataset_card_sources": [
+    {
+      "ref": "stevenleehans/rsna-knee-llm-report-labels",
+      "url": "https://www.kaggle.com/datasets/stevenleehans/rsna-knee-llm-report-labels/versions/6",
+      "version": 6,
+      "declared_license": "CC0: Public Domain",
+      "verification_scope": "Supplied current source-audit proposal, not CSV contents"
+    },
+    {
+      "ref": "pilkwang/rsna-knee-llm-labels",
+      "url": "https://www.kaggle.com/datasets/pilkwang/rsna-knee-llm-labels/versions/1",
+      "version": 1,
+      "declared_license": "CC0: Public Domain",
+      "verification_scope": "Supplied current source-audit proposal, not CSV contents"
+    }
+  ],
+  "source_file_sha256": {
+    "LICENSE": "c173a47c415dc05158199930cd775176463317300213d60ad3b10ec4a24ae38d",
+    "overlap_audit.py": "d917e0b376b38e364a9589ba0fd54ddf196340f0e648c310e8c7652a90b0e4da",
+    "synthetic_demo.py": "0642de77bfd0790b563fccd82d6605a2156d9d7851676171bc4cd4921dbff51e"
+  },
+  "notebook": "https://www.kaggle.com/code/prvsiyan/the-bee-s-knees-final-rsna-push",
+  "repository": "https://github.com/cubres/rsna-knee-abnormality-detection"
+}
