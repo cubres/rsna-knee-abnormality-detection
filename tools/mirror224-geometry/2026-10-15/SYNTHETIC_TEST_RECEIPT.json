@@ -1,0 +1,19 @@
+{
+  "boundary_cases": 10,
+  "checks": [
+    "explicit_coordinate_oracle",
+    "double_reflection",
+    "input_preserved",
+    "before_LUT_order"
+  ],
+  "created_utc": "2026-10-15T17:21:58.985365+00:00",
+  "fixture_count": 10,
+  "fixture_sha256": "2ebef23c372e6e76f01d06f0e16f59db21477201947b44035bdd1fd071ed8c8c",
+  "model_or_native_calls": false,
+  "model_or_patient_data_used": false,
+  "python": "stdlib; execution on local Python 3",
+  "randomness": "none",
+  "refusal_cases": 6,
+  "source_sha256": "7f1901ea52b59d9eb6fe632e84810c522fda73bb80ba6287f8a11a0118910435",
+  "status": "PASS_SYNTHETIC_GEOMETRY_ONLY"
+}
