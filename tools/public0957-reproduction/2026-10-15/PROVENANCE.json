@@ -1,0 +1,38 @@
+{
+  "schema": "knee-public0957-tool-provenance/1",
+  "package_kind": "Original reproduction explanation and synthetic parity utility",
+  "authors": "cubres contributors",
+  "tool_license": "MIT",
+  "license_file": "CODE_LICENSE.txt",
+  "upstream": {
+    "public_notebook": "https://www.kaggle.com/code/heliosli/this-is-new-version-0-9576-in-one-click?scriptVersionId=358332966",
+    "version": 1,
+    "visible_score": "0.957",
+    "source_sha256": "16a9d953972d9d82717f279f75e57e798d3902f93d1071c30f3caa67326e3601",
+    "source_license": "Apache-2.0",
+    "source_code_redistributed_in_this_packet": false,
+    "r6_dataset": "https://www.kaggle.com/datasets/heliosli/rsna-knee-r6-frozen-fe055406/versions/1",
+    "r6_required_version": 1,
+    "r6_bundle": "fe055406fad6a12f",
+    "r6_manifest_sha256": "6508ce6921eda986c885b2226fa55dd4d2aa8e5fc570b4c007c9a60c05bfc648"
+  },
+  "original_checker": {
+    "file": "validate_canary_parity.py",
+    "sha256": "be85d1291ad6d65fd650aa5c9633ca835c567bf23f4d00c120ad8d1e2cd2646b",
+    "bytes": 9097,
+    "modified_during_packaging": false,
+    "synthetic_receipt": "SYNTHETIC_SELF_TEST.json"
+  },
+  "frozen_guide": {
+    "file": "README.md",
+    "sha256": "5cbe75b60a66bf338fe27fc81a56b76a3c9f698fa74294bc309c11e92b36345c",
+    "modified_during_packaging": false
+  },
+  "own_verified_score_unchanged": "0.949",
+  "new_official_score_claimed": false,
+  "actual_canary_result_included": false,
+  "reference_csv_included": false,
+  "study_identifiers_included": false,
+  "individual_predictions_included": false,
+  "checkpoint_or_patient_data_included": false
+}

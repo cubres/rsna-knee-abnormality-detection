@@ -1,0 +1,91 @@
+{
+  "created_utc": "2026-10-15T14:56:44.169493+00:00",
+  "script_sha256": "be85d1291ad6d65fd650aa5c9633ca835c567bf23f4d00c120ad8d1e2cd2646b",
+  "script_bytes": 9097,
+  "command": "python3 validate_canary_parity.py --self-test",
+  "exit_code": 0,
+  "result": {
+    "status": "PASS",
+    "tests": 19,
+    "passed": 19,
+    "cases": [
+      {
+        "case": "identical",
+        "passed": true
+      },
+      {
+        "case": "within_numeric_tolerance",
+        "passed": true
+      },
+      {
+        "case": "inclusive_tolerance_boundary",
+        "passed": true
+      },
+      {
+        "case": "different_serialization_same_numbers",
+        "passed": true
+      },
+      {
+        "case": "shuffled_identifiers",
+        "passed": true
+      },
+      {
+        "case": "wrong_header",
+        "passed": true
+      },
+      {
+        "case": "wrong_reference_header",
+        "passed": true
+      },
+      {
+        "case": "nan_prediction",
+        "passed": true
+      },
+      {
+        "case": "infinite_prediction",
+        "passed": true
+      },
+      {
+        "case": "difference_above_tolerance",
+        "passed": true
+      },
+      {
+        "case": "high_precision_difference_above_tolerance",
+        "passed": true
+      },
+      {
+        "case": "prediction_out_of_range",
+        "passed": true
+      },
+      {
+        "case": "wrong_row_count",
+        "passed": true
+      },
+      {
+        "case": "wrong_column_count",
+        "passed": true
+      },
+      {
+        "case": "duplicate_identifier",
+        "passed": true
+      },
+      {
+        "case": "nonnumeric_prediction",
+        "passed": true
+      },
+      {
+        "case": "empty_file",
+        "passed": true
+      },
+      {
+        "case": "invalid_utf8",
+        "passed": true
+      },
+      {
+        "case": "invalid_reference_nonfinite",
+        "passed": true
+      }
+    ]
+  },
+  "actual_canary_comparison_performed": false
+}
