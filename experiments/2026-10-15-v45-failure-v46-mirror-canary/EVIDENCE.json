@@ -1,0 +1,80 @@
+{
+  "previous_report_commit": "1647bc2198d7ed80b0a37e3aad819b30b6fa6c9b",
+  "record_kind": "Timestamped completed public canary and pending accepted full competition attempt",
+  "repository": "https://github.com/cubres/rsna-knee-abnormality-detection",
+  "runtime_corrections": {
+    "independent_source_reviews_passed": true,
+    "output_identity_authority": "test.csv; sample_submission.csv exact column header only",
+    "physical_rss_bound_established": false,
+    "pool_workers_and_chunksize_unchanged": true,
+    "preprocessing_batch_studies": "max(8, 2*nproc)",
+    "v45_failure_cause_established": false
+  },
+  "schema": "bee-v45-failure-v46-canary-snapshot/2",
+  "scope": "No medical claims, no new official score, no hidden-runtime estimate; no patient records or weights included.",
+  "snapshot_utc": "2026-10-15T20:19:40.127451+00:00",
+  "v45": {
+    "accepted_submission_row": 57241363,
+    "api_error_present": true,
+    "api_status": "COMPLETE",
+    "hidden_success_established": false,
+    "native_ui_status": "Notebook Threw Exception",
+    "native_version": 358775631,
+    "observed_utc": "2026-10-15T19:38:43.287072+00:00",
+    "private_score": null,
+    "public_score": null,
+    "public_three_study_csv_byte_parity_previously_verified": true,
+    "public_version": 45,
+    "traceback_or_failing_stage_exposed": false,
+    "url": "https://www.kaggle.com/code/prvsiyan/the-bee-s-knees-final-rsna-push?scriptVersionId=358775631"
+  },
+  "v46": {
+    "canary": {
+      "accelerator": "T4 x2",
+      "all_reported_arm_failures": 0,
+      "hidden_runtime_or_accuracy_qualified": false,
+      "independent_completed_output_review_passed": true,
+      "mean_max_abs_diff": 6.49999999380313e-08,
+      "native_ui_runtime_seconds": 490.0,
+      "native_ui_status": "490.0 second run - successful",
+      "observed_utc": "2026-10-15T20:15:56.319789+00:00",
+      "other_arm_numerical_parity_established": false,
+      "paired_raw_probability_recomputation_performed": false,
+      "peak_sampled_owned_process_rss_bytes": 22616350720,
+      "physical_device_peak_verified": false,
+      "plain_control_max_abs_diff": 0.0,
+      "prediction_count": 36,
+      "prepublication_elapsed_seconds": 466.63876061799994,
+      "rows": 3,
+      "status": "PASS_SOURCE_BOUND_PUBLIC_CANARY_OUTPUT",
+      "submission_csv_sha256": "5a434dabc0fbc2fac49adcb0b7751a19369c5a0649fe9ccd6e72342f54e03906"
+    },
+    "competition_attempt": {
+      "accepted_submission_row": 57243233,
+      "api_error_present": false,
+      "full_budget_seconds": 29880,
+      "group_rss_cap_bytes": 30064771072,
+      "hidden_completion_verified": false,
+      "observed_utc": "2026-10-15T20:19:40.127451+00:00",
+      "private_score": null,
+      "public_score": null,
+      "score_verified": false,
+      "status": "PENDING",
+      "submission_route": "Submit to Competition menu on exact public V46",
+      "submitted_once": true
+    },
+    "competition_submission_sent": true,
+    "group_rss_cap_bytes": 30064771072,
+    "native_version": 358794056,
+    "public_budget_seconds": 900,
+    "public_version": 46,
+    "rank_blend_weights_unchanged": {
+      "r6": 0.5,
+      "raptor224": 0.175,
+      "raptor384": 0.325
+    },
+    "scientific_change": "Raptor224 anatomical mirror before intensity LUT; average plain/reflected probabilities",
+    "source_sha256": "c1bfe747728656d37bceed15ce6ad69956cf658fe5c3f09510df80cbfd52c85b",
+    "url": "https://www.kaggle.com/code/prvsiyan/the-bee-s-knees-final-rsna-push?scriptVersionId=358794056"
+  }
+}
