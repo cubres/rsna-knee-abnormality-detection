@@ -1,0 +1,290 @@
+{
+  "competition_data": {
+    "rights": "Competition access and competition rules; no data rehosted",
+    "slug": "rsna-knee-abnormality-detection",
+    "url": "https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/data"
+  },
+  "credits": {
+    "dreaddevelopment": "Raptor architecture and baseline lineage",
+    "full_credits_and_oai_acknowledgement": "https://github.com/cubres/rsna-knee-abnormality-detection/blob/af48d80410909758c7f8188c02afaebcf07942ff/tools/public0957-reproduction/2026-10-15/README.md#credits-and-use-conditions",
+    "heliosli": "Blend, R6 and auxiliary inference sources",
+    "nartaa": "Raptor checkpoints and inference scripts",
+    "rostigor": "Exact historical R6 V1 public mirror",
+    "varshithakolupuri": "224-slot contribution"
+  },
+  "inputs": [
+    {
+      "card_license": "Other (specified in description)",
+      "dataset_id": 12606546,
+      "public_visibility_observation": {
+        "anonymous": true,
+        "is_private": false,
+        "response_sha256": "a5db04384b51d81c117c09ddca6f4196602b7cfb85eda1123ff77a520e5fd3c7",
+        "status": "Ready",
+        "utc": "2026-10-15T18:35:33.920232+00:00"
+      },
+      "ref": "rostigor/rsna-knee-r6-fe055406",
+      "rights_note": "Refer to the original dataset card and component terms. Public visibility is not a blanket redistribution grant.",
+      "role": "Exact historical R6 V1 mirror: four fold models, side classifier, state specification and stackers",
+      "url": "https://www.kaggle.com/datasets/rostigor/rsna-knee-r6-fe055406/versions/1",
+      "version": 1
+    },
+    {
+      "card_license": "Other (specified in description)",
+      "dataset_id": 12431568,
+      "public_visibility_observation": {
+        "anonymous": true,
+        "is_private": false,
+        "response_sha256": "fd5cf29b9e1ef18504d531b83bfdb3d04ccdeea00d03b74bca0825d5f31fcc24",
+        "status": "Ready",
+        "utc": "2026-10-15T18:35:34.094142+00:00"
+      },
+      "ref": "nartaa/rsna-knee-publication-swa-weights-20261007",
+      "rights_note": "Refer to the original dataset card and component terms. Public visibility is not a blanket redistribution grant.",
+      "role": "Raptor384 and Raptor224 learned checkpoints",
+      "url": "https://www.kaggle.com/datasets/nartaa/rsna-knee-publication-swa-weights-20261007/versions/1",
+      "version": 1
+    },
+    {
+      "card_license": "Other (specified in description)",
+      "dataset_id": 12357722,
+      "public_visibility_observation": {
+        "anonymous": true,
+        "is_private": false,
+        "response_sha256": "028dc9746ec4c0c2bcb0fa3ab580ae7d85d1e475efceb6654cb6db173d694b56",
+        "status": "Ready",
+        "utc": "2026-10-15T18:35:33.843878+00:00"
+      },
+      "ref": "heliosli/rsna-orthofoundation-fold0-epoch7-20261004",
+      "rights_note": "Refer to the original dataset card and component terms. Public visibility is not a blanket redistribution grant.",
+      "role": "Inference source inventory, anatomy model and offline timm/pydicom wheels; conditional OFL weight-parts branch unused",
+      "url": "https://www.kaggle.com/datasets/heliosli/rsna-orthofoundation-fold0-epoch7-20261004/versions/1",
+      "version": 1
+    }
+  ],
+  "limitations": [
+    "Three public example studies are not cross-validation or a hidden-test accuracy estimate.",
+    "Final ranked CSV parity is not proof of every internal prediction or dependency being identical.",
+    "Three-study runtime is not a reliable linear predictor of hidden-test runtime.",
+    "Sampled process-group RSS is not proof of the unseen instantaneous physical-memory peak.",
+    "Official scoring is pending at the recorded timestamp; no improvement or 0.958 result is claimed.",
+    "This packet rehosts no weights, source data, study identifiers, per-study predictions or clinical records."
+  ],
+  "mainline_source_inventory": {
+    "files": 820,
+    "inventory_scope": "Runtime size inventory and 394 preacquired content hash pins verified separately; inventory digest is not a single concatenated source-file digest.",
+    "inventory_sha256": "f9cafe77c38d8bcb54b81d5e9e57b39e4bb9e3193e580f5edb9d3d549e8864a5",
+    "previously_acquired_hash_pins": 394
+  },
+  "notebook": {
+    "config_sha256": "c33c5c9949adcee5d397ced97467d52ae434b2032dee063b8a52f8be3fa0256e",
+    "historical_cells_preserved": 148,
+    "metadata_sha256": "73e0c1684a1ece4776168181fe6b74fa931d356cab54dfdaab4ff46f033990de",
+    "native_id": 358775631,
+    "public_version": 45,
+    "ref": "prvsiyan/the-bee-s-knees-final-rsna-push",
+    "source_bytes": 997241,
+    "source_sha256": "09e7b534fe8f9d7e457c1dcdbde03b401a747aa810ae3fbe8efc3e824ac49ede",
+    "title": "The bee's knees - final RSNA push",
+    "url": "https://www.kaggle.com/code/prvsiyan/the-bee-s-knees-final-rsna-push?scriptVersionId=358775631"
+  },
+  "parity_tool": {
+    "command_from_repo_root": "python3 -B tools/public0957-reproduction/2026-10-15/validate_canary_parity.py CANARY.csv REFERENCE.csv",
+    "documentation": "https://github.com/cubres/rsna-knee-abnormality-detection/blob/af48d80410909758c7f8188c02afaebcf07942ff/tools/public0957-reproduction/2026-10-15/TOOLS.md",
+    "git_blob_sha": "d4476571a349c2a0c3887cadb58ecb973e7bf20a",
+    "license": "MIT",
+    "reference_authenticity": "Caller must independently bind the reference to the exact public notebook version; the checker cannot establish source authenticity.",
+    "sha256": "be85d1291ad6d65fd650aa5c9633ca835c567bf23f4d00c120ad8d1e2cd2646b",
+    "url": "https://github.com/cubres/rsna-knee-abnormality-detection/blob/af48d80410909758c7f8188c02afaebcf07942ff/tools/public0957-reproduction/2026-10-15/validate_canary_parity.py"
+  },
+  "public_example_result": {
+    "canary_budget_seconds": 900,
+    "group_rss_cap_bytes": 30064771072,
+    "native_ui_runtime": "8m 6s \u00b7 GPU T4 x2",
+    "output_root_validated": true,
+    "owned_group_closed": true,
+    "parity": {
+      "byte_equal": true,
+      "canary_columns": 13,
+      "canary_rows": 3,
+      "canary_sha256": "1ebfe53cb93ba0b9705724721755b515e64f7703712bc6a1bdddbcd181a7342b",
+      "errors": [],
+      "max_abs_diff": 0.0,
+      "prediction_count": 36,
+      "reference_columns": 13,
+      "reference_rows": 3,
+      "reference_sha256": "1ebfe53cb93ba0b9705724721755b515e64f7703712bc6a1bdddbcd181a7342b",
+      "status": "PASS",
+      "tolerance": 1e-07
+    },
+    "peak_group_rss_bytes": 22933770240,
+    "phase": "public_three_study_canary",
+    "prepublication_elapsed_seconds": 463.759503828,
+    "r6_failed": 0,
+    "r6_fallback_studies": 0,
+    "raptor224_failed": 0,
+    "raptor384_failed": 0,
+    "receipt_sha256": "bbc9f1860330b139922638d0d2d56c9af8f57f9132bd6c335e7fb13162c904bc",
+    "reference_version": 358332966,
+    "rss_measurement": "sampled aggregate process-group RSS, not a proof of unseen instantaneous peak",
+    "stage_wall_seconds": {
+      "3": 41.90982198100002,
+      "5": 26.219493392000004,
+      "6": 8.657841675999975,
+      "7": 365.593147027,
+      "8": 0.6179068049999614
+    },
+    "status": "COMPLETE_FAITHFUL_PUBLIC_SOURCE_NO_OFFICIAL_SCORE",
+    "submission_bytes": 645,
+    "validated_output_written_elapsed_seconds": 463.769630788
+  },
+  "recipe": {
+    "embedded_r6_modules_unchanged": true,
+    "guide_url": "https://github.com/cubres/rsna-knee-abnormality-detection/blob/af48d80410909758c7f8188c02afaebcf07942ff/tools/public0957-reproduction/2026-10-15/README.md",
+    "rank_blend_weights": {
+      "r6": 0.5,
+      "raptor224": 0.175,
+      "raptor384": 0.325
+    },
+    "run_order": [
+      "Raptor384",
+      "Raptor224",
+      "R6 offline dependency installation",
+      "R6",
+      "fixed rank blend"
+    ]
+  },
+  "record_kind": "Timestamped completed public-example result; official submission pending",
+  "runtime": {
+    "gpu": true,
+    "image_digest": "sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+    "internet": false,
+    "interpretation": "monai:null is distribution-metadata absence; the pinned vendored source inventory is retained and the native inference completed. R6 offline timm/pydicom versions match exact pinned wheels. No package change beyond those two was observed. Runtime capture is not a claim of an upstream-identical installed environment; exact completed output parity supplies prediction evidence.",
+    "machine": "GPU T4 x2",
+    "runtime_by_stage": {
+      "after_r6_dependencies": {
+        "monai": null,
+        "numpy": "2.1.3",
+        "opencv-python-headless": "4.14.0.94",
+        "pandas": "2.3.3",
+        "pydicom": "3.0.1",
+        "python": "3.13.15",
+        "scipy": "1.16.3",
+        "timm": "1.0.25",
+        "torch": "2.11.0+cu128",
+        "torchvision": "0.26.0+cu128"
+      },
+      "before_raptor": {
+        "monai": null,
+        "numpy": "2.1.3",
+        "opencv-python-headless": "4.14.0.94",
+        "pandas": "2.3.3",
+        "pydicom": "3.0.2",
+        "python": "3.13.15",
+        "scipy": "1.16.3",
+        "timm": "1.0.29",
+        "torch": "2.11.0+cu128",
+        "torchvision": "0.26.0+cu128"
+      }
+    },
+    "tpu": false
+  },
+  "schema": "bee-v45-public-example-reproduction/1",
+  "source_bundle_sha256": {
+    "R6_FROZEN_V1_MANIFEST.json": "6508ce6921eda986c885b2226fa55dd4d2aa8e5fc570b4c007c9a60c05bfc648",
+    "owned_process_precision.source.py": "675cb35e790334f58d27a573ae4f119b891cc05892158ce5ea6a001f60632a75",
+    "runner.source.py": "c485f4514c528042d2de39ca04bab1a99844c31b3fa494dfc43274a465113102",
+    "supervisor.source.py": "b39bc56a62277a7e7584a228c29ce1dc5ad70e045e8a16823bbb51159fbbaedb",
+    "upstream.source.json": "16a9d953972d9d82717f279f75e57e798d3902f93d1071c30f3caa67326e3601"
+  },
+  "submission_snapshot": {
+    "accepted_utc": "2026-10-15 18:55:44.407000 UTC",
+    "coordinator_latest_status_observed_utc": "2026-10-15T19:01:03Z",
+    "new_official_score_claimed": false,
+    "notebook_native_link": "https://www.kaggle.com/code/prvsiyan/the-bee-s-knees-final-rsna-push?scriptVersionId=358775631",
+    "private_score": null,
+    "public_score": null,
+    "receipt_observed_utc": "2026-10-15T18:56:37.105356+00:00",
+    "route": "Notebook actual Submit to Competition menu",
+    "row_id": 57241363,
+    "status": "PENDING"
+  },
+  "upstream": {
+    "author": "heliosli",
+    "native_id": 358332966,
+    "original_r6_v1_url": "https://www.kaggle.com/datasets/heliosli/rsna-knee-r6-frozen-fe055406/versions/1",
+    "public_version": 1,
+    "r6_bundle": "fe055406fad6a12f",
+    "r6_manifest_sha256": "6508ce6921eda986c885b2226fa55dd4d2aa8e5fc570b4c007c9a60c05bfc648",
+    "source_license": "Apache-2.0",
+    "source_sha256": "16a9d953972d9d82717f279f75e57e798d3902f93d1071c30f3caa67326e3601",
+    "title_extra_digit_verified": false,
+    "url": "https://www.kaggle.com/code/heliosli/this-is-new-version-0-9576-in-one-click?scriptVersionId=358332966",
+    "verified_visible_score": "0.957"
+  },
+  "verified_asset_sha256": {
+    "auxiliary/anatomy.pt": {
+      "bytes": 112496037,
+      "sha256": "5904dd16eb9a4fd7a1caf90ac977f8fe2ef364908598c23c209db3fe7fd1563e"
+    },
+    "r6/E_lrprior_s0_f0.pt": {
+      "bytes": 200379391,
+      "sha256": "59cc88a197bc80c7fa5faa89e69ae7bec04f69cab5259a23a0d0ceb9431e53f6"
+    },
+    "r6/E_lrprior_s0_f1.pt": {
+      "bytes": 200379391,
+      "sha256": "3d9dd8d6a1667935ea25e85b2fcfc80c7ae7dd37fe1bb587f8dad9d720fd8066"
+    },
+    "r6/E_lrprior_s0_f2.pt": {
+      "bytes": 200379391,
+      "sha256": "8d32fa2c57efc8e1c9159cf2b22f38cee0f05dce46aab2f000095847f537b1ea"
+    },
+    "r6/E_lrprior_s0_f3.pt": {
+      "bytes": 200379391,
+      "sha256": "ea147aac4c30fe5a616b966018446e04bd6815c9965f2ac9b0a4702fa9f32710"
+    },
+    "r6/fluid_stacker.json": {
+      "bytes": 5010,
+      "sha256": "9fbd6f652470c5ef131f997edb4e358038937dd45e6f6b65a4afed80e10cf35d"
+    },
+    "r6/side_cls.pt": {
+      "bytes": 85255211,
+      "sha256": "ab623e2b619db4917639220fed15202e8c8aedd07c8e298a66a2afc0f153650a"
+    },
+    "r6/state_spec.json": {
+      "bytes": 6857,
+      "sha256": "3914242b0c404aee625ea65801f14f60adfee326c1ddd6fb96c48ed7050b7ff3"
+    },
+    "r6/state_stacker.json": {
+      "bytes": 24698,
+      "sha256": "b05147bb463a389a66a4a0d7ff0555efd2bde6f486718f79e9d7fa3d90b24522"
+    },
+    "raptor/raptor_ft_alldata_t16_blendjev_oai_d96_c08_r224_swa.pt": {
+      "bytes": 292842755,
+      "sha256": "3394fdd7e668286956e85af2554bef0386df5cd79d1c1af223b095c828b815d6"
+    },
+    "raptor/raptor_ft_alldata_t16_blendjev_oai_d96_r384_swa.pt": {
+      "bytes": 292840787,
+      "sha256": "7e5315dad125b99fc65b340b3de41de628e9be51ff5835355dd61c86472244ef"
+    },
+    "wheel/pydicom-3.0.1-py3-none-any.whl": {
+      "bytes": 2376126,
+      "sha256": "db32f78b2641bd7972096b8289111ddab01fb221610de8d7afa835eb938adb41"
+    },
+    "wheel/timm-1.0.25-py3-none-any.whl": {
+      "bytes": 2565837,
+      "sha256": "bef7f61dd717cb2dbbb7e326f143e13d660a47ecbd84116e6fe33732bed5c484"
+    }
+  },
+  "worker_receipt_repair": {
+    "constraint": "Exactly the two string keys and exact integer zero values; booleans rejected. Original failure gate retained.",
+    "field": "worker_exit_codes",
+    "lesson": "Validate the actual upstream JSON producer contract; do not substitute an assumed list schema.",
+    "required_json_shape": {
+      "0": 0,
+      "1": 0
+    },
+    "runner_sha256": "c485f4514c528042d2de39ca04bab1a99844c31b3fa494dfc43274a465113102",
+    "scientific_math_changed": false
+  }
+}
