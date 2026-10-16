@@ -1,0 +1,70 @@
+{
+  "notebook_identity_preserved": true,
+  "notebook_wide_badge": {
+    "linked_public_version": 47,
+    "observed_on_public_version_pages": [
+      46,
+      47
+    ],
+    "separate_v46_badge_claim": false,
+    "visible_text": "Public Score 0.957 Best Score"
+  },
+  "observed_utc": "2026-10-16T11:31:20.690590+00:00",
+  "publication_scope": "Aggregate results and source/version links only; no study records, weights or labels.",
+  "results": [
+    {
+      "accepted_row": 57243233,
+      "api_error_present": false,
+      "api_observed_utc": "2026-10-16T11:22:30.630097+00:00",
+      "api_status": "COMPLETE",
+      "native_submission_details_exact_version_link_verified": true,
+      "native_submission_details_status": "Succeeded",
+      "native_ui_observed_utc": "2026-10-16T11:31:20.690590+00:00",
+      "native_version": 358794056,
+      "official_public_score": "0.957",
+      "private_score": null,
+      "public_version": 46,
+      "rank_weight_order": [
+        "R6",
+        "Raptor384",
+        "Raptor224"
+      ],
+      "rank_weights": [
+        0.5,
+        0.325,
+        0.175
+      ],
+      "scientific_change": "Raptor224 anatomical mirror probability average",
+      "source_sha256": "c1bfe747728656d37bceed15ce6ad69956cf658fe5c3f09510df80cbfd52c85b",
+      "url": "https://www.kaggle.com/code/prvsiyan/the-bee-s-knees-final-rsna-push?scriptVersionId=358794056"
+    },
+    {
+      "accepted_row": 57243942,
+      "api_error_present": false,
+      "api_observed_utc": "2026-10-16T11:22:30.630097+00:00",
+      "api_status": "COMPLETE",
+      "native_submission_details_exact_version_link_verified": true,
+      "native_submission_details_status": "Succeeded",
+      "native_ui_observed_utc": "2026-10-16T11:31:20.690590+00:00",
+      "native_version": 358804172,
+      "official_public_score": "0.957",
+      "private_score": null,
+      "public_version": 47,
+      "rank_weight_order": [
+        "R6",
+        "Raptor384",
+        "Raptor224"
+      ],
+      "rank_weights": [
+        0.55,
+        0.2925,
+        0.1575
+      ],
+      "scientific_change": "Fixed 90% baseline blend plus 10% R6 ranks; no mirror",
+      "source_sha256": "07a50c3e6e5af6616cd6cd41a647adb40d30141e33f80cf9822e1cf8f8c41d3e",
+      "url": "https://www.kaggle.com/code/prvsiyan/the-bee-s-knees-final-rsna-push?scriptVersionId=358804172"
+    }
+  ],
+  "schema": "bee-v46-v47-official-public-results/1",
+  "score_precision_note": "Officially displayed three-decimal scores; no inference about undisplayed precision or comparative superiority."
+}
